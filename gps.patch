@@ -1,0 +1,171 @@
+diff -ru gps-release-ide-5.2.1-src_orig/gnatlib/gnat_src/mlib-utl.adb gps-release-ide-5.2.1-src/gnatlib/gnat_src/mlib-utl.adb
+--- gps-release-ide-5.2.1-src_orig/gnatlib/gnat_src/mlib-utl.adb	2012-05-23 08:52:27.000000000 +0200
++++ gps-release-ide-5.2.1-src/gnatlib/gnat_src/mlib-utl.adb	2013-06-23 15:00:37.000000000 +0200
+@@ -408,7 +408,7 @@
+          if Using_GNU_response_file then
+             for J in S'Range loop
+                if S (J) = ' ' or else S (J) = '\' then
+-                  if Write (Tname_FD, ASCII.BACK_SLASH'Address, 1) /= 1 then
++                  if Write (Tname_FD, ASCII.Back_Slash'Address, 1) /= 1 then
+                      Success := False;
+                   end if;
+                end if;
+diff -ru gps-release-ide-5.2.1-src_orig/gvd/gvd/display_items.ads gps-release-ide-5.2.1-src/gvd/gvd/display_items.ads
+--- gps-release-ide-5.2.1-src_orig/gvd/gvd/display_items.ads	2011-12-20 10:58:07.000000000 +0100
++++ gps-release-ide-5.2.1-src/gvd/gvd/display_items.ads	2013-06-23 15:00:37.000000000 +0200
+@@ -82,7 +82,7 @@
+    --  If Remove_Aliases is True, then all the items on the canvas that are
+    --  aliases of Item are also removed.
+ 
+-   function Get_Graph_Cmd (Item : access Display_Item_record) return String;
++   function Get_Graph_Cmd (Item : access Display_Item_Record) return String;
+    --  Return the "graph display..." command used to create the item
+ 
+    function Find_Item
+diff -ru gps-release-ide-5.2.1-src_orig/src_editor/src/files_extra_info_pkg.ads gps-release-ide-5.2.1-src/src_editor/src/files_extra_info_pkg.ads
+--- gps-release-ide-5.2.1-src_orig/src_editor/src/files_extra_info_pkg.ads	2011-12-20 10:58:07.000000000 +0100
++++ gps-release-ide-5.2.1-src/src_editor/src/files_extra_info_pkg.ads	2013-06-23 15:00:37.000000000 +0200
+@@ -20,7 +20,7 @@
+ with Gtk.Box;          use Gtk.Box;
+ with Gtk.Button;       use Gtk.Button;
+ with Gtk.Check_Button; use Gtk.Check_Button;
+-with Gtk.Gentry;       use Gtk.GEntry;
++with Gtk.GEntry;       use Gtk.GEntry;
+ with Gtk.Label;        use Gtk.Label;
+ with Gtk.Table;        use Gtk.Table;
+ with GPS.Kernel;
+diff -ru gps-release-ide-5.2.1-src_orig/src_editor/src/src_editor_view.adb gps-release-ide-5.2.1-src/src_editor/src/src_editor_view.adb
+--- gps-release-ide-5.2.1-src_orig/src_editor/src/src_editor_view.adb	2012-07-02 11:23:20.000000000 +0200
++++ gps-release-ide-5.2.1-src/src_editor/src/src_editor_view.adb	2013-06-23 15:00:37.000000000 +0200
+@@ -1788,7 +1788,7 @@
+       Event  : Gdk_Event) return Boolean
+    is
+       View         : constant Source_View := Source_View (Widget);
+-      Dummy_Gint   : Gint;
++      Dummy_Gint1, Dummy_Gint2   : Gint;
+       W, H, D      : Gint;
+       Button_Y     : Gint;
+       Lower, Upper : Gdouble;
+@@ -1807,7 +1807,7 @@
+          Button_Y := Gint (Get_Y (Event));
+ 
+          Get_Geometry
+-           (Get_Window (View.Area), Dummy_Gint, Dummy_Gint, W, H, D);
++           (Get_Window (View.Area), Dummy_Gint1, Dummy_Gint2, W, H, D);
+ 
+          Adj := Get_Vadjustment (View.Scroll);
+          Lower := Get_Lower (Adj);
+diff -ru gps-release-ide-5.2.1-src_orig/vcs/src/vcs-generic_vcs.adb gps-release-ide-5.2.1-src/vcs/src/vcs-generic_vcs.adb
+--- gps-release-ide-5.2.1-src_orig/vcs/src/vcs-generic_vcs.adb	2012-08-16 13:46:58.000000000 +0200
++++ gps-release-ide-5.2.1-src/vcs/src/vcs-generic_vcs.adb	2013-06-23 15:00:37.000000000 +0200
+@@ -1244,7 +1244,7 @@
+ 
+             Parser : Status_Parser_Record;
+             M      : Node_Ptr;
+-
++            Tmp_Field : Natural;
+          begin
+             if N = null then
+                return Parser;
+@@ -1324,28 +1324,44 @@
+             end if;
+ 
+             Field := Get_Field (N, "file_index");
+-            Set_Field (Parser, Field, Parser.File_Index);
++            Tmp_Field := Parser.File_Index;
++            Set_Field (Parser, Field, Tmp_Field);
++            Parser.File_Index := Tmp_Field;
+ 
+             Field := Get_Field (N, "status_index");
+-            Set_Field (Parser, Field, Parser.Status_Index);
++            Tmp_Field := Parser.Status_Index;
++            Set_Field (Parser, Field, Tmp_Field);
++            Parser.Status_Index := Tmp_Field;
+ 
+             Field := Get_Field (N, "local_revision_index");
+-            Set_Field (Parser, Field, Parser.Local_Rev_Index);
++            Tmp_Field := Parser.Local_Rev_Index;
++            Set_Field (Parser, Field, Tmp_Field);
++            Parser.Local_Rev_Index := Tmp_Field;
+ 
+             Field := Get_Field (N, "repository_revision_index");
+-            Set_Field (Parser, Field, Parser.Repository_Rev_Index);
++            Tmp_Field := Parser.Repository_Rev_Index;
++            Set_Field (Parser, Field, Tmp_Field);
++            Parser.Repository_Rev_Index := Tmp_Field;
+ 
+             Field := Get_Field (N, "author_index");
+-            Set_Field (Parser, Field, Parser.Author_Index);
++            Tmp_Field := Parser.Author_Index;
++            Set_Field (Parser, Field, Tmp_Field);
++            Parser.Author_Index := Tmp_Field;
+ 
+             Field := Get_Field (N, "date_index");
+-            Set_Field (Parser, Field, Parser.Date_Index);
++            Tmp_Field := Parser.Date_Index;
++            Set_Field (Parser, Field, Tmp_Field);
++            Parser.Date_Index := Tmp_Field;
+ 
+             Field := Get_Field (N, "log_index");
+-            Set_Field (Parser, Field, Parser.Log_Index);
++            Tmp_Field := Parser.Log_Index;
++            Set_Field (Parser, Field, Tmp_Field);
++            Parser.Log_Index := Tmp_Field;
+ 
+             Field := Get_Field (N, "sym_index");
+-            Set_Field (Parser, Field, Parser.Sym_Index);
++            Tmp_Field := Parser.Sym_Index;
++            Set_Field (Parser, Field, Tmp_Field);
++            Parser.Sym_Index := Tmp_Field;
+ 
+             Field := Get_Field (N, "tooltip_pattern");
+ 
+diff -ru gps-release-ide-5.2.1-src_orig/vcs/src/vcs_view-activities.ads gps-release-ide-5.2.1-src/vcs/src/vcs_view-activities.ads
+--- gps-release-ide-5.2.1-src_orig/vcs/src/vcs_view-activities.ads	2011-12-20 10:58:07.000000000 +0100
++++ gps-release-ide-5.2.1-src/vcs/src/vcs_view-activities.ads	2013-06-23 15:00:37.000000000 +0200
+@@ -29,7 +29,7 @@
+       Kernel   : access Kernel_Handle_Record'Class := null);
+    --  Create a new VCS explorer
+ 
+-   function Columns_Types
++   overriding function Columns_Types
+      (Explorer : access VCS_Activities_View_Record) return GType_Array;
+    --  Redefined for the VCS Activities
+ 
+@@ -83,20 +83,21 @@
+ 
+    type VCS_Activities_View_Record is new VCS_View_Record with null record;
+ 
+-   procedure Do_Delete (Explorer : VCS_Activities_View_Record);
++   overriding procedure Do_Delete (Explorer : VCS_Activities_View_Record);
+    --  ???
+ 
+-   procedure Do_Refresh (Explorer : access VCS_Activities_View_Record);
++   overriding procedure Do_Refresh
++     (Explorer : access VCS_Activities_View_Record);
+    --  ???
+ 
+-   procedure Do_Fill_Info
++   overriding procedure Do_Fill_Info
+      (Explorer  : VCS_Activities_View_Record;
+       Iter      : Gtk_Tree_Iter;
+       Line_Info : Line_Record;
+       Success   : out Boolean);
+    --  ???
+ 
+-   procedure Do_Initialize
++   overriding procedure Do_Initialize
+      (Explorer : access VCS_Activities_View_Record;
+       Kernel   : Kernel_Handle);
+    --  ???
+diff -ru gps-release-ide-5.2.1-src_orig/vdiff/src/vdiff2_module.ads gps-release-ide-5.2.1-src/vdiff/src/vdiff2_module.ads
+--- gps-release-ide-5.2.1-src_orig/vdiff/src/vdiff2_module.ads	2011-12-20 10:35:10.000000000 +0100
++++ gps-release-ide-5.2.1-src/vdiff/src/vdiff2_module.ads	2013-06-23 15:00:37.000000000 +0200
+@@ -50,6 +50,6 @@
+       end record;
+ 
+    type VDiff2_Module is access all VDiff2_Module_Record'Class;
+-   procedure Destroy (Id : in out VDiff2_Module_Record);
++   overriding procedure Destroy (Id : in out VDiff2_Module_Record);
+ 
+ end Vdiff2_Module;
