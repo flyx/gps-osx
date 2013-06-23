@@ -2,6 +2,8 @@
 
 export ADA_PROJECT_PATH=$PREFIX/lib/gnat
 export PATH=$PREFIX/bin:$PATH
+# gnat gcc does not support -arch
+export LDFLAGS=`echo $LDFLAGS | sed 's/ -arch [^ ]*//'`
 
 cd xmlada-4.4w-src
 ./configure --prefix=$PREFIX

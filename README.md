@@ -27,6 +27,7 @@ tells that usually, something's broken on the way. Anyway, follow the instructio
  * Install XCode from the AppStore, launch it, install the command line tools from the
    Preferences panel.
  * Download and execute [gtk-osx-setup.sh][5]
+ * Add `~/.local/bin` to your `PATH`.
  * Execute:
 
     jhbuild bootstrap
@@ -92,6 +93,21 @@ You can now execute:
    This may or may not be easy to fix in the GPS build script - I didn't try yet.
  * This list is not complete and will probably be grow as I use my native GPS.
 
+## What else can be done
+
+If we can get rid of those pesty Python problems, it might be possible to merge everything into a
+redistributable app bundle, using [gtk-mac-bundler][6]. I'm not sure whether this is doable without
+an unreasonable amount of work.
+
+To provide any more integration into OSX, GtkOSXApplication would need to be added to GtkAda, and
+GPS would need to be patched to use it. I certainly won't do this, but if anyone has a lot of time
+at hand...
+
+It might also be possible to create a jhbuild module to further automate the process of building
+GPS. But as the build needs a compiler jhbuild does not know about and considering the other issues
+and fixes that need to be applied, I think it's better to keep this stuff here in a separate
+repository.
+
 ## License
 
 The GNAT Programming Studio is distributed under the terms of the GNU GPL, so are these scripts and
@@ -104,3 +120,4 @@ patches.
  [3]: http://libre.adacore.com/i
  [4]: https://live.gnome.org/GTK%2B/OSX/Building
  [5]: http://git.gnome.org/browse/gtk-osx/plain/gtk-osx-build-setup.sh
+ [6]: https://live.gnome.org/GTK%2B/OSX/Bundling
