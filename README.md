@@ -30,6 +30,8 @@ tells that usually, something's broken on the way. Anyway, follow the instructio
  * Add `~/.local/bin` to your `PATH`.
  * Execute:
 
+<!-- ends the markdown list -->
+
     jhbuild bootstrap
     jhbuild build meta-gtk-osx-bootstrap
     jhbuild build meta-gtk-osx-core
@@ -57,7 +59,7 @@ Once you have everything ready, do:
 
 This will patch the GPS sources and afterwards use `jhbuild` (GNOME build utility) to build GPS.
 The patches to gps are mostly cosmetic; compilation is configured to break on style errors and
-warnings, and in there are some of these in the released GPS sources, so we need to fix them
+warnings, and there are some of these in the released GPS sources, so we need to fix them
 before compiling.
 
 If you compile a second time, you don't need to patch the sources again. Simply do:
@@ -87,8 +89,9 @@ You can now execute:
 ## Known issues
 
  * Fonts are quite small in the editor and project view. But you can change these in GPS' preferences.
- * You can use [Command]+C / +V / +X, but other shortcuts will still require [Ctrl] instead. You cannot
-   set them to [Command]+[Key] in the key bindings editor, as it doesn't recognize the Command button.
+ * You can use `[Command]+C / +V / +X`, but other shortcuts will still require `[Ctrl]` instead. You cannot
+   set them to `[Command]+[Key]` in the key bindings editor, as `[Command]` isn't recognized as a modifier
+   key there.
  * Currently, pyObject and pyGtk are not supported. You will get some error messages because of this.
    This may or may not be easy to fix in the GPS build script - I didn't try yet.
  * This list is not complete and will probably be grow as I use my native GPS.
