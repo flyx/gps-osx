@@ -36,6 +36,10 @@ tells that usually, something's broken on the way. Anyway, follow the instructio
     jhbuild build meta-gtk-osx-bootstrap
     jhbuild build meta-gtk-osx-core
 
+GPS embeds Python, and linking to the system's Python does not work properly, so we also need:
+
+    jhbuild build meta-gtk-osx-python
+
 ### GPS Sources
 
 Download the following source packages from [AdaCore's libre site][3]:
@@ -72,19 +76,9 @@ it breaks the build.
 
 ## Running GPS
 
-After successfully compiling GPS, there's one more thing you need to do:
+If everything worked properly, you should now be able to launch gps with
 
-    jhbuild shell < setup-gps-environment.sh
-
-This creates symlinks to the system's Python framework named:
-
- * `~/gtk/inst/lib/python2.7/config`
- * `~/gtk/inst/include/python2.7`
-
-I have no idea why they are seached in this place, but creating those symlinks enables GPS to run.
-You can now execute:
-
-    ./run-gps.sh
+    ~/gtk/inst/bin/gps
 
 ## Known issues
 
@@ -92,13 +86,11 @@ You can now execute:
  * You can use `[Command]+C / +V / +X`, but other shortcuts will still require `[Ctrl]` instead. You cannot
    set them to `[Command]+[Key]` in the key bindings editor, as `[Command]` isn't recognized as a modifier
    key there.
- * Currently, pyObject and pyGtk are not supported. You will get some error messages because of this.
-   This may or may not be easy to fix in the GPS build script - I didn't try yet.
  * This list is not complete and will probably be grow as I use my native GPS.
 
 ## What else can be done
 
-If we can get rid of those pesty Python problems, it might be possible to merge everything into a
+It might be possible to merge everything into a
 redistributable app bundle, using [gtk-mac-bundler][6]. I'm not sure whether this is doable without
 an unreasonable amount of work.
 

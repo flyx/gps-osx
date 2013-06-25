@@ -12,6 +12,9 @@ cd ../gtkada-2.24.3-src
 ./configure --prefix=$PREFIX
 make && make install
 cd ../gps-release-ide-5.2.1-src
-./configure --prefix=$PREFIX --with-python=/System/Library/Frameworks/Python.framework/Versions/2.7
+./configure --prefix=$PREFIX --with-python=$PREFIX/bin/python
 patch gnatlib/gnatcoll_shared.gpr < ../gnatcoll_shared.gpr.patch
+# PYTHON is taken as input value to gnatlib/gnatcoll_shared but is currently
+# defined as path to our python binary, so we need to fix that
+export PYTHON=yes
 make && make install
