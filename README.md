@@ -33,12 +33,10 @@ tells that usually, something's broken on the way. Anyway, follow the instructio
 <!-- ends the markdown list -->
 
     jhbuild bootstrap
-    jhbuild build meta-gtk-osx-bootstrap
-    jhbuild build meta-gtk-osx-core
+    jhbuild build meta-gtk-osx-bootstrap python meta-gtk-osx-core meta-gtk-osx-python
 
-GPS embeds Python, and linking to the system's Python does not work properly, so we also need:
-
-    jhbuild build meta-gtk-osx-python
+GPS embeds Python, so we compile python itself here (linking to the system's python causes far too
+much problems) and then build meta-gtk-osx-python for pyGObject and pyGtk.
 
 ### GPS Sources
 
@@ -78,7 +76,10 @@ it breaks the build.
 
 If everything worked properly, you should now be able to launch gps with
 
+    export ADA_PROJECT_PATH=~/gtk/inst/lib/gnat
     ~/gtk/inst/bin/gps
+
+(You need the `ADA_PROJECT_PATH` if you plan to link to installed GPRBuild projects like GtkAda.)
 
 ## Known issues
 
