@@ -16,7 +16,8 @@ if [ ! -d "gps-release-ide-5.2.1-src" ]; then
   echo "at http://libre.adacore.com/ - the resulting folder should be gps-release-ide-5.2.1-src, place it here."
 fi
 
-patch -d gps-release-ide-5.2.1-src -p1 < gps.patch
+patch -d gps-release-ide-5.2.1-src -p1 < gps-remove-compile-errors.patch
+patch -d gps-release-ide-5.2.1-src -p1 < gps-osx-command-key-shortcuts.patch
 
 jhbuild shell < build-gps.sh
 

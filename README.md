@@ -4,11 +4,20 @@
 
 This repository contains scripts and patches for compiling the [GNAT Programming Studio][1]
 against gtk-quartz, the native GTK backend for OSX. The resulting GPS binary will not
-require X11 anymore, but will run as normal OSX application instead.
+require X11 anymore, but will run as normal OSX application instead. Additionally, a patch
+is applied that allows the usage of the command key `⌘` for key shortcuts. Finally, GPS will
+be packed into an app bundle that can be dropped into the `/Application` folder.
 
-*Important:* gtk-quartz is considered experimental and you should not expect the resulting GPS
-binary to be stable. It also is in no way supported by [AdaCore][2]. Be aware of this before
-you decide to use it for any serious software development.
+### Very important - please read before using
+
+ * gtk-quartz is considered experimental and you should not expect the resulting GPS
+   binary to be stable. It also is in no way supported by [AdaCore][2]. Be aware of this before
+   you decide to use it for any serious software development.
+ * Because of support of the command key for shortcuts, this GPS binary's configuration will
+   be **incompatible** with that from AdaCore's GPS. You will probably need to delete `~/.gps`
+   when switching from one to the other.
+ * In order to take advantage of command key shortcuts, you need to change the default key shortcuts -
+   those have not been migrated to use command instead of control automatically.
 
 ## Prerequisites
 
@@ -60,9 +69,15 @@ Once you have everything ready, do:
     ./patch-and-build.sh
 
 This will patch the GPS sources and afterwards use `jhbuild` (GNOME build utility) to build GPS.
-The patches to gps are mostly cosmetic; compilation is configured to break on style errors and
-warnings, and there are some of these in the released GPS sources, so we need to fix them
-before compiling.
+Two patches are being applied here:
+
+ * `gps-remove-compile-errors.patch` is  mostly cosmetic; compilation is configured to break on
+   style errors and warnings, and there are some of these in the released GPS sources, so we need
+   to fix them before compiling.
+ * `gps-osx-command-key-shortcuts.patch` enables the usage of the command key `⌘`, as commonly used
+   in OSX, as keyboard shortcut. This patch is not really platform-specific; it would simply do the
+   same thing with the meta key on linux or the Windows key on Windows - but on those systems, this
+   modifier is usually not used by applications.
 
 If you compile a second time, you don't need to patch the sources again. Simply do:
 
@@ -72,7 +87,7 @@ The compilation process will patch the generated file `gnatlib/gnatcoll_shared.g
 of the linker option `-u _PyMac_Error`. I don't really know how that gets there and what it does, but
 it breaks the build.
 
-## Running GPS
+## Running GPS directly
 
 If everything worked properly, you should now be able to launch gps with
 
@@ -81,23 +96,35 @@ If everything worked properly, you should now be able to launch gps with
 
 (You need the `ADA_PROJECT_PATH` if you plan to link to installed GPRBuild projects like GtkAda.)
 
+## Building the app bundle
+
+After building GPS, navigate into the `bundle` folder and execute
+
+    jhbuild shell < build-bundle.sh
+
+This should create the bundle. To be able to do this, you need to have the latest
+[gtk-mac-bundler][6] from git installed (the current stable version mentioned on the site won't work).
+
 ## Known issues
 
  * Fonts are quite small in the editor and project view. But you can change these in GPS' preferences.
- * You can use `[Command]+C / +V / +X`, but other shortcuts will still require `[Ctrl]` instead. You cannot
-   set them to `[Command]+[Key]` in the key bindings editor, as `[Command]` isn't recognized as a modifier
-   key there.
+ * The autocomplete list is not rendered below the cursor, but quite some pixels off.
+ * Setting the `GPR_PROJECT_PATH` does not work when double-clicking the app bundle. If you need it,
+   you have to launch `GPS.app/Contents/MacOS/GPS` from the terminal. I have no idea why this is
+   happening - the environment variable can be set in the Info.plist in the app bundle so that GPS is
+   loaded with it, and it will be there then, but GPS won't load projects from there anyway. Maybe it's
+   a sandboxing issue or something.
+ * You need to have GNAT GPL 2013 installed in the default directory `/usr/local/gnat` in order to run
+   GPS. This is because GNAT's `libgcc_s.1.dylib` is referenced by GPS. I didn't yet succeed in
+   packing that properly into the bundle.
+ * Project templates are not bundled yet and GPS will fail if you try to use them. Coming soon.
  * This list is not complete and will probably be grow as I use my native GPS.
 
 ## What else can be done
 
-It might be possible to merge everything into a
-redistributable app bundle, using [gtk-mac-bundler][6]. I'm not sure whether this is doable without
-an unreasonable amount of work.
-
-To provide any more integration into OSX, GtkOSXApplication would need to be added to GtkAda, and
-GPS would need to be patched to use it. I certainly won't do this, but if anyone has a lot of time
-at hand...
+To provide more integration into OSX (= using the default OSX menu bar), GtkOSXApplication would need
+to be added to GtkAda, and GPS would need to be patched to use it. I certainly won't do this, but if
+anyone has a lot of time at hand...
 
 It might also be possible to create a jhbuild module to further automate the process of building
 GPS. But as the build needs a compiler jhbuild does not know about and considering the other issues
