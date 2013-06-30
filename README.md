@@ -6,7 +6,7 @@ This repository contains scripts and patches for compiling the [GNAT Programming
 against gtk-quartz, the native GTK backend for OSX. The resulting GPS binary will not
 require X11 anymore, but will run as normal OSX application instead. Additionally, a patch
 is applied that allows the usage of the command key `⌘` for key shortcuts. Finally, GPS will
-be packed into an app bundle that can be dropped into the `/Application` folder.
+be packed into an app bundle that can be dropped into the `/Applications` folder.
 
 ### Very important - please read before using
 
@@ -18,6 +18,16 @@ be packed into an app bundle that can be dropped into the `/Application` folder.
    when switching from one to the other.
  * In order to take advantage of command key shortcuts, you need to change the default key shortcuts -
    those have not been migrated to use command instead of control automatically.
+
+### Binary download
+
+I host a readily compiled binary on my server:
+
+    http://flyx.org/files/GPS.dmg
+
+Please be aware that I might remove it any time if bandwidth usage gets too high. Don't expect
+it to always be up-to-date with the repository. If I have time, I might create a site that hosts
+the binary and provides meta-information. Currently, this is just bleeding edge.
 
 ## Prerequisites
 
