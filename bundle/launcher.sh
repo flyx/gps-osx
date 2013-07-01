@@ -42,6 +42,9 @@ PYTHONPATH="$bundle_lib/python2.7/site-packages:$PYTHONPATH"
 PYTHONPATH="$bundle_lib/pygtk/2.0:$PYTHONPATH"
 export PYTHONPATH
 
+export GPS_PYTHONHOME="$bundle_res"
+export GPS_ROOT="$bundle_res"
+
 APP=name
 I18NDIR="$bundle_data/locale"
 # Set the locale-related variables appropriately:
