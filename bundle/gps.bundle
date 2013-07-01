@@ -13,6 +13,7 @@
          either define your own or just hardcode the path here.
     -->
     <prefix name="default">${env:JHBUILD_PREFIX}</prefix>
+    <prefix name="gnat">/usr/local/gnat</prefix>
 
     <!-- The project directory is the default location of the created
          app. If you leave out the path, the current directory is
