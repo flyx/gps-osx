@@ -64,9 +64,12 @@ shortcuts - those have not been migrated to use command instead of control autom
 
 <p>I host a readily compiled app bundle on my server:</p>
 
-<p><a href="http://flyx.org/files/GPS.dmg">Download!</a></p>
+<p><a href="http://flyx.org/files/GPS-1606baf.dmg">Download!</a></p>
 
-<p>This is built on the base of commit <a href="https://github.com/flyx86/gps-osx/commit/015a874679cdc4ac38a50d5564e042d5a0fedbd8">015a874679cdc4ac38a50d5564e042d5a0fedbd8</a>.</p>
+<p>This is built on the base of commit <a href="https://github.com/flyx86/gps-osx/commit/1606baff7a095e3a0a7c5978bca414b8d8265e09">1606baff7a095e3a0a7c5978bca414b8d8265e09</a>.</p>
+
+<p>Please note that I do not plan to create <em>stable</em> releases. I just spread the latest binary
+I use myself here.</p>
 
 <h3>
 <a name="known-issues" class="anchor" href="#known-issues"><span class="octicon octicon-link"></span></a>Known issues</h3>
@@ -79,10 +82,6 @@ you have to launch <code>GPS.app/Contents/MacOS/GPS</code> from the terminal. I 
 happening - the environment variable can be set in the Info.plist in the app bundle so that GPS is
 loaded with it, and it will be set in GPS then, but GPS won't load projects from there anyway.
 Maybe it's a sandboxing issue or something.</li>
-<li>You need to have GNAT GPL 2013 installed in the default directory <code>/usr/local/gnat</code> in order to run
-GPS. This is because GNAT's <code>libgcc_s.1.dylib</code> is referenced by GPS. I didn't yet succeed in
-packing that properly into the bundle.</li>
-<li>Project templates are not bundled yet and GPS will fail if you try to use them. Coming soon.</li>
 <li>GPS does not use the standard OSX menu bar. To be able to do this, one would need to patch
 GtkAda to provide the necessary binding to GtkOSXApplication and then patch GPS to use it. This
 doesn't seem worth the effort.</li>
