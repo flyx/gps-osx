@@ -1244,7 +1244,7 @@ package body VCS.Generic_VCS is
 
             Parser : Status_Parser_Record;
             M      : Node_Ptr;
-
+            Tmp_Field : Natural;
          begin
             if N = null then
                return Parser;
@@ -1324,28 +1324,44 @@ package body VCS.Generic_VCS is
             end if;
 
             Field := Get_Field (N, "file_index");
-            Set_Field (Parser, Field, Parser.File_Index);
+            Tmp_Field := Parser.File_Index;
+            Set_Field (Parser, Field, Tmp_Field);
+            Parser.File_Index := Tmp_Field;
 
             Field := Get_Field (N, "status_index");
-            Set_Field (Parser, Field, Parser.Status_Index);
+            Tmp_Field := Parser.Status_Index;
+            Set_Field (Parser, Field, Tmp_Field);
+            Parser.Status_Index := Tmp_Field;
 
             Field := Get_Field (N, "local_revision_index");
-            Set_Field (Parser, Field, Parser.Local_Rev_Index);
+            Tmp_Field := Parser.Local_Rev_Index;
+            Set_Field (Parser, Field, Tmp_Field);
+            Parser.Local_Rev_Index := Tmp_Field;
 
             Field := Get_Field (N, "repository_revision_index");
-            Set_Field (Parser, Field, Parser.Repository_Rev_Index);
+            Tmp_Field := Parser.Repository_Rev_Index;
+            Set_Field (Parser, Field, Tmp_Field);
+            Parser.Repository_Rev_Index := Tmp_Field;
 
             Field := Get_Field (N, "author_index");
-            Set_Field (Parser, Field, Parser.Author_Index);
+            Tmp_Field := Parser.Author_Index;
+            Set_Field (Parser, Field, Tmp_Field);
+            Parser.Author_Index := Tmp_Field;
 
             Field := Get_Field (N, "date_index");
-            Set_Field (Parser, Field, Parser.Date_Index);
+            Tmp_Field := Parser.Date_Index;
+            Set_Field (Parser, Field, Tmp_Field);
+            Parser.Date_Index := Tmp_Field;
 
             Field := Get_Field (N, "log_index");
-            Set_Field (Parser, Field, Parser.Log_Index);
+            Tmp_Field := Parser.Log_Index;
+            Set_Field (Parser, Field, Tmp_Field);
+            Parser.Log_Index := Tmp_Field;
 
             Field := Get_Field (N, "sym_index");
-            Set_Field (Parser, Field, Parser.Sym_Index);
+            Tmp_Field := Parser.Sym_Index;
+            Set_Field (Parser, Field, Tmp_Field);
+            Parser.Sym_Index := Tmp_Field;
 
             Field := Get_Field (N, "tooltip_pattern");
 

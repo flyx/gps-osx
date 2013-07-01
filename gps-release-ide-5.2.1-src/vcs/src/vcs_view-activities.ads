@@ -29,7 +29,7 @@ package VCS_View.Activities is
       Kernel   : access Kernel_Handle_Record'Class := null);
    --  Create a new VCS explorer
 
-   function Columns_Types
+   overriding function Columns_Types
      (Explorer : access VCS_Activities_View_Record) return GType_Array;
    --  Redefined for the VCS Activities
 
@@ -83,20 +83,21 @@ private
 
    type VCS_Activities_View_Record is new VCS_View_Record with null record;
 
-   procedure Do_Delete (Explorer : VCS_Activities_View_Record);
+   overriding procedure Do_Delete (Explorer : VCS_Activities_View_Record);
    --  ???
 
-   procedure Do_Refresh (Explorer : access VCS_Activities_View_Record);
+   overriding procedure Do_Refresh
+     (Explorer : access VCS_Activities_View_Record);
    --  ???
 
-   procedure Do_Fill_Info
+   overriding procedure Do_Fill_Info
      (Explorer  : VCS_Activities_View_Record;
       Iter      : Gtk_Tree_Iter;
       Line_Info : Line_Record;
       Success   : out Boolean);
    --  ???
 
-   procedure Do_Initialize
+   overriding procedure Do_Initialize
      (Explorer : access VCS_Activities_View_Record;
       Kernel   : Kernel_Handle);
    --  ???
