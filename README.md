@@ -1,21 +1,21 @@
-# Native GNAT Programming Studio for OSX
+## Native GNAT Programming Studio for OSX
 
-## Overview
+### Overview
 
 This repository contains the source code of the [GNAT Programming Studio][1], modified to be
 built against gtk-quartz, the native GTK backend for OSX. For a list of changes, see the
-website (coming soon). You can also download a binary there. This is a personal project,
+[website][7]. You can also download a binary there. This is a personal project,
 I am not affiliated with [AdaCore][2].
 
-## Prerequisites
+### Prerequisites
 
 In order to be able to build GPS on your Mac, you need to have:
 
-### GNAT GPL 2013
+#### GNAT GPL 2013
 
 Just download the darwin binary from [AdaCore's libre site][3] and execute the install script.
 
-### GTK-Quartz (jhbuild) Toolchain
+#### GTK-Quartz (jhbuild) Toolchain
 
 This will probably be tricky to set up. If you're lucky, it will work at first try, but experience
 tells that usually, something's broken on the way. Anyway, follow the instructions on
@@ -35,7 +35,7 @@ tells that usually, something's broken on the way. Anyway, follow the instructio
 GPS embeds Python, so we compile python itself here (linking to the system's python causes far
 too much problems) and then build meta-gtk-osx-python for pyGObject and pyGtk.
 
-### Dependencies
+#### Dependencies
 
 Download the following source packages from [AdaCore's libre site][3]:
 
@@ -48,10 +48,11 @@ directories:
 
     export GPR_PROJECT_PATH=$PREFIX/lib/gnat
     export PATH=$PREFIX/bin:$PATH
+    export LDFLAGS=`echo $LDFLAGS | sed 's/ -arch [^ ]*//'`
     ./configure --prefix=$PREFIX
     make && make install
 
-## Building GPS
+### Building GPS
 
 Just do:
 
@@ -59,7 +60,7 @@ Just do:
 
 This will build and install gps.
 
-## Running GPS directly
+### Running GPS directly
 
 If everything worked properly, you should be able to launch gps with
 
@@ -69,7 +70,7 @@ If everything worked properly, you should be able to launch gps with
 (You need the `GPR_PROJECT_PATH` if you plan to link against installed GPRBuild
 projects like GtkAda.)
 
-## Building the app bundle
+### Building the app bundle
 
 After building GPS, navigate into the `bundle` folder and execute
 
@@ -78,7 +79,7 @@ After building GPS, navigate into the `bundle` folder and execute
 This should create the bundle. To be able to do this, you need to have the latest
 [gtk-mac-bundler][6] from git installed (the current stable version mentioned on the site won't work).
 
-## What else can be done
+### What else can be done
 
 To provide more integration into OSX (= using the default OSX menu bar), GtkOSXApplication would need
 to be added to GtkAda, and GPS would need to be patched to use it. I certainly won't do this, but if
@@ -89,7 +90,7 @@ GPS. But as the build needs a compiler jhbuild does not know about and consideri
 and fixes that need to be applied, I think it's better to keep this stuff here in a separate
 repository.
 
-## License
+### License
 
 This work is, as the GNAT Programming Studio itself, licensed under the terms of the GNU GPL v3.
 
@@ -100,3 +101,4 @@ This work is, as the GNAT Programming Studio itself, licensed under the terms of
  [4]: https://live.gnome.org/GTK%2B/OSX/Building
  [5]: http://git.gnome.org/browse/gtk-osx/plain/gtk-osx-build-setup.sh
  [6]: https://live.gnome.org/GTK%2B/OSX/Bundling
+ [7]: http://flyx86.github.io/gps-osx/
