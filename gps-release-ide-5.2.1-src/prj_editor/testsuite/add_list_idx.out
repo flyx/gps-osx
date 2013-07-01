@@ -1,0 +1,21 @@
+project Add_List_Idx is
+
+   type A_Type is
+      ("1", "2");
+   A : A_Type := external ("A");
+
+   package Compiler is
+
+      case A is
+
+         when "1" =>
+            for Default_Switches ("c") use ("-g");
+            for Default_Switches ("Ada") use ("g");
+
+         when "2" =>
+
+      end case;
+   end Compiler;
+
+end Add_List_Idx;
+

@@ -1,0 +1,15 @@
+project Add_List3 is
+
+   type A_Type is ("1", "2");
+   A : A_Type := external ("A");
+
+   for source_dirs use ("..");
+   for source_dirs use (".");
+
+   case A is
+       when "1" =>
+          for object_dir use ".";
+   end case;
+end Add_List3;
+
+

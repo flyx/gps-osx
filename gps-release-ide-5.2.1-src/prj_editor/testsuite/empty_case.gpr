@@ -1,0 +1,8 @@
+project Empty_Case is
+    type A_Type is ("1", "2");
+    A : A_Type := external ("A");
+   
+    case A is
+    end case;
+
+end Empty_Case;

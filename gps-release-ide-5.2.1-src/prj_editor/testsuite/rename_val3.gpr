@@ -1,0 +1,22 @@
+project Rename_Val3 is
+   type Common_Type is ("1", "2");
+   A : Common_Type := external ("A", "1");
+   B : Common_Type := external ("B", "1");
+
+   case A is
+      when "1" =>
+         case B is
+            when "1" =>
+                 for object_dir use ".";
+            when "2" =>
+                 for object_dir use "..";
+         end case;
+      when "2" =>
+         case B is
+            when "1" =>
+                 for object_dir use "./.";
+            when "2" =>
+                 for object_dir use "./..";
+         end case;
+   end case;
+end Rename_Val3;

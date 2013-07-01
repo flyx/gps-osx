@@ -1,0 +1,163 @@
+PYTHON_VERSION=@PYTHON_VERSION@
+PYTHON_BASE=@PYTHON_BASE@
+PYGTK_INCLUDE=@PYGTK_INCLUDE@
+PYGOBJECT_INCLUDE=@PYGOBJECT_INCLUDE@
+PYGOBJECT_LIBS=@PYGOBJECT_LIBS@
+PYTHON_DIR=@PYTHON_DIR@
+PYTHON_LIBS=@PYTHON_LIBS@
+GTK_INCLUDE=@GTK_GCC_FLAGS@
+WITH_PYTHON=@WITH_PYTHON@
+WITH_GTK=@WITH_GTK@
+WITH_PYGOBJECT=@WITH_PYGOBJECT@
+WITH_SYSLOG=@WITH_SYSLOG@
+WITH_POSTGRES=@WITH_POSTGRES@
+WITH_TEMPLATES=no   # Hard coded for now
+WITH_GMP=@WITH_GMP@
+WITH_PROJECTS=@WITH_PROJECTS@
+GMP_CFLAGS=@GMP_CFLAGS@
+GMP_LIBS=@GMP_LIBS@
+POSTGRES_PATH=@PATH_LIBPQ@
+BUILDS_SHARED=@GNAT_BUILDS_SHARED@
+WITH_SQLITE=@WITH_SQLITE@
+SQLITE_PATH=@PATH_LIBSQLITE@
+
+WITH_XREF=no
+ifeq (${WITH_PROJECTS},yes)
+ifneq (${WITH_SQLITE},no)
+WITH_XREF=yes
+endif
+endif
+
+ifeq (${WITH_PROJECTS}, yes)
+GNAT_SOURCES=@GNAT_SOURCES@
+else
+GNAT_SOURCES=no
+endif
+
+# Unless already set by the user to another value
+ifeq ($(PROCESSORS),)
+PROCESSORS=1
+endif
+
+DEFS=@DEFS@
+
+GPRBUILD=gprbuild
+
+TARNAME=@PACKAGE_TARNAME@
+VERSION=@PACKAGE_VERSION@
+DESTDIR=
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+datarootdir=@datarootdir@
+datadir=${DESTDIR}@datadir@
+bindir=${DESTDIR}@bindir@
+libdir=${DESTDIR}@libdir@
+includedir=${DESTDIR}@includedir@
+
+MKDIR=mkdir -p
+CP=cp -p
+
+ifeq (${OS},Windows_NT)
+LN_S=${CP}
+else
+LN_S=@LN_S@ -f
+endif
+
+Gnatcoll_Build?=@BUILD_TYPE@
+export Gnatcoll_Build
+
+LIBEXT=@SO_EXT@
+
+ifeq (${OS},Windows_NT)
+DIRSEP=;
+EXE=.exe
+else
+DIRSEP=:
+EXE=
+endif
+
+################################################################
+# Below are variables and rules specific to installing *one* library.
+# They need the following variables:
+#   ${PROJECT}: name of the project file
+#   ${LIBNAME}: name of the library to install (e.g. libgnatcoll.so)
+#   ${MODULE}:  subdirectory in $libdir that contain the files
+#   ${SRCDIRS}: list of source directories
+#
+# To use these, we need to use a recursive make approach, where each
+# Makefile includes Makefile.conf after setting the above variables.
+# This approached is only used for installing, not building, the
+# libraries.
+################################################################
+
+STATIC_LIBNAME:=${LIBNAME}.a
+SO_LIBNAME:=${LIBNAME}${LIBEXT}
+
+# LIBSOFULL is the full name of the relocatable library.
+# On windows, gnatmake does not generate libraries with version numbers
+ifeq (${OS},Windows_NT)
+LIBSOFULL=${SO_LIBNAME}
+else
+LIBSOFULL=${SO_LIBNAME}.${VERSION}
+endif
+
+# 'libinstall' will install all the libraries (static or relocatable)
+libinstall: libinstall_static
+ifeq (${BUILDS_SHARED},yes)
+libinstall: libinstall_relocatable
+endif
+
+installsources:
+	@# Install the sources of the library. These can be in multiple source
+	@# directories. The second line generates the *.lgpr files which must contain
+	@# the name of one file per line (therefore the list is generated from ls, from
+	@# the installation directory, but the list of names is computed from the actual
+	@# source dirs). Of course, it would be more convenient if "gnatls" could output
+	@# that info directly.
+	@# We do the expansion of *.ad? directly in the Makefile, since among the SRCDIRS
+	@# we in fact have the library dir as well, which doesn't contain any source, and
+	@# install would complain.
+	@# This install is common to shared and static libraries.
+
+	@${CP} -p ${wildcard ${addsuffix *.ad[bs], ${SRCDIRS}}} ${includedir}/${TARNAME}
+ifeq (${OS},Windows_NT)
+	@cd ${includedir}/${TARNAME}; ls ${notdir ${wildcard ${addsuffix *.ad[bs], ${SRCDIRS}}}} | grep -v unix > ${DESTDIR}${prefix}/lib/gnat/${TARNAME}/${basename ${PROJECT}}.lgpr
+else
+	@cd ${includedir}/${TARNAME}; ls ${notdir ${wildcard ${addsuffix *.ad[bs], ${SRCDIRS}}}} | grep -v win32 > ${DESTDIR}${prefix}/lib/gnat/${TARNAME}/${basename ${PROJECT}}.lgpr
+endif
+
+libinstall_static: installsources
+	@echo "===== Installing ${MODULE} module (static) ======="
+	${CP} lib/${MODULE}/static/*.ali lib/${MODULE}/static/${STATIC_LIBNAME} ${libdir}/${TARNAME}/static
+
+libinstall_relocatable: installsources
+	@echo "===== Installing ${MODULE} module (relocatable) ======="
+
+	@# Install the ali files and libraries. The library itself is only copied once
+	@# as ${prefix}/lib/${TARNAME}/${TYPE}/lib*.so.${VERSION}, so that it is visible
+	@# in the library directory of the project files. We cannot install both shared
+	@# and static lib in the same directory, since otherwise ld will always pick up
+	@# the dynamic library
+
+	${CP} lib/${MODULE}/relocatable/*.ali lib/${MODULE}/relocatable/${LIBSOFULL} ${libdir}/${TARNAME}/relocatable
+
+	@# Create symbolic links with version numbers for the libraries, in
+	@# ${prefix}/lib/. The library itself is not duplicated and is found in the
+	@# subdirectory ${prefix}/lib/${TARNAME} so that it is visible for the GNAT
+	@# project files. We need to also install a link in lib/${TARNAME} or the linker
+	@# will complain
+
+	${RM} ${libdir}/${SO_LIBNAME}*
+
+ifneq (${OS},Windows_NT)
+	${RM} ${libdir}/${TARNAME}/relocatable/${SO_LIBNAME}
+	${RM} ${libdir}/${TARNAME}/relocatable/${SO_LIBNAME}.${basename ${VERSION}}
+	cd ${libdir}/${TARNAME}/relocatable; ${LN_S} ${LIBSOFULL} ${SO_LIBNAME}
+	cd ${libdir}/${TARNAME}/relocatable; ${LN_S} ${LIBSOFULL} ${SO_LIBNAME}.${basename ${VERSION}}
+	cd ${libdir}; ${LN_S} ${TARNAME}/relocatable/${LIBSOFULL} ${SO_LIBNAME}.${basename ${VERSION}}
+	cd ${libdir}; ${LN_S} ${TARNAME}/relocatable/${LIBSOFULL} ${SO_LIBNAME}.${VERSION}
+else
+	${CP} ${libdir}/${TARNAME}/relocatable/${LIBSOFULL} ${bindir}/${SO_LIBNAME}
+endif
+
+force:

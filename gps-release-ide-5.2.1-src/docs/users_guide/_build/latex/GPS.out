@@ -1,0 +1,151 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}
+\BOOKMARK [0][-]{chapter.2}{Description of the Main Windows}{}
+\BOOKMARK [1][-]{section.2.1}{The Welcome Dialog}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{The Tip of the Day}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{The Menu Bar}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{The Tool Bar}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{The Work Space}{chapter.2}
+\BOOKMARK [1][-]{section.2.6}{The Project View}{chapter.2}
+\BOOKMARK [1][-]{section.2.7}{The File View}{chapter.2}
+\BOOKMARK [1][-]{section.2.8}{The Entity View}{chapter.2}
+\BOOKMARK [1][-]{section.2.9}{The Window View}{chapter.2}
+\BOOKMARK [1][-]{section.2.10}{The Outline View}{chapter.2}
+\BOOKMARK [1][-]{section.2.11}{The Clipboard View}{chapter.2}
+\BOOKMARK [1][-]{section.2.12}{The Callgraph View}{chapter.2}
+\BOOKMARK [1][-]{section.2.13}{Bookmarks}{chapter.2}
+\BOOKMARK [1][-]{section.2.14}{The Messages Window}{chapter.2}
+\BOOKMARK [1][-]{section.2.15}{The Shell and Python Windows}{chapter.2}
+\BOOKMARK [1][-]{section.2.16}{The Locations View}{chapter.2}
+\BOOKMARK [1][-]{section.2.17}{The Execution Window}{chapter.2}
+\BOOKMARK [1][-]{section.2.18}{The Status Line}{chapter.2}
+\BOOKMARK [1][-]{section.2.19}{The Task Manager}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Online Help}{}
+\BOOKMARK [1][-]{section.3.1}{The Help Menu}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{Adding New Help Files}{chapter.3}
+\BOOKMARK [0][-]{chapter.4}{Multiple Document Interface}{}
+\BOOKMARK [1][-]{section.4.1}{Selecting Windows}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Closing Windows}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{Splitting Windows}{chapter.4}
+\BOOKMARK [1][-]{section.4.4}{Floating Windows}{chapter.4}
+\BOOKMARK [1][-]{section.4.5}{Moving Windows}{chapter.4}
+\BOOKMARK [1][-]{section.4.6}{Perspectives}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{Editing Files}{}
+\BOOKMARK [1][-]{section.5.1}{General Information}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{Editing Sources}{chapter.5}
+\BOOKMARK [1][-]{section.5.3}{The File Selector}{chapter.5}
+\BOOKMARK [1][-]{section.5.4}{Menu Items}{chapter.5}
+\BOOKMARK [1][-]{section.5.5}{Rectangles}{chapter.5}
+\BOOKMARK [1][-]{section.5.6}{Recording and replaying macros}{chapter.5}
+\BOOKMARK [1][-]{section.5.7}{Contextual Menus for Editing Files}{chapter.5}
+\BOOKMARK [1][-]{section.5.8}{Handling of case exceptions}{chapter.5}
+\BOOKMARK [1][-]{section.5.9}{Refactoring}{chapter.5}
+\BOOKMARK [1][-]{section.5.10}{Using an External Editor}{chapter.5}
+\BOOKMARK [1][-]{section.5.11}{Using the Clipboard}{chapter.5}
+\BOOKMARK [1][-]{section.5.12}{Saving Files}{chapter.5}
+\BOOKMARK [1][-]{section.5.13}{Remote Files}{chapter.5}
+\BOOKMARK [0][-]{chapter.6}{Source Navigation}{}
+\BOOKMARK [1][-]{section.6.1}{Support for Cross-References}{chapter.6}
+\BOOKMARK [1][-]{section.6.2}{The Navigate Menu}{chapter.6}
+\BOOKMARK [1][-]{section.6.3}{Contextual Menus for Source Navigation}{chapter.6}
+\BOOKMARK [1][-]{section.6.4}{Navigating with hyperlinks}{chapter.6}
+\BOOKMARK [1][-]{section.6.5}{Highlighting dispatching calls}{chapter.6}
+\BOOKMARK [0][-]{chapter.7}{Project Handling}{}
+\BOOKMARK [1][-]{section.7.1}{Description of the Projects}{chapter.7}
+\BOOKMARK [1][-]{section.7.2}{Supported Languages}{chapter.7}
+\BOOKMARK [1][-]{section.7.3}{Scenarios and Configuration Variables}{chapter.7}
+\BOOKMARK [1][-]{section.7.4}{Extending Projects}{chapter.7}
+\BOOKMARK [1][-]{section.7.5}{The Project View}{chapter.7}
+\BOOKMARK [1][-]{section.7.6}{Disabling Project Edition Features}{chapter.7}
+\BOOKMARK [1][-]{section.7.7}{The Project Menu}{chapter.7}
+\BOOKMARK [1][-]{section.7.8}{The Project Wizard}{chapter.7}
+\BOOKMARK [1][-]{section.7.9}{The Project Dependencies Editor}{chapter.7}
+\BOOKMARK [1][-]{section.7.10}{The Project Properties Editor}{chapter.7}
+\BOOKMARK [1][-]{section.7.11}{The Switches Editor}{chapter.7}
+\BOOKMARK [1][-]{section.7.12}{The Project Browser}{chapter.7}
+\BOOKMARK [0][-]{chapter.8}{Searching and Replacing}{}
+\BOOKMARK [0][-]{chapter.9}{Compilation/Build}{}
+\BOOKMARK [1][-]{section.9.1}{The Build Menu}{chapter.9}
+\BOOKMARK [1][-]{section.9.2}{The Target Configuration Dialog}{chapter.9}
+\BOOKMARK [1][-]{section.9.3}{The Build Mode}{chapter.9}
+\BOOKMARK [1][-]{section.9.4}{Working with two compilers}{chapter.9}
+\BOOKMARK [0][-]{chapter.10}{Source Browsing}{}
+\BOOKMARK [1][-]{section.10.1}{General Issues}{chapter.10}
+\BOOKMARK [1][-]{section.10.2}{Call Graph}{chapter.10}
+\BOOKMARK [1][-]{section.10.3}{Dependency Browser}{chapter.10}
+\BOOKMARK [1][-]{section.10.4}{Entity Browser}{chapter.10}
+\BOOKMARK [0][-]{chapter.11}{Debugging}{}
+\BOOKMARK [1][-]{section.11.1}{The Debug Menu}{chapter.11}
+\BOOKMARK [1][-]{section.11.2}{The Call Stack Window}{chapter.11}
+\BOOKMARK [1][-]{section.11.3}{The Data Window}{chapter.11}
+\BOOKMARK [1][-]{section.11.4}{The Breakpoint Editor}{chapter.11}
+\BOOKMARK [1][-]{section.11.5}{The Memory Window}{chapter.11}
+\BOOKMARK [1][-]{section.11.6}{Using the Source Editor when Debugging}{chapter.11}
+\BOOKMARK [1][-]{section.11.7}{The Assembly Window}{chapter.11}
+\BOOKMARK [1][-]{section.11.8}{The Debugger Console}{chapter.11}
+\BOOKMARK [1][-]{section.11.9}{Customizing the Debugger}{chapter.11}
+\BOOKMARK [0][-]{chapter.12}{Version Control System}{}
+\BOOKMARK [1][-]{section.12.1}{The VCS Explorer}{chapter.12}
+\BOOKMARK [1][-]{section.12.2}{The VCS Activities}{chapter.12}
+\BOOKMARK [1][-]{section.12.3}{The VCS Menu}{chapter.12}
+\BOOKMARK [1][-]{section.12.4}{The Version Control Contextual Menu}{chapter.12}
+\BOOKMARK [1][-]{section.12.5}{Working with global ChangeLog file}{chapter.12}
+\BOOKMARK [1][-]{section.12.6}{The Revision View}{chapter.12}
+\BOOKMARK [0][-]{chapter.13}{Tools}{}
+\BOOKMARK [1][-]{section.13.1}{The Tools Menu}{chapter.13}
+\BOOKMARK [1][-]{section.13.2}{Coding Standard}{chapter.13}
+\BOOKMARK [1][-]{section.13.3}{Visual Comparison}{chapter.13}
+\BOOKMARK [1][-]{section.13.4}{Code Fixing}{chapter.13}
+\BOOKMARK [1][-]{section.13.5}{Documentation Generation}{chapter.13}
+\BOOKMARK [1][-]{section.13.6}{Working With Unit Tests}{chapter.13}
+\BOOKMARK [1][-]{section.13.7}{Metrics}{chapter.13}
+\BOOKMARK [1][-]{section.13.8}{Code Coverage}{chapter.13}
+\BOOKMARK [1][-]{section.13.9}{Stack Analysis}{chapter.13}
+\BOOKMARK [0][-]{chapter.14}{Working in a Cross Environment}{}
+\BOOKMARK [1][-]{section.14.1}{Customizing your Projects}{chapter.14}
+\BOOKMARK [1][-]{section.14.2}{Debugger Issues}{chapter.14}
+\BOOKMARK [0][-]{chapter.15}{Using GPS for Remote Development}{}
+\BOOKMARK [1][-]{section.15.1}{Requirements}{chapter.15}
+\BOOKMARK [1][-]{section.15.2}{Setup the remote servers}{chapter.15}
+\BOOKMARK [1][-]{section.15.3}{Setup a remote project}{chapter.15}
+\BOOKMARK [1][-]{section.15.4}{Limitations}{chapter.15}
+\BOOKMARK [0][-]{chapter.16}{Customizing and Extending GPS}{}
+\BOOKMARK [1][-]{section.16.1}{The Preferences Dialog}{chapter.16}
+\BOOKMARK [1][-]{section.16.2}{GPS Themes}{chapter.16}
+\BOOKMARK [1][-]{section.16.3}{The Key Manager Dialog}{chapter.16}
+\BOOKMARK [1][-]{section.16.4}{The Plug-ins Editor}{chapter.16}
+\BOOKMARK [1][-]{section.16.5}{Customizing through XML and Python files}{chapter.16}
+\BOOKMARK [1][-]{section.16.6}{Adding support for new tools}{chapter.16}
+\BOOKMARK [1][-]{section.16.7}{Customization examples}{chapter.16}
+\BOOKMARK [1][-]{section.16.8}{Scripting GPS}{chapter.16}
+\BOOKMARK [1][-]{section.16.9}{Adding support for new Version Control Systems}{chapter.16}
+\BOOKMARK [1][-]{section.16.10}{The Server Mode}{chapter.16}
+\BOOKMARK [1][-]{section.16.11}{Adding project templates}{chapter.16}
+\BOOKMARK [0][-]{chapter.17}{Environment}{}
+\BOOKMARK [1][-]{section.17.1}{Command Line Options}{chapter.17}
+\BOOKMARK [1][-]{section.17.2}{Environment Variables}{chapter.17}
+\BOOKMARK [1][-]{section.17.3}{Running GPS on Mac OS X}{chapter.17}
+\BOOKMARK [1][-]{section.17.4}{Files}{chapter.17}
+\BOOKMARK [1][-]{section.17.5}{Reporting Suggestions and Bugs}{chapter.17}
+\BOOKMARK [1][-]{section.17.6}{Solving Problems}{chapter.17}
+\BOOKMARK [0][-]{chapter.18}{Scripting API reference for GPS}{}
+\BOOKMARK [1][-]{section.18.1}{Function description}{chapter.18}
+\BOOKMARK [1][-]{section.18.2}{User data in instances}{chapter.18}
+\BOOKMARK [1][-]{section.18.3}{Hooks}{chapter.18}
+\BOOKMARK [1][-]{section.18.4}{Functions}{chapter.18}
+\BOOKMARK [1][-]{section.18.5}{Classes}{chapter.18}
+\BOOKMARK [0][-]{chapter.19}{GNU Free Documentation License}{}
+\BOOKMARK [1][-]{section.19.1}{PREAMBLE}{chapter.19}
+\BOOKMARK [1][-]{section.19.2}{APPLICABILITY AND DEFINITIONS}{chapter.19}
+\BOOKMARK [1][-]{section.19.3}{VERBATIM COPYING}{chapter.19}
+\BOOKMARK [1][-]{section.19.4}{COPYING IN QUANTITY}{chapter.19}
+\BOOKMARK [1][-]{section.19.5}{MODIFICATIONS}{chapter.19}
+\BOOKMARK [1][-]{section.19.6}{COMBINING DOCUMENTS}{chapter.19}
+\BOOKMARK [1][-]{section.19.7}{COLLECTIONS OF DOCUMENTS}{chapter.19}
+\BOOKMARK [1][-]{section.19.8}{AGGREGATION WITH INDEPENDENT WORKS}{chapter.19}
+\BOOKMARK [1][-]{section.19.9}{TRANSLATION}{chapter.19}
+\BOOKMARK [1][-]{section.19.10}{TERMINATION}{chapter.19}
+\BOOKMARK [1][-]{section.19.11}{FUTURE REVISIONS OF THIS LICENSE}{chapter.19}
+\BOOKMARK [1][-]{section.19.12}{ADDENDUM: How to use this License for your documents}{chapter.19}
+\BOOKMARK [0][-]{chapter.20}{Indices and tables}{}
+\BOOKMARK [0][-]{section*.697}{Python Module Index}{}
+\BOOKMARK [0][-]{section*.698}{Index}{}

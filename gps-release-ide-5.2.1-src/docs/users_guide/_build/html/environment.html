@@ -1,0 +1,535 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>17. Environment &mdash; GPS 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GPS 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="18. Scripting API reference for GPS" href="GPS.html" />
+    <link rel="prev" title="16. Customizing and Extending GPS" href="extending.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="GPS.html" title="18. Scripting API reference for GPS"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="extending.html" title="16. Customizing and Extending GPS"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">17. Environment</a><ul>
+<li><a class="reference internal" href="#command-line-options">17.1. Command Line Options</a></li>
+<li><a class="reference internal" href="#environment-variables">17.2. Environment Variables</a></li>
+<li><a class="reference internal" href="#running-gps-on-mac-os-x">17.3. Running GPS on Mac OS X</a></li>
+<li><a class="reference internal" href="#files">17.4. Files</a></li>
+<li><a class="reference internal" href="#reporting-suggestions-and-bugs">17.5. Reporting Suggestions and Bugs</a></li>
+<li><a class="reference internal" href="#solving-problems">17.6. Solving Problems</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="extending.html"
+                        title="previous chapter">16. Customizing and Extending GPS</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="GPS.html"
+                        title="next chapter">18. Scripting API reference for <cite>GPS</cite></a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/environment.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="environment">
+<span id="id1"></span><h1>17. Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="command-line-options">
+<span id="index-0"></span><span id="id2"></span><h2>17.1. Command Line Options<a class="headerlink" href="#command-line-options" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-1"></span><span class="target" id="index-2"></span><p id="index-3">The command line options are:</p>
+<div class="highlight-ada"><pre>Usage:
+   gps [options] [-Pproject-file] [[+line] source1] [[+line] source2] ...
+Options:
+   --help              Show this help message and exit
+   --version           Show the GPS version and exit
+   --debug[=program]   Start a debug session and optionally load the
+                       program with the given arguments
+   --debugger debugger Specify the debugger's command line
+   --hide              Hide GPS main window
+   --host=tools_host   Use tools_host to launch tools (e.g. gdb)
+   --target=TARG:PRO   Load program on machine TARG using protocol PRO
+   --load=lang:file    Execute an external file written in the
+                       language lang
+   --eval=lang:file    Execute an in-line script written in the
+                       language lang
+   --readonly          Open all files in read-only mode
+   --server=port       Start GPS in server mode, opening a socket on the
+                       given port
+   --tracelist         Output the current configuration for logs
+   --traceon=name      Activate the logs for a given module
+   --traceoff=name     Deactivate the logs for a given module
+   --tracefile=file    Parse an alternate configuration file for the logs
+
+Source files can be absolute or relative pathnames.
+If you prepend a file name with '=', this file will be
+searched anywhere on the project's source path
+
+To open a file at a given line, use the '+line' prefix, e.g.
+gps +40 source.adb
+
+`tools_host` corresponds to a remote host's nickname as defined in
+:ref:`Setup_the_remote_servers`.</pre>
+</div>
+</div>
+<div class="section" id="environment-variables">
+<span id="id3"></span><h2>17.2. Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-4"></span><p id="index-5">The following environment variables can be set to override some default
+settings in GPS:</p>
+<dl class="docutils">
+<dt><em>GPS_HOME</em></dt>
+<dd><span class="target" id="index-6"></span><p class="first last" id="index-7">Override the variable HOME if present. All the configuration files and
+directories used by GPS are either relative to $HOME/.gps (%HOME%\.gps under
+Windows) if GPS_HOME is not set, or to $GPS_HOME/.gps (respectively
+%GPS_HOME%\.gps) if set.</p>
+</dd>
+<dt><em>GPS_DOC_PATH</em></dt>
+<dd><p class="first last" id="index-8">Set the search path for the documentation. <a class="reference internal" href="help.html#adding-new-help-files"><em>Adding New Help Files</em></a>.</p>
+</dd>
+<dt><em>GPS_CUSTOM_PATH</em></dt>
+<dd><p class="first last" id="index-9">Contains a list of directories to search for custom files. See
+<a class="reference internal" href="extending.html#customizing-through-xml-and-python-files"><em>Customizing through XML and Python files</em></a> for more details.</p>
+</dd>
+<dt><em>GPS_CHANGELOG_USER</em></dt>
+<dd><p class="first last" id="index-10">Contains the user and e-mail to use in the global ChangeLog files. Note that
+the common usage is to have two spaces between the name and the e-mail. Ex:
+&#8220;John Does  &lt;<a class="reference external" href="mailto:john&#46;doe&#37;&#52;&#48;home&#46;com">john<span>&#46;</span>doe<span>&#64;</span>home<span>&#46;</span>com</a>&gt;&#8221;</p>
+</dd>
+<dt><em>GPS_STARTUP_PATH</em></dt>
+<dd><p class="first last" id="index-11">Contains the value of the <cite>PATH</cite> environment variable just before GPS was
+started. This is used by GPS to restore the proper environment before
+spawning applications, no matter what particular directories it needed to set
+for its own purpose.</p>
+</dd>
+<dt><em>GPS_STARTUP_LD_LIBRARY_PATH</em></dt>
+<dd><p class="first last" id="index-12">Same as <cite>GPS_STARTUP_LD_LIBRARY_PATH</cite> but for the <cite>LD_LIBRARY_PATH</cite>
+variable.</p>
+</dd>
+<dt><em>GPS_MEMORY_MONITOR</em></dt>
+<dd><p class="first last" id="index-13">If set, GPS will add special code on every allocation and deallocation, thus
+slowing things down a bit, that makes it possible to check where the biggest
+amount of memory is allocated, through the <cite>GPS.debug_memory_usage</cite> python
+command.</p>
+</dd>
+<dt><em>GPS_PYTHONHOME</em></dt>
+<dd><p class="first last" id="index-14">If set, the Python interpreter will look for libraries in the subdirectory
+lib/python&lt;version&gt; of the directory contained in <cite>GPS_PYTHONHOME</cite>.</p>
+</dd>
+<dt><em>GNAT_CODE_PAGE</em></dt>
+<dd><p class="first last" id="index-15">This variable can be set to <cite>CP_ACP</cite> or <cite>CP_UTF8</cite> and is used to control the
+code page used on Windows platform. The default is <cite>CP_UTF8</cite> to support more
+languages. If file or directory names are using accents for example it may be
+necessary to set this variable to <cite>CP_ACP</cite> which is the default Windows ANSI
+code page.</p>
+</dd>
+<dt><em>GPS_ROOT</em></dt>
+<dd><p class="first last" id="index-16">Override and hardcode the default root installation directory.
+This variable should in general not be needed, except by GPS developers,
+in some rare circumstances. GPS will find all its resource files (e.g.
+images, plug-ins, xml files) from this root prefix, so setting GPS_ROOT
+to a wrong value will cause GPS to misbehave.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="running-gps-on-mac-os-x">
+<span id="id4"></span><h2>17.3. Running GPS on Mac OS X<a class="headerlink" href="#running-gps-on-mac-os-x" title="Permalink to this headline">¶</a></h2>
+<p id="index-17">The current version of GPS on Mac OS X requires an X11 server. Such a server is
+distributed with Mac OS X Panther and Mac OS X Tiger.</p>
+<p>Additionally, if you are launching GPS from a standard Terminal, you need to
+specify the display on which to launch GPS, by typing:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="n">export</span> <span class="n">DISPLAY</span><span class="o">=</span><span class="p">:</span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>before launching GPS.</p>
+<p>Note: GPS does not support files with line endings in CR.</p>
+</div>
+<div class="section" id="files">
+<span id="id5"></span><h2>17.4. Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils" id="index-18">
+<dt><em>$HOME/.gps</em></dt>
+<dd><span class="target" id="index-19"></span><p class="first last" id="index-20">GPS state directory. Defaults to C:\.gps under Windows systems if HOME or
+USERPROFILE environment variables are not defined.</p>
+</dd>
+<dt><em>$HOME/.gps/log</em></dt>
+<dd><p class="first" id="log-file"><span id="index-21"></span>Log file created automatically by GPS.  When GPS is running, it will create a
+file named <tt class="file docutils literal"><span class="pre">log.&lt;pid&gt;</span></tt>, where <tt class="file docutils literal"><span class="pre">&lt;pid&gt;</span></tt> is the GPS process id, so
+that multiple GPS sessions do not clobber each other&#8217;s log. In case of a
+successful session, this file is renamed <tt class="file docutils literal"><span class="pre">log</span></tt> when exiting; in case of
+an unexpected exit (a bug box will be displayed), the log file is kept under
+its original name.</p>
+<p class="last">Note that the name of the log file is configured by the <tt class="file docutils literal"><span class="pre">traces.cfg</span></tt>
+file.</p>
+</dd>
+<dt><em>$HOME/.gps/aliases</em></dt>
+<dd><p class="first last" id="index-22">File containing the user-defined aliases (<a class="reference internal" href="extending.html#defining-text-aliases"><em>Defining text aliases</em></a>).</p>
+</dd>
+<dt><em>$HOME/.gps/plug-ins</em></dt>
+<dd>Directory containing files with user-defined plug-ins.  All xml and python
+files found under this directory are loaded by GPS during start up.  You can
+create/edit these files to add your own menu/tool-bar entries in GPS, or
+define support for new languages.
+<a class="reference internal" href="extending.html#customizing-through-xml-and-python-files"><em>Customizing through XML and Python files</em></a> and
+<a class="reference internal" href="extending.html#adding-support-for-new-languages"><em>Adding support for new languages</em></a>.</dd>
+<dt><em>$HOME/.gps/keys.xml</em></dt>
+<dd>Contains all the key bindings for the actions defined in GPS or in the
+custom files. This only contains the key bindings overridden through the
+key shortcuts editor (see <a class="reference internal" href="extending.html#the-key-manager-dialog"><em>The Key Manager Dialog</em></a>).</dd>
+<dt><em>$HOME/.gps/gtkrc</em></dt>
+<dd><span class="target" id="index-23"></span><p class="first" id="index-24">Configuration and theme file for gtkrc. This file can be edited to activate
+gtk+ specific aspects, or change the look of GPS in some measure. Mostly,
+everything can be done through the standard GPS preferences, but this file
+can be used to get access to the old GPS preference &#8220;Dynamic Key Binding&#8221;.
+This preference activated a gtk+ behavior were key shortcuts for menu can be
+changed by simply pressing the appropriate key combination when the mouse is
+over that menu. It has various dangereous aspects and is not fully supported
+by GPS, so was removed as a preference, but you can add the following line in
+<tt class="file docutils literal"><span class="pre">gtkrc</span></tt> to get this back:</p>
+<div class="last highlight-ada"><div class="highlight"><pre><span class="n">gtk</span><span class="o">-</span><span class="n">can</span><span class="o">-</span><span class="n">change</span><span class="o">-</span><span class="n">accels</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</dd>
+<dt><em>$HOME/.gps/actions.xml</em></dt>
+<dd>Contains the definition of all the actions that were defined through the
+graphical interface. This is loaded last, and overrides all actions defined
+elsewhere.</dd>
+<dt><em>$HOME/.gps/perspectives.xml</em></dt>
+<dd>Desktop file in XML format (using the menu <cite>File-&gt;Save More-&gt;Desktop</cite>),
+loaded automatically if found.</dd>
+<dt><em>$HOME/.gps/locations.xml</em></dt>
+<dd>This file contains the list of locations that GPS has previously edited. It
+corresponds to the history navigation (<cite>Navigate-&gt;Back</cite> and
+<cite>Navigate-&gt;Forward</cite>)</dd>
+<dt><em>$HOME/.gps/properties.xml</em></dt>
+<dd>This file is used to store file-specific properties across GPS sessions. In
+particular, it contains the encoding to use for various files when the
+default encoding isn&#8217;t appropriate.</dd>
+<dt><em>$HOME/.gps/histories.xml</em></dt>
+<dd><p class="first last" id="index-25">Contains the state and history of combo boxes (e.g. the
+<cite>Run-&gt;Custom...</cite> dialog).</p>
+</dd>
+<dt><em>$HOME/.gps/targets.xml</em></dt>
+<dd><p class="first last" id="index-26">Contains the build targets defined by the user.</p>
+</dd>
+<dt><em>$HOME/.gps/preferences</em></dt>
+<dd><p class="first last" id="index-27">Contains all the preferences in XML format, as specified in the
+preferences menu.</p>
+</dd>
+<dt><em>$HOME/.gps/traces.cfg</em></dt>
+<dd><p class="first">Default configuration for the system traces. These traces are used to analyze
+problems with GPS.  By default, they are sent to the file
+<tt class="file docutils literal"><span class="pre">$HOME/.gps/log.&lt;pid&gt;</span></tt>.</p>
+<p class="last">This file is created automatically when the <tt class="file docutils literal"><span class="pre">$HOME/.gps/</span></tt> directory is
+created. If you remove it manually, it won&#8217;t be recreated the next time you
+start GPS.</p>
+</dd>
+<dt><em>$HOME/.gps/startup.xml</em></dt>
+<dd>This file contains the list of scripts to load at startup, as well as
+additional code that need to be executed to setup the script.</dd>
+<dt><em>$HOME/.gpe/activity_log.tmplt</em></dt>
+<dd>Template file used to generate activities&#8217; group commit-log and patch
+file&#8217;s header. If not present the system wide template (see below) is
+used. The set of configurable tags are described into this template.<span class="target" id="index-28"></span></dd>
+<dt><em>prefix</em></dt>
+<dd>The prefix directory where GPS is installed, e.g <tt class="file docutils literal"><span class="pre">/opt/gps</span></tt>.</dd>
+<dt><em>prefix</em>/bin</dt>
+<dd>The directory containing the GPS executables.</dd>
+<dt><em>prefix</em>/etc/gps</dt>
+<dd>The directory containing global configuration files for GPS.</dd>
+<dt><em>prefix</em>/lib</dt>
+<dd>This directory contains the shared libraries used by GPS.</dd>
+<dt><em>prefix</em>/share/doc/gps/html</dt>
+<dd>GPS will look for all the documentation files under this directory.</dd>
+<dt><em>prefix</em>/share/examples/gps</dt>
+<dd>This directory contains source code examples.</dd>
+<dt><em>prefix</em>/share/examples/gps/language</dt>
+<dd>This directory contains sources showing how to provide a shared library to
+dynamically define a new language. See
+<a class="reference internal" href="extending.html#adding-support-for-new-languages"><em>Adding support for new languages</em></a>.</dd>
+<dt><em>prefix</em>/share/examples/gps/tutorial</dt>
+<dd><p class="first">This directory contains the sources used by the GPS tutorial.</p>
+<p class="last" id="index-30">See <a class="reference external" href="gps-tutorial.html">gps-tutorial.html</a>.</p>
+</dd>
+<dt><em>prefix</em>/share/gps/plug-ins</dt>
+<dd>Directory containing files with system-wide plug-ins (xml and python files)
+loaded automatically at start-up.</dd>
+<dt><em>prefix</em>/share/gps/library</dt>
+<dd>Directory containing files with system-wide plug-ins (xml and python files)
+that are not loaded automatically at startup, but can be selected in the
+Plug-ins editor.</dd>
+<dt><em>prefix</em>/share/gps/gps-animation.png</dt>
+<dd><p class="first last" id="index-31">Default image displayed in the top right corner of GPS when GPS is idle.</p>
+</dd>
+<dt><em>prefix</em>/share/gps/gps-animation.gif</dt>
+<dd><p class="first last" id="index-32">Animated image displayed in the top right corner of GPS to indicate that
+actions (e.g compilation) are on going. If you remove this file, the idle
+image (<tt class="file docutils literal"><span class="pre">gps-animation.png</span></tt>) will always be displayed.</p>
+</dd>
+<dt><em>prefix</em>/share/gps/gps-splash.png</dt>
+<dd><p class="first last" id="index-33">Splash screen displayed by default when GPS is started.</p>
+</dd>
+<dt><em>prefix</em>/share/gps/perspectives.xml</dt>
+<dd><span class="target" id="index-34"></span><p class="first last" id="index-35">This is the description of the default desktop that GPS uses when the user
+hasn&#8217;t defined his own default desktop and no project specific desktop
+exists.  You can modify this file if you want, knowing that this will impact
+all users of GPS sharing this installation.  The format of this file is the
+same as $HOME/.gps/perspectives.xml, which can be copied from your own
+directory if you wish.</p>
+</dd>
+<dt><em>prefix</em>/share/gps/default.gpr</dt>
+<dd><p class="first last" id="index-36">Default project used by GPS. Can be modified after installation time to
+provide useful default for a given system or project.</p>
+</dd>
+<dt><em>prefix</em>/share/gps/readonly.gpr</dt>
+<dd>Project used by GPS as the default project when working in a read-only
+directory.</dd>
+<dt><em>prefix</em>/share/gps/activity_log.tmplt</dt>
+<dd>Template file used by default to generate activities&#8217; group commit-log
+and patch file&#8217;s header. This file can be copied into user home
+directory and customized (see above).</dd>
+<dt><em>prefix</em>/share/locale</dt>
+<dd>Directory used to retrieve the translation files, when relevant.</dd>
+</dl>
+</div>
+<div class="section" id="reporting-suggestions-and-bugs">
+<span id="id6"></span><h2>17.5. Reporting Suggestions and Bugs<a class="headerlink" href="#reporting-suggestions-and-bugs" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-37"></span><p id="index-38">If you would like to make suggestions about GPS, or if you encountered a bug,
+please report it to <a class="reference external" href="mailto:report&#37;&#52;&#48;gnat&#46;com">mailto:report<span>&#64;</span>gnat<span>&#46;</span>com</a> if you
+are a supported user, and to <a class="reference external" href="mailto:gps-devel&#37;&#52;&#48;lists&#46;act-europe&#46;fr">mailto:gps-devel<span>&#64;</span>lists<span>&#46;</span>act-europe<span>&#46;</span>fr</a> otherwise.</p>
+<p>Please try to include a detailed description of the problem, including sources
+to reproduce it if possible/needed, and/or a scenario describing the actions
+performed to reproduce the problem, as well as the tools (e.g <em>debugger</em>,
+<em>compiler</em>, <em>call graph</em>) involved.</p>
+<p>The files <tt class="file docutils literal"><span class="pre">$HOME/.gps/log</span></tt> may also
+bring some useful information when reporting a bug.</p>
+<p>In case GPS generates a bug box, the log file will be kept under a separate
+name (<tt class="file docutils literal"><span class="pre">$HOME/.gps/log.&lt;pid&gt;</span></tt> so that it does not get erased by further
+sessions. Be sure to include the right log file when reporting a bug box.</p>
+</div>
+<div class="section" id="solving-problems">
+<h2>17.6. Solving Problems<a class="headerlink" href="#solving-problems" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-39"></span><p id="index-40">This section addresses some common problems that may arise when using or
+installing GPS.</p>
+<dl class="docutils">
+<dt><em>Non-privileged users cannot start GPS</em></dt>
+<dd><p class="first">Q: I have installed GPS originally as super user, and ran GPS successfully,
+but normal users can&#8217;t.</p>
+<p class="last">A: You should check the permissions of the directory $HOME/.gps and its
+subdirectories, they should be owned by the user.</p>
+</dd>
+<dt><em>GPS crashes whenever I open a source editor</em></dt>
+<dd>This is usually due to font problems. Editing the file
+<tt class="file docutils literal"><span class="pre">$HOME/.gps/preferences</span></tt> and changing the name of the fonts, e.g
+changing <em>Courier</em> by <em>Courier Medium</em>, and <em>Helvetica</em> by <em>Sans</em>
+should solve the problem.</dd>
+<dt><em>GPS refuses to start the debugger</em></dt>
+<dd><p class="first last" id="index-41">If GPS cannot properly initialize the debugger (using the menu
+<cite>Debug-&gt;Initialize</cite>), it is usually because the underlying debugger (gdb)
+cannot be launched properly. To verify this, try to launch the &#8216;gdb&#8217; command
+from a shell (i.e outside GPS). If gdb cannot be launched from a shell, it
+usually means that you are using a wrong version of gdb (e.g a version of gdb
+built for Solaris 8, but run on Solaris 2.6).</p>
+</dd>
+<dt><em>GPS is frozen during a debugging session</em></dt>
+<dd><p class="first" id="index-42">If GPS is no longer responding while debugging an application you should
+first wait a little bit, since some communications between GPS and gdb can
+take a long time to finish. If GPS is still not responding after a few
+minutes, you can usually get the control back in GPS by either typing
+<tt class="kbd docutils literal"><span class="pre">Ctrl-C</span></tt> in the shell where you&#8217;ve started GPS: this should unblock it;
+if it does not work, you can kill the gdb process launched by GPS using the
+<cite>ps</cite> and <cite>kill</cite>, or the <cite>top</cite> command under Unix,</p>
+<span class="target" id="index-43"></span><p class="last" id="index-44">and the <cite>Task Manager</cite> under Windows: this will terminate your debugging
+session, and will unblock GPS.</p>
+</dd>
+<dt><em>My Ada program fails during elaboration. How can I debug it ?</em></dt>
+<dd><span class="target" id="index-45"></span><p class="first" id="index-46">If your program was compiled with GNAT, the main program is generated by the
+binder. This program is an ordinary Ada (or C if the <em>-C</em> switch was used)
+program, compiled in the usual manner, and fully debuggable provided that the
+<em>-g</em> switch is used on the <em>gnatlink</em> command (or <em>-g</em> is used in the
+<em>gnatmake</em> command itself).</p>
+<p class="last">The name of this package containing the main program is <tt class="file docutils literal"><span class="pre">b~xxx.ads/adb</span></tt>
+where xxx is the name of the Ada main unit given in the gnatbind command, and
+you can edit and debug this file in the normal manner. You will see a series
+of calls to the elaboration routines of the packages, and you can debug these
+in the usual manner, just as if you were debugging code in your application.</p>
+</dd>
+</dl>
+<p><em>How can I debug the Ada run-time library ?</em></p>
+<blockquote>
+<div><p>The run time distributed in binary versions of GNAT hasn&#8217;t been compiled with
+debug information. Thus, it needs to be recompiled before you can actually
+debug it.</p>
+<p>The simplest is to recompile your application by adding the switches <em>-a</em> and
+<em>-f</em> to the <em>gnatmake</em> command line. This extra step is then no longer
+required, assuming that you keep the generated object and ali files
+corresponding to the GNAT run time available.</p>
+<p>Another possibility on Unix systems is to use the file
+<tt class="file docutils literal"><span class="pre">Makefile.adalib</span></tt> that can be found in the adalib directory of your
+GNAT installation and specify e.g <em>-g -O2</em> for the <em>CFLAGS</em> switches.</p>
+</div></blockquote>
+<p><em>The GPS main window is not displayed</em></p>
+<blockquote>
+<div>If when launching GPS, nothing happens, you can try to rename the <tt class="file docutils literal"><span class="pre">.gps</span></tt>
+directory (see <a class="reference internal" href="#files"><em>Files</em></a>) to start from a fresh set up.</div></blockquote>
+<p><em>My project have several files with the same name. How can I import it in GPS?</em></p>
+<blockquote>
+<div><p>GPS&#8217;s projects do not allow implicit overriding of sources file, i.e.  you
+cannot have multiple times the same file name in the project hierarchy. The
+reason is that GPS needs to know exactly where the file is, and cannot
+reliably guess which occurrence to use.</p>
+<p>There are several solutions to handle this issue:</p>
+<p><em>Put all duplicate files in the same project</em></p>
+<blockquote>
+<div><p>There is one specific case where a project is allowed to have duplicate
+source files: if the list of source directories is specified explicitly.
+All duplicate files must be in the same project. With these conditions,
+there is no ambiguity for GPS and the GNAT tools which file to use, and the
+first file found on the source path is the one hiding all the others. GPS
+only shows the first file.</p>
+<p>You can then have a scenario variable that changes the order of source
+directories to give visibility on one of the other duplicate files.</p>
+</div></blockquote>
+<p><em>Use scenario variables in the project</em></p>
+<blockquote>
+<div>The idea is that you define various scenarios in your project (For instance
+compiling in &#8220;debug&#8221; mode or &#8220;production&#8221; mode), and change the source
+directories depending on this setup.  Such projects can be edited directly
+from GPS (in the project properties editor, this is the right part of the
+window, as described in this documentation). On top of the project view
+(left part of the GPS main window), you have a combo box displayed for each
+of the variable, allowing a simple switch between scenarios depending on
+what you want to build.</div></blockquote>
+<p><em>Use extending projects</em></p>
+<blockquote>
+<div><p>These projects cannot currently be created through GPS, so you will need to
+edit them by hand. See the GNAT user&#8217;s guide for more information on
+extending projects.</p>
+<p>The idea behind this approach is that you can have a local overriding of
+some source files from the common build/source setup (if you are working on
+a small part of the whole system, you may not want to have a complete copy
+of the code on your local machine).</p>
+</div></blockquote>
+</div></blockquote>
+<p><em>GPS is very slow compared to previous versions under unix (GPS &lt; 4.0.0)</em></p>
+<blockquote>
+<div>GPS versions 4.x need the X RENDER extension when running under unix
+systems to perform at a reasonable speed, so you need to make sure your X
+server properly supports this extension.</div></blockquote>
+<p><em>Using the space key brings the smart completion window under Ubuntu</em></p>
+<blockquote>
+<div><p>This is specific to the way GNOME is configured on Ubuntu distributions.  To
+address this incompatibility, close GPS, then go to the GNOME menu
+<em>System-&gt;Preferences-&gt;Keyboard</em> (or launch <em>gnome-keyboard-properties</em>).</p>
+<p>Select the <em>Layout</em> tab, click on <em>Layout Options</em>. Then click twice on
+<em>Using space key to input non-breakable space character</em> and then select
+<em>Usual space at any level</em> and then close the dialogs.</p>
+</div></blockquote>
+<p><em>GPS crashes on some GNU/Linux distributions at start up</em></p>
+<blockquote>
+<div><p>Look at the <tt class="file docutils literal"><span class="pre">~/.gps/log.xxx</span></tt> file and if there is a message that
+looks like:</p>
+<blockquote>
+<div>[GPS.MAIN_WINDOW] 1/16 loading gps-animation.png
+[UNEXPECTED_EXCEPTION] 1/17 Unexpected exception: Exception name: CONSTRAINT_ERROR
+_UNEXPECTED_EXCEPTION_ Message: gtk-image.adb:281 access check failed</div></blockquote>
+<p>Then it means there is a conflict with <tt class="file docutils literal"><span class="pre">~/.local/share/mime/mime.cache</span></tt>.
+Removing this file will solve this conflict.</p>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="GPS.html" title="18. Scripting API reference for GPS"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="extending.html" title="16. Customizing and Extending GPS"
+             >previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

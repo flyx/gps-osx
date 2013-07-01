@@ -1,0 +1,6 @@
+project remove_val is
+
+   for Object_Dir use ".";
+
+end remove_val;
+

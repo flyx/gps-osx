@@ -1,0 +1,48 @@
+project Add_Attr6_Vars is
+
+   type A_Type is
+      ("1", "2", "3");
+   A : A_Type := external ("A");
+   type B_Type is
+      ("B1", "B2", "B3");
+   B : B_Type := external ("B");
+
+end Add_Attr6_Vars;
+--  Scenario variables are defined only in an imported project
+with "add_attr6_vars";
+
+project Add_Attr6 is
+
+   type A_Type is
+      ("1", "2", "3");
+   type B_Type is
+      ("B1", "B2", "B3");
+   for Source_Files use ();
+   B : B_Type := external ("B");
+   A : A_Type := external ("A");
+
+   case B is
+
+      when "B1" =>
+
+         case A is
+
+            when "1" =>
+               for Object_Dir use "new_obj_dir";
+
+            when "2" =>
+               for Object_Dir use ".";
+
+            when "3" =>
+               for Object_Dir use ".";
+         end case;
+
+      when "B2" =>
+         for Object_Dir use ".";
+
+      when "B3" =>
+         for Object_Dir use ".";
+   end case;
+
+end Add_Attr6;
+

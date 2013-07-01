@@ -1,0 +1,1571 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5. Editing Files &mdash; GPS 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GPS 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="6. Source Navigation" href="navigation.html" />
+    <link rel="prev" title="4. Multiple Document Interface" href="mdi.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="navigation.html" title="6. Source Navigation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mdi.html" title="4. Multiple Document Interface"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">5. Editing Files</a><ul>
+<li><a class="reference internal" href="#general-information">5.1. General Information</a></li>
+<li><a class="reference internal" href="#editing-sources">5.2. Editing Sources</a><ul>
+<li><a class="reference internal" href="#key-bindings">5.2.1. Key bindings</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-file-selector">5.3. The File Selector</a></li>
+<li><a class="reference internal" href="#menu-items">5.4. Menu Items</a><ul>
+<li><a class="reference internal" href="#the-file-menu">5.4.1. The File Menu</a></li>
+<li><a class="reference internal" href="#the-edit-menu">5.4.2. The Edit Menu</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rectangles">5.5. Rectangles</a></li>
+<li><a class="reference internal" href="#recording-and-replaying-macros">5.6. Recording and replaying macros</a></li>
+<li><a class="reference internal" href="#contextual-menus-for-editing-files">5.7. Contextual Menus for Editing Files</a></li>
+<li><a class="reference internal" href="#handling-of-case-exceptions">5.8. Handling of case exceptions</a></li>
+<li><a class="reference internal" href="#refactoring">5.9. Refactoring</a><ul>
+<li><a class="reference internal" href="#rename-entity">5.9.1. Rename Entity</a></li>
+<li><a class="reference internal" href="#name-parameters">5.9.2. Name Parameters</a></li>
+<li><a class="reference internal" href="#extract-subprogram">5.9.3. Extract Subprogram</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-an-external-editor">5.10. Using an External Editor</a></li>
+<li><a class="reference internal" href="#using-the-clipboard">5.11. Using the Clipboard</a></li>
+<li><a class="reference internal" href="#saving-files">5.12. Saving Files</a></li>
+<li><a class="reference internal" href="#remote-files">5.13. Remote Files</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mdi.html"
+                        title="previous chapter">4. Multiple Document Interface</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="navigation.html"
+                        title="next chapter">6. Source Navigation</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/editing.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="editing-files">
+<span id="id1"></span><h1>5. Editing Files<a class="headerlink" href="#editing-files" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general-information">
+<span id="index-0"></span><span id="id2"></span><h2>5.1. General Information<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h2>
+<p>Source editing is one of the central parts of GPS, giving in turn access to
+many other functionalities, including extended source navigation and source
+analyzing tools.</p>
+<img alt="_images/source-editor.jpg" id="index-1" src="_images/source-editor.jpg" />
+<p>The integrated source editor provides all the usual capabilities found in
+integrated environments, including:</p>
+<dl class="docutils">
+<dt><em>Title bar</em></dt>
+<dd>Showing the full name of the file including path information.</dd>
+<dt><em>Line number information</em></dt>
+<dd>This is the left area of the source editor. Line numbers can be disabled from
+the preferences. <a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>.  Note that this area can also
+display additional information, such as the current line of execution when
+debugging, or cvs annotations.</dd>
+<dt><em>Scrollbar</em></dt>
+<dd>Located on the right of the editor, it allows you to scroll through the
+source file.</dd>
+<dt><em>Speed column</em></dt>
+<dd>This column, when visible, is located on the left of the editor. It allows
+you to view all the highlighted lines in a file, at a glance. For example,
+all the lines containing compilation errors are displayed in the Speed
+Column.  See <a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a> for information on how to
+customize the behavior of the Speed Column.</dd>
+<dt><em>Status bar</em></dt>
+<dd>Giving information about the file. It is divided in two sections, one
+on the left and one on the right of the window.</dd>
+<dt><em>The left section</em></dt>
+<dd>The first box on the left shows the current subprogram name for languages
+that support this capability. Currently <cite>Ada</cite>, <cite>C</cite> and <cite>C++</cite> have this
+ability. See <a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a> to enable or disable this feature.</dd>
+<dt><em>The right section</em></dt>
+<dd><p class="first">If the file is maintained under version control, and version control is
+supported and enabled in GPS, the first box on the left will show VCS
+information on the file: the VCS kind (e.g. <em>CVS</em>), followed by the revision
+number, and if available, the status of the file.</p>
+<p>The second box shows the current editing mode. This is either <em>Insert</em> or
+<em>Overwrite</em> and can be changed using the insert keyboard keys by default.</p>
+<p>The third box shows the writable state of the file.  You can change this
+state by clicking on the label directly: this will switch between <em>Writable</em>
+and <em>Read Only</em>.  Note that this will not change the permissions of the file
+on disk, it will only change the writable state of the source editor within
+GPS.</p>
+<p>When trying to save a file which is read only on the disk, GPS will ask for
+confirmation, and if possible, will force saving of the file, keeping its
+read only state.</p>
+<p class="last">The fourth box shows whether the file has been modified since the last save.
+The three possible states are:</p>
+</dd>
+<dt><em>Unmodified</em></dt>
+<dd>The file has not been modified since the file has been loaded or saved.</dd>
+<dt><em>Modified</em></dt>
+<dd>The file has been modified since last load or save. Note that if you undo all
+the editing operations until the last save operation, this label will change
+to <em>Unmodified</em>.</dd>
+<dt><em>Saved</em></dt>
+<dd><p class="first">The file has been saved and not modified since.</p>
+<p class="last">The fifth box displays the position of the cursor in the file by a line and a
+column number.</p>
+</dd>
+<dt><em>Contextual menu</em></dt>
+<dd>Displayed when you right-click on any area of the source editor.  See in
+particular <a class="reference internal" href="navigation.html#contextual-menus-for-source-navigation"><em>Contextual Menus for Source Navigation</em></a> for more details.</dd>
+<dt><em>Syntax highlighting</em></dt>
+<dd><p class="first">Based on the programming language associated with the file, reserved words
+and languages constructs such as comments and strings are highlighted in
+different colors and fonts. See <a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a> for a list of
+settings that can be customized.</p>
+<p class="last">By default, GPS knows about many languages. You can also easily add support
+for other languages through XML files. Most languages supported by GPS will
+provide syntax highlighting in the editor.</p>
+</dd>
+<dt><em>Automatic indentation</em></dt>
+<dd><p class="first" id="index-2">When enabled, lines are automatically indented each time you press the
+<tt class="kbd docutils literal"><span class="pre">Enter</span></tt> key, or by pressing the indentation key.  The indentation key is
+<tt class="kbd docutils literal"><span class="pre">Ctrl-Tab</span></tt> by default, and can be changed in the key manager dialog,
+<a class="reference internal" href="extending.html#the-key-manager-dialog"><em>The Key Manager Dialog</em></a>.</p>
+<p class="last">If a set of lines is selected when you press the indentation key, this whole
+set of lines will be indented.</p>
+</dd>
+<dt><em>Tooltips</em></dt>
+<dd><p class="first" id="index-3">When you leave the mouse over a word in the source editor, a small window
+will automatically pop up if there are relevant contextual information to
+display about the word.</p>
+<p>The type of information displayed depends on the current state of GPS.</p>
+<p>In normal mode, the entity kind and the location of declaration is displayed
+when this information is available. That is, when the cross-reference
+information about the current file has been generated. If there is no
+relevant information, no tooltip is displayed.  See
+<a class="reference internal" href="navigation.html#support-for-cross-references"><em>Support for Cross-References</em></a> for more information.</p>
+<p>In addition, the documentation for the entity is displayed. This is the block
+of comments just before or just after the entity&#8217;s declaration of body. There
+mustn&#8217;t be any blank line between the two. For instance, the following are
+valid documentation for Ada and C:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="c1">--  A comment for A</span>
+<span class="n">A</span> <span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span>
+
+<span class="n">B</span> <span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span>
+<span class="c1">--  A comment for B</span>
+
+<span class="n">C</span> <span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span>
+
+<span class="c1">--  Not a comment for C, there is a blank linke</span>
+</pre></div>
+</div>
+<p>In debugging mode, the value of the variable under the mouse is displayed in
+the pop up window if the variable is known to the debugger.  Otherwise, the
+normal mode information is displayed.</p>
+<p class="last">You can disable the automatic pop up of tool tips in the Editor section of
+the preferences dialog. <a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>.</p>
+</dd>
+<dt><em>Code completion</em></dt>
+<dd><p class="first" id="index-4">GPS provides two kinds of code completion: a <a class="reference internal" href="#smart-completion"><em>smart code completion</em></a> based on semantic information, and a text completion.</p>
+<p>It is useful when editing a file and using often the same words to get
+automatic word completion. This is possible by typing the <tt class="kbd docutils literal"><span class="pre">Ctrl-/</span></tt> key
+combination (customizable through the key manager dialog) after a partial
+word: the next possible completion will be inserted in the editor. Typing
+this key again will cycle through the list of possible completions.</p>
+<p class="last">Text completions are searched in all currently open source files, by first
+looking at the closest words and then looking further in the source as
+needed.</p>
+</dd>
+<dt><em>Delimiter highlighting</em></dt>
+<dd><p class="first" id="index-5">When the cursor is moved before an opening delimiter or after a closing
+delimiter, then both delimiters will be highlighted. The following characters
+are considered delimiters: ()[]{}.  You can disable highlighting of
+delimiters in the preferences.</p>
+<p class="last">You can also jump to a corresponding delimiter by using the <tt class="kbd docutils literal"><span class="pre">Ctrl-'</span></tt>
+key, that can be configured in the preferences. Typing twice on this key will
+move the cursor back to its original position.</p>
+</dd>
+<dt><em>Current line highlighting</em></dt>
+<dd><p class="first last" id="index-6">You can configure the editor to highlight the current line with a certain
+color. <a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>.</p>
+</dd>
+<dt><em>Current block highlighting</em></dt>
+<dd><p class="first" id="index-7">If this preference is enabled, the editor will highlight the current block of
+code, e.g. the current <cite>begin...end</cite> block, or loop statement, etc...</p>
+<p>The block highlighting will also take into account the changes made in your
+source code, and will recompute automatically the current block when needed.</p>
+<p class="last">This capability is currently implemented for Ada, C and C++ languages.</p>
+</dd>
+<dt><em>Block folding</em></dt>
+<dd><p class="first" id="index-8">When enabled, the editor will display <cite>-</cite> icons on the left side,
+corresponding to the beginning of subprograms. If you click on one of these
+icons, all the lines corresponding to this subprogram are hidden, except the
+first one. As for the block highlighting, these icons are recomputed
+automatically when you modify your sources and are always kept up to date.</p>
+<p class="last">This capability is currently implemented for Ada, C and C++ languages.</p>
+</dd>
+<dt><em>Auto save</em></dt>
+<dd><p class="first last" id="index-9">You can configure the editor to periodically save modified files.  See
+<a class="reference internal" href="extending.html#autosave-delay"><em>Autosave delay</em></a> for a full description of this
+capability.</p>
+</dd>
+<dt><em>Automatic highlighting of entities</em></dt>
+<dd><p class="first" id="index-10">When the cursor is positioned on an entity in the source editor, GPS will
+highlight all references to this entity in the current editor.</p>
+<p>When the cursor moves away from the entity, the highlighting is removed.</p>
+<p>This is controlled by the plugin <cite>auto_highlight_occurrences.py</cite>: it can be
+deactivated by deactivating the plugin (<a class="reference internal" href="extending.html#the-plug-ins-editor"><em>The Plug-ins Editor</em></a>).</p>
+<p class="last">Details such as presence of indications in the Speed Column or highlighting
+color can be customized in the <cite>Plugins</cite> section of
+<a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>.</p>
+</dd>
+</dl>
+<p id="index-11">GPS also integrates with existing third party editors such as <cite>Emacs</cite> or <cite>vi</cite>.
+<a class="reference internal" href="#using-an-external-editor"><em>Using an External Editor</em></a>.</p>
+</div>
+<div class="section" id="editing-sources">
+<span id="id3"></span><h2>5.2. Editing Sources<a class="headerlink" href="#editing-sources" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-12"></span><div class="section" id="key-bindings">
+<span id="index-13"></span><h3>5.2.1. Key bindings<a class="headerlink" href="#key-bindings" title="Permalink to this headline">¶</a></h3>
+<p id="index-14">In addition to the standard keys used to navigate in the editor (up, down,
+right, left, page up, page down), the integrated editor provides a number of
+key bindings allowing easy navigation in the file.</p>
+<p>There are also several ways to define new key bindings, see
+<a class="reference internal" href="extending.html#defining-text-aliases"><em>Defining text aliases</em></a> and <a class="reference internal" href="extending.html#binding-actions-to-keys"><em>Binding actions to keys</em></a>.</p>
+<dl class="docutils">
+<dt><em>Ctrl-Shift-u</em></dt>
+<dd><span class="target" id="index-15"></span><p class="first last" id="index-16">Pressing these three keys and then holding Ctrl-Shift allow you to enter
+characters using their hexadecimal value. For example, pressing
+<tt class="kbd docutils literal"><span class="pre">Ctrl-Shift-u-2-0</span></tt> will insert a space character (ASCII 32, which is 20
+in hexadecimal).</p>
+</dd>
+<dt><em>Ctrl-x / Shift-delete</em></dt>
+<dd>Cut to clipboard</dd>
+<dt><em>Ctrl-c / Ctrl-insert</em></dt>
+<dd>Copy to clipboard</dd>
+<dt><em>Ctrl-v / Shift-insert</em></dt>
+<dd>Paste from clipboard</dd>
+<dt><em>Ctrl-s</em></dt>
+<dd>Save file to disk</dd>
+<dt><em>Ctrl-z</em></dt>
+<dd>Undo previous insertion/deletion</dd>
+<dt><em>Ctrl-r</em></dt>
+<dd>Redo previous insertion/deletion</dd>
+<dt><em>Insert</em></dt>
+<dd>Toggle overwrite mode</dd>
+<dt><em>Ctrl-a</em></dt>
+<dd>Select the whole file</dd>
+<dt><em>Home / Ctrl-Pgup</em></dt>
+<dd>Go to the beginning of the line</dd>
+<dt><em>End / Ctrl-Pgdown</em></dt>
+<dd>Go to the end of the line</dd>
+<dt><em>Ctrl-Home</em></dt>
+<dd>Go to the beginning of the file</dd>
+<dt><em>Ctrl-End</em></dt>
+<dd>Go to the end of the file</dd>
+<dt><em>Ctrl-up</em></dt>
+<dd>Go to the beginning of the line, or to the previous line if already at the
+beginning of the line.</dd>
+<dt><em>Ctrl-down</em></dt>
+<dd>Go to the end of the line, or to the beginning of the next line if already at
+the end of the line.</dd>
+<dt><em>Ctrl-delete</em></dt>
+<dd>Delete end of the current word.</dd>
+<dt><em>Ctrl-backspace</em></dt>
+<dd>Delete beginning of the current word.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="the-file-selector">
+<span id="id4"></span><h2>5.3. The File Selector<a class="headerlink" href="#the-file-selector" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-17"></span><p id="index-18">The file selector is a dialog used to select a file. Under Windows, the default
+is to use the standard file selection widget. Under other platforms, the file
+selector is a built-in dialog:</p>
+<img alt="_images/open-file.jpg" id="index-19" src="_images/open-file.jpg" />
+<p>This dialog provides the following areas and capabilities:</p>
+<ul class="simple">
+<li>A tool bar on the top composed of five buttons giving access to common
+navigation features:</li>
+<li><tt class="kbd docutils literal"><span class="pre">left</span> <span class="pre">arrow</span></tt>
+go back in the list of directories visited</li>
+<li><tt class="kbd docutils literal"><span class="pre">right</span> <span class="pre">arrow</span></tt>
+go forward</li>
+<li><tt class="kbd docutils literal"><span class="pre">up</span> <span class="pre">arrow</span></tt>
+go to parent directory</li>
+<li><tt class="kbd docutils literal"><span class="pre">refresh</span></tt>
+refresh the contents of the directory</li>
+<li><tt class="kbd docutils literal"><span class="pre">home</span></tt>
+go to home directory (value of the HOME environment variable, or <cite>/</cite> if
+not defined)</li>
+<li>A list with the current directory and the last directories explored.
+You can modify the current directory by modifying the text entry and hitting
+<tt class="kbd docutils literal"><span class="pre">Enter</span></tt>, or by clicking on the right arrow and choose a previous
+directory in the pop down list displayed.</li>
+<li>A directory tree. You can open or close directories by clicking on the <cite>+</cite>
+and <cite>-</cite> icons on the left of the directories, or navigate using the keyboard
+keys: <tt class="kbd docutils literal"><span class="pre">up</span></tt> and <tt class="kbd docutils literal"><span class="pre">down</span></tt> to select the previous or the next directory,
+<tt class="kbd docutils literal"><span class="pre">+</span></tt> and <tt class="kbd docutils literal"><span class="pre">-</span></tt> to expand and collapse the current directory, and
+<tt class="kbd docutils literal"><span class="pre">backspace</span></tt> to select the parent directory.</li>
+<li>A file list. This area lists the files contained in the selected directory.
+If a filter is selected in the filter area, only the relevant files for the
+given filter are displayed. Depending on the context, the list of files may
+include additional information about the files, e.g. the kind of a file, its
+size, etc...</li>
+<li>A filter area. Depending on the context, one or several filters are available
+to select only a subset of files to display. The filter <em>All files</em> which is
+always available will display all files in the directory selected.</li>
+<li>A file name area. This area will display the name of the current file
+selected, if any.  You can also type a file or directory name directly, and
+complete the name automatically by using the <tt class="kbd docutils literal"><span class="pre">Tab</span></tt> key.</li>
+<li>A button bar with the <cite>OK</cite> and <cite>Cancel</cite> buttons.  When you have selected the
+right file, clock on <cite>OK</cite> to confirm, or click on <cite>Cancel</cite> at any time to
+cancel and close the file selection.</li>
+</ul>
+</div>
+<div class="section" id="menu-items">
+<span id="id5"></span><h2>5.4. Menu Items<a class="headerlink" href="#menu-items" title="Permalink to this headline">¶</a></h2>
+<p id="index-20">The main menus that give access to extended functionalities related to source
+editing are described in this section.</p>
+<div class="section" id="the-file-menu">
+<span id="id6"></span><h3>5.4.1. The File Menu<a class="headerlink" href="#the-file-menu" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em>New</em></dt>
+<dd><p class="first" id="index-21">Open a new untitled source editor.  No syntax highlighting is performed until
+the file is saved, since GPS needs to know the file name in order to choose
+the programming language associated with a file.</p>
+<p class="last" id="index-22">When you save a new file for the first time, GPS will ask you to enter the
+name of the file. In case you have started typing Ada code, GPS will try to
+guess based on the first main entity in the editor and on the current naming
+scheme, what should be the default name of this new file.</p>
+</dd>
+<dt><em>New View</em></dt>
+<dd><span class="target" id="index-23"></span><p class="first" id="index-24">Create a new view of the current editor. The new view shares the same
+contents: if you modify one of the source views, the other view is updated at
+the same time. This is particularly useful when you want to display two
+separate parts of the same file, for example a function spec and its body.</p>
+<p class="last">A new view can also be created by keeping the <tt class="kbd docutils literal"><span class="pre">shift</span></tt> key pressed while
+drag-and-dropping the editor (see <a class="reference internal" href="mdi.html#moving-windows"><em>Moving Windows</em></a>). This second method
+is preferred, since you can then specify directly where you want to put the
+new view. The default when using the menu is that the new view is put on top
+of the editor itself.</p>
+</dd>
+<dt><em>Open...</em></dt>
+<dd><span class="target" id="index-25"></span><p class="first last" id="index-26">Open a file selection dialog where you can select a file to edit.  Under
+Windows, this is the standard file selector. Under other platforms, this is a
+built-in file selector described in <a class="reference internal" href="#the-file-selector"><em>The File Selector</em></a>.</p>
+</dd>
+<dt><em>Open From Project...</em></dt>
+<dd><span class="target" id="open-from-project"></span><span class="target" id="index-27"></span><p class="first" id="index-28">Open a dialog where you can easily and rapidly select a source file from your
+project.</p>
+<img alt="_images/open-from-project.jpg" id="index-29" src="_images/open-from-project.jpg" />
+<p>The first text area allows you to type a file name. You can start the
+beginning of a file name, and use the <tt class="kbd docutils literal"><span class="pre">Tab</span></tt> key to complete the file
+name. If there are several possible completions, the common prefix will be
+displayed, and a list of all possible completions will be displayed in the
+second text area.</p>
+<p id="index-30">You can then either complete the name by typing it, or continue hitting the
+<tt class="kbd docutils literal"><span class="pre">Tab</span></tt> key to cycle through the possible completions, or click on one of
+the completions in the list displayed.</p>
+<p>If you press the down arrow key, the focus will move to the list of
+completions, so that you can select a file from this list without using the
+mouse.</p>
+<p>Once you have made your choice, click on the <cite>OK</cite> button to validate.
+Clicking on <cite>Cancel</cite> or hitting the <tt class="kbd docutils literal"><span class="pre">Esc</span></tt> key will cancel the operation
+and close the dialog.</p>
+<p class="last">This dialog will only show each file once. If you have extended projects in
+your hierarchy, some files may be redefined in some extending project. In
+this case, only the files from the extending project are shown, and you
+cannot have access through this dialog to the overridden files of the
+extended project. Of course, you can still use the project view or the
+standard <cite>File-&gt;Open</cite> menu to open these files.</p>
+</dd>
+<dt><em>Open From Host...</em></dt>
+<dd><span class="target" id="open-from-host"></span><p class="first" id="index-31">Open a file selector dialog where you can specify a remote host, as defined
+in <a class="reference internal" href="remote.html#the-remote-configuration-dialog"><em>The remote configuration dialog</em></a>. You have access to a remote host
+file system, can specify a file which can be edited in GPS. When you hit the
+save button or menu, the file will be saved on the remote host.</p>
+<p class="last">See also <a class="reference internal" href="remote.html#using-gps-for-remote-development"><em>Using GPS for Remote Development</em></a> for a more efficient way to
+work locally on remote files.</p>
+</dd>
+<dt><em>Recent</em></dt>
+<dd><p class="first last" id="index-32">Open a sub menu containing a list of the ten most recent files opened in GPS,
+so that you can reopen them easily.</p>
+</dd>
+<dt><em>Save</em></dt>
+<dd><p class="first last" id="index-33">Save the current source editor if needed.</p>
+</dd>
+<dt><em>Save As...</em></dt>
+<dd><p class="first last" id="index-34">Same current file under a different name, using the file selector dialog.
+<a class="reference internal" href="#the-file-selector"><em>The File Selector</em></a>.</p>
+</dd>
+<dt><em>Save More</em></dt>
+<dd><p class="first last" id="index-35">Give access to extra save capabilities.</p>
+</dd>
+<dt><em>All</em></dt>
+<dd><p class="first last" id="index-36">Save all items, including projects, etc...</p>
+</dd>
+<dt><em>Desktop</em></dt>
+<dd><p class="first last" id="index-37">Save the desktop to a file. The desktop includes information about files,
+graphs, ... and their window size and position in GPS. The desktop is saved
+per top level project, so that if you reload the same project you get back to
+the same situation you were in when you left GPS. Instead, if you load a
+different project another desktop will be loaded (or the default desktop).
+Through the preference &#8220;Save Desktop On Exit&#8221;, you can also automatically
+save this desktop when you quit GPS.</p>
+</dd>
+<dt><em>Change Directory...</em></dt>
+<dd><p class="first last" id="index-38">Open a directory selection dialog that lets you change the current working
+directory.</p>
+</dd>
+<dt><em>Messages</em></dt>
+<dd><p class="first last" id="index-39">This sub menu gives access to functionalities related to the Messages window.
+<a class="reference internal" href="main_window.html#the-messages-window"><em>The Messages Window</em></a>.</p>
+</dd>
+<dt><em>Clear</em></dt>
+<dd><span class="target" id="index-40"></span><p class="first last" id="index-41">Clear the contents of the Messages window.</p>
+</dd>
+<dt><em>Save As...</em></dt>
+<dd><p class="first last" id="index-42">Save the contents of the Messages window to a file. A file selector is
+displayed to choose the name and location of the file.</p>
+</dd>
+<dt><em>Load Contents...</em></dt>
+<dd><p class="first last" id="index-43">Open a file selector to load the contents of a file in the Messages window.
+Source locations are identified and loaded in <a class="reference internal" href="main_window.html#the-locations-view"><em>The Locations View</em></a>.</p>
+</dd>
+<dt><em>Export Locations to Editor</em></dt>
+<dd><p class="first last" id="index-44">List the contents of the Locations view in a standard text editor.</p>
+</dd>
+<dt><em>Close</em></dt>
+<dd><p class="first last" id="index-45">Close the current window. This applies to all GPS windows, not only source
+editors.</p>
+</dd>
+<dt><em>Print</em></dt>
+<dd><p class="first" id="index-46">Print the current window contents, optionally saving it interactively if it
+has been modified. The Print Command specified in the preferences is used if
+it is defined. On Unix this command is required; on Windows it is optional.</p>
+<p>On Windows, if no command is specified in the preferences the standard
+Windows print dialog box is displayed. This dialog box allows the user to
+specify the target printer, the properties of the printer, which pages to
+print (all, or a specific range of pages), the number of copies to print,
+and, when more than one copy is specified, whether the pages should be
+collated.  Pressing the Cancel button on the dialog box returns to GPS
+without printing the window contents; otherwise the specified pages and
+copies are printed on the selected printer. Each page is printed with a
+header containing the name of the file (if the window has ever been saved).
+The page number is printed on the bottom of each page.</p>
+<p class="last">See also:ref:<cite>Print Command &lt;Print_Command&gt;</cite>.</p>
+</dd>
+<dt><em>Exit</em></dt>
+<dd><span class="target" id="index-47"></span><p class="first last" id="index-48">Exit GPS after confirmation and if needed, confirmation about saving modified
+windows and editors.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="the-edit-menu">
+<span id="id7"></span><h3>5.4.2. The Edit Menu<a class="headerlink" href="#the-edit-menu" title="Permalink to this headline">¶</a></h3>
+<span class="target" id="index-49"></span><dl class="docutils" id="index-50">
+<dt><em>Undo</em></dt>
+<dd><p class="first last" id="index-51">Undo previous insertion/deletion in the current editor.</p>
+</dd>
+<dt><em>Redo</em></dt>
+<dd><p class="first last" id="index-52">Redo previous insertion/deletion in the current editor.</p>
+</dd>
+<dt><em>Cut</em></dt>
+<dd><p class="first last" id="index-53">Cut the current selection and store it in the clipboard.</p>
+</dd>
+<dt><em>Copy</em></dt>
+<dd><span class="target" id="index-54"></span><p class="first last" id="index-55">Copy the current selection to the clipboard.</p>
+</dd>
+<dt><em>Paste</em></dt>
+<dd><p class="first last" id="index-56">Paste the contents of the clipboard to the current cursor position.</p>
+</dd>
+<dt><em>Paste Previous</em></dt>
+<dd><p class="first" id="index-57">GPS stores a list of all the text that was previously copied into the
+clipboard through the use of Copy or Cut.</p>
+<p>By default, if you press Paste, the newest text will be copied at the current
+position. But if you select Paste Previous immediately after (one or more
+times) you can instead paste text that was copied previously in the
+clipboard.</p>
+<p>For instance, if you copy through <cite>Edit-&gt;Copy</cite> the text &#8220;First&#8221;, then copy
+the text &#8220;Second&#8221;, you can then select <cite>Edit-&gt;Paste</cite> to insert &#8220;Second&#8221; at
+the current location. If you then select <cite>Edit-&gt;Paste Previous</cite>, &#8220;Second&#8221;
+will be replaced by &#8220;First&#8221;.</p>
+<p>Selecting this menu several times will replace the text previously pasted by
+the previous one in the list saved in the clipboard. When reaching the end of
+this list, GPS will started from the beginning, and insert again the last
+text copied into the clipboard.</p>
+<p>The size of this list is controlled by the <cite>Clipboard Size</cite> preference.</p>
+<p class="last">For more information, <a class="reference internal" href="main_window.html#the-clipboard-view"><em>The Clipboard View</em></a>.</p>
+</dd>
+<dt><em>Select All</em></dt>
+<dd><p class="first last" id="index-58">Select the whole contents of the current source editor.</p>
+</dd>
+<dt><em>Rectangles...</em></dt>
+<dd>See the section <a class="reference internal" href="#rectangles"><em>Rectangles</em></a> for more information on rectangles.</dd>
+<dt><em>Insert File...</em></dt>
+<dd>Open a file selection dialog and insert the contents of this file in the
+current source editor, at the current cursor location.</dd>
+<dt><em>Insert Shell Output...</em></dt>
+<dd>Open an input window at the bottom of the GPS window where you can specify
+any external command. The output of the command will be inserted at the
+current editor location in case of success. If text is selected, the text is
+passed to the external command and replaced by the command&#8217;s output.</dd>
+<dt><em>Format Selection</em></dt>
+<dd><p class="first last" id="index-59">Indent and format the selection or the current line.
+<a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>, for preferences related to source formatting.</p>
+</dd>
+</dl>
+<p><em>Smart Completion</em></p>
+<blockquote>
+<div><span class="target" id="smart-completion"></span><p id="index-60">Complete the identifier prefix under the cursor, and list the results in a
+pop-up list. Used with Ada sources this command can take advantage of an
+entity database as well as Ada parsers embedded in GPS which analyze the
+context, and offer completions from the entire project along with
+documentation extracted from comments surrounding declarations. To take full
+advantage of this feature, the smart completion preference must be enabled,
+which will imply the computation of the entity database at GPS startup.</p>
+<p>The support for C and C++ is not as powerful as the support for Ada since it
+relies completely on the xref information files generated by the compiler,
+does not have into account the C/C++ context around the cursor, and does not
+extract documentation from comments around candidate declarations. To take
+advantage of this feature, in addition to enable the smart completion
+preference, the C/C++ application must be built with <cite>-fdump-xref</cite>.</p>
+<p>In order to use this feature, open any Ada, C or C++ file, and begin to type
+an identifier. It has to be an identifier declared either in the current file
+(and accessible from the cursor location) or in one of the packages of the
+project loaded. Move the cursor right after the last character of the
+incomplete identifier and hit the completion key (which is <tt class="kbd docutils literal"><span class="pre">ctrl+space</span></tt>
+by default).  GPS will open a popup displaying all the known identifiers
+beginning with the prefix you typed. You can then browse among the various
+proposals by clicking on the  <tt class="kbd docutils literal"><span class="pre">up</span></tt> and <tt class="kbd docutils literal"><span class="pre">down</span></tt> keys, or using the
+left scrollbar. For each entity, a documentation box is filled. If the
+location of the entity is known, it&#8217;s displayed as an hyperlink, and you can
+jump directly to its declaration by clicking on it.</p>
+<p>Typing new letters will reduce the range of proposal, as long as there remain
+solutions. Once you&#8217;ve selected the expected completion, you can validate by
+pressing <tt class="kbd docutils literal"><span class="pre">Enter</span></tt>.</p>
+<p>Typing control characters (ie, characters which cannot be used in
+identifiers) will also validate the current selection.</p>
+<p>GPS is also able to complete automatically subprogram parameter or dotted
+notations. For example, if you type:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kn">with</span> <span class="nn">Ada.</span>
+</pre></div>
+</div>
+<p>the smart completion window will appear automatically, listing all the child
+and nested packages of Ada. You can configure the time interval after which
+the completion window appears (<a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>).</p>
+<p>You can also write the beginning of the package, e.g.:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kn">with</span> <span class="nn">Ada.Text</span>
+</pre></div>
+</div>
+<p>pressing the completion key will offer you Text_IO.</p>
+<p>If you are in a code section, you will be able to complete the fields of a
+record, or the contents of a package, e.g.:</p>
+<div class="highlight-ada"><div class="highlight"><pre> <span class="kr">declare</span>
+   <span class="kd">type</span> <span class="kt">R</span> <span class="kr">is</span> <span class="kr">record</span>
+      <span class="nv">Field1</span> <span class="p">: </span><span class="nv">Integer</span><span class="p">;</span>
+      <span class="nv">Field2</span> <span class="p">: </span><span class="nv">Integer</span><span class="p">;</span>
+   <span class="nv">end</span> <span class="nv">record</span><span class="p">;</span>
+
+   <span class="nv">V</span> <span class="p">: </span><span class="nv">R</span><span class="p">;</span>
+<span class="nv">begin</span>
+   <span class="nv">V</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>Completing V. will propose Field1 and Field2.</p>
+<p>The smart completion can also give you the possible parameters of a call
+you&#8217;re currently making. For example, in the following code:</p>
+<div class="highlight-ada"><div class="highlight"><pre>   <span class="kd">procedure</span> <span class="nf">Proc</span> <span class="p">(</span><span class="nv">A</span><span class="p">,</span> <span class="nv">B</span><span class="p">,</span> <span class="nv">C</span> <span class="p">: </span><span class="nv">Integer</span><span class="p">);</span>
+<span class="kr">begin</span>
+   <span class="n">Proc</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>If you hit the completion key after the comma, the smart completion engine
+will propose you to complete with the named parameters &#8220;B =&gt;&#8221;, &#8220;C =&gt;&#8221; or
+directly to complete with all the remaining parameters, which in this case
+will be &#8220;B =&gt;, C =&gt; )&#8221;.</p>
+<img alt="_images/smart-completion.jpg" id="index-61" src="_images/smart-completion.jpg" />
+<p>Limitations:</p>
+</div></blockquote>
+<ul>
+<li><p class="first">This feature is currently only available for Ada, C and C++. Using the smart
+completion on sources of other languages behaves as the <a class="reference internal" href="#complete-identifier"><em>identifier
+completion</em></a> does.</p>
+</li>
+<li><p class="first">Smart completion for C and C++ is based on the xref information generated by
+the compiler. Therefore, GPS has no knowledge on recently edited files. Use
+Build-&gt;Recompute Xref Info or rebuild with <cite>-fdump-xref</cite> to update the
+completion database.</p>
+</li>
+<li><p class="first">Smart completion for C and C++ is only triggered at the beginning of an
+expression (that is, it is not triggered on special characters such as &#8216;(&#8216;,
+&#8216;-&gt;&#8217;, or the C++ operator &#8216;::&#8217;) and it may propose too much candidates since
+it does not have into account the C/C++ syntax context. Typing new letters
+will reduce the range of proposal, as long as there remain solutions.</p>
+</li>
+<li><p class="first">Smart completion of subprogram parameters, fields and dotted notation are not
+available yet for C and C++.</p>
+</li>
+<li><p class="first"><cite>More Completion</cite>
+.. index:: completion</p>
+<p>This submenu contains more ways to automatically complete code</p>
+<ul>
+<li><p class="first"><cite>Expand Alias</cite>
+Consider the current word as an alias and expand according to aliases
+defined in <a class="reference internal" href="extending.html#defining-text-aliases"><em>Defining text aliases</em></a>.</p>
+</li>
+<li><p class="first"><cite>Complete Identifier</cite></p>
+<span class="target" id="complete-identifier"></span><p id="index-62">Complete the identifier prefix under the cursor. This command will cycle
+through all identifiers starting with the given prefix.</p>
+</li>
+<li><p class="first"><cite>Complete Block</cite>
+.. index:: complete block</p>
+<p>Close the current statement (if, case, loop) or unit (procedure,
+function, package). This action works only on an Ada buffer.</p>
+</li>
+</ul>
+</li>
+</ul>
+<dl class="docutils">
+<dt><em>Selection</em></dt>
+<dd><dl class="first last docutils" id="index-63">
+<dt><em>Comment Lines</em></dt>
+<dd><p class="first last" id="index-64">Comment the current selection or line based on the current programming
+language syntax.</p>
+</dd>
+<dt><em>Uncomment Lines</em></dt>
+<dd><p class="first last" id="index-65">Remove the comment delimiters from the current selection or line.</p>
+</dd>
+<dt><em>Refill</em></dt>
+<dd><p class="first last" id="index-66">Refill text on the selection or current line: rearrange line breaks in
+the paragraph so that line lengths do not exceed the maximum length, as
+set in the &#8220;Right margin&#8221; preference (<a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>).</p>
+</dd>
+<dt><em>Sort</em></dt>
+<dd>Sort the selected lines alphabetically. This is particularly useful when
+editing non source code, or for specific parts of the code, like with
+clauses in Ada.</dd>
+<dt><em>Sort Reverse</em></dt>
+<dd>Sort the selected lines in reverse alphabetical order</dd>
+<dt><em>Pipe in external program...</em></dt>
+<dd>Open an input window at the bottom of the GPS window where you can
+specify any external command, which will take the current selection as
+input. The output of the command will replace the contents of the
+selection on success.</dd>
+<dt><em>Serialize</em></dt>
+<dd><p class="first">Increment a set of numbers found on adjacent lines.  The exact behavior
+depends on whether there is a current selection or not.</p>
+<p>If there is no selection, then the set of lines considered is from the
+current line on and includes all adjacent lines that have at least one
+digit in the original columns. In the following example, &#8216;|&#8217; marks the
+place where the cursor is at the beginning:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="n">AAA</span> <span class="p">|</span><span class="mi">10</span> <span class="n">AAA</span>
+<span class="n">CCC</span> <span class="mi">34567</span> <span class="n">CCC</span>
+<span class="n">DDD</span> <span class="n">DDD</span>
+</pre></div>
+</div>
+<p>then only the first two lines will be modified, and will become:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="n">AAA</span> <span class="mi">10</span> <span class="n">AAA</span>
+<span class="n">CCC</span> <span class="mi">11</span> <span class="n">CCC</span>
+<span class="n">DDD</span> <span class="n">DDD</span>
+</pre></div>
+</div>
+<p>If there is a selection, all the lines in the selection are
+modified. For each line, the columns that had digits in the first
+line are modified, no matter what they actually contain. In the
+example above, if you select all three lines, the replacement becomes:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="n">AAA</span> <span class="mi">10</span> <span class="n">AAA</span>
+<span class="n">CCC</span> <span class="mi">11567</span> <span class="n">CCC</span>
+<span class="n">DDD</span> <span class="mi">12</span><span class="n">D</span>
+</pre></div>
+</div>
+<p>ie only the fifth and sixth columns are modified since only those
+columns contained digits in the first line. This feature assumes that
+you are selecting a relevant set of lines. But it allows you to
+transform blank lines more easily. For instance, if you have:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="n">AAA</span> <span class="mi">1</span>
+<span class="n">BBB</span>
+<span class="n">CCC</span>
+</pre></div>
+</div>
+<p>this is transformed into:</p>
+<div class="last highlight-ada"><div class="highlight"><pre><span class="n">AAA</span> <span class="mi">1</span>
+<span class="n">BBB</span> <span class="mi">2</span>
+<span class="n">CCC</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</dd>
+<dt><em>Untabify</em></dt>
+<dd>Replace all tabs in the current selection (or in the whole buffer if
+there is no selection) by the appropriate number of spaces</dd>
+<dt><em>Move Right</em> and <em>Move Left</em></dt>
+<dd>Shift the currently selected lines (or the current line if there is no
+selection) one character to the right or to the left</dd>
+</dl>
+</dd>
+<dt><em>Fold all blocks</em></dt>
+<dd><p class="first last" id="index-67">Collapse all the blocks in the current file.</p>
+</dd>
+<dt><em>Unfold all blocks</em></dt>
+<dd><p class="first last" id="index-68">Uncollapse all the blocks in the current file.</p>
+</dd>
+<dt><em>Create Bookmark</em></dt>
+<dd>Creates a new Bookmark at cursor position. For more information,
+<a class="reference internal" href="main_window.html#bookmarks"><em>Bookmarks</em></a>.</dd>
+<dt><em>Pretty Print</em></dt>
+<dd><span class="target" id="index-69"></span><p class="first last" id="index-70">Pretty print the current source editor by calling the external tool <cite>gnatpp</cite>.
+It is possible to specify <cite>gnatpp</cite> switches in the switch editor.
+<a class="reference internal" href="projects.html#the-switches-editor"><em>The Switches Editor</em></a>.</p>
+</dd>
+<dt><em>Generate Body</em></dt>
+<dd><span class="target" id="index-71"></span><p class="first last" id="index-72">Generate Ada body stub for the current source editor by calling the external
+tool <cite>gnatstub</cite>.</p>
+</dd>
+<dt><em>Edit with external editor</em></dt>
+<dd><a class="reference internal" href="#using-an-external-editor"><em>Using an External Editor</em></a>.</dd>
+<dt><em>Aliases</em></dt>
+<dd><p class="first last" id="index-73">Display the Aliases editor. <a class="reference internal" href="extending.html#defining-text-aliases"><em>Defining text aliases</em></a>.</p>
+</dd>
+<dt><em>Key shortcuts</em></dt>
+<dd><p class="first last" id="index-74">Give access to the key manager dialog, to associate commands with special
+keys. <a class="reference internal" href="extending.html#the-key-manager-dialog"><em>The Key Manager Dialog</em></a>.</p>
+</dd>
+<dt><em>Preferences</em></dt>
+<dd><p class="first last" id="index-75">Give access to the preferences dialog. <a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="rectangles">
+<span id="id8"></span><h2>5.5. Rectangles<a class="headerlink" href="#rectangles" title="Permalink to this headline">¶</a></h2>
+<p id="index-76">Rectangle commands operate on a rectangular area of the text, that is all the
+characters between two columns in a certain range of lines.</p>
+<p>A rectangle is selected using the standard selection mechanism. You can
+therefore use either the mouse to highlight the proper region, or <tt class="kbd docutils literal"><span class="pre">shift</span></tt>
+and the cursor keys to extend the selection, or the Emacs selection (with the
+mark and the current cursor location) if you have activated the
+<tt class="file docutils literal"><span class="pre">emacs.py</span></tt> plugin.</p>
+<p>Visually, a selected rectangle is exactly the same as the standard selection.
+In particular, the characters after the last column, on each line, will also be
+highlighted. The way the selection is interpreted (either as a full text or as
+a rectangle) depends on the command you then chose to manipulate the selection.</p>
+<p>If you chose one of the commands from the <cite>/Edit/Rectangles</cite> menu, the actual
+rectangle will extend from the top-left corner down to the bottom-right corner.
+All characters to the right of the right-most column, although they are
+highlighted, are not part of the rectangle.</p>
+<p>Consider for instance the following initial text:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kd">package</span> <span class="nc">A</span> <span class="kr">is</span>
+   <span class="kd">procedure</span> <span class="nf">P</span><span class="p">;</span>
+
+   <span class="kd">procedure</span> <span class="nf">Q</span><span class="p">;</span>
+<span class="kr">end</span> <span class="nf">A</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>and assume we have selected from the character &#8220;p&#8221; in &#8220;procedure P&#8221;, down to
+the character &#8220;c&#8221; in &#8220;procedure Q&#8221;.</p>
+<p>The following commands can then be used (either from the menu, or you can
+assign key shortcuts to them via the usual <cite>/Edit/Key shortcuts</cite> menu.</p>
+<ul>
+<li><p class="first"><cite>Cut</cite> or <cite>Delete</cite>
+These commands will remove the selected text (and have no effect on empty
+lines within the rectangle). The former will in addition copy the rectangle
+to the clipboard, so that you can paste it later. In our example, we end up
+with:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kd">package</span> <span class="nc">A</span> <span class="kr">is</span>
+   <span class="n">edure</span> <span class="n">P</span><span class="p">;</span>
+
+   <span class="n">edure</span> <span class="n">Q</span><span class="p">;</span>
+<span class="kr">end</span> <span class="nf">A</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><cite>Copy</cite>
+This command has no visual effect, but copies the contents of the rectangle
+into the clipboard.</p>
+</li>
+<li><p class="first"><cite>Paste</cite>
+Pastes the contents of the clipboard as a rectangle: each line from the
+clipboard is treated independently, and inserted on successive lines in the
+current editor. They all start in the same column (the one where the cursor
+is initially in), and existing text in the editor lines is shifted to the
+right). If for instance you now place the cursor in the second line, first
+column, and paste, we end up with:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kd">package</span> <span class="nc">A</span> <span class="kr">is</span>
+<span class="n">proc</span>   <span class="n">edure</span> <span class="n">P</span><span class="p">;</span>
+
+<span class="n">proc</span>   <span class="n">edure</span> <span class="n">Q</span><span class="p">;</span>
+<span class="kr">end</span> <span class="nf">A</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><cite>Clear</cite>
+Replaces the contents of the selected rectangle with spaces. If we start
+from our initial exmaple, we end up with the following. Note the difference
+with <cite>Delete</cite>:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kd">package</span> <span class="nc">A</span> <span class="kr">is</span>
+       <span class="n">edure</span> <span class="n">P</span><span class="p">;</span>
+
+       <span class="n">edure</span> <span class="n">Q</span><span class="p">;</span>
+<span class="kr">end</span> <span class="nf">A</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><cite>Open</cite>
+Replaces the contents of the selected rectangle with spaces, but shifts the
+lines to the right to do so. Note the difference with <cite>Clear</cite>:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kd">package</span> <span class="nc">A</span> <span class="kr">is</span>
+       <span class="kd">procedure</span> <span class="nf">P</span><span class="p">;</span>
+
+       <span class="kd">procedure</span> <span class="nf">Q</span><span class="p">;</span>
+<span class="kr">end</span> <span class="nf">A</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><cite>Replace With Text</cite>
+This is similar to <cite>Clear</cite>, but the rectangle is replaced with user-defined
+text. The lines will be shifted left or right if the text you insert is
+shorter (resp. longer) than the width of the rectangle. If for instance we
+replace our initial rectangle with the text TMP, we end up with the
+following. Note that the character &#8220;c&#8221; has disappeared, since TMP is shorter
+than our rectangle width (4 characters). This command will impact lines that
+are empty in the initial rectangle:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kd">package</span> <span class="nc">A</span> <span class="kr">is</span>
+   <span class="n">TMPedure</span> <span class="n">P</span><span class="p">;</span>
+   <span class="n">TMP</span>
+   <span class="n">TMPedure</span> <span class="n">Q</span><span class="p">;</span>
+<span class="kr">end</span> <span class="nf">A</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><cite>Insert Text</cite>
+This inserts a text to the left of the rectangle on each line. The following
+example inserts TMP. Note the difference with <cite>Replace With Text</cite>. This
+command will also insert the text on lines that are empty in the initial
+rectangle:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kd">package</span> <span class="nc">A</span> <span class="kr">is</span>
+   <span class="n">TMPprocedure</span> <span class="n">P</span><span class="p">;</span>
+   <span class="n">TMP</span>
+   <span class="n">TMPprocedure</span> <span class="n">Q</span><span class="p">;</span>
+<span class="kr">end</span> <span class="nf">A</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><cite>Sort</cite>
+This sorts the selected lines according to the key which starts and ends on
+the corresponding rectangle&#8217;s columns:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="n">aaa</span> <span class="mi">15</span> <span class="n">aa</span>
+<span class="n">bbb</span> <span class="mi">02</span> <span class="n">bb</span>
+<span class="n">ccc</span> <span class="mi">09</span> <span class="n">cc</span>
+</pre></div>
+</div>
+<p>With a selection starting from the 1 on the first line and ending on the 9 on
+the last one, sorting will result with the following content:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="n">bbb</span> <span class="mi">02</span> <span class="n">bb</span>
+<span class="n">ccc</span> <span class="mi">09</span> <span class="n">cc</span>
+<span class="n">aaa</span> <span class="mi">15</span> <span class="n">aa</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><cite>Sort reverse</cite></p>
+<p>As above but in the reverse order.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="recording-and-replaying-macros">
+<span id="id9"></span><h2>5.6. Recording and replaying macros<a class="headerlink" href="#recording-and-replaying-macros" title="Permalink to this headline">¶</a></h2>
+<p id="index-77">It is often convenient to be able to repeat a given key sequence a number of
+times.</p>
+<p>GPS supports this with several different methods:</p>
+<ul>
+<li><p class="first">Repeat the next action</p>
+<p>If there is a single key press that you wish to repeat a number of times, you
+should first use the GPS action <cite>&#8220;Repeat Next&#8221;</cite> (bound by default to
+<tt class="kbd docutils literal"><span class="pre">control-u</span></tt>, but this can be changed as usual through the <cite>/Edit/Key
+Shortcuts</cite> menu), then entering the number of times you wish to repeat, and
+finally pressing the key you want.</p>
+<p>For instance, the following sequence <tt class="kbd docutils literal"><span class="pre">control-u</span> <span class="pre">79</span> <span class="pre">-</span></tt> will insert
+79 characters &#8216;-&#8216; in the current editor. This proves often useful to insert
+separators.</p>
+<p>If you are using the emacs mode (see <cite>/Tools/Plug-ins</cite> menu), you can also
+use the sequence <tt class="kbd docutils literal"><span class="pre">control-u</span> <span class="pre">30</span> <span class="pre">control-k</span></tt> to delete
+30 lines.</p>
+</li>
+<li><p class="first">Recording macros</p>
+<p>If you wish to repeat a sequence of more than 1 key, you should record this
+sequence as a macro. All macro-related menus are found in <cite>/Tools/Macros</cite>,
+although it is often more convenient to use these through key bindings, which
+you can of course override.</p>
+<p>You must indicate to GPS that it should start recording the keys you are
+pressing. This is done through the <cite>/Tools/Macros/Start Keyboard Macro</cite> menu.
+As its name indicates, this only records keyboard events, not mouse events.
+Until you select <cite>/Tools/Macros/Stop Macro</cite>, GPS will keep recording the
+events.</p>
+<p>In Emacs mode, the macro actions are bound to <tt class="kbd docutils literal"><span class="pre">control-x</span> <span class="pre">(</span></tt>,
+<tt class="kbd docutils literal"><span class="pre">control-x</span> <span class="pre">)</span></tt> and <tt class="kbd docutils literal"><span class="pre">control-x</span> <span class="pre">e</span></tt> key shortcuts. For instance, you
+can execute the following to create a very simple macro that deletes the
+current line, wherever your cursor initially is on that line:</p>
+<ul class="simple">
+<li><tt class="kbd docutils literal"><span class="pre">control-x</span> <span class="pre">(</span></tt>     start recording</li>
+<li><tt class="kbd docutils literal"><span class="pre">control-a</span></tt>      go to beginning of line</li>
+<li><tt class="kbd docutils literal"><span class="pre">control-k</span></tt>      delete line</li>
+<li><tt class="kbd docutils literal"><span class="pre">control-x</span> <span class="pre">)</span></tt>     stop recording</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="contextual-menus-for-editing-files">
+<span id="id10"></span><h2>5.7. Contextual Menus for Editing Files<a class="headerlink" href="#contextual-menus-for-editing-files" title="Permalink to this headline">¶</a></h2>
+<p id="index-78">Whenever you ask for a contextual menu (using e.g. the third button on your
+mouse) on a source file, you will get access to a number of entries, displayed
+or not depending on the current context.</p>
+<p>Menu entries include the following categories:</p>
+<dl class="docutils">
+<dt><em>Source Navigation</em></dt>
+<dd><a class="reference internal" href="navigation.html#contextual-menus-for-source-navigation"><em>Contextual Menus for Source Navigation</em></a>.</dd>
+<dt><em>Dependencies</em></dt>
+<dd><a class="reference internal" href="browsing.html#dependency-browser"><em>Dependency Browser</em></a>.</dd>
+<dt><em>Entity browsing</em></dt>
+<dd><a class="reference internal" href="browsing.html#entity-browser"><em>Entity Browser</em></a>.</dd>
+<dt><em>Project view</em></dt>
+<dd><a class="reference internal" href="projects.html#the-project-view"><em>The Project View</em></a>.</dd>
+<dt><em>Version control</em></dt>
+<dd><a class="reference internal" href="vcs.html#the-version-control-contextual-menu"><em>The Version Control Contextual Menu</em></a>.</dd>
+<dt><em>Debugger</em></dt>
+<dd><a class="reference internal" href="debugging.html#using-the-source-editor-when-debugging"><em>Using the Source Editor when Debugging</em></a>.</dd>
+<dt><em>Case exceptions</em></dt>
+<dd><a class="reference internal" href="#handling-of-case-exceptions"><em>Handling of case exceptions</em></a>.</dd>
+<dt><em>Refactoring</em></dt>
+<dd><a class="reference internal" href="#refactoring"><em>Refactoring</em></a>.</dd>
+</dl>
+<span class="target" id="index-79"></span><p id="index-80">In addition, an entry <cite>Properties...</cite> is always visible in this contextual
+menu. When you select it, a dialog pops up that allows you to override the
+language used for the file, or the character set.</p>
+<p>This can be used for instance if you want to open a file that does not belong
+to the current project, but where you want to benefit from the syntax
+highlighting that GPS knows how to.</p>
+<p>It is not recommended to override the language for source files that belong to
+the project. Instead, you should use the <cite>Project Properties</cite> dialog and change
+the naming scheme if appropriate. This will ensure better consistency between
+GPS and the compiler in the way they manipulate the file.</p>
+</div>
+<div class="section" id="handling-of-case-exceptions">
+<span id="id11"></span><h2>5.8. Handling of case exceptions<a class="headerlink" href="#handling-of-case-exceptions" title="Permalink to this headline">¶</a></h2>
+<p id="index-81">GPS keeps a set of case exceptions that is used by all case insensitive
+languages. When editing or reformatting a buffer for such a language the case
+exception dictionary will be checked first. If an exception is found for this
+word or a substring of the word, it will be used; otherwise the specified
+casing for keywords or identifiers is used. A substring is defined as a part of
+the word separated by underscores.</p>
+<p>Note that this feature is not activated for entities (keywords or identifiers)
+for which the casing is set to <cite>Unchanged</cite>. See <a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>.</p>
+<p>A contextual menu named <strong>Casing</strong> has the following entries:</p>
+<dl class="docutils">
+<dt><em>Lower *entity*</em></dt>
+<dd>Set the selected entity in lower case.</dd>
+<dt><em>Upper *entity*</em></dt>
+<dd>Set the selected entity in upper case.</dd>
+<dt><em>Mixed *entity*</em></dt>
+<dd>Set the selected entity in mixed case (set the first letter and
+letters before an underscore in upper case, all other letters are set
+to lower case).</dd>
+<dt><em>Smart Mixed *entity*</em></dt>
+<dd>Set the selected entity in smart mixed case. Idem as above except that
+upper case letters are kept unchanged.</dd>
+<dt><em>Add exception for *entity*</em></dt>
+<dd>Add the current entity into the case exception dictionary.</dd>
+<dt><em>Remove exception for *entity*</em></dt>
+<dd>Remove the current entity from the case exception dictionary.</dd>
+</dl>
+<p>To add or remove a substring exception into/from the dictionary you need to
+first select the substring on the editor. In this case the last two contextual
+menu entries will be:</p>
+<dl class="docutils">
+<dt><em>Add substring exception for *str*</em></dt>
+<dd>Add the selected substring into the case substring exception dictionary.</dd>
+<dt><em>Remove substring exception for *str*</em></dt>
+<dd>Remove the selected substring from the case substring exception dictionary.</dd>
+</dl>
+</div>
+<div class="section" id="refactoring">
+<span id="id12"></span><h2>5.9. Refactoring<a class="headerlink" href="#refactoring" title="Permalink to this headline">¶</a></h2>
+<p id="index-82">GPS includes basic facilities for refactoring your code. Refactoring is the
+standard term used to describe manipulation of the source code that do not
+affect the behavior of the application, but help reorganize the source code to
+make it more readable, more extendable, ...</p>
+<p>Refactoring technics are generally things that programmers are used to do by
+hand, but which are faster and more secure to do automatically through a tool.</p>
+<p>One of the basic recommendations when you refactor your code is to recompile
+and test your application very regularly, to make sure that each of the small
+modifications you made to it didn&#8217;t break the behavior of your application.
+This is particularly true with GPS, since it relies on the cross-references
+information that is generated by the compiler. If some of the source files have
+not been recompiled recently, GPS will print warning messages indicating that
+the renaming operation might be dangerous and/or only partial.</p>
+<p>One of the reference books that was used in the choice of refactoring methods
+to implement is &#8220;Refactoring&#8221;, by Martin Fowler (Addison Wesley).</p>
+<div class="section" id="rename-entity">
+<span id="id13"></span><h3>5.9.1. Rename Entity<a class="headerlink" href="#rename-entity" title="Permalink to this headline">¶</a></h3>
+<p>Clicking on an entity in a source file and selecting the <cite>Refactoring/Rename</cite>
+menu will open a dialog asking for the new name of the entity. GPS will rename
+all instances of the entity in your application.  This includes the definition
+of the entity, its body, all calls to it, etc...  Of course, no comment is
+updated, and you should probably check manually that the comment for the entity
+still applies.</p>
+<p>GPS will handle primitive operations by also renaming the operations it
+overrides or that overrides it. This means that any dispatching call to that
+operation will also be renamed, and the application should still work as
+before. If you are renaming a parameter to a subprogram, GPS can also rename
+parameters with similar names in overriding or overridden subprograms.</p>
+<p>The behavior when handling read-only files can be specified: by default, GPS
+will not do any refactoring in these files, and will display a dialog listing
+all of them; but you can also choose to make them writable just as if you had
+clicked on the &#8220;Read-Only&#8221; button in the status bar of the editor and then have
+GPS perform the renaming in them as well.</p>
+</div>
+<div class="section" id="name-parameters">
+<span id="id14"></span><h3>5.9.2. Name Parameters<a class="headerlink" href="#name-parameters" title="Permalink to this headline">¶</a></h3>
+<p>If you are editing Ada code and click on a call to a subprogram, GPS will
+display a contextual menu <cite>Refactoring/Name parameters</cite>, which will replace all
+unnamed parameters by named parameters, as in:</p>
+<div class="highlight-ada"><div class="highlight"><pre>   <span class="n">Call</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">=&gt;</span>
+   <span class="n">Call</span> <span class="p">(</span><span class="n">Param1</span> <span class="p">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Param2</span> <span class="p">=&gt;</span> <span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="extract-subprogram">
+<span id="id15"></span><h3>5.9.3. Extract Subprogram<a class="headerlink" href="#extract-subprogram" title="Permalink to this headline">¶</a></h3>
+<p>This refactoring is used to move some code from one place to a separate
+subprogram. The goal is to simplify the original subprogram, by moving part of
+its code elsewhere.</p>
+<p>Here is an example from the &#8220;Refactoring&#8221; book. The refactoring will take place
+in the body of the package <tt class="file docutils literal"><span class="pre">pkg.adb</span></tt>, but the spec is needed so that you
+can compile the source code (a preliminary step mandatory before you can
+refactor the code):</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kr">pragma</span> <span class="cp">Ada_05</span><span class="p">;</span>
+
+<span class="kn">with</span> <span class="nn">Ada.Containers.Indefinite_Doubly_Linked_Lists</span><span class="p">;</span>
+<span class="kn">with</span> <span class="nn">Ada.Strings.Unbounded</span><span class="p">;</span>
+
+<span class="kd">package</span> <span class="nc">Pkg</span> <span class="kr">is</span>
+
+   <span class="kd">type</span> <span class="kt">Order</span> <span class="kr">is</span> <span class="kr">tagged</span> <span class="kc">null</span> <span class="kr">record</span><span class="p">;</span>
+   <span class="nv">function</span> <span class="nv">Get_Amount</span> <span class="p">(</span><span class="nv">Self</span> <span class="p">: </span><span class="nv">Order</span><span class="p">)</span> <span class="kr">return</span> <span class="kt">Integer</span><span class="p">;</span>
+
+   <span class="kd">package</span> <span class="nc">Order_Listsis</span> <span class="nc">new</span>
+      <span class="nc">Ada.Containers.Indefinite_Doubly_Linked_Lists</span> <span class="p">(</span>Order<span class="p">);</span>
+
+   <span class="kd">type</span> <span class="kt">Invoice</span> <span class="kr">is</span> <span class="kr">tagged</span> <span class="kr">record</span>
+      <span class="nv">Orders</span> <span class="p">: </span><span class="nv">Order_Lists</span><span class="p">.</span><span class="nv">List</span><span class="p">;</span>
+      <span class="nv">Name</span>   <span class="p">: </span><span class="nv">Ada</span><span class="p">.</span><span class="nv">Strings</span><span class="p">.</span><span class="nv">Unbounded</span><span class="p">.</span><span class="nv">Unbounded_String</span><span class="p">;</span>
+   <span class="nv">end</span> <span class="nv">record</span><span class="p">;</span>
+
+   <span class="nv">procedure</span> <span class="nv">Print_Owing</span> <span class="p">(</span><span class="nv">Self</span> <span class="p">: </span><span class="nv">Invoice</span><span class="p">);</span>
+
+<span class="kr">end</span> <span class="nf">Pkg</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The initial implementation for this code is given by the following code:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kr">pragma</span> <span class="cp">Ada_05</span><span class="p">;</span>
+<span class="kn">with</span> <span class="nn">Ada.Strings.Unbounded</span><span class="p">;</span>  <span class="kn">use</span> <span class="nn">Ada.Strings.Unbounded</span><span class="p">;</span>
+<span class="kn">with</span> <span class="nn">Ada.Text_IO</span><span class="p">;</span>            <span class="kn">use</span> <span class="nn">Ada.Text_IO</span><span class="p">;</span>
+
+<span class="kd">package</span> <span class="kd">body</span> <span class="nc">Pkg</span> <span class="kr">is</span>
+   <span class="kn">use</span> <span class="nn">Order_Lists</span><span class="p">;</span>
+
+   <span class="c1">----------------</span>
+   <span class="c1">-- Get_Amount --</span>
+   <span class="c1">----------------</span>
+
+   <span class="kd">function</span> <span class="nf">Get_Amount</span> <span class="p">(</span><span class="nv">Self</span> <span class="p">: </span><span class="nv">Order</span><span class="p">)</span> <span class="kr">return</span> <span class="kt">Integer</span> <span class="kr">is</span>
+   <span class="kr">begin</span>
+      <span class="kr">return</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="kr">end</span> <span class="nf">Get_Amount</span><span class="p">;</span>
+
+   <span class="c1">-----------------</span>
+   <span class="c1">-- Print_Owing --</span>
+   <span class="c1">-----------------</span>
+
+   <span class="kd">procedure</span> <span class="nf">Print_Owing</span> <span class="p">(</span><span class="nv">Self</span> <span class="p">: </span><span class="nv">Invoice</span><span class="p">)</span> <span class="kr">is</span>
+      <span class="n">E</span> <span class="p">:</span> <span class="n">Order_Lists</span><span class="p">.</span><span class="n">Cursor</span> <span class="p">:=</span> <span class="n">First</span> <span class="p">(</span><span class="n">Self</span><span class="p">.</span><span class="n">Orders</span><span class="p">);</span>
+      <span class="n">Outstanding</span> <span class="p">:</span> <span class="kt">Natural</span> <span class="p">:=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="n">Each</span> <span class="p">:</span> <span class="n">Order</span><span class="p">;</span>
+   <span class="kr">begin</span>
+      <span class="c1">--  &lt;&lt;&lt; line 30</span>
+      <span class="c1">--  Print Banner</span>
+
+      <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+      <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot; Customer Owes         &quot;</span><span class="p">);</span>
+      <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>  <span class="c1">--  &lt;&lt; line 35</span>
+
+      <span class="c1">--  Calculate Outstanding</span>
+
+      <span class="kr">while</span> <span class="n">Has_Element</span> <span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="kr">loop</span>
+         <span class="n">Each</span> <span class="p">:=</span> <span class="n">Element</span> <span class="p">(</span><span class="n">E</span><span class="p">);</span>
+         <span class="n">Outstanding</span> <span class="p">:=</span> <span class="n">Outstanding</span> <span class="o">+</span> <span class="n">Each</span><span class="p">.</span><span class="n">Get_Amount</span><span class="p">;</span>
+         <span class="n">Next</span> <span class="p">(</span><span class="n">E</span><span class="p">);</span>
+      <span class="kr">end</span> <span class="kr">loop</span><span class="p">;</span>
+
+      <span class="c1">--  Print Details</span>
+
+      <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot;Name: &quot;</span> <span class="o">&amp;</span> <span class="n">To_String</span> <span class="p">(</span><span class="n">Self</span><span class="p">.</span><span class="n">Name</span><span class="p">));</span>
+      <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot;Outstanding:&quot;</span> <span class="o">&amp;</span> <span class="n">Outstanding</span><span class="p">&#39;</span><span class="na">Img</span><span class="p">);</span>
+   <span class="kr">end</span> <span class="nf">Print_Owing</span><span class="p">;</span>
+<span class="kr">end</span> <span class="nf">Pkg</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The procedure <cite>Print_Owing</cite> is too long and does several independent actions.
+We will perform a series of three successive refactoring steps to extract the
+code and move it elsewhere.</p>
+<p>The first is the code that prints the banner. Moving it is easy, since this
+code does not depend on any context. We could just do a copy-paste, but then we
+would have to create the new subprogram. Instead, we select lines 30 to 35, and
+then select the contextual menu <cite>Refactoring/Extract Subprogram</cite>.  GPS will
+then automatically change <cite>Print_Owing</cite> and create a new procedure
+<cite>Print_Banner</cite> (the name is specified by the user, GPS does not try to guess
+it). Also, since the chunk of code that is extracted starts with a comment, GPS
+automatically uses that comment as the documentation for the new subprogram.
+Here is part of the resulting file:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kd">package</span> <span class="kd">body</span> <span class="nc">Pkg</span> <span class="kr">is</span>
+
+   <span class="kd">procedure</span> <span class="nf">Print_Banner</span><span class="p">;</span>
+   <span class="c1">--  Print Banner</span>
+
+   <span class="c1">------------------</span>
+   <span class="c1">-- Print_Banner --</span>
+   <span class="c1">------------------</span>
+
+   <span class="kd">procedure</span> <span class="nf">Print_Banner</span> <span class="kr">is</span>
+   <span class="kr">begin</span>
+      <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+      <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot; Customer Owes         &quot;</span><span class="p">);</span>
+      <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+   <span class="kr">end</span> <span class="nf">Print_Banner</span><span class="p">;</span>
+
+   <span class="p">...</span> <span class="p">(</span><span class="n">code</span> <span class="ow">not</span> <span class="n">shown</span><span class="p">)</span>
+
+   <span class="kd">procedure</span> <span class="nf">Print_Owing</span> <span class="p">(</span><span class="nv">Self</span> <span class="p">: </span><span class="nv">Invoice</span><span class="p">)</span> <span class="kr">is</span>
+      <span class="n">E</span> <span class="p">:</span> <span class="n">Order_Lists</span><span class="p">.</span><span class="n">Cursor</span> <span class="p">:=</span> <span class="n">First</span> <span class="p">(</span><span class="n">Self</span><span class="p">.</span><span class="n">Orders</span><span class="p">);</span>
+      <span class="n">Outstanding</span> <span class="p">:</span> <span class="kt">Natural</span> <span class="p">:=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="n">Each</span> <span class="p">:</span> <span class="n">Order</span><span class="p">;</span>
+   <span class="kr">begin</span>
+      <span class="n">Print_Banner</span><span class="p">;</span>
+
+      <span class="c1">--  Calculate Outstanding</span>
+
+      <span class="kr">while</span> <span class="n">Has_Element</span> <span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="kr">loop</span>
+         <span class="n">Each</span> <span class="p">:=</span> <span class="n">Element</span> <span class="p">(</span><span class="n">E</span><span class="p">);</span>
+         <span class="n">Outstanding</span> <span class="p">:=</span> <span class="n">Outstanding</span> <span class="o">+</span> <span class="n">Each</span><span class="p">.</span><span class="n">Get_Amount</span><span class="p">;</span>
+         <span class="n">Next</span> <span class="p">(</span><span class="n">E</span><span class="p">);</span>
+      <span class="kr">end</span> <span class="kr">loop</span><span class="p">;</span>
+
+      <span class="c1">--  Print Details   &lt;&lt;&lt; line  54</span>
+
+      <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot;Name: &quot;</span> <span class="o">&amp;</span> <span class="n">To_String</span> <span class="p">(</span><span class="n">Self</span><span class="p">.</span><span class="n">Name</span><span class="p">));</span>
+      <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot;Outstanding:&quot;</span> <span class="o">&amp;</span> <span class="n">Outstanding</span><span class="p">&#39;</span><span class="na">Img</span><span class="p">);</span>  <span class="c1">--  line 57</span>
+   <span class="kr">end</span> <span class="nf">Print_Owing</span><span class="p">;</span>
+<span class="kr">end</span> <span class="nf">Pkg</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>A more interesting example is when we want to extract the code to print the
+details of the invoice. This code depends on one local variable and the
+parameter to Print_Owing. When we select lines 54 to 57 and extract it into a
+new <cite>Print_Details</cite> subprogram, we get the following result. GPS automatically
+decides which variables to extract, and whether they should become parameters
+of the new subprogram, or local variables. In the former case, it will also
+automatically decide whether to create <cite>&#8220;in&#8221;</cite>, <cite>&#8220;out&#8221;</cite> or <cite>&#8220;in out&#8221;</cite>
+parameters. If there is a single <cite>&#8220;out&#8221;</cite> parameter, it will automatically
+create a function rather than a procedure.</p>
+<p>GPS will use, for the parameters, the same name that was used for the local
+variable. Very often, it will make sense to recompile the new version of the
+source, and then apply the <cite>Rename Entity</cite> refactoring to have more specific
+names for the parameters, or the <cite>Name Parameters</cite> refactoring so that the call
+to the new method uses named parameters to further clarify the code:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="p">...</span> <span class="n">code</span> <span class="ow">not</span> <span class="n">shown</span>
+
+<span class="kd">procedure</span> <span class="nf">Print_Details</span>
+  <span class="p">(</span><span class="nv">Self</span> <span class="p">: </span><span class="nv">Invoice</span><span class="p">&#39;</span><span class="na">Class</span><span class="p">;</span>
+   <span class="nv">Outstanding</span> <span class="p">: </span><span class="nv">Natural</span><span class="p">);</span>
+<span class="c1">--  Print Details</span>
+
+<span class="c1">-------------------</span>
+<span class="c1">-- Print_Details --</span>
+<span class="c1">-------------------</span>
+
+<span class="kd">procedure</span> <span class="nf">Print_Details</span>
+  <span class="p">(</span><span class="nv">Self</span> <span class="p">: </span><span class="nv">Invoice</span><span class="p">&#39;</span><span class="na">Class</span><span class="p">;</span>
+   <span class="nv">Outstanding</span> <span class="p">: </span><span class="nv">Natural</span><span class="p">)</span>
+<span class="kr">is</span>
+<span class="kr">begin</span>
+   <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot;Name: &quot;</span> <span class="o">&amp;</span> <span class="n">To_String</span> <span class="p">(</span><span class="n">Self</span><span class="p">.</span><span class="n">Name</span><span class="p">));</span>
+   <span class="n">Put_Line</span> <span class="p">(</span><span class="s">&quot;Outstanding:&quot;</span> <span class="o">&amp;</span> <span class="n">Outstanding</span><span class="p">&#39;</span><span class="na">Img</span><span class="p">);</span>
+<span class="kr">end</span> <span class="nf">Print_Details</span><span class="p">;</span>
+
+<span class="kd">procedure</span> <span class="nf">Print_Owing</span> <span class="p">(</span><span class="nv">Self</span> <span class="p">: </span><span class="nv">Invoice</span><span class="p">)</span> <span class="kr">is</span>
+   <span class="n">E</span> <span class="p">:</span> <span class="n">Order_Lists</span><span class="p">.</span><span class="n">Cursor</span> <span class="p">:=</span> <span class="n">First</span> <span class="p">(</span><span class="n">Self</span><span class="p">.</span><span class="n">Orders</span><span class="p">);</span>
+   <span class="n">Outstanding</span> <span class="p">:</span> <span class="kt">Natural</span> <span class="p">:=</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="n">Each</span> <span class="p">:</span> <span class="n">Order</span><span class="p">;</span>
+<span class="kr">begin</span>
+   <span class="n">Print_Banner</span><span class="p">;</span>
+
+   <span class="c1">--  Calculate Outstanding</span>
+
+   <span class="kr">while</span> <span class="n">Has_Element</span> <span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="kr">loop</span>
+      <span class="n">Each</span> <span class="p">:=</span> <span class="n">Element</span> <span class="p">(</span><span class="n">E</span><span class="p">);</span>
+      <span class="n">Outstanding</span> <span class="p">:=</span> <span class="n">Outstanding</span> <span class="o">+</span> <span class="n">Each</span><span class="p">.</span><span class="n">Get_Amount</span><span class="p">;</span>
+      <span class="n">Next</span> <span class="p">(</span><span class="n">E</span><span class="p">);</span>
+   <span class="kr">end</span> <span class="kr">loop</span><span class="p">;</span>
+
+   <span class="n">Print_Details</span> <span class="p">(</span><span class="n">Self</span><span class="p">,</span> <span class="n">Outstanding</span><span class="p">);</span>
+<span class="kr">end</span> <span class="nf">Print_Owing</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Finally, we want to extract the code that computes the outstanding amount. When
+this code is moved, the variables <cite>E</cite> and <cite>Each</cite> become useless in
+<cite>Print_Owing</cite> and are moved into the new subprogram (which we will call
+<cite>Get_Outstanding</cite>. Here is the result of that last refactoring (the initial
+selection should include the blank lines before and after the code, to keep the
+resulting <cite>Print_Owing</cite> simpler). GPS will automatically ignore those blank
+lines:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="p">...</span> <span class="n">code</span> <span class="ow">not</span> <span class="n">shown</span>
+
+<span class="kd">procedure</span> <span class="nf">Get_Outstanding</span> <span class="p">(</span><span class="nv">Outstanding</span> <span class="p">: </span><span class="nv">in</span> <span class="nv">out</span> <span class="nv">Natural</span><span class="p">);</span>
+<span class="c1">--  Calculate Outstanding</span>
+
+<span class="c1">---------------------</span>
+<span class="c1">-- Get_Outstanding --</span>
+<span class="c1">---------------------</span>
+
+<span class="kd">procedure</span> <span class="nf">Get_Outstanding</span> <span class="p">(</span><span class="nv">Outstanding</span> <span class="p">: </span><span class="nv">in</span> <span class="nv">out</span> <span class="nv">Natural</span><span class="p">)</span> <span class="kr">is</span>
+   <span class="n">E</span> <span class="p">:</span> <span class="n">Order_Lists</span><span class="p">.</span><span class="n">Cursor</span> <span class="p">:=</span> <span class="n">First</span> <span class="p">(</span><span class="n">Self</span><span class="p">.</span><span class="n">Orders</span><span class="p">);</span>
+   <span class="n">Each</span> <span class="p">:</span> <span class="n">Order</span><span class="p">;</span>
+<span class="kr">begin</span>
+   <span class="kr">while</span> <span class="n">Has_Element</span> <span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="kr">loop</span>
+      <span class="n">Each</span> <span class="p">:=</span> <span class="n">Element</span> <span class="p">(</span><span class="n">E</span><span class="p">);</span>
+      <span class="n">Outstanding</span> <span class="p">:=</span> <span class="n">Outstanding</span> <span class="o">+</span> <span class="n">Each</span><span class="p">.</span><span class="n">Get_Amount</span><span class="p">;</span>
+      <span class="n">Next</span> <span class="p">(</span><span class="n">E</span><span class="p">);</span>
+   <span class="kr">end</span> <span class="kr">loop</span><span class="p">;</span>
+<span class="kr">end</span> <span class="nf">Get_Outstanding</span><span class="p">;</span>
+
+<span class="kd">procedure</span> <span class="nf">Print_Owing</span> <span class="p">(</span><span class="nv">Self</span> <span class="p">: </span><span class="nv">Invoice</span><span class="p">)</span> <span class="kr">is</span>
+   <span class="n">Outstanding</span> <span class="p">:</span> <span class="kt">Natural</span> <span class="p">:=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kr">begin</span>
+   <span class="n">Print_Banner</span><span class="p">;</span>
+   <span class="n">Get_Outstanding</span> <span class="p">(</span><span class="n">Outstanding</span><span class="p">);</span>
+   <span class="n">Print_Details</span> <span class="p">(</span><span class="n">Self</span><span class="p">,</span> <span class="n">Outstanding</span><span class="p">);</span>
+<span class="kr">end</span> <span class="nf">Print_Owing</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Note that the final version of <cite>Print_Owing</cite> is not perfect. For instance,
+passing the initial value 0 to <cite>Get_Outstanding</cite> is useless, and in fact that
+should probably be a function with no parameter. But GPS already saves a lot of
+time and manipulation.</p>
+<p>Finally, a word of caution: this refactoring does not check that you are giving
+a valid input. For instance, if the text you select includes a <cite>declare</cite> block,
+you should always include the full block, not just a part of it (or select text
+between <cite>begin</cite> and <cite>end</cite>). Likewise, GPS does not expect you to select any
+part of the variable declarations, just the code.</p>
+</div>
+</div>
+<div class="section" id="using-an-external-editor">
+<span id="id16"></span><h2>5.10. Using an External Editor<a class="headerlink" href="#using-an-external-editor" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-83"></span><span class="target" id="index-84"></span><span class="target" id="index-85"></span><p id="index-86">GPS is integrated with a number of external editors, in particular <cite>Emacs</cite> and
+<cite>vi</cite>. The choice of the default external editor is done in the preferences.
+<a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>.</p>
+<p id="index-87">The following values are recognized:</p>
+<dl class="docutils">
+<dt><em>gnuclient</em></dt>
+<dd><p class="first" id="index-88">This is the recommended client. It is based on Emacs, but needs an extra
+package to be installed. This is the only client that provides a full
+integration in GPS, since any extended lisp command can be sent to the Emacs
+server.</p>
+<p>By default, gnuclient will open a new Emacs frame for every file that is
+opened. You might want to add the following code to your <tt class="file docutils literal"><span class="pre">.emacs</span></tt> file
+(create one if needed) so that the same Emacs frame is reused every time:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="p">(</span><span class="n">setq</span> <span class="n">gnuserv</span><span class="o">-</span><span class="n">frame</span> <span class="p">(</span><span class="n">car</span> <span class="p">(</span><span class="n">frame</span><span class="o">-</span><span class="n">list</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p class="last" id="index-89">See <a class="reference external" href="http://www.hpl.hp.com/personal/ange/gnuserv/home.html">http://www.hpl.hp.com/personal/ange/gnuserv/home.html</a> for more
+information.</p>
+</dd>
+<dt><em>emacsclient</em></dt>
+<dd><p class="first last" id="index-90">This is a program that is always available if you have installed Emacs. As
+opposed to starting a new Emacs every time, it will reuse an existing Emacs
+session. It is then extremely fast to open a file.</p>
+</dd>
+<dt><em>emacs</em></dt>
+<dd><p class="first last" id="index-91">This client will start a new Emacs session every time a file needs to be
+opened. You should use <cite>emacsclient</cite> instead, since it is much faster, and
+makes it easier to copy and paste between multiple files. Basically, the only
+reason to use this external editor is if your system doesn&#8217;t support
+<cite>emacsclient</cite>.</p>
+</dd>
+<dt><em>vim</em></dt>
+<dd><p class="first" id="index-92"><cite>Vim</cite> is a vi-like editor that provides a number of enhancements, for
+instance syntax highlighting for all the languages supported by GPS.
+Selecting this external editor will start an xterm (or command window,
+depending on your system) with a running <cite>vim</cite> process editing the file.</p>
+<p>Note that one limitation of this editor is that if GPS needs to open the same
+file a second time, it will open a new editor, instead of reusing the
+existing one.</p>
+<p class="last" id="index-93">To enable this capability, the xterm executable must be found in the PATH,
+and thus is not supported on Windows systems. Under Windows systems, you can
+use the <cite>custom</cite> editor instead.</p>
+</dd>
+<dt><em>vi</em></dt>
+<dd><p class="first last" id="index-94">This editor works exactly like vim, but uses the standard <cite>vi</cite> command
+instead of <cite>vim</cite>.</p>
+</dd>
+<dt><em>custom</em></dt>
+<dd><p class="first last" id="index-95">You can specify any external editor by choosing this item. The full command
+line used to call the editor can be specified in the preferences (see
+<a class="reference internal" href="extending.html#custom-editor-command"><em>Custom Editor Command</em></a>).</p>
+</dd>
+<dt><em>none</em></dt>
+<dd>No external editor is used, and the contextual menus simply won&#8217;t
+appear.</dd>
+</dl>
+<p>In the cases that require an Emacs server, GPS will try several solutions if no
+already running server was found. It will first try to spawn the glide
+environment distributed with GNAT. If not found in the PATH, it will then start
+a standard Emacs. The project file currently used in GPS will be set
+appropriately the first time Emacs is spawned. This means that if you load a
+new project in GPS, or modify the paths of the current project, you should kill
+any running Emacs, so that a new one is spawned by GPS with the appropriate
+project.</p>
+<p id="index-96">Alternatively, you can reload explicitly the project from Emacs itself by using
+the menu <cite>Project-&gt;Load</cite></p>
+<p id="index-97">In the preferences, there are three settings that allow you to select the
+external editor (if left to an empty string, GPS will automatically select the
+first editor available on your system), to specify the custom editor command,
+in case you&#8217;ve selector this item, and whether this editor should always be
+used every time you double-click on a file, or whether you need to explicitly
+select the contextual menu to open the external editor.</p>
+</div>
+<div class="section" id="using-the-clipboard">
+<span id="id17"></span><h2>5.11. Using the Clipboard<a class="headerlink" href="#using-the-clipboard" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-98"></span><span class="target" id="index-99"></span><span class="target" id="index-100"></span><span class="target" id="index-101"></span><span class="target" id="index-102"></span><p id="index-103">This section concerns X-Window users who are used to cutting and pasting with
+the middle mouse button. In the GPS text editor, as in many recent X
+applications, the <em>GPS clipboard</em> is set by explicit cut/copy/paste actions,
+either through menu items or keyboard shortcuts, and the <em>primary clipboard</em>
+(i.e. the &#8216;middle button&#8217; clipboard) is set by the current selection.</p>
+<p>Therefore, copy/paste between GPS and other X applications using the <em>primary
+clipboard</em> will still work, provided that there is some text currently
+selected. The <em>GPS clipboard</em>, when set, will override the <em>primary clipboard</em>.</p>
+<p>By default, GPS overrides the X mechanism. To prevent this, add the following
+line: <cite>OVERRIDE_MIDDLE_CLICK_PASTE = no</cite> to your <cite>traces.cfg</cite> file. Note,
+however, that the X mechanism pastes all attributes of text, including
+coloring and editability, which can be confusing.</p>
+<p id="index-104">See <a class="reference external" href="http://standards.freedesktop.org/clipboards-spec/clipboards-latest.txt">http://standards.freedesktop.org/clipboards-spec/clipboards-latest.txt</a> for
+more information.</p>
+</div>
+<div class="section" id="saving-files">
+<span id="id18"></span><h2>5.12. Saving Files<a class="headerlink" href="#saving-files" title="Permalink to this headline">¶</a></h2>
+<p id="index-105">After you have finished modifying your files, you need to save them. The basic
+method to do that is to select the menu <cite>File-&gt;Save</cite>, which saves the currently
+selected file.</p>
+<p>You can also use the menu <cite>File-&gt;Save As...</cite> if you want to save the file with
+another name, or in another directory.</p>
+<p>If you have multiple files to save, another possibility is to use the menu
+<cite>File-&gt;Save More-&gt;All</cite>. This will open a dialog listing all the currently
+modified editors that need saving. You can then select individually which one
+should be saved, and click on <cite>Save</cite> to do the actual saving.</p>
+<p>When calling external commands, such as compiling a file, if the <cite>Auto save</cite>
+preference is disabled, this same dialog is also used, to make sure that e.g.
+the compiler will take into account your local changes.  If the preference is
+enabled, the saving is performed automatically.</p>
+<img alt="_images/save-dialog.jpg" id="index-106" src="_images/save-dialog.jpg" />
+<p>You can conveniently select or unselect all the files at once by clicking on
+the title of the first column (labeled <em>Select</em>). This will toggle the
+selection status of the first line, and have the same status for all other
+editors.</p>
+<p>If you press <cite>Cancel</cite> instead of <cite>Save</cite>, no saving will take place, and the
+action that displayed this dialog is also canceled. Such actions can be for
+instance starting a compilation command, a VCS operation, or quitting GPS with
+unsaved files.</p>
+</div>
+<div class="section" id="remote-files">
+<span id="id19"></span><h2>5.13. Remote Files<a class="headerlink" href="#remote-files" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-107"></span><span class="target" id="index-108"></span><span class="target" id="index-109"></span><span class="target" id="index-110"></span><span class="target" id="index-111"></span><span class="target" id="index-112"></span><p id="index-113">GPS has a basic support for working with files on remote hosts. This includes a
+number of protocols, described below, which allow you to read a file from a
+remote host, edit it locally, and then save it transparently to the remote
+machine.</p>
+<p>For now, the support for remote files is only available through the GPS shell
+window. You start editing a remote file by typing a line similar to:</p>
+<div class="highlight-ada"><pre>Editor.edit protocol://user@machine/full/path</pre>
+</div>
+<p>where &#8220;protocol&#8221; should be replaced by the name of the protocol you want to
+use, &#8220;user&#8221; is the login name you wish to use on the remote &#8220;machine&#8221;, and
+&#8220;/full/path&#8221; is the full path on the remote machine to access the file.</p>
+<p>The user name is optional. If it is the same as on the local machine, you can
+omit the user name as well as the &#8220;&#64;&#8221; sign.</p>
+<p>Likewise, the machine name is optional, if you want to get a file from the
+local host. This can be used to access files belonging to another user. In this
+case, you need to specify the &#8220;&#64;&#8221; sign, but do not insert a machine name right
+after it.</p>
+<p>Remote files can also be used if you want to work with GPS, but the machine on
+which the files are found isn&#8217;t supported by GPS.</p>
+<p>The following protocols are supported:</p>
+<dl class="docutils">
+<dt><em>ssh</em></dt>
+<dd><p class="first">This protocol is based on the ssh command line tool, which must therefore be
+available in the path. It provides encrypted and secure connections to the
+remote host. Files are transfered in-line, that is the connection is
+established the first time you access the remote host, and kept open for all
+further access.</p>
+<p id="index-114">Although ssh can be setup not to require a password, GPS will automatically
+detect if a password is asked and open a dialog to query it.</p>
+<p>The remote system must be a Unix-like system with support for standard Unix
+commands like <cite>test</cite>, <cite>echo</cite>, <cite>rm</cite> and <cite>ls</cite>.</p>
+<p class="last">In the sample shell command above, you would replace the word &#8220;protocol&#8221; with
+&#8220;ssh&#8221; to use this protocol.</p>
+</dd>
+<dt><em>rsh</em></dt>
+<dd><p class="first">This protocol behaves like ssh, except that the connections are not encrypted.
+However, this protocol is generally available on all Unix machines by default.</p>
+<p class="last">It has the same requirements that the ssh protocol. To use it, substitute the
+word &#8220;rsh&#8221; to &#8220;protocol&#8221; in the example above.</p>
+</dd>
+<dt><em>telnet</em></dt>
+<dd><p class="first">This protocol is based on the standard telnet protocol. It behaves much like
+the two protocols above, with an unencrypted connection.</p>
+<p class="last">To use it, substitute the word &#8220;telnet&#8221; to &#8220;protocol&#8221; in the example above.</p>
+</dd>
+<dt><em>scp</em></dt>
+<dd><p class="first">This protocol is also based on one of the tools of the ssh suite. It provides
+encrypted connections, and uses a mixture of ssh and scp connections.
+Various commands like querying the time stamp of a file are executed through
+a permanent ssh connection, whereas files are downloaded and uploaded through
+a one-time scp command.</p>
+<p>It basically has the same behavior as the ssh protocol, although it might be
+slightly slower since a new connection has to be established every time a
+file is fetched from, or written to the remote host. However, it might work
+better than ssh if the file contains 8 bit characters.</p>
+<p class="last">To use it, substitute the word &#8220;scp&#8221; to &#8220;protocol&#8221; in the example above.</p>
+</dd>
+<dt><em>rsync</em></dt>
+<dd><p class="first">Just like scp is based on ssh, this protocol is based on either rsh or ssh.
+It depends on the external tool rsync, and uses a mixture of a rsh/ssh
+connection for commands like querying the time stamp of a file, and one-time
+connections with rsync to transfer the files.</p>
+<p>Rsync is specially optimized to transfer only the parts of a file that are
+different from the one already on the remote host. Therefore, it will
+generally provide the best performance when writing the file back to the
+remote host.</p>
+<p>If you set up the environment variable RSYNC_RSH to ssh before starting gps,
+the connection will then be encrypted when transferring the files, and the
+connection will be performed using ssh instead of rsh.</p>
+<p class="last">To use this protocol, substitute the word &#8220;rsync&#8221; to &#8220;protocol&#8221; in the
+example above.</p>
+</dd>
+<dt><em>ftp</em></dt>
+<dd><p class="first">This protocol provides only limited capabilities, but can be used to retrieve
+or write a file back through an ftp connection, possibly even through an
+anonymous ftp connection.</p>
+<p class="last">To use this protocol, substitute the word &#8220;ftp&#8221; to &#8220;protocol&#8221; in the example
+above.</p>
+</dd>
+<dt><em>http</em></dt>
+<dd>This is the usual http protocol to download documents from the web. It is in
+particular useful for documentation</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="navigation.html" title="6. Source Navigation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mdi.html" title="4. Multiple Document Interface"
+             >previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

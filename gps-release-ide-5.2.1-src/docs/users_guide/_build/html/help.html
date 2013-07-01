@@ -1,0 +1,183 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. Online Help &mdash; GPS 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GPS 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="4. Multiple Document Interface" href="mdi.html" />
+    <link rel="prev" title="2. Description of the Main Windows" href="main_window.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdi.html" title="4. Multiple Document Interface"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="main_window.html" title="2. Description of the Main Windows"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">3. Online Help</a><ul>
+<li><a class="reference internal" href="#the-help-menu">3.1. The Help Menu</a></li>
+<li><a class="reference internal" href="#adding-new-help-files">3.2. Adding New Help Files</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="main_window.html"
+                        title="previous chapter">2. Description of the Main Windows</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mdi.html"
+                        title="next chapter">4. Multiple Document Interface</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/help.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="online-help">
+<span id="id1"></span><h1>3. Online Help<a class="headerlink" href="#online-help" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="index-0"></span><span class="target" id="index-1"></span><p id="index-2">By default when you start GPS, the working area contains a welcome page giving
+a few starting points in the online help.</p>
+<p>Online help for the GNAT tools is available from the <cite>Help</cite> menu item.  GPS
+launches an external html browser to view these pages. (See
+<a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a> on how to configure this under Unix. Under
+Windows systems, the default HTML browser is used.)</p>
+<div class="section" id="the-help-menu">
+<span id="id2"></span><h2>3.1. The Help Menu<a class="headerlink" href="#the-help-menu" title="Permalink to this headline">¶</a></h2>
+<p>The Help menu item provides the following entries:</p>
+<dl class="docutils">
+<dt><em>Welcome</em></dt>
+<dd>Open the GPS Welcome page.</dd>
+<dt><em>Contents</em></dt>
+<dd>Open a special HTML file that contains links for all the
+documentation files currently registered in GPS, <a class="reference internal" href="#adding-new-help-files"><em>Adding New Help Files</em></a>.</dd>
+<dt><em>GPS</em></dt>
+<dd>Submenu containing GPS documentation items.</dd>
+<dt><em>GNAT Runtime</em></dt>
+<dd>Submenu referencing all GNAT run-time files available, and a direct access
+to the corresponding specs containing embedded documentation.</dd>
+<dt><em>Python extensions</em></dt>
+<dd>Gives access to the GPS API available via python.</dd>
+<dt><em>About</em></dt>
+<dd><p class="first">Display a dialog giving information about the versions of GPS and GNAT used:</p>
+<img alt="_images/about.jpg" class="last" id="index-3" src="_images/about.jpg" />
+</dd>
+</dl>
+<p>This menu contains a number of additional entries, depending on what
+documentation packages were installed on your system. See the next section to
+see how to add new help files.</p>
+</div>
+<div class="section" id="adding-new-help-files">
+<span id="id3"></span><h2>3.2. Adding New Help Files<a class="headerlink" href="#adding-new-help-files" title="Permalink to this headline">¶</a></h2>
+<p id="index-4">GPS will search for the help files in the list of directories set in the
+environment variable <cite>GPS_DOC_PATH</cite> (a colon-separated list of directories on
+Unix systems, or semicolon-separated list of directories on Windows systems).
+In addition, the default directory <cite>&lt;prefix&gt;/share/doc/gps/html</cite> is also
+searched. If the file cannot be found in any of these directories, the
+corresponding menu item will be disabled.</p>
+<p>The environment variable <cite>GPS_DOC_PATH</cite> can either be set by each user in his
+own environment, or can be set system-wide by modifying the small wrapper
+script <tt class="file docutils literal"><span class="pre">gps</span></tt> itself on Unix systems.</p>
+<p>It can also be set programmatically through the GPS shell or any of the
+scripting languages. This is done with:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">GPS</span><span class="o">.</span><span class="n">add_doc_directory</span> <span class="p">(</span><span class="s">&quot;/home/foo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The specific list of files shown in the menus is set by reading the index files
+in each of the directories in <cite>GPS_DOC_PATH</cite>. These index files must be called
+<tt class="file docutils literal"><span class="pre">gps_index.xml</span></tt>.</p>
+<p>The format of these index files is specified in <a class="reference internal" href="extending.html#adding-documentation"><em>Adding documentation</em></a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdi.html" title="4. Multiple Document Interface"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="main_window.html" title="2. Description of the Main Windows"
+             >previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

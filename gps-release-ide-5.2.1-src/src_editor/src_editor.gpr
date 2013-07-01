@@ -1,0 +1,30 @@
+with "../common/common";
+with "gtkada";
+with "../kernel/kernel";
+with "../completion/ui/completion_ui";
+with "../vsearch/vsearch";
+with "../widgets/widgets";
+with "../aliases/aliases";
+with "../shared";
+
+project Src_Editor is
+
+   for Source_Dirs use ("src");
+   for Object_Dir use Shared'Object_Dir;
+
+   package Compiler renames Shared.Compiler;
+
+   package Naming is
+      case Shared.OS is
+         when "Windows_NT" =>
+            for Implementation ("src_printing.fabric") use
+              "src_printing-fabric__win32.adb";
+         when "unix" =>
+            for Implementation ("src_printing.fabric") use
+              "src_printing-fabric__default.adb";
+      end case;
+   end Naming;
+
+   package IDE renames Shared.IDE;
+
+end Src_Editor;

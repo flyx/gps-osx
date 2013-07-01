@@ -1,0 +1,26 @@
+rename_var_imported.gpr:10:14: warning: "./A1" is not a valid directory
+project Rename_Var_Imported is
+
+   type A_Type is
+      ("A1", "A2");
+   A : A_Type := external ("var1_new");
+   A := "c" & external ("var1_new") & external ("var2") & external ("var1_new");
+   for Source_Dirs use (".", "./" & external ("var1_new"));
+
+end Rename_Var_Imported;
+with "rename_var_imported";
+
+project Rename_Var is
+
+   type A_Type is
+      ("A1", "A2");
+   A : A_Type := external ("var1_new");
+   type A_Type1 is
+      ("A1", "A2");
+   C : A_Type1 := external ("var1_new");
+   C := "c" & external ("var1_new") & external ("var2") & external ("var1_new");
+   for Source_Files use ();
+   for Source_Dirs use (".", "./" & external ("var1_new"));
+
+end Rename_Var;
+

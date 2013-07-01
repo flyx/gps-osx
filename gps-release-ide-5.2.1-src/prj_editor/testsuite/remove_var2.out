@@ -1,0 +1,22 @@
+remove_var.gpr:2:09: warning: object directory "../A1" not found
+remove_var.gpr:17:39: warning: ".A1" is not a valid directory
+project Remove_Var is
+
+   type B_Type is
+      ("B1", "B2");
+   B : B_Type := external ("B");
+   for Object_Dir use "." & "A3";
+   for Source_Dirs use ("." & "A3", ".." & "A3");
+
+   case B is
+
+      when "B1" =>
+         for Source_Dirs use ("." & "A3");
+         for Object_Dir use "../" & "A3";
+
+      when "B2" =>
+         for Source_Dirs use (".." & "A3");
+   end case;
+
+end Remove_Var;
+

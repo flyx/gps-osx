@@ -1,0 +1,36 @@
+with "../gnatcoll_shared";
+with "gnatcoll_postgres";
+with "gnatcoll_sqlite";
+with "gnatcoll_readline";
+
+project GnatColl_Tools is
+   for Main use ("gnatcoll_db2ada.adb");
+   for Object_Dir use Gnatcoll_Shared'Object_Dir;
+   for Source_Dirs use ("tools");
+
+   --  gnatinspect and GNATCOLL.Xref require projects support
+   case GnatColl_Shared.Projects is
+      when "no" =>
+         for Excluded_Source_Files use ("gnatinspect.adb");
+      when "yes" =>
+         case GnatColl_Shared.Sqlite is
+            when "no" =>
+               for Excluded_Source_Files use ("gnatinspect.adb");
+            when "yes" | "embedded" =>
+               for Main use Project'Main & ("gnatinspect.adb");
+         end case;
+   end case;
+
+   case GnatColl_Shared.Templates is
+      when "no" =>
+         for Source_Dirs use Project'Source_Dirs & ("tools/notemplates");
+      when "yes" =>
+         for Source_Dirs use Project'Source_Dirs & ("tools/templates");
+   end case;
+
+   package Builder  renames GnatColl_Shared.Builder;
+   package Compiler renames GnatColl_Shared.Compiler;
+   package Binder   renames GnatColl_Shared.Binder;
+   package Ide      renames GnatColl_Shared.Ide;
+
+end GnatColl_Tools;

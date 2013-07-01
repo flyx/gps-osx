@@ -1,0 +1,14 @@
+with "../custom";
+
+project Templates_GUI is
+   for Source_Dirs use (".");
+   for Object_Dir use "obj";
+
+   for Main use ("main_gui.adb", "main.adb");
+
+   package Compiler is
+      for Default_Switches ("Ada") use ("-gnat05");
+   end Compiler;
+
+end Templates_GUI;
+

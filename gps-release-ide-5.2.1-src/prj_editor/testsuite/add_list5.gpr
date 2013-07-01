@@ -1,0 +1,21 @@
+project Add_List5 is
+
+   type A_Type is ("1", "2");
+   A : A_Type := external ("A");
+
+   type B_Type is ("B1", "B2");
+   B : B_Type := external ("B");
+
+   for source_dirs use ("..");
+   for source_dirs use (".");
+
+   case A is
+       when "1" =>
+          case B is
+              when "B1" =>
+                 for object_dir use ".";
+          end case;
+   end case;
+end Add_List5;
+
+

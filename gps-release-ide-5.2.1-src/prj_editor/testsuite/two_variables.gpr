@@ -1,0 +1,10 @@
+project Two_Variables is
+   type A_Type is ("1", "2");
+   A : A_Type := external ("A", "1");
+   B : A_Type := external ("A", "2");
+
+   case A is
+      when "1" => 
+        for object_dir use ".";
+   end case;
+end Two_Variables;

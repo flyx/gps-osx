@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>8. Debugging &mdash; GPS Programer&#39;s Guide 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GPS Programer&#39;s Guide 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="9. Contexts" href="contexts.html" />
+    <link rel="prev" title="7. Documenting your module" href="documenting.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="contexts.html" title="9. Contexts"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="documenting.html" title="7. Documenting your module"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">GPS Programer&#39;s Guide 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">8. Debugging</a><ul>
+<li><a class="reference internal" href="#x11-server">8.1. X11 server</a></li>
+<li><a class="reference internal" href="#gtk-library">8.2. gtk+ library</a></li>
+<li><a class="reference internal" href="#debugger">8.3. debugger</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="documenting.html"
+                        title="previous chapter">7. Documenting your module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="contexts.html"
+                        title="next chapter">9. Contexts</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/debugging.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="debugging">
+<h1>8. Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="x11-server">
+<h2>8.1. X11 server<a class="headerlink" href="#x11-server" title="Permalink to this headline">¶</a></h2>
+<p>If you are developing on a linux system, it is recommended that you
+reconfigure your X11 server with the following setup (see the file
+<tt class="file docutils literal"><span class="pre">/etc/X11/XF86Config-4</span></tt>):</p>
+<div class="highlight-python"><pre>Section "ServerFlags"
+        Option "AllowDeactivateGrabs" "true"   # Ctrl+Alt+Keypad *
+        Option "AllowClosedownGrabs"  "true"   # Ctrl+Alt+Keypad /
+EndSection</pre>
+</div>
+<p>The two key bindings described above are used to release any grab that
+a GUI application might have. This is especially useful when debugging
+through <cite>gdb</cite>: it might happen that the breakpoint happens while
+such a grab is in place, and would therefore prevent any input (mouse
+or keyboard) to any application in your X11 session, in particular the
+debugger.</p>
+</div>
+<div class="section" id="gtk-library">
+<h2>8.2. gtk+ library<a class="headerlink" href="#gtk-library" title="Permalink to this headline">¶</a></h2>
+<p>It is also recommended that you recompile your own gtk+ library (on
+systems where this is easily doable such as Unix systems), with the
+following configure command:</p>
+<div class="highlight-python"><pre>./configure --with-debug=yes</pre>
+</div>
+<p>In addition to providing the usual debugging information in the
+debugger, this also activates several environment variables which
+might be used to monitor the actions in gtk+ and its associated
+libraries.</p>
+<p>These variables are the following:</p>
+<div class="highlight-python"><pre>export GTK_DEBUG=misc:plugsocket:text:tree:updates:keybindings;
+export GDK_DEBUG=updates:nograbs:events:dnd:misc:xim:colormap:gdkrb:gc:pixmap:image:input:cursor;
+export GOBJECT_DEBUG=objects:signals;</pre>
+</div>
+<p>Some of the values for these variables can be omitted. The exact
+semantic (or even the exact list) of such variables depends on your
+version of gtk+, and you should therefore consult its documentation.</p>
+</div>
+<div class="section" id="debugger">
+<h2>8.3. debugger<a class="headerlink" href="#debugger" title="Permalink to this headline">¶</a></h2>
+<p>When debugging with <cite>gdb</cite>, it is recommended that you always
+specify the flag <cite>&#8211;sync</cite> to gps. This forces any gtk+
+application, and in particular GPS, to process X11 events
+synchronously, and therefore makes it easier to debug possible
+problems.</p>
+<p>If your application is printing some gtk+ warnings on the console, you
+should do the following in the debugger:</p>
+<div class="highlight-python"><pre>(gdb) set args --sync
+(gdb) begin
+(gdb) break g_log
+(gdb) cont</pre>
+</div>
+<p>This will stop the application as soon as the gtk+ warning is printed.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="contexts.html" title="9. Contexts"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="documenting.html" title="7. Documenting your module"
+             >previous</a> |</li>
+        <li><a href="index.html">GPS Programer&#39;s Guide 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

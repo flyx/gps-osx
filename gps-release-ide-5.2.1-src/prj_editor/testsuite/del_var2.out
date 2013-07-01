@@ -1,0 +1,16 @@
+project Del_Var is
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-O2", "-gnatf", "-gnatwe", "-g");
+   end Compiler;
+
+   package Builder is
+      for Default_Switches ("ada") use ("-g");
+   end Builder;
+
+   package Linker is
+      for Default_Switches ("ada") use ("-g");
+   end Linker;
+
+end Del_Var;
+

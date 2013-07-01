@@ -1,0 +1,54 @@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+srcdir = @srcdir@
+
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@
+INSTALL_DATA = @INSTALL_DATA@
+
+CC = @CC@
+CFLAGS = -g -O2
+LDFLAGS = @LDFLAGS@
+LIBS = -limagehlp
+
+EXPLAUNCH_OBJS = \
+	expWinSlaveDrv.o \
+	expWinSlaveDbg.o \
+	expWinSlaveDbgW.o \
+	expWinSlaveKey.o \
+	expWinProcess.o \
+	expDString.o \
+	tclHash.o
+
+EXPLAUNCH_DEPS = \
+	expWin.h \
+	expWinSlave.h \
+	expWinProcess.h \
+	expDString.h \
+	tclHash.h
+
+EXPLAUNCH = explaunch.exe
+
+ifeq ($(DEBUG), 1)
+	CFLAGS += -DEXPLAUNCH_DEBUG
+endif
+
+all: $(EXPLAUNCH)
+
+install: $(EXPLAUNCH)
+	$(INSTALL_PROGRAM) $(EXPLAUNCH) $(exec_prefix)/bin
+
+install-strip: $(EXPLAUNCH)
+	$(INSTALL_PROGRAM) -s $(EXPLAUNCH) $(exec_prefix)/bin
+
+clean:
+	rm -f *.o *~ $(EXPLAUNCH)
+
+$(EXPLAUNCH): $(EXPLAUNCH_OBJS) $(EXPLAUNCH_DEPS)
+	$(CC) -o $@ $(LDFLAGS) $(EXPLAUNCH_OBJS) $(LIBS)
+
+.c.o:
+	$(CC) -c $(CFLAGS) $<
+
+expWinSlaveDbgW.o: expWinSlaveDbg.c
+	$(CC) -c -DUNICODE $(CFLAGS) $< -o $@

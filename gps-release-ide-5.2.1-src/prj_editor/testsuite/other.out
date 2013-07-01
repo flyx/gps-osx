@@ -1,0 +1,58 @@
+--  Testing the support of "when others"
+
+project Other is
+
+   type A_Type is
+      ("Devel", "Debug", "Release");
+   A : A_Type := external ("A");
+   type B_Type is
+      ("Linux", "Windows");
+   B : B_Type := external ("B");
+
+   case A is
+
+      when "Devel" =>
+         for Source_Dirs use (".");
+
+      when "Debug" =>
+         for Source_Dirs use ("..");
+
+      when "Release" =>
+         for Source_Dirs use ("..");
+   end case;
+
+   package Compiler is
+
+      case A is
+
+         when "Devel" =>
+            for Default_Switches ("ada") use ("-g");
+
+         when "Debug" =>
+
+            case B is
+
+               when "Linux" =>
+                  for Default_Switches ("ada") use ("-O2");
+                  for Switches ("dummy.adb") use ("-mlinux");
+
+               when "Windows" =>
+                  for Default_Switches ("ada") use ("-O2");
+            end case;
+
+         when "Release" =>
+
+            case B is
+
+               when "Linux" =>
+                  for Default_Switches ("ada") use ("-O2");
+                  for Switches ("dummy.adb") use ("-mlinux");
+
+               when "Windows" =>
+                  for Default_Switches ("ada") use ("-O2");
+            end case;
+      end case;
+   end Compiler;
+
+end Other;
+

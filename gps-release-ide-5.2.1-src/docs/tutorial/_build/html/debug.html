@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>11. Debug &mdash; Tutorial 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Tutorial 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="12. Call Graph" href="callgraph.html" />
+    <link rel="prev" title="10. Run" href="run.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="callgraph.html" title="12. Call Graph"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="run.html" title="10. Run"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Tutorial 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="run.html"
+                        title="previous chapter">10. Run</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="callgraph.html"
+                        title="next chapter">12. Call Graph</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/debug.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="debug">
+<h1>11. Debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h1>
+<p>Open the preferences dialog (menu <cite>Edit-&gt;Preferences</cite>) and click on the
+<cite>Debugger</cite> item on the left; set the button <cite>Break on exceptions</cite> to <em>Enabled</em>:
+this will enable by default a special breakpoint every time an exception is
+raised. Click on <cite>OK</cite> to confirm your change.</p>
+<p>Now select the menu <cite>Debug-&gt;Initialize-&gt;sdc</cite>: GPS automatically switches to the
+<em>Debug</em> perspective as shown in the menu <cite>Window-&gt;Perspectives</cite>, and new
+windows have appeared: the debugger data window on top, the call stack window
+on the right, and the debugger console at the bottom.</p>
+<p>You can also look at the various debug menu item and tool bar buttons which are
+now activated.</p>
+<p>On the call stack window (you can use the menu <cite>Debug-&gt;Data-&gt;Call Stack</cite> to
+open it if you do not have it displayed), select the contextual menu: various
+pieces of information can be displayed or removed in the call stack. From this
+contextual menu, add the <cite>Frame Number</cite> info by clicking on it.</p>
+<p>Now select the menu <cite>Debug-&gt;Run...</cite> and type <cite>input.txt</cite> in the text input
+field. Click on <cite>OK</cite>: the debugger should stop on an exception
+(<cite>Constraint_Error</cite> in the file <tt class="file docutils literal"><span class="pre">stack.adb</span></tt>, at line 49).</p>
+<p>Go up in the call stack by clicking on the <cite>tokens.process</cite> line (frame number
+6 or 7, depending on your GNAT version).</p>
+<p>If you move the mouse over the parameter <cite>T</cite> at line 64, a tool tip is
+displayed showing the value of <cite>T</cite>. You have probably noticed that tool tips,
+like menus, are contextual: depending on the current session and on the entity
+selected, different information is displayed.</p>
+<p>Select the contextual menu <cite>Debug-&gt;Display T</cite>: this will highlight the data
+window, with a new box displaying graphically the contents of the different
+fields of <cite>T</cite>, each clearly separated.</p>
+<p>Move your mouse over the <cite>1:T</cite> box, select the contextual menu <cite>Display-&gt;Show
+Value + Type</cite>: this displays for all fields both their type and value.</p>
+<p>Special colors are used in the data display: blue for pointers that can be
+dereferenced by a double-click (double click on <cite>T.val</cite>); red for fields that
+have been modified since last step.</p>
+<p>From the T box, right-click to display the contextual menu and select <cite>View
+memory at address of T</cite>: a memory view is opened on top of the source editors.
+Use the <cite>up</cite> and <cite>down</cite> arrows on the right to visit memory.</p>
+<p>Click in the memory dump, and modify it by typing numbers. Notice the red color
+for modified values; click on <cite>Undo Changes</cite> to cancel the modifications; then
+close the memory window by e.g. clicking on the <cite>x</cite> icon or pressing
+<tt class="kbd docutils literal"><span class="pre">Ctrl-W</span></tt>.</p>
+<p>In the call stack, go back to <cite>stack.push</cite> frame (num 4 or 5).  Move the mouse
+over <cite>Last</cite> and let the debugger display its value: 0.  From the contextual
+menu, select <cite>Goto declaration of Last</cite>: this will jump to the line 16 of
+<tt class="file docutils literal"><span class="pre">stack.adb</span></tt>, where you can see that <cite>Last</cite> is a <cite>Natural</cite>. Now click on
+the <cite>Goto Previous Location</cite> button in the tool bar: we&#8217;re now back at line 49
+where we can see that for a <cite>Push</cite> procedure, <cite>Last</cite> should be incremented, and
+not decremented.</p>
+<p>Fix the line to <cite>Last := Last + 1;</cite></p>
+<p>Save the file (<tt class="kbd docutils literal"><span class="pre">Ctrl-S</span></tt>); End the debug session: menu <cite>Debug-&gt;Terminate</cite>;
+Rebuild (press <tt class="kbd docutils literal"><span class="pre">F4</span></tt> key); Rerun (menu <cite>Build-&gt;Run-&gt;sdc</cite>, click on
+<cite>Execute</cite>): the program now completes as expected. Close the execution window.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="callgraph.html" title="12. Call Graph"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="run.html" title="10. Run"
+             >previous</a> |</li>
+        <li><a href="index.html">Tutorial 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1295 @@
+\begin{theindex}
+\def\bigletter#1{{\Large\sffamily#1}\nopagebreak\vspace{1mm}}
+
+  \bigletter {Symbols}
+  \item --eval, \hyperpage{210}
+  \item --load, \hyperpage{210}
+  \item -c, \hyperpage{155}
+  \item -g, \hyperpage{239}
+  \item -gnatQ, \hyperpage{49}
+  \item -k, \hyperpage{49}
+  \item -u, \hyperpage{155}
+  \item \_\_init\_\_() (GPS.Action method), \hyperpage{251}
+  \item \_\_init\_\_() (GPS.Activities method), \hyperpage{252}
+  \item \_\_init\_\_() (GPS.AreaContext method), \hyperpage{253}
+  \item \_\_init\_\_() (GPS.Bookmark method), \hyperpage{254}
+  \item \_\_init\_\_() (GPS.BuildTarget method), \hyperpage{255}
+  \item \_\_init\_\_() (GPS.Button method), \hyperpage{256}
+  \item \_\_init\_\_() (GPS.CodeAnalysis method), \hyperpage{258}
+  \item \_\_init\_\_() (GPS.Codefix method), \hyperpage{259}
+  \item \_\_init\_\_() (GPS.CodefixError method), \hyperpage{261}
+  \item \_\_init\_\_() (GPS.Combo method), \hyperpage{262}
+  \item \_\_init\_\_() (GPS.CommandWindow method), \hyperpage{264}
+  \item \_\_init\_\_() (GPS.Console method), \hyperpage{266}
+  \item \_\_init\_\_() (GPS.Contextual method), \hyperpage{270}
+  \item \_\_init\_\_() (GPS.Debugger method), \hyperpage{274}
+  \item \_\_init\_\_() (GPS.DocgenTagHandler method), \hyperpage{278}
+  \item \_\_init\_\_() (GPS.EditorBuffer method), \hyperpage{288}
+  \item \_\_init\_\_() (GPS.EditorHighlighter method), \hyperpage{294}
+  \item \_\_init\_\_() (GPS.EditorLocation method), \hyperpage{294}
+  \item \_\_init\_\_() (GPS.EditorMark method), \hyperpage{299}
+  \item \_\_init\_\_() (GPS.EditorOverlay method), \hyperpage{299}
+  \item \_\_init\_\_() (GPS.EditorView method), \hyperpage{300}
+  \item \_\_init\_\_() (GPS.Entity method), \hyperpage{301}
+  \item \_\_init\_\_() (GPS.EntityContext method), \hyperpage{306}
+  \item \_\_init\_\_() (GPS.File method), \hyperpage{306}
+  \item \_\_init\_\_() (GPS.FileContext method), \hyperpage{310}
+  \item \_\_init\_\_() (GPS.FileLocation method), \hyperpage{311}
+  \item \_\_init\_\_() (GPS.GUI method), \hyperpage{312}
+  \item \_\_init\_\_() (GPS.Help method), \hyperpage{314}
+  \item \_\_init\_\_() (GPS.Hook method), \hyperpage{325}
+  \item \_\_init\_\_() (GPS.Logger method), \hyperpage{329}
+  \item \_\_init\_\_() (GPS.MDIWindow method), \hyperpage{332}
+  \item \_\_init\_\_() (GPS.Menu method), \hyperpage{334}
+  \item \_\_init\_\_() (GPS.Message method), \hyperpage{335}
+  \item \_\_init\_\_() (GPS.Preference method), \hyperpage{337}
+  \item \_\_init\_\_() (GPS.Process method), \hyperpage{340}
+  \item \_\_init\_\_() (GPS.Project method), \hyperpage{343}
+  \item \_\_init\_\_() (GPS.Style method), \hyperpage{353}
+  \item \_\_init\_\_() (GPS.SwitchesChooser method), \hyperpage{355}
+  \item \_\_init\_\_() (GPS.Timeout method), \hyperpage{356}
+  \item \_\_init\_\_() (GPS.ToolButton method), \hyperpage{356}
+  \item \_\_init\_\_() (GPS.Toolbar method), \hyperpage{357}
+  \item \_\_init\_\_() (GPS.Vdiff static method), \hyperpage{361}
+  \item \_\_init\_\_() (GPS.XMLViewer method), \hyperpage{363}
+  \item \textless{}Language\textgreater{}, \hyperpage{179}
+  \item \textless{}action\textgreater{}, \hyperpage{163}
+  \item \textless{}alias\textgreater{}, \hyperpage{183}
+  \item \textless{}button\textgreater{}, \hyperpage{175}
+  \item \textless{}case\_exceptions\textgreater{}, \hyperpage{192}
+  \item \textless{}check\textgreater{}, \hyperpage{203}
+  \item \textless{}choice\textgreater{}, \hyperpage{188}
+  \item \textless{}combo-entry\textgreater{}, \hyperpage{203}
+  \item \textless{}combo\textgreater{}, \hyperpage{203}
+  \item \textless{}contextual\textgreater{}, \hyperpage{174}
+  \item \textless{}default-value-dependency\textgreater{}, \hyperpage{204}
+  \item \textless{}dependency\textgreater{}, \hyperpage{204}
+  \item \textless{}doc\_path\textgreater{}, \hyperpage{193}
+  \item \textless{}documentation\_file\textgreater{}, \hyperpage{192}
+  \item \textless{}entry\textgreater{}, \hyperpage{175}, \hyperpage{204}
+  \item \textless{}expansion\textgreater{}, \hyperpage{204}
+  \item \textless{}external\textgreater{}, \hyperpage{163}
+  \item \textless{}field\textgreater{}, \hyperpage{203}
+  \item \textless{}filter\_and\textgreater{}, \hyperpage{170}
+  \item \textless{}filter\_or\textgreater{}, \hyperpage{170}
+  \item \textless{}filter\textgreater{}, \hyperpage{163}, \hyperpage{170}
+  \item \textless{}index\textgreater{}, \hyperpage{188}
+  \item \textless{}initial-cmd-line\textgreater{}, \hyperpage{201}
+  \item \textless{}key\textgreater{}, \hyperpage{176}
+  \item \textless{}language\textgreater{}, \hyperpage{200}
+  \item \textless{}menu\textgreater{}, \hyperpage{172}
+  \item \textless{}popup\textgreater{}, \hyperpage{203}
+  \item \textless{}pref\textgreater{}, \hyperpage{178}
+  \item \textless{}preference\textgreater{}, \hyperpage{176}
+  \item \textless{}project\_attribute\textgreater{}, \hyperpage{185}
+  \item \textless{}radio\textgreater{}, \hyperpage{203}
+  \item \textless{}shell\textgreater{}, \hyperpage{163}, \hyperpage{188}
+  \item \textless{}specialized\_index\textgreater{}, \hyperpage{188}
+  \item \textless{}spin\textgreater{}, \hyperpage{203}
+  \item \textless{}stock\_icons\textgreater{}, \hyperpage{193}
+  \item \textless{}string\textgreater{}, \hyperpage{187}
+  \item \textless{}submenu\textgreater{}, \hyperpage{172}
+  \item \textless{}switches\textgreater{}, \hyperpage{201}
+  \item \textless{}theme\textgreater{}, \hyperpage{178}
+  \item \textless{}title\textgreater{}, \hyperpage{172}, \hyperpage{202}
+  \item \textless{}tool\textgreater{}, \hyperpage{200}
+  \item \textless{}vsearch-pattern\textgreater{}, \hyperpage{179}
+
+  \indexspace
+  \bigletter A
+  \item a2ps, \hyperpage{154}
+  \item accept\_input() (GPS.Console method), \hyperpage{268}
+  \item action, \hyperpage{163}
+  \item Action (class in GPS), \hyperpage{250}
+  \item action\_hooks, \hyperpage{224}
+  \item Activities (class in GPS), \hyperpage{252}
+  \item activity, \hyperpage{237}
+  \item activity log template, \hyperpage{237}
+  \item Ada, \hyperpage{30}, \hyperpage{49--51}, \hyperpage{78}, \hyperpage{101}, \hyperpage{150}
+  \item Ada xrefs heuristics, \hyperpage{50}
+  \item ADA\_PROJECT\_PATH, \hyperpage{55}
+  \item add configuration variable, \hyperpage{61}
+  \item add symbols, \hyperpage{96}
+  \item Add To Extending Project, \hyperpage{61}
+  \item add() (GPS.Combo method), \hyperpage{262}
+  \item add() (GPS.Hook method), \hyperpage{325}
+  \item add() (GPS.Locations static method), \hyperpage{327}
+  \item add() (GPS.MDI static method), \hyperpage{330}
+  \item add\_all\_gcov\_project\_info() (GPS.CodeAnalysis method), \hyperpage{258}
+  \item add\_attribute\_values() (GPS.Project method), \hyperpage{343}
+  \item add\_blank\_lines() (GPS.Editor static method), \hyperpage{279}
+  \item add\_case\_exception() (GPS.Editor static method), \hyperpage{279}
+  \item add\_dependency() (GPS.Project method), \hyperpage{343}
+  \item add\_doc\_directory() (GPS.HTML static method), \hyperpage{313}
+  \item add\_file() (GPS.Activities method), \hyperpage{252}
+  \item add\_gcov\_file\_info() (GPS.CodeAnalysis method), \hyperpage{258}
+  \item add\_gcov\_project\_info() (GPS.CodeAnalysis method), \hyperpage{258}
+  \item add\_input() (GPS.Console method), \hyperpage{268}
+  \item add\_link() (GPS.Revision static method), \hyperpage{353}
+  \item add\_location\_command() (in module GPS), \hyperpage{242}
+  \item add\_log() (GPS.Revision static method), \hyperpage{353}
+  \item add\_main\_unit() (GPS.Project method), \hyperpage{343}
+  \item add\_predefined\_paths() (GPS.Project static method), \hyperpage{344}
+  \item add\_revision() (GPS.Revision static method), \hyperpage{353}
+  \item add\_source\_dir() (GPS.Project method), \hyperpage{344}
+  \item add\_special\_line() (GPS.EditorBuffer method), \hyperpage{288}
+  \item add\_templates\_dir() (GPS.ProjectTemplate static method), \hyperpage{352}
+  \item ALI, \hyperpage{49}
+  \item alias, \hyperpage{36}
+  \item aliases, \hyperpage{100}, \hyperpage{153}, \hyperpage{183}, \hyperpage{237}
+  \item align, \hyperpage{100}
+  \item all floating, \hyperpage{22}
+  \item analyze other file, \hyperpage{93}
+  \item ancestor\_deps() (GPS.Project method), \hyperpage{344}
+  \item annotate() (GPS.VCS static method), \hyperpage{359}
+  \item annotations\_parse() (GPS.VCS static method), \hyperpage{359}
+  \item append() (GPS.Toolbar method), \hyperpage{358}
+  \item apply\_overlay() (GPS.EditorBuffer method), \hyperpage{288}
+  \item AreaContext (class in GPS), \hyperpage{253}
+  \item argument, \hyperpage{166}
+  \item arguments, \hyperpage{98}
+  \item as-directory, \hyperpage{203}
+  \item as-file, \hyperpage{203}
+  \item ASCII, \hyperpage{28}, \hyperpage{105}
+  \item assembly, \hyperpage{97}
+  \item attach, \hyperpage{96}
+  \item attributes() (GPS.Entity method), \hyperpage{302}
+  \item auto, \hyperpage{113}
+  \item auto highlighting, \hyperpage{27}
+  \item auto refresh, \hyperpage{100}
+  \item auto save, \hyperpage{27}, \hyperpage{146}
+  \item autosave delay, \hyperpage{148}
+
+  \indexspace
+  \bigletter B
+  \item Back, \hyperpage{51}
+  \item background color, \hyperpage{146}
+  \item background tasks, \hyperpage{17}
+  \item backward\_overlay() (GPS.EditorLocation method), \hyperpage{295}
+  \item base\_name() (in module GPS), \hyperpage{242}
+  \item beginning\_of\_buffer() (GPS.EditorBuffer method), \hyperpage{288}
+  \item beginning\_of\_line() (GPS.EditorLocation method), \hyperpage{295}
+  \item block, \hyperpage{27}
+  \item block folding, \hyperpage{148}
+  \item block highlighting, \hyperpage{148}
+  \item block\_end() (GPS.EditorLocation method), \hyperpage{295}
+  \item block\_end\_line() (GPS.EditorLocation method), \hyperpage{295}
+  \item block\_fold() (GPS.Editor static method), \hyperpage{279}
+  \item block\_fold() (GPS.EditorLocation method), \hyperpage{295}
+  \item block\_get\_end() (GPS.Editor static method), \hyperpage{279}
+  \item block\_get\_level() (GPS.Editor static method), \hyperpage{279}
+  \item block\_get\_name() (GPS.Editor static method), \hyperpage{280}
+  \item block\_get\_start() (GPS.Editor static method), \hyperpage{280}
+  \item block\_get\_type() (GPS.Editor static method), \hyperpage{280}
+  \item block\_level() (GPS.EditorLocation method), \hyperpage{295}
+  \item block\_name() (GPS.EditorLocation method), \hyperpage{295}
+  \item block\_start() (GPS.EditorLocation method), \hyperpage{295}
+  \item block\_start\_line() (GPS.EditorLocation method), \hyperpage{295}
+  \item block\_type() (GPS.EditorLocation method), \hyperpage{295}
+  \item block\_unfold() (GPS.Editor static method), \hyperpage{280}
+  \item block\_unfold() (GPS.EditorLocation method), \hyperpage{296}
+  \item blocks\_fold() (GPS.EditorBuffer method), \hyperpage{288}
+  \item blocks\_unfold() (GPS.EditorBuffer method), \hyperpage{288}
+  \item board, \hyperpage{96}
+  \item body() (GPS.Entity method), \hyperpage{302}
+  \item bookmark, \hyperpage{15}, \hyperpage{123}
+  \item Bookmark (class in GPS), \hyperpage{254}
+  \item breakpoint, \hyperpage{97}, \hyperpage{103}, \hyperpage{106, 107}, \hyperpage{153}
+  \item breakpoint editor, \hyperpage{103}
+  \item breakpoints, \hyperpage{105}
+  \item browse() (GPS.HTML static method), \hyperpage{313}
+  \item browsers, \hyperpage{52}, \hyperpage{60}
+  \item buffer() (GPS.EditorLocation method), \hyperpage{296}
+  \item buffer() (GPS.EditorView method), \hyperpage{300}
+  \item build, \hyperpage{6}, \hyperpage{15--17}, \hyperpage{81}
+  \item BuildTarget (class in GPS), \hyperpage{255}
+  \item Button (class in GPS), \hyperpage{256}
+
+  \indexspace
+  \bigletter C
+  \item C, \hyperpage{49}, \hyperpage{63}, \hyperpage{83}, \hyperpage{101}, \hyperpage{105}, 
+		\hyperpage{152}
+  \item C++, \hyperpage{49}, \hyperpage{63}, \hyperpage{78}, \hyperpage{83}, \hyperpage{152}
+  \item call graph, \hyperpage{52}, \hyperpage{60}, \hyperpage{90}
+  \item call stack, \hyperpage{97, 98}
+  \item called by, \hyperpage{52}
+  \item called\_by() (GPS.Entity method), \hyperpage{302}
+  \item called\_by\_browser() (GPS.Entity method), \hyperpage{302}
+  \item callgraph, \hyperpage{14}
+  \item calls, \hyperpage{52}
+  \item calls() (GPS.Entity method), \hyperpage{302}
+  \item case exceptions, \hyperpage{39}
+  \item case indentation, \hyperpage{150}
+  \item case preserving, \hyperpage{80}
+  \item case sensitive, \hyperpage{80}
+  \item case\_exceptions, \hyperpage{192}
+  \item casing, \hyperpage{39}
+  \item category, \hyperpage{16}
+  \item category() (GPS.Entity method), \hyperpage{302}
+  \item cd() (in module GPS), \hyperpage{242}
+  \item center() (GPS.EditorView method), \hyperpage{301}
+  \item ChangeLog file, \hyperpage{120}
+  \item character set, \hyperpage{39}, \hyperpage{146}
+  \item characters\_count() (GPS.EditorBuffer method), \hyperpage{289}
+  \item check() (GPS.Logger method), \hyperpage{329}
+  \item children() (GPS.MDI static method), \hyperpage{331}
+  \item clear, \hyperpage{32}, \hyperpage{100}
+  \item clear() (GPS.CodeAnalysis method), \hyperpage{258}
+  \item clear() (GPS.Combo method), \hyperpage{262}
+  \item clear() (GPS.Console method), \hyperpage{268}
+  \item clear\_attribute\_values() (GPS.Project method), \hyperpage{344}
+  \item clear\_cache command, \hyperpage{211}
+  \item clear\_input() (GPS.Console method), \hyperpage{268}
+  \item clear\_view() (GPS.Revision static method), \hyperpage{353}
+  \item ClearCase, \hyperpage{113}
+  \item ClearCase Native, \hyperpage{113}
+  \item client/server, \hyperpage{139}
+  \item clipboard, \hyperpage{45}, \hyperpage{147}
+  \item Clipboard (class in GPS), \hyperpage{257}
+  \item clipboard view, \hyperpage{13}
+  \item clone, \hyperpage{100}
+  \item clone() (GPS.BuildTarget method), \hyperpage{255}
+  \item close, \hyperpage{21}, \hyperpage{32}
+  \item close dialog on match, \hyperpage{80}
+  \item close() (GPS.Debugger method), \hyperpage{274}
+  \item close() (GPS.Editor static method), \hyperpage{280}
+  \item close() (GPS.EditorBuffer method), \hyperpage{289}
+  \item close\_editors() (GPS.Vdiff method), \hyperpage{361}
+  \item Code Coverage, \hyperpage{130}
+  \item code coverage, \hyperpage{124}
+  \item code fix, \hyperpage{147}
+  \item code fixing, \hyperpage{126}
+  \item CodeAnalysis (class in GPS), \hyperpage{258}
+  \item Codefix (class in GPS), \hyperpage{259}
+  \item Codefix.errors, \hyperpage{208}
+  \item CodefixError (class in GPS), \hyperpage{261}
+  \item CodefixError.fix, \hyperpage{208}
+  \item CodefixError.possible\_fixes, \hyperpage{208}
+  \item Coding Standard, \hyperpage{124}
+  \item coding standard, \hyperpage{124}
+  \item color, \hyperpage{147}, \hyperpage{149}, \hyperpage{154--156}
+  \item column index, \hyperpage{156}
+  \item column() (GPS.EditorLocation method), \hyperpage{296}
+  \item column() (GPS.FileLocation method), \hyperpage{311}
+  \item Combo (class in GPS), \hyperpage{261}
+  \item command, \hyperpage{15}, \hyperpage{97}
+  \item Command (class in GPS), \hyperpage{263}
+  \item command line, \hyperpage{4}, \hyperpage{235}
+  \item command() (GPS.Debugger method), \hyperpage{274}
+  \item CommandWindow (class in GPS), \hyperpage{263}
+  \item comment, \hyperpage{35}
+  \item commit() (GPS.Activities method), \hyperpage{252}
+  \item commit() (GPS.VCS static method), \hyperpage{359}
+  \item compare, \hyperpage{118}
+  \item compilation, \hyperpage{16}, \hyperpage{81}
+  \item compile, \hyperpage{58}
+  \item compile() (GPS.File method), \hyperpage{307}
+  \item complete identifier, \hyperpage{35}
+  \item completion, \hyperpage{27}, \hyperpage{33}
+  \item compute\_xref() (in module GPS), \hyperpage{242}
+  \item conditional line, \hyperpage{150}
+  \item configuration variable, \hyperpage{8}, \hyperpage{58}
+  \item connect, \hyperpage{96}
+  \item Console (class in GPS), \hyperpage{265}
+  \item contents() (GPS.Clipboard static method), \hyperpage{257}
+  \item Context (class in GPS), \hyperpage{270}
+  \item context length, \hyperpage{156}
+  \item Contextual (class in GPS), \hyperpage{270}
+  \item contextual menu, \hyperpage{51}, \hyperpage{98--100}, \hyperpage{106}
+  \item contextual menus, \hyperpage{222}
+  \item contextual() (GPS.Action method), \hyperpage{251}
+  \item contextual\_context() (in module GPS), \hyperpage{242}
+  \item continuation line, \hyperpage{150}
+  \item continue, \hyperpage{96}
+  \item continue until, \hyperpage{107}
+  \item copy, \hyperpage{32}, \hyperpage{45}
+  \item copy() (GPS.Clipboard static method), \hyperpage{257}
+  \item copy() (GPS.Editor static method), \hyperpage{280}
+  \item copy() (GPS.EditorBuffer method), \hyperpage{289}
+  \item copy\_clipboard() (GPS.Console method), \hyperpage{268}
+  \item core file, \hyperpage{96}
+  \item count (GPS.Logger attribute), \hyperpage{329}
+  \item create() (GPS.Action method), \hyperpage{251}
+  \item create() (GPS.Bookmark static method), \hyperpage{254}
+  \item create() (GPS.Contextual method), \hyperpage{271}
+  \item create() (GPS.Menu static method), \hyperpage{334}
+  \item create() (GPS.Preference method), \hyperpage{338}
+  \item create() (GPS.Vdiff static method), \hyperpage{361}
+  \item create\_dynamic() (GPS.Contextual method), \hyperpage{272}
+  \item create\_link() (GPS.Console method), \hyperpage{268}
+  \item create\_mark() (GPS.Editor static method), \hyperpage{280}
+  \item create\_mark() (GPS.EditorLocation method), \hyperpage{296}
+  \item create\_metric() (GPS.XMLViewer method), \hyperpage{364}
+  \item create\_overlay() (GPS.EditorBuffer method), \hyperpage{289}
+  \item creating, \hyperpage{225}
+  \item creating configuration variable, \hyperpage{58}
+  \item cross debugger, \hyperpage{96}
+  \item cross environment, \hyperpage{137}
+  \item cross-references, \hyperpage{49}
+  \item current line, \hyperpage{27}, \hyperpage{106}
+  \item current location, \hyperpage{107}
+  \item current() (GPS.Clipboard static method), \hyperpage{257}
+  \item current() (GPS.MDI static method), \hyperpage{331}
+  \item current\_context() (in module GPS), \hyperpage{244}
+  \item current\_view() (GPS.EditorBuffer method), \hyperpage{289}
+  \item cursor() (GPS.EditorView method), \hyperpage{301}
+  \item cursor\_center() (GPS.Editor static method), \hyperpage{281}
+  \item cursor\_get\_column() (GPS.Editor static method), \hyperpage{281}
+  \item cursor\_get\_line() (GPS.Editor static method), \hyperpage{281}
+  \item cursor\_set\_position() (GPS.Editor static method), \hyperpage{281}
+  \item custom editor, \hyperpage{45}
+  \item customization, \hyperpage{1}, \hyperpage{145}, \hyperpage{160}
+  \item cut, \hyperpage{32}, \hyperpage{45}
+  \item cut() (GPS.Editor static method), \hyperpage{281}
+  \item cut() (GPS.EditorBuffer method), \hyperpage{289}
+  \item CVS, \hyperpage{113}
+
+  \indexspace
+  \bigletter D
+  \item data, \hyperpage{97, 98}
+  \item Data Window, \hyperpage{98}
+  \item data window, \hyperpage{98}
+  \item debug, \hyperpage{58}, \hyperpage{95}, \hyperpage{106}
+  \item debugger, \hyperpage{6}, \hyperpage{95}, \hyperpage{109}, \hyperpage{138}, \hyperpage{239}
+  \item Debugger (class in GPS), \hyperpage{274}
+  \item debugger console, \hyperpage{109}
+  \item debugger windows, \hyperpage{153}
+  \item debugging, \hyperpage{95}
+  \item declaration line, \hyperpage{150}
+  \item declaration() (GPS.Entity method), \hyperpage{303}
+  \item default, \hyperpage{238}
+  \item default desktop, \hyperpage{238}
+  \item default project, \hyperpage{238}
+  \item Default VCS, \hyperpage{155}
+  \item delete() (GPS.Bookmark method), \hyperpage{254}
+  \item delete() (GPS.EditorBuffer method), \hyperpage{290}
+  \item delete() (GPS.EditorMark method), \hyperpage{299}
+  \item delete() (in module GPS), \hyperpage{244}
+  \item delete\_mark() (GPS.Editor static method), \hyperpage{281}
+  \item delimiter, \hyperpage{27}
+  \item dependencies() (GPS.Project method), \hyperpage{344}
+  \item dependency browser, \hyperpage{92}
+  \item derived\_types() (GPS.Entity method), \hyperpage{303}
+  \item describe\_functions() (GPS.Hook method), \hyperpage{325}
+  \item description, \hyperpage{166}
+  \item desktop, \hyperpage{146}, \hyperpage{238}
+  \item destroy() (GPS.GUI method), \hyperpage{312}
+  \item detach, \hyperpage{96}
+  \item dialog() (GPS.MDI static method), \hyperpage{331}
+  \item diff, \hyperpage{155}
+  \item diff3, \hyperpage{155}
+  \item diff\_head() (GPS.VCS static method), \hyperpage{359}
+  \item diff\_working() (GPS.VCS static method), \hyperpage{359}
+  \item dir() (in module GPS), \hyperpage{244}
+  \item dir\_name() (in module GPS), \hyperpage{244}
+  \item directory, \hyperpage{8}, \hyperpage{32}
+  \item directory() (GPS.File method), \hyperpage{307}
+  \item directory() (GPS.FileContext method), \hyperpage{310}
+  \item discriminants() (GPS.Entity method), \hyperpage{303}
+  \item dispatching, \hyperpage{53}
+  \item display, \hyperpage{106}
+  \item display expression, \hyperpage{98}, \hyperpage{100}
+  \item display line numbers, \hyperpage{148}
+  \item Display subprogram names, \hyperpage{148}
+  \item display type hierarchy, \hyperpage{51}
+  \item Docgen (class in GPS), \hyperpage{276}
+  \item DocgenTagHandler (class in GPS), \hyperpage{277}
+  \item documentation, \hyperpage{124}
+  \item documentation generation, \hyperpage{127}
+  \item documentation() (GPS.Entity method), \hyperpage{303}
+  \item drag-n-drop, \hyperpage{6}, \hyperpage{23}
+  \item dump() (GPS.Locations static method), \hyperpage{328}
+  \item dump() (in module GPS), \hyperpage{245}
+  \item dump\_file() (in module GPS), \hyperpage{245}
+  \item dump\_to\_file() (GPS.CodeAnalysis method), \hyperpage{258}
+  \item dump\_xref\_db() (in module GPS), \hyperpage{245}
+  \item Dynamic Key Binding, \hyperpage{237}
+
+  \indexspace
+  \bigletter E
+  \item edit, \hyperpage{32}
+  \item edit project source file, \hyperpage{61}
+  \item edit() (GPS.Editor static method), \hyperpage{282}
+  \item editing, \hyperpage{25}, \hyperpage{28}, \hyperpage{106}
+  \item editing configuration variable, \hyperpage{59}
+  \item editor, \hyperpage{39}, \hyperpage{44}
+  \item Editor (class in GPS), \hyperpage{279}
+  \item EditorBuffer (class in GPS), \hyperpage{288}
+  \item EditorHighlighter (class in GPS), \hyperpage{293}
+  \item EditorLocation (class in GPS), \hyperpage{294}
+  \item EditorMark (class in GPS), \hyperpage{298}
+  \item EditorOverlay (class in GPS), \hyperpage{299}
+  \item EditorView (class in GPS), \hyperpage{300}
+  \item emacs, \hyperpage{28}, \hyperpage{44, 45}
+  \item emacsclient, \hyperpage{44}
+  \item enable\_input() (GPS.Console method), \hyperpage{269}
+  \item End Of Statement, \hyperpage{51}
+  \item end\_line() (GPS.AreaContext method), \hyperpage{254}
+  \item end\_of\_buffer() (GPS.EditorBuffer method), \hyperpage{290}
+  \item end\_of\_line() (GPS.EditorLocation method), \hyperpage{296}
+  \item end\_of\_scope() (GPS.Entity method), \hyperpage{303}
+  \item ends\_word() (GPS.EditorLocation method), \hyperpage{296}
+  \item entities() (GPS.File method), \hyperpage{307}
+  \item entity, \hyperpage{8}
+  \item Entity (class in GPS), \hyperpage{301}
+  \item entity browser, \hyperpage{93}
+  \item Entity View, \hyperpage{11}
+  \item entity() (GPS.EntityContext method), \hyperpage{306}
+  \item EntityContext (class in GPS), \hyperpage{306}
+  \item environment, \hyperpage{235}
+  \item environment variables, \hyperpage{235}
+  \item error\_at() (GPS.Codefix method), \hyperpage{260}
+  \item errors, \hyperpage{15}, \hyperpage{156}
+  \item errors() (GPS.Codefix method), \hyperpage{260}
+  \item examine entity, \hyperpage{94}
+  \item examine projects imported by, \hyperpage{76}
+  \item example, \hyperpage{169}, \hyperpage{235}
+  \item exception, \hyperpage{153}
+  \item Exception (class in GPS), \hyperpage{306}
+  \item exec directory, \hyperpage{66}
+  \item exec\_in\_console() (in module GPS), \hyperpage{245}
+  \item execute() (GPS.BuildTarget method), \hyperpage{255}
+  \item execute\_action, \hyperpage{211}
+  \item execute\_action() (GPS.Message method), \hyperpage{336}
+  \item execute\_action() (in module GPS), \hyperpage{245}
+  \item execute\_asynchronous\_action() (in module GPS), \hyperpage{246}
+  \item execution, \hyperpage{15}, \hyperpage{17}, \hyperpage{153, 154}
+  \item execution window, \hyperpage{15}, \hyperpage{17}
+  \item exit, \hyperpage{32}
+  \item exit() (in module GPS), \hyperpage{246}
+  \item expect() (GPS.Process method), \hyperpage{341}
+  \item export, \hyperpage{89}
+  \item export locations, \hyperpage{32}
+  \item extending, \hyperpage{60}
+  \item external, \hyperpage{164}
+  \item external editor, \hyperpage{44}, \hyperpage{148}
+  \item external tool, \hyperpage{200}
+
+  \indexspace
+  \bigletter F
+  \item fast project loading, \hyperpage{157}
+  \item fields() (GPS.Entity method), \hyperpage{303}
+  \item file, \hyperpage{8}, \hyperpage{16}
+  \item File (class in GPS), \hyperpage{306}
+  \item file index, \hyperpage{156}
+  \item file pattern, \hyperpage{156}
+  \item file selector, \hyperpage{28}
+  \item File View, \hyperpage{10}
+  \item file view, \hyperpage{8}
+  \item file() (GPS.EditorBuffer method), \hyperpage{290}
+  \item file() (GPS.FileContext method), \hyperpage{311}
+  \item file() (GPS.FileLocation method), \hyperpage{311}
+  \item file() (GPS.Help method), \hyperpage{314}
+  \item file() (GPS.Project method), \hyperpage{345}
+  \item file\_selector() (GPS.MDI static method), \hyperpage{331}
+  \item FileContext (class in GPS), \hyperpage{310}
+  \item FileLocation (class in GPS), \hyperpage{311}
+  \item files, \hyperpage{236}
+  \item files() (GPS.Activities method), \hyperpage{252}
+  \item files() (GPS.FileContext method), \hyperpage{311}
+  \item files() (GPS.Vdiff method), \hyperpage{362}
+  \item filter, \hyperpage{166}
+  \item find, \hyperpage{8}, \hyperpage{50}, \hyperpage{77}
+  \item find all local references, \hyperpage{52}
+  \item find all references, \hyperpage{50}, \hyperpage{52}
+  \item find next, \hyperpage{50}
+  \item find previous, \hyperpage{50}
+  \item find\_all\_refs() (GPS.Entity method), \hyperpage{303}
+  \item finish, \hyperpage{96}
+  \item finish\_undo\_group() (GPS.EditorBuffer method), \hyperpage{290}
+  \item fix() (GPS.CodefixError method), \hyperpage{261}
+  \item float, \hyperpage{147}
+  \item float() (GPS.MDIWindow method), \hyperpage{332}
+  \item floating, \hyperpage{22}
+  \item flush() (GPS.Console method), \hyperpage{269}
+  \item fold, \hyperpage{36}
+  \item font, \hyperpage{146}, \hyperpage{149}
+  \item format selection, \hyperpage{33}
+  \item Forward, \hyperpage{51}
+  \item forward\_char() (GPS.EditorLocation method), \hyperpage{296}
+  \item forward\_line() (GPS.EditorLocation method), \hyperpage{296}
+  \item forward\_overlay() (GPS.EditorLocation method), \hyperpage{297}
+  \item forward\_word() (GPS.EditorLocation method), \hyperpage{297}
+  \item freeze\_xref() (in module GPS), \hyperpage{246}
+  \item from\_file() (GPS.Activities static method), \hyperpage{252}
+  \item ftp, \hyperpage{46}
+  \item full\_name() (GPS.Entity method), \hyperpage{303}
+
+  \indexspace
+  \bigletter G
+  \item generate body, \hyperpage{36}
+  \item generate\_doc() (GPS.File method), \hyperpage{307}
+  \item generate\_doc() (GPS.Project method), \hyperpage{345}
+  \item generate\_index\_file() (GPS.Docgen method), \hyperpage{276}
+  \item generic\_vcs, \hyperpage{226}
+  \item get() (GPS.Activities static method), \hyperpage{252}
+  \item get() (GPS.Bookmark static method), \hyperpage{254}
+  \item get() (GPS.CodeAnalysis static method), \hyperpage{258}
+  \item get() (GPS.Command static method), \hyperpage{263}
+  \item get() (GPS.Debugger static method), \hyperpage{274}
+  \item get() (GPS.EditorBuffer static method), \hyperpage{290}
+  \item get() (GPS.MDI static method), \hyperpage{331}
+  \item get() (GPS.Menu static method), \hyperpage{335}
+  \item get() (GPS.Preference method), \hyperpage{338}
+  \item get() (GPS.Toolbar method), \hyperpage{358}
+  \item get() (GPS.Vdiff static method), \hyperpage{362}
+  \item get\_active() (GPS.Menu method), \hyperpage{335}
+  \item get\_attribute\_as\_list, \hyperpage{206}
+  \item get\_attribute\_as\_list() (GPS.Project method), \hyperpage{345}
+  \item get\_attribute\_as\_string, \hyperpage{206}
+  \item get\_attribute\_as\_string() (GPS.Project method), \hyperpage{346}
+  \item get\_background() (GPS.Style method), \hyperpage{354}
+  \item get\_buffer() (GPS.Editor static method), \hyperpage{282}
+  \item get\_build\_mode() (in module GPS), \hyperpage{246}
+  \item get\_build\_output() (in module GPS), \hyperpage{246}
+  \item get\_busy() (in module GPS), \hyperpage{247}
+  \item get\_by\_child() (GPS.MDI static method), \hyperpage{331}
+  \item get\_by\_pos() (GPS.Toolbar method), \hyperpage{358}
+  \item get\_category() (GPS.Message method), \hyperpage{336}
+  \item get\_char() (GPS.EditorLocation method), \hyperpage{297}
+  \item get\_chars() (GPS.Editor static method), \hyperpage{282}
+  \item get\_chars() (GPS.EditorBuffer method), \hyperpage{290}
+  \item get\_child() (GPS.MDIWindow method), \hyperpage{332}
+  \item get\_cmd\_line() (GPS.SwitchesChooser method), \hyperpage{355}
+  \item get\_column() (GPS.Editor static method), \hyperpage{283}
+  \item get\_column() (GPS.Message method), \hyperpage{336}
+  \item get\_current\_file() (GPS.Docgen method), \hyperpage{276}
+  \item get\_current\_vcs() (GPS.VCS static method), \hyperpage{359}
+  \item get\_doc\_dir() (GPS.Docgen method), \hyperpage{277}
+  \item get\_executable() (GPS.Debugger method), \hyperpage{275}
+  \item get\_executable\_name() (GPS.Project method), \hyperpage{346}
+  \item get\_file() (GPS.Editor static method), \hyperpage{283}
+  \item get\_file() (GPS.Message method), \hyperpage{336}
+  \item get\_flags() (GPS.Message method), \hyperpage{336}
+  \item get\_foreground() (GPS.Style method), \hyperpage{354}
+  \item get\_home\_dir() (in module GPS), \hyperpage{247}
+  \item get\_in\_speedbar() (GPS.Style method), \hyperpage{354}
+  \item get\_last\_line() (GPS.Editor static method), \hyperpage{283}
+  \item get\_line() (GPS.Editor static method), \hyperpage{283}
+  \item get\_line() (GPS.Message method), \hyperpage{336}
+  \item get\_log\_file() (GPS.VCS static method), \hyperpage{359}
+  \item get\_mark() (GPS.EditorBuffer method), \hyperpage{291}
+  \item get\_mark() (GPS.Message method), \hyperpage{336}
+  \item get\_name() (GPS.Style method), \hyperpage{354}
+  \item get\_new() (GPS.EditorBuffer static method), \hyperpage{291}
+  \item get\_num() (GPS.Debugger method), \hyperpage{275}
+  \item get\_overlays() (GPS.EditorLocation method), \hyperpage{297}
+  \item get\_property() (GPS.EditorOverlay method), \hyperpage{299}
+  \item get\_property() (GPS.File method), \hyperpage{307}
+  \item get\_property() (GPS.Project method), \hyperpage{346}
+  \item get\_result() (GPS.Command method), \hyperpage{263}
+  \item get\_result() (GPS.Process method), \hyperpage{342}
+  \item get\_result() (GPS.ReferencesCommand method), \hyperpage{352}
+  \item get\_status() (GPS.VCS static method), \hyperpage{359}
+  \item get\_system\_dir() (in module GPS), \hyperpage{247}
+  \item get\_text() (GPS.Combo method), \hyperpage{262}
+  \item get\_text() (GPS.Console method), \hyperpage{269}
+  \item get\_text() (GPS.Message method), \hyperpage{336}
+  \item get\_tmp\_dir() (in module GPS), \hyperpage{247}
+  \item get\_tool\_switches\_as\_list, \hyperpage{206}
+  \item get\_tool\_switches\_as\_list() (GPS.Project method), \hyperpage{347}
+  \item get\_tool\_switches\_as\_string, \hyperpage{206}
+  \item get\_tool\_switches\_as\_string() (GPS.Project method), \hyperpage{347}
+  \item getdoc() (GPS.Help method), \hyperpage{314}
+  \item gif, \hyperpage{175}, \hyperpage{238}
+  \item Git, \hyperpage{113}
+  \item global ChangeLog, \hyperpage{120}
+  \item GNAT, \hyperpage{8}, \hyperpage{49}, \hyperpage{55, 56}
+  \item GNAT\_CODE\_PAGE, \hyperpage{236}
+  \item gnatmake, \hyperpage{239}
+  \item gnatpp, \hyperpage{36}
+  \item gnatstub, \hyperpage{36}
+  \item gnattest, \hyperpage{124}
+  \item gnuclient, \hyperpage{44}
+  \item gnuserv url, \hyperpage{44}
+  \item goto body, \hyperpage{50, 51}
+  \item goto declaration, \hyperpage{50, 51}
+  \item goto entity, \hyperpage{50}
+  \item goto file spec/body, \hyperpage{50, 51}
+  \item goto line, \hyperpage{50}
+  \item goto matching delimiter, \hyperpage{50}
+  \item goto type declaration, \hyperpage{51}
+  \item goto() (GPS.Bookmark method), \hyperpage{255}
+  \item goto() (GPS.EditorView method), \hyperpage{301}
+  \item goto\_mark() (GPS.Editor static method), \hyperpage{283}
+  \item GPS (module), \hyperpage{241}
+  \item gps shell, \hyperpage{211}
+  \item GPS\_CHANGELOG\_USER, \hyperpage{236}
+  \item GPS\_CUSTOM\_PATH, \hyperpage{236}
+  \item GPS\_DOC\_PATH, \hyperpage{236}
+  \item GPS\_HOME, \hyperpage{236}
+  \item gps\_index.xml, \hyperpage{20}
+  \item GPS\_MEMORY\_MONITOR, \hyperpage{236}
+  \item GPS\_PYTHONHOME, \hyperpage{236}
+  \item GPS\_ROOT, \hyperpage{236}
+  \item GPS\_STARTUP\_LD\_LIBRARY\_PATH, \hyperpage{236}
+  \item GPS\_STARTUP\_PATH, \hyperpage{236}
+  \item graph disable, \hyperpage{109}
+  \item graph display, \hyperpage{109}
+  \item graph enable, \hyperpage{109}
+  \item graph print, \hyperpage{109}
+  \item graph undisplay, \hyperpage{109}
+  \item group\_commit() (GPS.Activities method), \hyperpage{252}
+  \item gtkrc, \hyperpage{237}
+  \item GUI (class in GPS), \hyperpage{312}
+
+  \indexspace
+  \bigletter H
+  \item has\_log() (GPS.Activities method), \hyperpage{252}
+  \item has\_overlay() (GPS.EditorLocation method), \hyperpage{297}
+  \item help, \hyperpage{1}, \hyperpage{19}
+  \item Help (class in GPS), \hyperpage{314}
+  \item hexadecimal, \hyperpage{28}, \hyperpage{105}
+  \item hidden directories pattern, \hyperpage{157}
+  \item hide, \hyperpage{100}
+  \item hide() (GPS.BuildTarget method), \hyperpage{256}
+  \item hide() (GPS.Contextual method), \hyperpage{273}
+  \item hide() (GPS.GUI method), \hyperpage{312}
+  \item hide() (GPS.MDI static method), \hyperpage{331}
+  \item hide\_coverage\_information() (GPS.CodeAnalysis method), \hyperpage{259}
+  \item highlight delimiter, \hyperpage{148}
+  \item highlight() (GPS.Editor static method), \hyperpage{283}
+  \item highlight\_range() (GPS.Editor static method), \hyperpage{283}
+  \item history, \hyperpage{97}, \hyperpage{237}
+  \item HOME, \hyperpage{236}
+  \item Hook (class in GPS), \hyperpage{315}
+  \item Hook.describe, \hyperpage{222}
+  \item Hook.list, \hyperpage{222}
+  \item Hook.list\_types, \hyperpage{223}
+  \item Hook.register, \hyperpage{225}
+  \item Hook.run, \hyperpage{224}
+  \item hooks, \hyperpage{222--225}
+  \item HTML, \hyperpage{1}, \hyperpage{19}
+  \item html, \hyperpage{154}
+  \item HTML (class in GPS), \hyperpage{313}
+  \item http, \hyperpage{46}
+  \item hyper mode, \hyperpage{146}
+  \item hyperlinks, \hyperpage{53}
+
+  \indexspace
+  \bigletter I
+  \item icon, \hyperpage{102}
+  \item icons for source language entities, \hyperpage{9}
+  \item id() (GPS.Activities method), \hyperpage{252}
+  \item image, \hyperpage{89}
+  \item Implicit status, \hyperpage{155}
+  \item imported entities, \hyperpage{52}
+  \item imported\_by() (GPS.File method), \hyperpage{307}
+  \item imports() (GPS.File method), \hyperpage{308}
+  \item indent() (GPS.Editor static method), \hyperpage{284}
+  \item indent() (GPS.EditorBuffer method), \hyperpage{291}
+  \item indent\_buffer() (GPS.Editor static method), \hyperpage{284}
+  \item indentation, \hyperpage{26}, \hyperpage{150}, \hyperpage{152}
+  \item indentation level, \hyperpage{150}
+  \item indexed, \hyperpage{188}
+  \item indexed project attributes, \hyperpage{188}
+  \item input\_dialog, \hyperpage{206}
+  \item input\_dialog() (GPS.MDI static method), \hyperpage{331}
+  \item insert() (GPS.EditorBuffer method), \hyperpage{291}
+  \item insert() (GPS.Toolbar method), \hyperpage{358}
+  \item insert\_text() (GPS.Editor static method), \hyperpage{284}
+  \item inside\_word() (GPS.EditorLocation method), \hyperpage{297}
+  \item insmod() (in module GPS), \hyperpage{247}
+  \item interactive command, \hyperpage{15}, \hyperpage{165}
+  \item interactive search, \hyperpage{7}, \hyperpage{115}
+  \item interrupt, \hyperpage{96}, \hyperpage{124}
+  \item interrupt() (GPS.Command method), \hyperpage{263}
+  \item interrupt() (GPS.Process method), \hyperpage{342}
+  \item interrupt() (GPS.Task method), \hyperpage{355}
+  \item introduction, \hyperpage{1}
+  \item Invalid\_Argument (class in GPS), \hyperpage{327}
+  \item is\_break\_command() (GPS.Debugger method), \hyperpage{275}
+  \item is\_busy() (GPS.Debugger method), \hyperpage{275}
+  \item is\_closed() (GPS.Activities method), \hyperpage{253}
+  \item is\_context\_command() (GPS.Debugger method), \hyperpage{275}
+  \item is\_exec\_command() (GPS.Debugger method), \hyperpage{275}
+  \item is\_floating() (GPS.MDIWindow method), \hyperpage{333}
+  \item is\_modified() (GPS.EditorBuffer method), \hyperpage{291}
+  \item is\_modified() (GPS.Project method), \hyperpage{347}
+  \item is\_present() (GPS.EditorMark method), \hyperpage{299}
+  \item is\_read\_only() (GPS.EditorBuffer method), \hyperpage{291}
+  \item is\_read\_only() (GPS.EditorView method), \hyperpage{301}
+  \item is\_sensitive() (GPS.GUI method), \hyperpage{312}
+  \item is\_server\_local() (in module GPS), \hyperpage{248}
+  \item isatty() (GPS.Console method), \hyperpage{269}
+  \item ISO-8859-1, \hyperpage{146}
+
+  \indexspace
+  \bigletter J
+  \item jpeg, \hyperpage{175}
+
+  \indexspace
+  \bigletter K
+  \item key, \hyperpage{15--17}, \hyperpage{28}, \hyperpage{31}, \hyperpage{77}, \hyperpage{105}, 
+		\hyperpage{176}
+  \item key shortcuts, \hyperpage{36}
+  \item key() (GPS.Action method), \hyperpage{251}
+  \item kill, \hyperpage{96}
+  \item kill() (GPS.Process method), \hyperpage{342}
+
+  \indexspace
+  \bigletter L
+  \item language, \hyperpage{39}
+  \item language() (GPS.File method), \hyperpage{308}
+  \item Languages, \hyperpage{66}
+  \item languages, \hyperpage{57}
+  \item languages() (GPS.Project method), \hyperpage{347}
+  \item last\_command() (in module GPS), \hyperpage{248}
+  \item library projects, \hyperpage{67}
+  \item limited with, \hyperpage{61}
+  \item line index, \hyperpage{156}
+  \item line terminator, \hyperpage{148}
+  \item line() (GPS.EditorLocation method), \hyperpage{297}
+  \item line() (GPS.FileLocation method), \hyperpage{312}
+  \item lines\_count() (GPS.EditorBuffer method), \hyperpage{292}
+  \item list() (GPS.Activities static method), \hyperpage{253}
+  \item list() (GPS.Bookmark static method), \hyperpage{255}
+  \item list() (GPS.Command static method), \hyperpage{263}
+  \item list() (GPS.Contextual static method), \hyperpage{273}
+  \item list() (GPS.Debugger static method), \hyperpage{275}
+  \item list() (GPS.EditorBuffer static method), \hyperpage{292}
+  \item list() (GPS.Hook static method), \hyperpage{325}
+  \item list() (GPS.Message static method), \hyperpage{336}
+  \item list() (GPS.Style static method), \hyperpage{354}
+  \item list() (GPS.Task static method), \hyperpage{355}
+  \item list() (GPS.Vdiff static method), \hyperpage{362}
+  \item list\_categories() (GPS.Locations static method), \hyperpage{328}
+  \item list\_locations() (GPS.Locations static method), \hyperpage{328}
+  \item list\_types() (GPS.Hook static method), \hyperpage{326}
+  \item load, \hyperpage{32}, \hyperpage{96}
+  \item Load xref info in memory, \hyperpage{49}
+  \item load xref info on project load, \hyperpage{157}
+  \item load() (GPS.Project static method), \hyperpage{348}
+  \item load\_from\_file() (GPS.CodeAnalysis method), \hyperpage{259}
+  \item local variables, \hyperpage{97}
+  \item locate in Project View, \hyperpage{76}
+  \item locate in project view, \hyperpage{8}
+  \item location, \hyperpage{16}, \hyperpage{146}, \hyperpage{156}
+  \item location() (GPS.CodefixError method), \hyperpage{261}
+  \item location() (GPS.EditorMark method), \hyperpage{299}
+  \item location() (GPS.FileContext method), \hyperpage{311}
+  \item Locations (class in GPS), \hyperpage{327}
+  \item locations view, \hyperpage{16}, \hyperpage{51}
+  \item log, \hyperpage{236}
+  \item log template, \hyperpage{237}
+  \item log() (GPS.Activities method), \hyperpage{253}
+  \item log() (GPS.Logger method), \hyperpage{330}
+  \item log() (GPS.VCS static method), \hyperpage{359}
+  \item log\_file() (GPS.Activities method), \hyperpage{253}
+  \item log\_parse() (GPS.VCS static method), \hyperpage{360}
+  \item Logger (class in GPS), \hyperpage{329}
+  \item look in, \hyperpage{78}
+  \item lookup\_actions() (in module GPS), \hyperpage{248}
+  \item lookup\_actions\_from\_key() (in module GPS), \hyperpage{248}
+  \item ls() (in module GPS), \hyperpage{248}
+  \item lsmod() (in module GPS), \hyperpage{249}
+
+  \indexspace
+  \bigletter M
+  \item Mac OS, \hyperpage{236}
+  \item macros, \hyperpage{38}, \hyperpage{124}
+  \item main units, \hyperpage{67}
+  \item main windows, \hyperpage{3}
+  \item make() (GPS.File method), \hyperpage{308}
+  \item mark\_current\_location() (GPS.Editor static method), \hyperpage{284}
+  \item MDI, \hyperpage{6}, \hyperpage{21}, \hyperpage{80}, \hyperpage{147}
+  \item MDI (class in GPS), \hyperpage{330}
+  \item MDI.save\_all, \hyperpage{205}
+  \item MDIWindow (class in GPS), \hyperpage{332}
+  \item memory view, \hyperpage{97}, \hyperpage{100}, \hyperpage{105}, \hyperpage{107}
+  \item menu, \hyperpage{16, 17}, \hyperpage{22}, \hyperpage{30}, \hyperpage{32}, \hyperpage{45}, 
+		\hyperpage{77}, \hyperpage{80}, \hyperpage{95}, \hyperpage{97}, \hyperpage{99}, 
+		\hyperpage{101}, \hyperpage{103}, \hyperpage{117}, \hyperpage{166}
+  \item Menu (class in GPS), \hyperpage{334}
+  \item menu bar, \hyperpage{5}
+  \item menu separator, \hyperpage{174}
+  \item menu() (GPS.Action method), \hyperpage{251}
+  \item menus, \hyperpage{172}
+  \item Mercurial, \hyperpage{113}
+  \item merge() (GPS.Clipboard static method), \hyperpage{257}
+  \item Message (class in GPS), \hyperpage{335}
+  \item message() (GPS.CodefixError method), \hyperpage{261}
+  \item messages, \hyperpage{15}, \hyperpage{32}
+  \item messages window, \hyperpage{15}
+  \item methods, \hyperpage{52}
+  \item methods() (GPS.Entity method), \hyperpage{304}
+  \item Metrics, \hyperpage{130}
+  \item metrics, \hyperpage{124}
+  \item Missing\_Arguments (class in GPS), \hyperpage{337}
+  \item Mode, \hyperpage{86}, \hyperpage{199}
+  \item Model, \hyperpage{197}
+  \item module\_name (GPS.Context attribute), \hyperpage{270}
+  \item move() (GPS.EditorMark method), \hyperpage{299}
+  \item moving, \hyperpage{23}
+  \item multi-unit source files, \hyperpage{68}
+  \item Multiple Document Interface, \hyperpage{6}, \hyperpage{21}, \hyperpage{80}, \hyperpage{147}
+
+  \indexspace
+  \bigletter N
+  \item name() (GPS.Activities method), \hyperpage{253}
+  \item name() (GPS.Bookmark method), \hyperpage{255}
+  \item name() (GPS.Command method), \hyperpage{263}
+  \item name() (GPS.EditorOverlay method), \hyperpage{299}
+  \item name() (GPS.Entity method), \hyperpage{304}
+  \item name() (GPS.File method), \hyperpage{308}
+  \item name() (GPS.MDIWindow method), \hyperpage{333}
+  \item name() (GPS.Project method), \hyperpage{348}
+  \item name() (GPS.Task method), \hyperpage{355}
+  \item name\_parameters() (GPS.Entity method), \hyperpage{304}
+  \item naming scheme, \hyperpage{67}
+  \item navigate, \hyperpage{50}
+  \item navigation, \hyperpage{49}
+  \item network, \hyperpage{139}
+  \item new file, \hyperpage{30}
+  \item new view, \hyperpage{30}
+  \item next, \hyperpage{96}
+  \item Next Subprogram, \hyperpage{51}
+  \item next tag, \hyperpage{51}
+  \item next() (GPS.MDIWindow method), \hyperpage{333}
+  \item nexti, \hyperpage{96}
+  \item non\_blocking\_send() (GPS.Debugger method), \hyperpage{275}
+  \item normalization of projects, \hyperpage{55}
+
+  \indexspace
+  \bigletter O
+  \item object directory, \hyperpage{66}
+  \item object\_dirs() (GPS.Project method), \hyperpage{348}
+  \item offset() (GPS.EditorLocation method), \hyperpage{297}
+  \item old diff, \hyperpage{155}
+  \item on-failure, \hyperpage{165}
+  \item Online help, \hyperpage{19}
+  \item opaque, \hyperpage{147}
+  \item open, \hyperpage{30, 31}
+  \item open\_file\_action\_hook, \hyperpage{224}
+  \item options, \hyperpage{235}
+  \item other\_file() (GPS.File method), \hyperpage{308}
+  \item Outline View, \hyperpage{12}
+  \item output, \hyperpage{207}
+
+  \indexspace
+  \bigletter P
+  \item parameters() (GPS.Entity method), \hyperpage{304}
+  \item parse() (GPS.Codefix static method), \hyperpage{260}
+  \item parse() (GPS.Locations static method), \hyperpage{328}
+  \item parse() (GPS.XMLViewer method), \hyperpage{364}
+  \item parse\_string() (GPS.XMLViewer method), \hyperpage{364}
+  \item parse\_xml() (in module GPS), \hyperpage{249}
+  \item password, \hyperpage{47}, \hyperpage{114}, \hyperpage{139}, \hyperpage{164}, 
+		\hyperpage{195}
+  \item paste, \hyperpage{32}, \hyperpage{45}
+  \item paste previous, \hyperpage{32}
+  \item paste() (GPS.Editor static method), \hyperpage{284}
+  \item paste() (GPS.EditorBuffer method), \hyperpage{292}
+  \item patch, \hyperpage{155}
+  \item path, \hyperpage{196}
+  \item pause() (GPS.Task method), \hyperpage{355}
+  \item perspectives, \hyperpage{23}
+  \item plug-ins, \hyperpage{124}, \hyperpage{159}
+  \item png, \hyperpage{89}, \hyperpage{175}, \hyperpage{238}
+  \item pointed\_type() (GPS.Entity method), \hyperpage{304}
+  \item possible\_fixes() (GPS.CodefixError method), \hyperpage{261}
+  \item predefined patterns, \hyperpage{179}
+  \item Preference (class in GPS), \hyperpage{337}
+  \item preferences, \hyperpage{4}, \hyperpage{22}, \hyperpage{36}, \hyperpage{44, 45}, 
+		\hyperpage{106}, \hyperpage{145}, \hyperpage{237}
+  \item pretty print, \hyperpage{36}
+  \item Previous Subprogram, \hyperpage{51}
+  \item previous tag, \hyperpage{51}
+  \item primitive operation, \hyperpage{52}
+  \item primitive operations, \hyperpage{52}
+  \item primitive\_of() (GPS.Entity method), \hyperpage{304}
+  \item print, \hyperpage{32}, \hyperpage{106}, \hyperpage{154}
+  \item print\_line\_info() (GPS.Editor static method), \hyperpage{284}
+  \item PrintFile, \hyperpage{154}
+  \item problems, \hyperpage{238}
+  \item Process (class in GPS), \hyperpage{339}
+  \item progress bar, \hyperpage{17}
+  \item progress() (GPS.Command method), \hyperpage{263}
+  \item project, \hyperpage{3, 4}, \hyperpage{6}, \hyperpage{8}, \hyperpage{30}, \hyperpage{49}, 
+		\hyperpage{55}, \hyperpage{137}
+  \item Project (class in GPS), \hyperpage{343}
+  \item project attribute, \hyperpage{58}
+  \item project attributes, \hyperpage{185}, \hyperpage{188}
+  \item project browser, \hyperpage{76}
+  \item project comments, \hyperpage{56}
+  \item project dependencies, \hyperpage{71}
+  \item project dependency, \hyperpage{61}
+  \item project description, \hyperpage{55}
+  \item project editing, \hyperpage{62}
+  \item project file, \hyperpage{8}, \hyperpage{55, 56}
+  \item project menu, \hyperpage{62}
+  \item project properties editor, \hyperpage{72}
+  \item project templates, \hyperpage{234}
+  \item project variable, \hyperpage{8}, \hyperpage{58}
+  \item project view, \hyperpage{6, 7}, \hyperpage{9}, \hyperpage{55}, \hyperpage{61}, 
+		\hyperpage{77}
+  \item project wizard, \hyperpage{63}
+  \item project() (GPS.File method), \hyperpage{309}
+  \item project() (GPS.FileContext method), \hyperpage{311}
+  \item projects, \hyperpage{60}
+  \item ProjectTemplate (class in GPS), \hyperpage{352}
+  \item properties\_editor() (GPS.Project method), \hyperpage{348}
+  \item protection domain, \hyperpage{97}
+  \item pwd() (in module GPS), \hyperpage{249}
+  \item pygtk, \hyperpage{222}
+  \item python, \hyperpage{124}, \hyperpage{212}, \hyperpage{217}
+  \item python window, \hyperpage{15}
+  \item pywidget() (GPS.GUI method), \hyperpage{312}
+
+  \indexspace
+  \bigletter Q
+  \item quit, \hyperpage{32}
+
+  \indexspace
+  \bigletter R
+  \item raise\_window() (GPS.MDIWindow method), \hyperpage{333}
+  \item range size, \hyperpage{153}
+  \item read() (GPS.CommandWindow method), \hyperpage{265}
+  \item read() (GPS.Console method), \hyperpage{269}
+  \item readline() (GPS.Console method), \hyperpage{269}
+  \item recent, \hyperpage{31}
+  \item recompute, \hyperpage{98}
+  \item recompute dependencies, \hyperpage{93}
+  \item recompute() (GPS.Project static method), \hyperpage{348}
+  \item recompute() (GPS.Vdiff method), \hyperpage{362}
+  \item record indentation, \hyperpage{150}
+  \item rectangle, \hyperpage{36}
+  \item redo, \hyperpage{32}
+  \item redo() (GPS.Editor static method), \hyperpage{284}
+  \item redo() (GPS.EditorBuffer method), \hyperpage{292}
+  \item refactoring, \hyperpage{40}
+  \item references, \hyperpage{52}
+  \item references() (GPS.Entity method), \hyperpage{304}
+  \item ReferencesCommand (class in GPS), \hyperpage{352}
+  \item refill, \hyperpage{35}
+  \item refill() (GPS.Editor static method), \hyperpage{284}
+  \item refill() (GPS.EditorBuffer method), \hyperpage{292}
+  \item register() (GPS.Hook static method), \hyperpage{326}
+  \item register\_css() (GPS.Docgen static method), \hyperpage{277}
+  \item register\_highlighting() (GPS.Editor static method), \hyperpage{285}
+  \item register\_main\_index() (GPS.Docgen static method), \hyperpage{277}
+  \item register\_tag\_handler() (GPS.Docgen static method), \hyperpage{277}
+  \item registers, \hyperpage{98}
+  \item regular expression, \hyperpage{79}
+  \item relative project path, \hyperpage{156}
+  \item reload project, \hyperpage{63}
+  \item remote, \hyperpage{139}, \hyperpage{194--196}
+  \item remote copy, \hyperpage{154}
+  \item remote files, \hyperpage{46}
+  \item remote project, \hyperpage{142}
+  \item remote shell, \hyperpage{154}
+  \item remove() (GPS.BuildTarget method), \hyperpage{256}
+  \item remove() (GPS.Combo method), \hyperpage{262}
+  \item remove() (GPS.EditorHighlighter method), \hyperpage{294}
+  \item remove() (GPS.Hook method), \hyperpage{326}
+  \item remove() (GPS.Message method), \hyperpage{336}
+  \item remove() (GPS.Timeout method), \hyperpage{356}
+  \item remove\_annotations() (GPS.VCS static method), \hyperpage{360}
+  \item remove\_attribute\_values() (GPS.Project method), \hyperpage{349}
+  \item remove\_blank\_lines() (GPS.Editor static method), \hyperpage{285}
+  \item remove\_case\_exception() (GPS.Editor static method), \hyperpage{285}
+  \item remove\_category() (GPS.Locations static method), \hyperpage{329}
+  \item remove\_dependency() (GPS.Project method), \hyperpage{349}
+  \item remove\_file() (GPS.Activities method), \hyperpage{253}
+  \item remove\_overlay() (GPS.EditorBuffer method), \hyperpage{292}
+  \item remove\_property() (GPS.File method), \hyperpage{309}
+  \item remove\_property() (GPS.Project method), \hyperpage{349}
+  \item remove\_source\_dir() (GPS.Project method), \hyperpage{349}
+  \item remove\_special\_lines() (GPS.EditorBuffer method), \hyperpage{292}
+  \item removing variable, \hyperpage{60}
+  \item rename() (GPS.Bookmark method), \hyperpage{255}
+  \item rename() (GPS.Entity method), \hyperpage{305}
+  \item rename() (GPS.MDIWindow method), \hyperpage{333}
+  \item rename() (GPS.Menu method), \hyperpage{335}
+  \item rename() (GPS.Project method), \hyperpage{349}
+  \item renaming entities, \hyperpage{90}
+  \item repeat\_next() (in module GPS), \hyperpage{249}
+  \item replace, \hyperpage{50}, \hyperpage{77}, \hyperpage{154}
+  \item replace with, \hyperpage{78}
+  \item replace\_text() (GPS.Editor static method), \hyperpage{285}
+  \item repository\_dir() (GPS.VCS static method), \hyperpage{360}
+  \item repository\_path() (GPS.VCS static method), \hyperpage{360}
+  \item reset() (GPS.Help method), \hyperpage{315}
+  \item reset\_xref\_db() (in module GPS), \hyperpage{249}
+  \item resume() (GPS.Task method), \hyperpage{355}
+  \item return\_type() (GPS.Entity method), \hyperpage{305}
+  \item Revision (class in GPS), \hyperpage{353}
+  \item revision\_parse() (GPS.VCS static method), \hyperpage{360}
+  \item right margin, \hyperpage{148}
+  \item root() (GPS.Project static method), \hyperpage{350}
+  \item rsh, \hyperpage{46}
+  \item rsync, \hyperpage{46}, \hyperpage{196}
+  \item run, \hyperpage{17}, \hyperpage{95}
+  \item run() (GPS.Hook method), \hyperpage{326}
+  \item run\_until\_failure() (GPS.Hook method), \hyperpage{326}
+  \item run\_until\_success() (GPS.Hook method), \hyperpage{326}
+
+  \indexspace
+  \bigletter S
+  \item save, \hyperpage{31}
+  \item save all, \hyperpage{31}
+  \item save as, \hyperpage{31, 32}
+  \item save desktop, \hyperpage{32}
+  \item save() (GPS.Editor static method), \hyperpage{285}
+  \item save() (GPS.EditorBuffer method), \hyperpage{292}
+  \item save\_all() (GPS.MDI static method), \hyperpage{332}
+  \item save\_buffer() (GPS.Editor static method), \hyperpage{286}
+  \item save\_persistent\_properties() (in module GPS), \hyperpage{249}
+  \item saving, \hyperpage{45}, \hyperpage{105}
+  \item saving breakpoints, \hyperpage{105}
+  \item saving projects, \hyperpage{61, 62}
+  \item scenario\_variables() (GPS.Project static method), \hyperpage{350}
+  \item scenario\_variables\_cmd\_line() (GPS.Project static method), \hyperpage{350}
+  \item scenario\_variables\_values() (GPS.Project static method), \hyperpage{350}
+  \item screen shot, \hyperpage{3, 4}, \hyperpage{6}, \hyperpage{9--12}, \hyperpage{15, 16}, 
+		\hyperpage{18, 19}, \hyperpage{25}, \hyperpage{28}, \hyperpage{30}, \hyperpage{34}, 
+		\hyperpage{46}, \hyperpage{58, 59}, \hyperpage{62, 63}, \hyperpage{67}, 
+		\hyperpage{69}, \hyperpage{71, 72}, \hyperpage{74}, \hyperpage{76, 77}, 
+		\hyperpage{79}, \hyperpage{83}, \hyperpage{86}, \hyperpage{90}, \hyperpage{92}, 
+		\hyperpage{94}, \hyperpage{97--99}, \hyperpage{101}, \hyperpage{103}, 
+		\hyperpage{105--107}, \hyperpage{114}, \hyperpage{116}, \hyperpage{121}, 
+		\hyperpage{126}, \hyperpage{128}, \hyperpage{132}, \hyperpage{134}, 
+		\hyperpage{140}, \hyperpage{143}, \hyperpage{145}, \hyperpage{158}, 
+		\hyperpage{183}
+  \item scripts, \hyperpage{210}
+  \item search, \hyperpage{8}, \hyperpage{16}, \hyperpage{50}, \hyperpage{77}, \hyperpage{154}
+  \item search context, \hyperpage{77, 78}
+  \item search for, \hyperpage{77}
+  \item search() (GPS.EditorLocation method), \hyperpage{298}
+  \item search() (GPS.File method), \hyperpage{309}
+  \item search() (GPS.Project method), \hyperpage{350}
+  \item search\_next() (GPS.File method), \hyperpage{309}
+  \item select all, \hyperpage{33}
+  \item select window on match, \hyperpage{80}
+  \item select() (GPS.EditorBuffer method), \hyperpage{293}
+  \item select\_all() (GPS.Console method), \hyperpage{269}
+  \item select\_all() (GPS.Editor static method), \hyperpage{286}
+  \item select\_text() (GPS.Editor static method), \hyperpage{286}
+  \item selection, \hyperpage{35}
+  \item selection\_end() (GPS.EditorBuffer method), \hyperpage{293}
+  \item selection\_start() (GPS.EditorBuffer method), \hyperpage{293}
+  \item send() (GPS.Debugger method), \hyperpage{276}
+  \item send() (GPS.Process method), \hyperpage{342}
+  \item separate unit, \hyperpage{49}
+  \item server, \hyperpage{196}, \hyperpage{233}
+  \item sessions() (GPS.Codefix static method), \hyperpage{260}
+  \item set() (GPS.Preference method), \hyperpage{338}
+  \item set\_action() (GPS.Message method), \hyperpage{336}
+  \item set\_active() (GPS.Logger method), \hyperpage{330}
+  \item set\_active() (GPS.Menu method), \hyperpage{335}
+  \item set\_attribute\_as\_string() (GPS.Project method), \hyperpage{351}
+  \item set\_background() (GPS.CommandWindow method), \hyperpage{265}
+  \item set\_background() (GPS.Style method), \hyperpage{354}
+  \item set\_background\_color() (GPS.Editor static method), \hyperpage{286}
+  \item set\_build\_mode() (in module GPS), \hyperpage{249}
+  \item set\_busy() (in module GPS), \hyperpage{249}
+  \item set\_closed() (GPS.Activities method), \hyperpage{253}
+  \item set\_cmd\_line() (GPS.SwitchesChooser method), \hyperpage{355}
+  \item set\_foreground() (GPS.Style method), \hyperpage{354}
+  \item set\_in\_speedbar() (GPS.Style method), \hyperpage{354}
+  \item set\_last\_command() (in module GPS), \hyperpage{250}
+  \item set\_prompt() (GPS.CommandWindow method), \hyperpage{265}
+  \item set\_property() (GPS.EditorOverlay method), \hyperpage{300}
+  \item set\_property() (GPS.File method), \hyperpage{310}
+  \item set\_property() (GPS.Project method), \hyperpage{351}
+  \item set\_read\_only() (GPS.EditorBuffer method), \hyperpage{293}
+  \item set\_read\_only() (GPS.EditorView method), \hyperpage{301}
+  \item set\_reference() (GPS.VCS static method), \hyperpage{360}
+  \item set\_scenario\_variable() (GPS.Project static method), \hyperpage{351}
+  \item set\_sensitive() (GPS.Contextual method), \hyperpage{273}
+  \item set\_sensitive() (GPS.GUI method), \hyperpage{313}
+  \item set\_size() (GPS.Process method), \hyperpage{342}
+  \item set\_sort\_order\_hint() (GPS.Locations static method), \hyperpage{329}
+  \item set\_sort\_order\_hint() (GPS.Message static method), \hyperpage{336}
+  \item set\_style() (GPS.Message method), \hyperpage{336}
+  \item set\_subprogram() (GPS.Message method), \hyperpage{337}
+  \item set\_synchronized\_scrolling() (GPS.Editor static method), \hyperpage{286}
+  \item set\_text() (GPS.Button method), \hyperpage{257}
+  \item set\_text() (GPS.Combo method), \hyperpage{263}
+  \item set\_title() (GPS.Editor static method), \hyperpage{286}
+  \item set\_writable() (GPS.Editor static method), \hyperpage{287}
+  \item shell, \hyperpage{15}, \hyperpage{124}, \hyperpage{165}
+  \item shell window, \hyperpage{15}
+  \item show, \hyperpage{100}
+  \item Show absolute paths, \hyperpage{8}
+  \item show dependencies, \hyperpage{76}
+  \item show dependencies for, \hyperpage{92}
+  \item show files depending on, \hyperpage{93}
+  \item show files depending on file, \hyperpage{93}
+  \item Show flat view, \hyperpage{8}
+  \item Show hidden directories, \hyperpage{8}
+  \item show implicit dependencies, \hyperpage{93}
+  \item show projects depending on, \hyperpage{76}
+  \item show recursive dependencies, \hyperpage{76}
+  \item show system files, \hyperpage{93}
+  \item show type, \hyperpage{100}
+  \item show value, \hyperpage{100}
+  \item show() (GPS.BuildTarget method), \hyperpage{256}
+  \item show() (GPS.Contextual method), \hyperpage{273}
+  \item show() (GPS.Entity method), \hyperpage{305}
+  \item show() (GPS.GUI method), \hyperpage{313}
+  \item show() (GPS.MDI static method), \hyperpage{332}
+  \item show\_analysis\_report() (GPS.CodeAnalysis method), \hyperpage{259}
+  \item show\_coverage\_information() (GPS.CodeAnalysis method), \hyperpage{259}
+  \item smart completion, \hyperpage{149}
+  \item solving problems, \hyperpage{238}
+  \item source browsing, \hyperpage{89}
+  \item source file, \hyperpage{28}, \hyperpage{106}
+  \item source navigation, \hyperpage{49}
+  \item source\_dirs() (GPS.Project method), \hyperpage{351}
+  \item sources() (GPS.Project method), \hyperpage{352}
+  \item spawn() (GPS.Debugger static method), \hyperpage{276}
+  \item speed column policy, \hyperpage{148}
+  \item splash screen, \hyperpage{146}
+  \item split() (GPS.MDIWindow method), \hyperpage{333}
+  \item Splitting, \hyperpage{22}
+  \item ssh, \hyperpage{46}
+  \item Stack Analysis, \hyperpage{133}
+  \item stack analysis, \hyperpage{124}
+  \item Start Of Statement, \hyperpage{51}
+  \item start\_line() (GPS.AreaContext method), \hyperpage{254}
+  \item start\_undo\_group() (GPS.EditorBuffer method), \hyperpage{293}
+  \item starts\_word() (GPS.EditorLocation method), \hyperpage{298}
+  \item status, \hyperpage{17}
+  \item status bar, \hyperpage{17}, \hyperpage{147}
+  \item status line, \hyperpage{17}
+  \item status() (GPS.Task method), \hyperpage{355}
+  \item status\_parse() (GPS.VCS static method), \hyperpage{360}
+  \item step, \hyperpage{95}
+  \item stepi, \hyperpage{95}
+  \item stock\_icons, \hyperpage{193}
+  \item strip blanks, \hyperpage{148}
+  \item style, \hyperpage{156}
+  \item Style (class in GPS), \hyperpage{353}
+  \item sub project, \hyperpage{56}
+  \item submitting bugs, \hyperpage{238}
+  \item subprogram parameters, \hyperpage{214}
+  \item subprogram\_name() (GPS.Editor static method), \hyperpage{287}
+  \item subprogram\_name() (GPS.EditorLocation method), \hyperpage{298}
+  \item substitution, \hyperpage{166}
+  \item Subversion, \hyperpage{113}
+  \item Subversion Windows, \hyperpage{113}
+  \item suggestions, \hyperpage{238}
+  \item supported\_languages() (in module GPS), \hyperpage{250}
+  \item supported\_systems() (GPS.VCS static method), \hyperpage{361}
+  \item svg, \hyperpage{89}
+  \item switches, \hyperpage{69}
+  \item switches editor, \hyperpage{74}
+  \item SwitchesChooser (class in GPS), \hyperpage{354}
+  \item syntax highlighting, \hyperpage{106}
+
+  \indexspace
+  \bigletter T
+  \item tabulation, \hyperpage{150}, \hyperpage{152}
+  \item tag, \hyperpage{51}
+  \item Target, \hyperpage{197}
+  \item target, \hyperpage{96}
+  \item Targets, \hyperpage{83}
+  \item targets, \hyperpage{237}
+  \item task, \hyperpage{97}
+  \item Task (class in GPS), \hyperpage{355}
+  \item task manager, \hyperpage{17}
+  \item tasks, \hyperpage{17}
+  \item telnet, \hyperpage{46}
+  \item terminate, \hyperpage{96}
+  \item text files, \hyperpage{57}
+  \item thaw\_xref() (in module GPS), \hyperpage{250}
+  \item themes, \hyperpage{158}
+  \item themes creation, \hyperpage{178}
+  \item thread, \hyperpage{97}
+  \item Timeout (class in GPS), \hyperpage{356}
+  \item tip of the day, \hyperpage{4}, \hyperpage{147}
+  \item title bar, \hyperpage{21}, \hyperpage{99}
+  \item title() (GPS.EditorView method), \hyperpage{301}
+  \item toggle\_group\_commit() (GPS.Activities method), \hyperpage{253}
+  \item tool bar, \hyperpage{6}, \hyperpage{146, 147}, \hyperpage{175}
+  \item Toolbar (class in GPS), \hyperpage{357}
+  \item ToolButton (class in GPS), \hyperpage{356}
+  \item Toolchains, \hyperpage{83}, \hyperpage{86}
+  \item tools, \hyperpage{123}
+  \item tooltip, \hyperpage{26}, \hyperpage{106}, \hyperpage{148}
+  \item tooltip timeout, \hyperpage{148}
+  \item top level, \hyperpage{22}
+  \item tty, \hyperpage{153}
+  \item type, \hyperpage{223}
+  \item type() (GPS.Entity method), \hyperpage{305}
+
+  \indexspace
+  \bigletter U
+  \item uncomment, \hyperpage{35}
+  \item undo, \hyperpage{32}
+  \item undo() (GPS.Editor static method), \hyperpage{287}
+  \item undo() (GPS.EditorBuffer method), \hyperpage{293}
+  \item Unexpected\_Exception (class in GPS), \hyperpage{358}
+  \item unfold, \hyperpage{36}
+  \item unhighlight() (GPS.Editor static method), \hyperpage{287}
+  \item unhighlight\_range() (GPS.Editor static method), \hyperpage{287}
+  \item Unix, \hyperpage{59}, \hyperpage{239}
+  \item unselect() (GPS.EditorBuffer method), \hyperpage{293}
+  \item unset\_busy() (in module GPS), \hyperpage{250}
+  \item update value, \hyperpage{100}
+  \item update() (GPS.VCS static method), \hyperpage{361}
+  \item update\_parse() (GPS.VCS static method), \hyperpage{361}
+  \item update\_xref() (GPS.Project method), \hyperpage{352}
+  \item url, \hyperpage{45}, \hyperpage{238}
+  \item used\_by() (GPS.File method), \hyperpage{310}
+  \item uses() (GPS.File method), \hyperpage{310}
+
+  \indexspace
+  \bigletter V
+  \item variable, \hyperpage{8}, \hyperpage{58}
+  \item variables used, \hyperpage{52}
+  \item VCS, \hyperpage{66}, \hyperpage{113}
+  \item VCS (class in GPS), \hyperpage{359}
+  \item VCS activities, \hyperpage{116}
+  \item VCS explorer, \hyperpage{114}
+  \item vcs() (GPS.Activities method), \hyperpage{253}
+  \item Vdiff (class in GPS), \hyperpage{361}
+  \item version control, \hyperpage{113, 114}, \hyperpage{116, 117}
+  \item Version Control System, \hyperpage{66}
+  \item version() (in module GPS), \hyperpage{250}
+  \item vertical layout, \hyperpage{155}
+  \item vi, \hyperpage{44, 45}
+  \item view, \hyperpage{8}, \hyperpage{30}
+  \item views() (GPS.EditorBuffer method), \hyperpage{293}
+  \item vim, \hyperpage{45}
+  \item visual diff, \hyperpage{124, 125}
+  \item VxWorks, \hyperpage{57}
+  \item VxWorks AE, \hyperpage{104}
+
+  \indexspace
+  \bigletter W
+  \item wait() (GPS.Process method), \hyperpage{342}
+  \item warning index, \hyperpage{156}
+  \item welcome dialog, \hyperpage{3}, \hyperpage{146}
+  \item whole word, \hyperpage{79}
+  \item window manager, \hyperpage{21}
+  \item window selection, \hyperpage{21}
+  \item Window View, \hyperpage{12}
+  \item Windows, \hyperpage{8}, \hyperpage{28}, \hyperpage{30}, \hyperpage{45}, \hyperpage{236}, 
+		\hyperpage{239}
+  \item work space, \hyperpage{6}, \hyperpage{21}
+  \item wrench icon, \hyperpage{126}
+  \item write() (GPS.CommandWindow method), \hyperpage{265}
+  \item write() (GPS.Console method), \hyperpage{269}
+  \item write\_with\_links() (GPS.Console method), \hyperpage{270}
+
+  \indexspace
+  \bigletter X
+  \item X-Window, \hyperpage{45}
+  \item XMLViewer (class in GPS), \hyperpage{363}
+  \item xpm, \hyperpage{175}
+
+  \indexspace
+  \bigletter Y
+  \item yank, \hyperpage{32}, \hyperpage{45}
+  \item yes\_no\_dialog, \hyperpage{206}
+  \item yes\_no\_dialog() (GPS.MDI static method), \hyperpage{332}
+
+  \indexspace
+  \bigletter Z
+  \item zoom, \hyperpage{100}
+  \item zoom in, \hyperpage{100}
+  \item zoom out, \hyperpage{100}
+
+\end{theindex}

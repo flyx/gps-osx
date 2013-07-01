@@ -1,0 +1,7 @@
+--  Scenario variables are defined only in an imported project
+with "add_attr6_vars";
+
+project Add_Attr6 is
+    for Source_Files use ();
+    for Object_Dir use ".";
+end Add_Attr6;

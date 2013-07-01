@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>10. Source Browsing &mdash; GPS 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GPS 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="11. Debugging" href="debugging.html" />
+    <link rel="prev" title="9. Compilation/Build" href="compilation.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="debugging.html" title="11. Debugging"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="compilation.html" title="9. Compilation/Build"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">10. Source Browsing</a><ul>
+<li><a class="reference internal" href="#general-issues">10.1. General Issues</a></li>
+<li><a class="reference internal" href="#call-graph">10.2. Call Graph</a></li>
+<li><a class="reference internal" href="#dependency-browser">10.3. Dependency Browser</a></li>
+<li><a class="reference internal" href="#entity-browser">10.4. Entity Browser</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="compilation.html"
+                        title="previous chapter">9. Compilation/Build</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="debugging.html"
+                        title="next chapter">11. Debugging</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/browsing.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="source-browsing">
+<span id="id1"></span><h1>10. Source Browsing<a class="headerlink" href="#source-browsing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general-issues">
+<span id="index-0"></span><span id="id2"></span><h2>10.1. General Issues<a class="headerlink" href="#general-issues" title="Permalink to this headline">¶</a></h2>
+<p>GPS contains several kinds of browsers, that have a common set of basic
+functionalities. There are currently four such browsers: the project browser
+(<a class="reference internal" href="projects.html#the-project-browser"><em>The Project Browser</em></a>), the call graph (<a class="reference internal" href="#call-graph"><em>Call Graph</em></a>), the
+dependency browser (<a class="reference internal" href="#dependency-browser"><em>Dependency Browser</em></a>) and the entity browser
+(<a class="reference internal" href="#entity-browser"><em>Entity Browser</em></a>).</p>
+<p>All these browsers are interactive viewers. They contain a number of items,
+whose visual representation depends on the type of information displayed in the
+browser (they can be projects, files, entities, ...).</p>
+<p>In addition, the following capabilities are provided in all browsers:</p>
+<p><em>Scrolling</em></p>
+<blockquote>
+<div>When a lot of items are displayed in the canvas, the currently visible area
+might be too small to display all of them. In this case, scrollbars will be
+added on the sides, so that you can make other items visible. Scrolling can
+also be done with the arrow keys.</div></blockquote>
+<p><em>Layout</em></p>
+<blockquote>
+<div><p>A basic layout algorithm is used to organize the items. This algorithm is
+layer oriented: items with no parents are put in the first layer, then their
+direct children are put in the second layer, and so on. Depending on the type
+of browser, these layers are organized either vertically or horizontally.
+This algorithm tries to preserve as much as possible the positions of the
+items that were moved interactively.</p>
+<p>The <cite>Refresh layout</cite> menu item in the background contextual menu can be used
+to recompute the layout of items at any time, even for items that were
+previously moved interactively.</p>
+</div></blockquote>
+<p><em>Interactive moving of items</em></p>
+<blockquote>
+<div>Items can be moved interactively with the mouse. Click and drag the item by
+clicking on its title bar. The links will still be displayed during the move,
+so that you can check whether it overlaps any other item. If you are trying
+to move the item outside of the visible part of the browser, the latter will
+be scrolled.</div></blockquote>
+<p><em>Links</em></p>
+<blockquote>
+<div><p>Items can be linked together, and will remain connected when items are moved.
+Different types of links exist, see the description of the various browsers.</p>
+<p>By default, links are displayed as straight lines. You can choose to use
+orthogonal links instead, which are displayed only with vertical or
+horizontal lines. Select the entry <cite>orthogonal links</cite> in the background
+contextual menu.</p>
+</div></blockquote>
+<p><em>Exporting</em></p>
+<blockquote>
+<div><span class="target" id="index-1"></span><span class="target" id="index-2"></span><span class="target" id="index-3"></span><p id="index-4">The entire contents of a browser can be exported as a <cite>PNG</cite> image using the
+entry <cite>Export to PNG...</cite> in the background contextual menu.  It can also be
+exported in <cite>SVG</cite> format using the <cite>Export to SVG...</cite> entry.</p>
+</div></blockquote>
+<p><em>Zooming</em></p>
+<blockquote>
+<div><p>Several different zoom levels are available. The contextual menu in the
+background of the browser contains three entries: <cite>zoom in</cite>, <cite>zoom out</cite> and
+<cite>zoom</cite>. The latter is used to select directly the zoom level you want.</p>
+<p>This zooming capability is generally useful when lots of items are displayed
+in the browser, to get a more general view of the layout and the
+relationships between the items.</p>
+</div></blockquote>
+<p><em>Selecting items</em></p>
+<blockquote>
+<div><p>Items can be selected by clicking inside them. Multiple items can be selected
+by holding the <tt class="kbd docutils literal"><span class="pre">control</span></tt> key while clicking in the item. Alternatively,
+you can click and drag the mouse inside the background of the browser. All
+the items found in the selection rectangle when the mouse is released will be
+selected.</p>
+<p>Selected items are drawn with a different title bar color. All items linked
+to them also use a different title bar color, as well as the links. This is
+the most convenient way to understand the relationships between items when
+lots of them are present in the browser.</p>
+</div></blockquote>
+<p><em>Hyper-links</em></p>
+<blockquote>
+<div>Some of the items will contain hyper links, displayed in blue by default, and
+underlined. Clicking on these will generally display new items.</div></blockquote>
+<p>Two types of contextual menus are available in the browsers: the background
+contextual menu is available by right-clicking in the background area (i.e.
+outside of any item). As described above, it contains entries for the zooming,
+selecting of orthogonal links, and refresh; the second kind of contextual menu
+is available by right-clicking in items.</p>
+<p>The latter menu contains various entries. Most of the entries are added by
+various modules in GPS (VCS module, source editor, ...). In addition, each kind
+of browser also has some specific entries, which is described in the
+corresponding browser&#8217;s section.</p>
+<p>There are two common items in all item contextual menus:</p>
+<p><em>Hide Links</em></p>
+<blockquote>
+<div>Browsers can become confusing if there are many items and many links. You can
+lighten them by selecting this menu entry. As a result, the item will remain
+in the canvas, but none of the links to or from it will be visible. Selecting
+the item will still highlight linked items, so that this information remains
+available.</div></blockquote>
+<p><em>Remove unselected items</em></p>
+<blockquote>
+<div>Selecting this menu will remove all the items that are not currently
+selected. This is a convenient method to clean up the contents of the
+browser.</div></blockquote>
+<p><em>Remove selected items</em></p>
+<blockquote>
+<div>Selecting this menu will remove all the items that are currently selected.</div></blockquote>
+</div>
+<div class="section" id="call-graph">
+<span id="id3"></span><h2>10.2. Call Graph<a class="headerlink" href="#call-graph" title="Permalink to this headline">¶</a></h2>
+<p id="index-5">The call graph shows graphically the relationship between subprogram callers
+and callees. A link between two items indicate that one of them is calling the
+other.</p>
+<p id="index-6">A special handling is provided for renaming entities (in Ada): if a subprogram
+is a renaming of another one, both items will be displayed in the browser, with
+a special hashed link between the two. Since the renaming subprogram doesn&#8217;t
+have a proper body, you will then need to ask for the subprograms called by the
+renamed to get the list.</p>
+<img alt="_images/call-graph.jpg" id="index-7" src="_images/call-graph.jpg" />
+<p>In this browser, clicking on the right arrow in the title bar will display all
+the entities that are called by the selected item.</p>
+<p>Clicking on the left arrow will display all the entities that call the selected
+item (i.e. its callers).</p>
+<p>This browser is accessible through the contextual menu in the project view and
+source editor, by selecting one of the items:</p>
+<p>All boxes in this browser list several information: the location of their
+declaration, and the list of all their references in the other entities
+currently displayed in the browser. If you close the box for an entity that
+calls them, the matching references are also hidden, to keep the contents of
+the browser simpler.</p>
+<p><em>Browsers-&gt;*Entity</em> calls*</p>
+<blockquote>
+<div>Display all the entities called by the selected entity. This has the same
+effect as clicking on the right title bar arrow if the item is already
+present in the call graph.</div></blockquote>
+<p><em>Browsers-&gt;*Entity</em> is called by*</p>
+<blockquote>
+<div>Display all the entities called by the selected entity. This has the same
+effect as clicking on the left title bar arrow if the item is already present
+in the call graph.</div></blockquote>
+<p>The contextual menu available by right-clicking on the entities in the browser
+has the following new entries, in addition to the ones added by other modules
+of GPS.</p>
+<dl class="docutils">
+<dt><em>Entity</em> calls</dt>
+<dd>Same as described above.</dd>
+<dt><em>Entity</em> is called by</dt>
+<dd>Same as described above.</dd>
+<dt>Go To Spec</dt>
+<dd>Selecting this item will open a source editor that displays the
+declaration of the entity.</dd>
+<dt>Go To Body</dt>
+<dd>Selecting this item will open a source editor that displays the
+body of the entity.</dd>
+<dt>Locate in Project View</dt>
+<dd>Selecting this menu entry will move the focus to the project view,
+and select the first node representing the file in which the entity is
+declared. This makes it easier to see which other entities are
+declared in the same file.</dd>
+</dl>
+</div>
+<div class="section" id="dependency-browser">
+<span id="id4"></span><h2>10.3. Dependency Browser<a class="headerlink" href="#dependency-browser" title="Permalink to this headline">¶</a></h2>
+<p id="index-8">The dependency browser shows the dependencies between source files. Each item
+in the browser represents one source file.</p>
+<img alt="_images/dependency-browser.jpg" id="index-9" src="_images/dependency-browser.jpg" />
+<p>In this browser, clicking on the right arrow in the title bar will display the
+list of files that the selected file depends on. A file depend on another one
+if it explicitly imports it (<cite>with</cite> statement in Ada, or <cite>#include</cite> in C/C++).
+Implicit dependencies are currently not displayed in this browser, since the
+information is accessible by opening the other direct dependencies.</p>
+<p>Clicking on the left arrow in the title bar will display the list of files that
+depend on the selected file.</p>
+<p>This browser is accessible through the contextual menu in the project view and
+the source editor, by selecting one of the following items:</p>
+<dl class="docutils">
+<dt><em>Show dependencies for *file*</em></dt>
+<dd><p class="first last" id="index-10">This has the same effect as clicking on the right arrow for a file already in
+the browser, and will display the direct dependencies for that file.</p>
+</dd>
+<dt><em>Show files depending on *file*</em></dt>
+<dd><p class="first last" id="index-11">This has the same effect as clicking on the left arrow for a file already in
+the browser, and will display the list of files that directly depend on that
+file.</p>
+</dd>
+</dl>
+<p>The background contextual menu in the browser adds a few entries to the
+standard menu:</p>
+<p><em>Open file...</em></p>
+<blockquote>
+<div>This menu entry will display an external dialog in which you can select the
+name of a file to analyze.</div></blockquote>
+<p><em>Recompute dependencies</em></p>
+<blockquote>
+<div><p id="index-12">This menu entry will check that all links displays in the dependency browser
+are still valid. If not, they are removed. The arrows in the title bar are
+also reset if necessary, in case new dependencies were added for the files.</p>
+<p>The browser is not refreshed automatically, since there are lots of cases
+where the dependencies might change (editing source files, changing the
+project hierarchy or the value of the scenario variables, ...)</p>
+<p>It also recomputes the layout of the graph, and will change the current
+position of the boxes.</p>
+</div></blockquote>
+<dl class="docutils">
+<dt><em>Show system files</em></dt>
+<dd><p class="first last" id="index-13">This menu entry indicates whether standard system files (runtime files for
+instance in the case of Ada) are displayed in the browser. By default, these
+files will only be displayed if you explicitly select them through the <cite>Open
+file</cite> menu, or the contextual menu in the project view.</p>
+</dd>
+<dt><em>Show implicit dependencies</em></dt>
+<dd><p class="first last" id="index-14">This menu entry indicates whether implicit dependencies should also be
+displayed for the files. Implicit dependencies are files that are required to
+compile the selected file, but that are not explicitly imported through a
+<cite>with</cite> or <cite>#include</cite> statement. For instance, the body of generics in Ada is
+an implicit dependency.  Any time one of the implicit dependencies is
+modified, the selected file should be recompiled as well.</p>
+</dd>
+</dl>
+<p>The contextual menu available by right clicking on an item also adds a
+number of entries:</p>
+<dl class="docutils">
+<dt><em>Analyze other file</em></dt>
+<dd><p class="first last" id="index-15">This will open a new item in the browser, displaying the complement file for
+the selected one. In Ada, this would be the body if you clicked on a spec
+file, or the opposite. In C, it depends on the naming conventions you
+specified in the project properties, but you would generally go from a
+<tt class="file docutils literal"><span class="pre">.h</span></tt> file to a <tt class="file docutils literal"><span class="pre">.c</span></tt> file and back.</p>
+</dd>
+<dt><em>Show dependencies for *file*</em></dt>
+<dd><p class="first last" id="index-16">These play the same role as in the project view contextual menu</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="entity-browser">
+<span id="id5"></span><h2>10.4. Entity Browser<a class="headerlink" href="#entity-browser" title="Permalink to this headline">¶</a></h2>
+<p id="index-17">The entity browser displays static information about any source entity.</p>
+<p>The exact content of the items depend on the type of the item. For instance:</p>
+<p><em>Ada record / C struct</em></p>
+<blockquote>
+<div>The list of fields, each as an hyper link, is displayed. Clicking on
+one of the fields will open a new item for the type.</div></blockquote>
+<p><em>Ada tagged type / C++ class</em></p>
+<blockquote>
+<div>The list of attributes and methods is displayed. They are also
+click-able hyper-links.</div></blockquote>
+<p><em>Subprograms</em></p>
+<blockquote>
+<div>The list of parameters is displayed</div></blockquote>
+<p><em>Packages</em></p>
+<blockquote>
+<div>The list of all the entities declared in that package is displayed</div></blockquote>
+<p><em>and more...</em></p>
+<img alt="_images/entity-browser.jpg" id="index-18" src="_images/entity-browser.jpg" />
+<p>This browser is accessible through the contextual menu in the project view and
+source editor, when clicking on an entity:</p>
+<dl class="docutils">
+<dt><em>Browsers/Examine entity *entity*</em></dt>
+<dd><p class="first last" id="index-19">Open a new item in the entity browser that displays information for the
+selected entity.</p>
+</dd>
+</dl>
+<p>Most information in the items are click-able (by default, they appear as
+underlined blue text). Clicking on one of these hyper links will open a new
+item in the entity browser for the selected entity.</p>
+<p>This browser can display the parent entities for an item. For instance, for a
+C++ class or Ada tagged type, this would be the types it derives from. This is
+accessible by clicking on the up arrow in the title bar of the item.</p>
+<p>Likewise, children entities (for instance types that derive from the item) can
+be displayed by clicking on the down arrow in the title bar.</p>
+<p>An extra button appear in the title bar for the C++ class or Ada tagged types,
+which toggles whether the inherited methods (or primitive operations in Ada)
+should be displayed. By default, only the new methods, or the ones that
+override an inherited one, are displayed. The parent&#8217;s methods are not shown,
+unless you click on this title bar button.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="debugging.html" title="11. Debugging"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="compilation.html" title="9. Compilation/Build"
+             >previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

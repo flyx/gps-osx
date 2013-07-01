@@ -1,0 +1,187 @@
+ADC_REVISION($Revision: 197313 $)
+AC_INIT(gps/src/gps-main.adb)
+
+AC_CANONICAL_SYSTEM
+
+# Forces gtk+ 2.0
+CONFIGURE_SWITCH_WITH_GTK=2.0
+export CONFIGURE_SWITCH_WITH_GTK
+
+GPS_VERSION=5.2.1
+STRIP_CR=False
+CAN_OUTPUT=True
+TARGET_CFLAGS=""
+TARGET_LFLAGS='()'
+EXEC_COMMAND="xterm -e"
+DEFAULT_FONT="sans 9"
+DEFAULT_FIXED_FONT="Courier 10"
+PATH_STYLE=UNIX
+SSH_ESCAPE='~'
+
+## We need to double the quotes here, since this is inserted in an Ada file
+DEFAULT_PS='sh -c """"""ps x 2> /dev/null || ps -u \$USER 2> /dev/null || ps""""""'
+
+PRINT_CMD="lp"
+OPAQUE_MDI=False
+HOST_TYPE=Unix
+PYTHON_LIBS=""
+DIFF_CMD="diff"
+DIFF3_CMD="diff3"
+PATCH_CMD="patch"
+EXECUTION_WINDOW=True
+CHARSET="ISO-8859-1"
+
+TARGET=$host
+EXEC_PREFIX="$prefix"
+
+######## Check XML/Ada
+
+PROJECT_PATH=`gnatls -v | tr -d '\015' | awk 'BEGIN {display=0} /<Current/ {next} {if (display) {printf "%s:", $1}} /Project Search Path/ {display=1}'`
+AC_CHECK_PROG(XMLADA_GPR, xmlada.gpr, "with_xmlada", "no_xmlada", $PROJECT_PATH)
+IFS=' '
+
+######## checking for local tools ###
+AC_PROG_CC
+AC_ISC_POSIX
+AC_HEADER_STDC
+AM_PATH_GNAT
+AC_PROG_MAKE_SET
+AC_PROG_INSTALL
+AC_PROG_RANLIB
+AC_PROG_AWK(AWK)
+AC_CHECK_PROGS(DVIPS, dvips)
+AC_CHECK_PROGS(MAKEINFO, makeinfo)
+AC_CHECK_PROGS(TEXI2DVI, texi2dvi)
+
+######### checking for gtk
+AM_PATH_GTK
+AM_PATH_GTKADA(2.24.0,,AC_MSG_ERROR(Test for GtkAda failed. See the file 'INSTALL' for help.))
+
+######## GNU regex checking
+AC_CHECK_FUNC(re_compile_pattern, AC_DEFINE(HAVE_GNU_REGEX))
+
+######## Support for ptys ###
+AC_CHECK_HEADERS(sys/stropts.h)
+
+AC_CHECK_LIB(util,openpty,
+ [AC_DEFINE(HAVE_OPENPTY) TARGET_LFLAGS=$TARGET_LFLAGS' & ("-lutil")'],
+ [AC_CHECK_LIB(bsd,openpty,
+  [AC_DEFINE(HAVE_OPENPTY) TARGET_LFLAGS=$TARGET_LFLAGS' & ("-lbsd")'],
+  [AC_CHECK_FUNCS(openpty)]
+ ])
+)
+
+case "${host}" in
+
+  ## Alpha (DEC) machines.
+  alpha*-dec-osf* ) EXECUTION_WINDOW=False ;;
+
+  ## IBM, AIX machines
+  powerpc-ibm-aix5.*  ) TARGET_LFLAGS=$TARGET_LFLAGS' & ("-Wl,-bbigtoc")' ;;
+
+  ## PowerPC
+  powerpc-*-linux-gnu )
+    PRINT_CMD="a2ps"
+    EXEC_COMMAND="xterm -hold -e"
+    ;;
+
+  powerpc-*-darwin* ) STRIP_CR=True ;;
+
+  ## Suns
+  *-sun-solaris* | i[[3456]]86-*-solaris2* | i[3456]86-*-sunos5*)
+    TARGET_LFLAGS=$TARGET_LFLAGS' & ("-lXrender")' ;;
+
+  # IA64 processors
+  ia64-*-* )
+    case "${host}" in
+      *-linux-gnu* )
+        EXEC_COMMAND="xterm -hold -e"
+        PRINT_CMD="a2ps" ;;
+    esac
+  ;;
+
+  # AMD64 processors
+  x86_64-*-* )
+    case "${host}" in
+      *-linux-gnu* )
+        EXEC_COMMAND="xterm -hold -e"
+        PRINT_CMD="a2ps" ;;
+    esac
+  ;;
+
+  ## Intel 386 machines where we don't care about the manufacturer
+  i[[3456]]86-*-* )
+    machine=intel386
+    case "${host}" in
+      *-linux-gnu* )
+        EXEC_COMMAND="xterm -hold -e"
+        PRINT_CMD="a2ps"
+        ;;
+      *win32* | *mingw32* | *cygwin* )
+	STRIP_CR=True
+	CAN_OUTPUT=False
+	TARGET_LFLAGS='("-luser32", "-lcomdlg32", "-mwindows", "-Wl,--stack=0x5000000")'
+	COLOR_SELECTION="#BEBEBE"
+	EXEC_COMMAND="cmd /c start gps_run.cmd"
+	DEFAULT_PS="winps"
+	DEFAULT_FONT="tahoma 8"
+	DEFAULT_FIXED_FONT="Courier New 9"
+	PRINT_CMD=""
+	DIFF_CMD="gnudiff"
+	DIFF3_CMD="gnudiff3"
+	PATCH_CMD="gnupatch --binary"
+	OPAQUE_MDI=True
+	HOST_TYPE=Windows
+	PATH_STYLE=CYGWIN
+	SSH_ESCAPE=\'~\'
+	CHARSET="ISO-8859-1"
+	;;
+
+      *-darwin* )
+	STRIP_CR=True
+	DEFAULT_FIXED_FONT="Monospace 7.5"
+	;;
+      # Otherwise we'll fall through to the generic opsys code at the bottom.
+    esac
+  ;;
+
+  *) echo "Unknown system: ${host}"
+     exit;;
+esac
+
+# Set the version number of GPS
+AC_SUBST(GPS_VERSION)
+
+AC_SUBST(TARGET)
+AC_SUBST(EXEC_PREFIX)
+
+AC_SUBST(STRIP_CR)
+AC_SUBST(CAN_OUTPUT)
+AC_SUBST(TARGET_CFLAGS)
+AC_SUBST(TARGET_LFLAGS)
+AC_SUBST(TARGET)
+AC_SUBST(EXEC_COMMAND)
+AC_SUBST(DEFAULT_PS)
+AC_SUBST(DEFAULT_FONT)
+AC_SUBST(DEFAULT_FIXED_FONT)
+AC_SUBST(PRINT_CMD)
+AC_SUBST(DIFF_CMD)
+AC_SUBST(DIFF3_CMD)
+AC_SUBST(PATCH_CMD)
+AC_SUBST(OPAQUE_MDI)
+AC_SUBST(HOST_TYPE)
+AC_SUBST(EXECUTION_WINDOW)
+AC_SUBST(SSH_ESCAPE)
+AC_SUBST(CHARSET)
+AC_SUBST(AWK)
+
+## Recurse for gnatlib, but do not provide support for syslog
+
+AC_CONFIG_SUBDIRS([gnatlib])
+
+AC_MSG_NOTICE([------------- Summary for GPS --------------------])
+AC_MSG_NOTICE([ Xml/Ada: $XMLADA_GPR])
+AC_MSG_NOTICE([    use ADA_PROJECT_PATH to find xmlada.gpr])
+AC_MSG_NOTICE([--------------------------------------------------])
+
+AC_OUTPUT(Makefile docs/Makefile po/Makefile common/src/config.ads common/expect/Makefile common/common.gpr:common/common_${XMLADA_GPR}.gpr.in share/plug-ins/protocols.xml)

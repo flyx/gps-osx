@@ -1,0 +1,20 @@
+--  The part of the kernel that depends on the GUI
+with "../gnat";
+with "gtkada";
+with "kernel_core";
+with "shared";
+with "../widgets/widgets";
+with "../gnatlib/src/gnatcoll_gtk";
+with "../refactoring/core/refactoring_core";
+with "../toolchains_editor/core/toolchains_core";
+
+project Kernel is
+
+   for Source_Dirs use ("src");
+
+   for Object_Dir use Shared'Object_Dir;
+
+   package Compiler renames Shared.Compiler;
+   package IDE renames Shared.IDE;
+
+end Kernel;

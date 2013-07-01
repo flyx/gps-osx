@@ -1,0 +1,9 @@
+project Add_Attr6_Vars is
+
+   type A_Type is ("1", "2", "3");
+   A : A_Type := external ("A");
+  
+   type B_Type is ("B1", "B2", "B3");
+   B : B_Type := external ("B");
+
+end Add_Attr6_Vars;

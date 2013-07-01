@@ -1,0 +1,15 @@
+project rename_val is
+
+   type A_Type is
+      ("A2", "A3");
+   a : A_Type := external ("A");
+   b : A_Type := external ("A");
+   case b is
+      when "A3" =>
+         for Object_Dir use ".." & external ("A", "A3");
+      when "A2" =>
+         for Object_Dir use ".." & external ("A");
+   end case;
+
+end rename_val;
+

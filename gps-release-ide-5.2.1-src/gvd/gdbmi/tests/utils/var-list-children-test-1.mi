@@ -1,0 +1,2 @@
+^done,numchild="3",children=[child={name="var1.i",exp="i",numchild="0",type="integer"},child={name="var1.j",exp="j",numchild="0",type="natural"},child={name="var1.k",exp="k",numchild="0",type="float"}],has_more="0"
+(gdb)

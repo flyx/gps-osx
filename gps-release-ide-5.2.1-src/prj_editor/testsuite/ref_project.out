@@ -1,0 +1,33 @@
+project Remove_Var7_Utils is
+
+   type A_Type is
+      ("A1", "A2");
+   A : A_Type := external ("A", "A1");
+
+   case A is
+
+      when "A1" =>
+         for Object_Dir use ".";
+   end case;
+
+end Remove_Var7_Utils;
+with "remove_var7_utils";
+
+project Remove_Var7 is
+
+   type A_Type is
+      ("A1", "A2");
+   for Source_Files use ();
+   A : A_Type := external ("A");
+
+   case A is
+
+      when "A1" =>
+         for Object_Dir use ".";
+
+      when "A2" =>
+
+   end case;
+
+end Remove_Var7;
+

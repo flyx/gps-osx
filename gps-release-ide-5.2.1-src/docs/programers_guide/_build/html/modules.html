@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. The GPS modules &mdash; GPS Programer&#39;s Guide 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GPS Programer&#39;s Guide 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="4. Hello World walk through" href="hello_world.html" />
+    <link rel="prev" title="2. System Setup" href="setup.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="hello_world.html" title="4. Hello World walk through"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="setup.html" title="2. System Setup"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">GPS Programer&#39;s Guide 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="setup.html"
+                        title="previous chapter">2. System Setup</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="hello_world.html"
+                        title="next chapter">4. Hello World walk through</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/modules.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="the-gps-modules">
+<h1>3. The GPS modules<a class="headerlink" href="#the-gps-modules" title="Permalink to this headline">¶</a></h1>
+<p>GPS is organized around the concept of modules. The only part of GPS that
+is mandatory is its kernel (<a class="reference internal" href="kernel.html#the-gps-kernel"><em>The GPS Kernel</em></a>), all the other tools,
+menus and features are provided in optional modules.</p>
+<p>Although currently all modules have to be loaded at startup, some proof of
+concept for dynamically loadable module was implemented, and will most likely
+be part of a future version of GPS.</p>
+<p>Every new feature you implement will be part of one or more modules. We will
+go through the details of creating new modules all along this manual, starting
+from a simple Hello World module to more advanced features like providing
+new shell or python commands.</p>
+<p>Generally speaking, a module provides a limited set of features, and adds
+new GUI features in the GPS interface, like menus, toolbar buttons, contextual
+menu entries, new windows,... As much as possible, a menu shouldn&#8217;t directly
+depend on any other module, only on the GPS kernel itself.</p>
+<p>See the file <tt class="file docutils literal"><span class="pre">gps-kernel-modules.ads</span></tt> for more information on modules.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="hello_world.html" title="4. Hello World walk through"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="setup.html" title="2. System Setup"
+             >previous</a> |</li>
+        <li><a href="index.html">GPS Programer&#39;s Guide 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

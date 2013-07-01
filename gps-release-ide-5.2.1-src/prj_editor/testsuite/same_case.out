@@ -1,0 +1,20 @@
+same_case.gpr:15:33: warning: source file "a.adb" not found
+project Same_Case is
+
+   type Var_Type is
+      ("1", "2");
+   Var : Var_Type := external ("VAR");
+
+   case Var is
+
+      when "1" =>
+         for Source_Dirs use (".");
+         for Object_Dir use ".";
+         for Source_Files use ("a.adb");
+
+      when "2" =>
+
+   end case;
+
+end Same_Case;
+

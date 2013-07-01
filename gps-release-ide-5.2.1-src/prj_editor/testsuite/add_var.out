@@ -1,0 +1,11 @@
+project Add_Var is
+
+   for Source_Dirs use (".");
+   for Source_Files use ();
+   for Object_Dir use ".";
+   type A_B_Type is
+      ("A3", "A2", "A1");
+   A_B : A_B_Type := external ("A B");
+
+end Add_Var;
+

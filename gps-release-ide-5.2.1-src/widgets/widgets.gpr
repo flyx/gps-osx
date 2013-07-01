@@ -1,0 +1,36 @@
+with "gtkada";
+with "../common/common";
+with "../shared";
+
+project Widgets is
+
+   for Languages use ("C", "Ada");
+   for Source_Dirs use ("src");
+   for Object_Dir use Shared'Object_Dir;
+
+   package Compiler renames Shared.Compiler;
+   package IDE renames Shared.IDE;
+
+   package Naming is
+      case Shared.OS is
+         when "Windows_NT" =>
+            for Implementation ("gtk_utils") use "gtk_utils__win32.adb";
+         when "unix" =>
+            for Implementation ("gtk_utils") use "gtk_utils__default.adb";
+      end case;
+   end Naming;
+
+   package Linker is
+      case Shared.OS is
+         when "Windows_NT" =>
+            null;
+         when "unix" =>
+            --  for Linker_Options use
+            --    GtkAda.Linker'Linker_Options
+            --    & ("-L/usr/X11R6/lib", "-L/usr/X11/lib",
+            --       "-L/usr/X11R6/lib64", "-L/usr/X11/lib64",
+            --       "-lXrender");
+      end case;
+   end Linker;
+
+end Widgets;

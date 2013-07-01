@@ -1,0 +1,15 @@
+--  Tests that "null;" statements are eliminated from the normalized project
+
+project Eliminate_Null is
+   type A_Type is ("Debug", "Release");
+   A : A_Type := external ("A");
+
+   package Compiler is
+       case A is
+          when "Debug" =>
+              for Default_Switches ("ada") use ("-g");
+          when "Release" => null;
+       end case;
+   end Compiler;
+
+end Eliminate_Null;

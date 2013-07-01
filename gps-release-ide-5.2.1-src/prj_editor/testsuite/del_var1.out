@@ -1,0 +1,13 @@
+project Del_Var is
+
+   package Compiler is
+   end Compiler;
+
+   package Builder is
+   end Builder;
+
+   package Linker is
+   end Linker;
+
+end Del_Var;
+

@@ -1,0 +1,14 @@
+project Remove_Var7_Utils is
+
+   for Object_Dir use ".";
+
+end Remove_Var7_Utils;
+with "remove_var7_utils";
+
+project Remove_Var7 is
+
+   for Source_Files use ();
+   for Object_Dir use ".";
+
+end Remove_Var7;
+

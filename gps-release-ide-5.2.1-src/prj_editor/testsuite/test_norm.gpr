@@ -1,0 +1,8 @@
+with "simple2";
+
+project Test_Norm is
+   package Compiler is
+      for Default_Switches use Simple2.Compiler'Default_Switches;
+   end Compiler;
+
+end Test_Norm;

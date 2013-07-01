@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>9. Code Completion &mdash; Tutorial 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Tutorial 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="10. Run" href="run.html" />
+    <link rel="prev" title="8. Back to Source Navigation" href="back_to_navigation.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="run.html" title="10. Run"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="back_to_navigation.html" title="8. Back to Source Navigation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Tutorial 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="back_to_navigation.html"
+                        title="previous chapter">8. Back to Source Navigation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="run.html"
+                        title="next chapter">10. Run</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/completion.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="code-completion">
+<h1>9. Code Completion<a class="headerlink" href="#code-completion" title="Permalink to this headline">¶</a></h1>
+<p>Go on the line 38 of sdc.adb. You can see that there is a null instruction for
+the case of Stack.Overflow. We are going to add some code here, using the code
+assist capabilities.</p>
+<p>Type <tt class="kbd docutils literal"><span class="pre">enter</span></tt> to create a new line, and then <cite>Scr</cite>, and hit
+<tt class="kbd docutils literal"><span class="pre">Ctrl+Space</span></tt>.  A completion popup will be displayed, showing all the
+entities of the project begining with <cite>Scr</cite>. Double click on <cite>Screen_Output</cite>:
+the code is automatically completed in the editor. Then add a dot in your code.
+The completion popup will be automatically triggered, and will offer you to
+complete your code with the entities contained in the <cite>Screen_Output</cite> package.
+Select <cite>Msg</cite>, add a space, and then an open parenthesis. Once again, the
+completion windows will pop up, and show you the possible parameters for msg.
+If you choose the first entry of the completion list (&#8220;params of Msg&#8221;), the
+call will be automatically completed by a list of named parameters. Complete
+the list by giving e.g. <cite>&#8220;The stack is full.&#8221;</cite> for <cite>S1</cite>, <cite>&#8220;&#8221;</cite> for <cite>S2</cite>, and
+<cite>True</cite> for <cite>End_Line</cite>.</p>
+<p>Don&#8217;t forget to add a semicolon at the end of the instruction. Then hit
+<tt class="kbd docutils literal"><span class="pre">F4</span></tt> in order to rebuild the application.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="run.html" title="10. Run"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="back_to_navigation.html" title="8. Back to Source Navigation"
+             >previous</a> |</li>
+        <li><a href="index.html">Tutorial 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

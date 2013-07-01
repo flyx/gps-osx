@@ -1,0 +1,9 @@
+project Remove_Val is
+   type A_Type is ("1");
+   A : A_Type := external ("A", "1");
+
+   case A is
+       when "1" =>
+          for object_dir use ".";
+   end case;
+end Remove_Val;

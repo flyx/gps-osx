@@ -1,0 +1,4 @@
+with "tree1";
+
+project Tree is
+end Tree;

@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Using the GNAT Programming Studio &mdash; GPS 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GPS 5.2.1 documentation" href="#" />
+    <link rel="next" title="1. Introduction" href="intro.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="1. Introduction"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="#">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Using the GNAT Programming Studio</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="next chapter">1. Introduction</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="using-the-gnat-programming-studio">
+<h1>Using the GNAT Programming Studio<a class="headerlink" href="#using-the-gnat-programming-studio" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main_window.html">2. Description of the Main Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-welcome-dialog">2.1. The Welcome Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-tip-of-the-day">2.2. The Tip of the Day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-menu-bar">2.3. The Menu Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-tool-bar">2.4. The Tool Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-work-space">2.5. The Work Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-project-view">2.6. The Project View</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="main_window.html#the-configuration-variables">2.6.1. The configuration variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="main_window.html#icons-for-source-language-entities">2.6.2. Icons for source language entities</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-file-view">2.7. The File View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-entity-view">2.8. The Entity View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-window-view">2.9. The Window View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-outline-view">2.10. The Outline View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-clipboard-view">2.11. The Clipboard View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-callgraph-view">2.12. The Callgraph View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#bookmarks">2.13. Bookmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-messages-window">2.14. The Messages Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-shell-and-python-windows">2.15. The Shell and Python Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-locations-view">2.16. The Locations View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-execution-window">2.17. The Execution Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-status-line">2.18. The Status Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main_window.html#the-task-manager">2.19. The Task Manager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">3. Online Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="help.html#the-help-menu">3.1. The Help Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help.html#adding-new-help-files">3.2. Adding New Help Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mdi.html">4. Multiple Document Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mdi.html#selecting-windows">4.1. Selecting Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdi.html#closing-windows">4.2. Closing Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdi.html#splitting-windows">4.3. Splitting Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdi.html#floating-windows">4.4. Floating Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdi.html#moving-windows">4.5. Moving Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdi.html#perspectives">4.6. Perspectives</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="editing.html">5. Editing Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#general-information">5.1. General Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#editing-sources">5.2. Editing Sources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="editing.html#key-bindings">5.2.1. Key bindings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#the-file-selector">5.3. The File Selector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#menu-items">5.4. Menu Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="editing.html#the-file-menu">5.4.1. The File Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html#the-edit-menu">5.4.2. The Edit Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#rectangles">5.5. Rectangles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#recording-and-replaying-macros">5.6. Recording and replaying macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#contextual-menus-for-editing-files">5.7. Contextual Menus for Editing Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#handling-of-case-exceptions">5.8. Handling of case exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#refactoring">5.9. Refactoring</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="editing.html#rename-entity">5.9.1. Rename Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html#name-parameters">5.9.2. Name Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html#extract-subprogram">5.9.3. Extract Subprogram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#using-an-external-editor">5.10. Using an External Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#using-the-clipboard">5.11. Using the Clipboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#saving-files">5.12. Saving Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#remote-files">5.13. Remote Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">6. Source Navigation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#support-for-cross-references">6.1. Support for Cross-References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html#loading-xref-info-in-memory">6.1.1. Loading xref info in memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html#ada-xrefs-heuristics">6.1.2. Ada xrefs heuristics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#the-navigate-menu">6.2. The Navigate Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#contextual-menus-for-source-navigation">6.3. Contextual Menus for Source Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#navigating-with-hyperlinks">6.4. Navigating with hyperlinks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navigation.html#highlighting-dispatching-calls">6.5. Highlighting dispatching calls</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">7. Project Handling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#description-of-the-projects">7.1. Description of the Projects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#project-files-and-gnat-tools">7.1.1. Project files and GNAT tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#contents-of-project-files">7.1.2. Contents of project files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#supported-languages">7.2. Supported Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#scenarios-and-configuration-variables">7.3. Scenarios and Configuration Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#creating-new-configuration-variables">7.3.1. Creating new configuration variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#editing-existing-configuration-variables">7.3.2. Editing existing configuration variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#extending-projects">7.4. Extending Projects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#description-of-extending-projects">7.4.1. Description of extending projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#creating-extending-projects">7.4.2. Creating extending projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#adding-files-to-extending-projects">7.4.3. Adding files to extending projects</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#the-project-view">7.5. The Project View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#disabling-project-edition-features">7.6. Disabling Project Edition Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#the-project-menu">7.7. The Project Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#the-project-wizard">7.8. The Project Wizard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#project-type">7.8.1. Project Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#project-naming">7.8.2. Project Naming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#languages-selection">7.8.3. Languages Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#vcs-selection">7.8.4. VCS Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#source-directories-selection">7.8.5. Source Directories Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#build-directory">7.8.6. Build Directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#main-units">7.8.7. Main Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#library">7.8.8. Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#naming-scheme">7.8.9. Naming Scheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="projects.html#switches">7.8.10. Switches</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#the-project-dependencies-editor">7.9. The Project Dependencies Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#the-project-properties-editor">7.10. The Project Properties Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#the-switches-editor">7.11. The Switches Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html#the-project-browser">7.12. The Project Browser</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="searching.html">8. Searching and Replacing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compilation.html">9. Compilation/Build</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="compilation.html#the-build-menu">9.1. The Build Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compilation.html#the-target-configuration-dialog">9.2. The Target Configuration Dialog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="compilation.html#the-targets-tree">9.2.1. The Targets tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compilation.html#the-configuration-panel">9.2.2. The configuration panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compilation.html#background-compilations">9.2.3. Background compilations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="compilation.html#the-build-mode">9.3. The Build Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compilation.html#working-with-two-compilers">9.4. Working with two compilers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="compilation.html#interaction-with-the-remote-mode">9.4.1. Interaction with the remote mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="browsing.html">10. Source Browsing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="browsing.html#general-issues">10.1. General Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="browsing.html#call-graph">10.2. Call Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="browsing.html#dependency-browser">10.3. Dependency Browser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="browsing.html#entity-browser">10.4. Entity Browser</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">11. Debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html#the-debug-menu">11.1. The Debug Menu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html#initialize">11.1.1. Initialize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html#debug">11.1.2. Debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html#data">11.1.3. Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html#the-call-stack-window">11.2. The Call Stack Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html#the-data-window">11.3. The Data Window</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html#description">11.3.1. Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html#manipulating-items">11.3.2. Manipulating items</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html#the-breakpoint-editor">11.4. The Breakpoint Editor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html#scope-action-settings-for-vxworks-ae">11.4.1. Scope/Action Settings for VxWorks AE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html#the-memory-window">11.5. The Memory Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html#using-the-source-editor-when-debugging">11.6. Using the Source Editor when Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html#the-assembly-window">11.7. The Assembly Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html#the-debugger-console">11.8. The Debugger Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html#customizing-the-debugger">11.9. Customizing the Debugger</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vcs.html">12. Version Control System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vcs.html#the-vcs-explorer">12.1. The VCS Explorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vcs.html#the-vcs-activities">12.2. The VCS Activities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vcs.html#the-vcs-menu">12.3. The VCS Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vcs.html#the-version-control-contextual-menu">12.4. The Version Control Contextual Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vcs.html#working-with-global-changelog-file">12.5. Working with global ChangeLog file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vcs.html#the-revision-view">12.6. The Revision View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">13. Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#the-tools-menu">13.1. The Tools Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#coding-standard">13.2. Coding Standard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#visual-comparison">13.3. Visual Comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#code-fixing">13.4. Code Fixing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#documentation-generation">13.5. Documentation Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#working-with-unit-tests">13.6. Working With Unit Tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#the-gnattest-menu">13.6.1. The GNATtest Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#the-contextual-menu">13.6.2. The Contextual Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#project-properties">13.6.3. Project Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#metrics">13.7. Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#the-metrics-menu">13.7.1. The Metrics Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#id9">13.7.2. The Contextual Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#code-coverage">13.8. Code Coverage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#coverage-menu">13.8.1. Coverage Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#id11">13.8.2. The Contextual Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#the-coverage-report">13.8.3. The Coverage Report</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#stack-analysis">13.9. Stack Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#the-stack-analysis-menu">13.9.1. The Stack Analysis Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#id13">13.9.2. The Contextual Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#the-stack-usage-report">13.9.3. The Stack Usage Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools.html#the-stack-usage-editor">13.9.4. The Stack Usage Editor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cross_env.html">14. Working in a Cross Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cross_env.html#customizing-your-projects">14.1. Customizing your Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross_env.html#debugger-issues">14.2. Debugger Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="remote.html">15. Using GPS for Remote Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="remote.html#requirements">15.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="remote.html#setup-the-remote-servers">15.2. Setup the remote servers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="remote.html#the-remote-configuration-dialog">15.2.1. The remote configuration dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="remote.html#connection-settings">15.2.2. Connection settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="remote.html#paths-settings">15.2.3. Paths settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="remote.html#setup-a-remote-project">15.3. Setup a remote project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="remote.html#remote-operations">15.3.1. Remote operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="remote.html#the-remote-view">15.3.2. The remote view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="remote.html#loading-a-remote-project">15.3.3. Loading a remote project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="remote.html#limitations">15.4. Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">16. Customizing and Extending GPS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#the-preferences-dialog">16.1. The Preferences Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#gps-themes">16.2. GPS Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#the-key-manager-dialog">16.3. The Key Manager Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#the-plug-ins-editor">16.4. The Plug-ins Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#customizing-through-xml-and-python-files">16.5. Customizing through XML and Python files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#customization-files-and-plugins">16.5.1. Customization files and plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#defining-actions">16.5.2. Defining Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#macro-arguments">16.5.3. Macro arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#filtering-actions">16.5.4. Filtering actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#adding-new-menus">16.5.5. Adding new menus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#adding-contextual-menus">16.5.6. Adding contextual menus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#adding-tool-bar-buttons">16.5.7. Adding tool bar buttons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#binding-actions-to-keys">16.5.8. Binding actions to keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#preferences-support-in-custom-files">16.5.9. Preferences support in custom files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#creating-themes">16.5.10. Creating themes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#defining-new-search-patterns">16.5.11. Defining new search patterns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#adding-support-for-new-languages">16.5.12. Adding support for new languages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#defining-text-aliases">16.5.13. Defining text aliases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#aliases-files">16.5.14. Aliases files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#defining-project-attributes">16.5.15. Defining project attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#adding-casing-exceptions">16.5.16. Adding casing exceptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#adding-documentation">16.5.17. Adding documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#adding-stock-icons">16.5.18. Adding stock icons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#remote-programming-customization">16.5.19. Remote programming customization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#customizing-build-targets-and-models">16.5.20. Customizing build Targets and Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#toolchains-customization">16.5.21. Toolchains customization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#adding-support-for-new-tools">16.6. Adding support for new tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#defining-supported-languages">16.6.1. Defining supported languages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#defining-default-command-line">16.6.2. Defining default command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#defining-tool-switches">16.6.3. Defining tool switches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#executing-external-tools">16.6.4. Executing external tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#customization-examples">16.7. Customization examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#menu-example">16.7.1. Menu example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#tool-example">16.7.2. Tool example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#scripting-gps">16.8. Scripting GPS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#scripts">16.8.1. Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#scripts-and-gps-actions">16.8.2. Scripts and GPS actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#the-gps-shell">16.8.3. The GPS Shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#the-python-interpreter">16.8.4. The Python Interpreter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#python-modules">16.8.5. Python modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#subprogram-parameters">16.8.6. Subprogram parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#python-faq">16.8.7. Python FAQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#hooks">16.8.8. Hooks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#adding-support-for-new-version-control-systems">16.9. Adding support for new Version Control Systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#custom-vcs-interfaces">16.9.1. Custom VCS interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#describing-a-vcs">16.9.2. Describing a VCS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#implementing-vcs-actions">16.9.3. Implementing VCS actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending.html#implementing-vcs-menus">16.9.4. Implementing VCS menus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#the-server-mode">16.10. The Server Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#adding-project-templates">16.11. Adding project templates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="environment.html">17. Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#command-line-options">17.1. Command Line Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#environment-variables">17.2. Environment Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#running-gps-on-mac-os-x">17.3. Running GPS on Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#files">17.4. Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#reporting-suggestions-and-bugs">17.5. Reporting Suggestions and Bugs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html#solving-problems">17.6. Solving Problems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GPS.html">18. Scripting API reference for <cite>GPS</cite></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GPS.html#function-description">18.1. Function description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPS.html#user-data-in-instances">18.2. User data in instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPS.html#hooks">18.3. Hooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPS.html#functions">18.4. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GPS.html#classes">18.5. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-action">18.5.1. <tt class="docutils literal"><span class="pre">GPS.Action</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-activities">18.5.2. <tt class="docutils literal"><span class="pre">GPS.Activities</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-areacontext">18.5.3. <tt class="docutils literal"><span class="pre">GPS.AreaContext</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-bookmark">18.5.4. <tt class="docutils literal"><span class="pre">GPS.Bookmark</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-buildtarget">18.5.5. <tt class="docutils literal"><span class="pre">GPS.BuildTarget</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-button">18.5.6. <tt class="docutils literal"><span class="pre">GPS.Button</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-clipboard">18.5.7. <tt class="docutils literal"><span class="pre">GPS.Clipboard</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-codeanalysis">18.5.8. <tt class="docutils literal"><span class="pre">GPS.CodeAnalysis</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-codefix">18.5.9. <tt class="docutils literal"><span class="pre">GPS.Codefix</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-codefixerror">18.5.10. <tt class="docutils literal"><span class="pre">GPS.CodefixError</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-combo">18.5.11. <tt class="docutils literal"><span class="pre">GPS.Combo</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-command">18.5.12. <tt class="docutils literal"><span class="pre">GPS.Command</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-commandwindow">18.5.13. <tt class="docutils literal"><span class="pre">GPS.CommandWindow</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-console">18.5.14. <tt class="docutils literal"><span class="pre">GPS.Console</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-context">18.5.15. <tt class="docutils literal"><span class="pre">GPS.Context</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-contextual">18.5.16. <tt class="docutils literal"><span class="pre">GPS.Contextual</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-debugger">18.5.17. <tt class="docutils literal"><span class="pre">GPS.Debugger</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-docgen">18.5.18. <tt class="docutils literal"><span class="pre">GPS.Docgen</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-docgentaghandler">18.5.19. <tt class="docutils literal"><span class="pre">GPS.DocgenTagHandler</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-editor">18.5.20. <tt class="docutils literal"><span class="pre">GPS.Editor</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-editorbuffer">18.5.21. <tt class="docutils literal"><span class="pre">GPS.EditorBuffer</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-editorhighlighter">18.5.22. <tt class="docutils literal"><span class="pre">GPS.EditorHighlighter</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-editorlocation">18.5.23. <tt class="docutils literal"><span class="pre">GPS.EditorLocation</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-editormark">18.5.24. <tt class="docutils literal"><span class="pre">GPS.EditorMark</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-editoroverlay">18.5.25. <tt class="docutils literal"><span class="pre">GPS.EditorOverlay</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-editorview">18.5.26. <tt class="docutils literal"><span class="pre">GPS.EditorView</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-entity">18.5.27. <tt class="docutils literal"><span class="pre">GPS.Entity</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-entitycontext">18.5.28. <tt class="docutils literal"><span class="pre">GPS.EntityContext</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-exception">18.5.29. <tt class="docutils literal"><span class="pre">GPS.Exception</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-file">18.5.30. <tt class="docutils literal"><span class="pre">GPS.File</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-filecontext">18.5.31. <tt class="docutils literal"><span class="pre">GPS.FileContext</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-filelocation">18.5.32. <tt class="docutils literal"><span class="pre">GPS.FileLocation</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-gui">18.5.33. <tt class="docutils literal"><span class="pre">GPS.GUI</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-html">18.5.34. <tt class="docutils literal"><span class="pre">GPS.HTML</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-help">18.5.35. <tt class="docutils literal"><span class="pre">GPS.Help</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-hook">18.5.36. <tt class="docutils literal"><span class="pre">GPS.Hook</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-invalid-argument">18.5.37. <tt class="docutils literal"><span class="pre">GPS.Invalid_Argument</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-locations">18.5.38. <tt class="docutils literal"><span class="pre">GPS.Locations</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-logger">18.5.39. <tt class="docutils literal"><span class="pre">GPS.Logger</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-mdi">18.5.40. <tt class="docutils literal"><span class="pre">GPS.MDI</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-mdiwindow">18.5.41. <tt class="docutils literal"><span class="pre">GPS.MDIWindow</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-menu">18.5.42. <tt class="docutils literal"><span class="pre">GPS.Menu</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-message">18.5.43. <tt class="docutils literal"><span class="pre">GPS.Message</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-missing-arguments">18.5.44. <tt class="docutils literal"><span class="pre">GPS.Missing_Arguments</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-preference">18.5.45. <tt class="docutils literal"><span class="pre">GPS.Preference</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-process">18.5.46. <tt class="docutils literal"><span class="pre">GPS.Process</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-project">18.5.47. <tt class="docutils literal"><span class="pre">GPS.Project</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-projecttemplate">18.5.48. <tt class="docutils literal"><span class="pre">GPS.ProjectTemplate</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-referencescommand">18.5.49. <tt class="docutils literal"><span class="pre">GPS.ReferencesCommand</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-revision">18.5.50. <tt class="docutils literal"><span class="pre">GPS.Revision</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-style">18.5.51. <tt class="docutils literal"><span class="pre">GPS.Style</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-switcheschooser">18.5.52. <tt class="docutils literal"><span class="pre">GPS.SwitchesChooser</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-task">18.5.53. <tt class="docutils literal"><span class="pre">GPS.Task</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-timeout">18.5.54. <tt class="docutils literal"><span class="pre">GPS.Timeout</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-toolbutton">18.5.55. <tt class="docutils literal"><span class="pre">GPS.ToolButton</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-toolbar">18.5.56. <tt class="docutils literal"><span class="pre">GPS.Toolbar</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-unexpected-exception">18.5.57. <tt class="docutils literal"><span class="pre">GPS.Unexpected_Exception</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-vcs">18.5.58. <tt class="docutils literal"><span class="pre">GPS.VCS</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-vdiff">18.5.59. <tt class="docutils literal"><span class="pre">GPS.Vdiff</span></tt></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GPS.html#gps-xmlviewer">18.5.60. <tt class="docutils literal"><span class="pre">GPS.XMLViewer</span></tt></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">19. GNU Free Documentation License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="license.html#preamble">19.1. PREAMBLE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#applicability-and-definitions">19.2. APPLICABILITY AND DEFINITIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#verbatim-copying">19.3. VERBATIM COPYING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#copying-in-quantity">19.4. COPYING IN QUANTITY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#modifications">19.5. MODIFICATIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#combining-documents">19.6. COMBINING DOCUMENTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#collections-of-documents">19.7. COLLECTIONS OF DOCUMENTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#aggregation-with-independent-works">19.8. AGGREGATION WITH INDEPENDENT WORKS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#translation">19.9. TRANSLATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#termination">19.10. TERMINATION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#future-revisions-of-this-license">19.11. FUTURE REVISIONS OF THIS LICENSE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#addendum-how-to-use-this-license-for-your-documents">19.12. ADDENDUM: How to use this License for your documents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+</ul>
+<p>This document may be copied, in whole or in part, in any form or by any
+means, as is or with alterations, provided that (1) alterations are clearly
+marked as alterations and (2) this copyright notice is included
+unmodified in any copy.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="1. Introduction"
+             >next</a> |</li>
+        <li><a href="#">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

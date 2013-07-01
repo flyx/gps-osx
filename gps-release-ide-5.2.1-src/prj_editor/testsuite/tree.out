@@ -1,0 +1,19 @@
+with "tree2";
+
+project Tree1 is
+
+   for Source_Files use ();
+
+end Tree1;
+project Tree2 is
+
+   for Source_Files use ();
+
+end Tree2;
+with "/foo/bar/tree2.gpr";
+with "tree1";
+
+project Tree is
+
+end Tree;
+

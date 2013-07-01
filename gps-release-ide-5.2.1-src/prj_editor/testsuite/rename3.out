@@ -1,0 +1,28 @@
+with "new_project.gpr";
+
+project Rename_Root is
+
+   for Source_Files use ();
+
+end Rename_Root;
+project Add_Var is
+
+   for Source_Dirs use (".");
+   for Source_Files use ();
+   for Object_Dir use ".";
+
+end Add_Var;
+with "add_var";
+
+project New_Project is
+
+   for Source_Files use ();
+
+end New_Project;
+with "new_project.gpr";
+with "rename_root";
+
+project Rename_Root3 is
+
+end Rename_Root3;
+

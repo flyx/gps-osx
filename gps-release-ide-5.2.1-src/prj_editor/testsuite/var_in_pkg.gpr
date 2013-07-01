@@ -1,0 +1,11 @@
+project Var_In_Pkg is
+   type A_Type is ("A1", "A2");
+
+   package Compiler is
+      A : A_Type := external ("A", "A1");
+      case A is
+         when "A1" =>
+            for Default_Switches ("ada") use ("-g");
+      end case;
+   end Compiler;
+end Var_In_Pkg;

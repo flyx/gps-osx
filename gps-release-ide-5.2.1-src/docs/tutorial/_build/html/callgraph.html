@@ -1,0 +1,141 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>12. Call Graph &mdash; Tutorial 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Tutorial 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="13. Locations View" href="locations.html" />
+    <link rel="prev" title="11. Debug" href="debug.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="locations.html" title="13. Locations View"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="debug.html" title="11. Debug"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Tutorial 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="debug.html"
+                        title="previous chapter">11. Debug</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="locations.html"
+                        title="next chapter">13. Locations View</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/callgraph.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="call-graph">
+<h1>12. Call Graph<a class="headerlink" href="#call-graph" title="Permalink to this headline">¶</a></h1>
+<p>Now go back to the file <tt class="file docutils literal"><span class="pre">sdc.adb</span></tt>, move the mouse over the procedure
+<em>sdc</em> at line 8, select the contextual menu <cite>Browsers-&gt;Sdc calls</cite>: this will
+open a new window titled <em>Call graph browser</em>.</p>
+<p>Note that there is also a top level contextual menu (<cite>Sdc calls</cite>)
+which provides a tree view of the callers/callees.</p>
+<p>In the call graph, click on the right arrow of <cite>Process</cite> (one of the
+first items on the top). Also click on the right arrow of <cite>Error_Msg</cite>.</p>
+<p>Select <cite>Orthogonal links</cite> in the contextual menu of the graph to change the way
+links are displayed in the graph.  You may then play with the zoom (<tt class="kbd docutils literal"><span class="pre">=</span></tt>
+and <tt class="kbd docutils literal"><span class="pre">-</span></tt> keys).</p>
+<p>If you select <cite>Hide links</cite> from <cite>Error_Msg</cite> contextual menu, this will hide all
+the links that are related to this item: the link between the callers and
+callees of <cite>Error_Msg</cite> are no longer displayed. This can be useful when the
+graph becomes complex, to hide some parts. If you go back to the contextual
+menu, you can now select <cite>Show links</cite> to show the links again.</p>
+<p>Click on right arrow of <cite>Process</cite> (<cite>(Decl) instructions.ads:12</cite>).</p>
+<p>The items can also be moved: move e.g <cite>Msg</cite> item around.</p>
+<p>You can also recompute the layout of all the current items by using
+the browser&#8217;s contextual menu <cite>Refresh layout</cite> (move the mouse on the
+browser&#8217;s background, with no box underneath, and right click).</p>
+<p>Click on left arrow of <cite>Msg</cite>
+to display who is calling <cite>Msg</cite>. Notice that <cite>View</cite> calls <cite>Msg</cite>.</p>
+<p>Click on left arrow of <cite>View</cite>: the arrow disappears, and no
+new items are created, which means that <cite>View</cite> isn&#8217;t called by anyone,
+so we&#8217;re now going to remove this procedure.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="locations.html" title="13. Locations View"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="debug.html" title="11. Debug"
+             >previous</a> |</li>
+        <li><a href="index.html">Tutorial 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

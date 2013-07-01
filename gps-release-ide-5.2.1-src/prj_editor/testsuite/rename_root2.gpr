@@ -1,0 +1,6 @@
+with "rename";
+with "rename";
+
+project Rename_Root2 is
+
+end Rename_Root2;
