@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>GPS-OSX by flyx86</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/flyx86/gps-osx">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/flyx86/gps-osx/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/flyx86/gps-osx/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>GPS-OSX</h1>
+          <p>Native GNAT Programming Studio for OSX</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/flyx86">flyx86</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h3>
+<a name="gps-osx" class="anchor" href="#gps-osx"><span class="octicon octicon-link"></span></a>GPS-OSX</h3>
+
+<p><strong>GPS-OSX</strong> is a modified version the <a href="http://libre.adacore.com/tools/gps/">GNAT Programming Studio</a> for OSX. Compared to the
+version provided by <a href="http://www.adacore.com/">AdaCore</a> with GNAT GPL 2013, it provides the following enhancements:</p>
+
+<ul>
+<li>It is built against gtk-quartz and thus does not need an X11 server to run.</li>
+<li>You can use the command key <code>⌘</code> as modifier for keyboard shortcuts. Because of this, its
+configuration will be incompatible with AdaCore's gps and will therefore be placed in
+<code>~/.gps-osx</code> instead of <code>~/.gps</code> so that the two versions don't interfere with each other.</li>
+<li>It comes as an app bundle which can simply be dropped into your <code>/Applications</code> folder.</li>
+</ul><h3>
+<a name="very-important---please-read-before-downloading" class="anchor" href="#very-important---please-read-before-downloading"><span class="octicon octicon-link"></span></a>Very important - please read before downloading</h3>
+
+<ul>
+<li>gtk-quartz is considered experimental and you should not expect this binary to be stable.
+It also is in no way supported by <a href="http://www.adacore.com/">AdaCore</a>. Be aware of this before you decide to use
+it for any serious software development.</li>
+<li>In order to take advantage of the command key, you need to change the default keyboard
+shortcuts - those have not been migrated to use command instead of control automatically.</li>
+</ul><h3>
+<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h3>
+
+<p>I host a readily compiled app bundle on my server:</p>
+
+<p><a href="http://flyx.org/files/GPS.dmg">Download!</a></p>
+
+<p>This is built on the base of commit <a href="https://github.com/flyx86/gps-osx/commit/015a874679cdc4ac38a50d5564e042d5a0fedbd8">015a874679cdc4ac38a50d5564e042d5a0fedbd8</a>.</p>
+
+<h3>
+<a name="known-issues" class="anchor" href="#known-issues"><span class="octicon octicon-link"></span></a>Known issues</h3>
+
+<ul>
+<li>Fonts are quite small in the editor and project view. But you can change these in GPS' preferences.</li>
+<li>The autocomplete list is not rendered below the cursor, but quite some pixels off.</li>
+<li>Setting the <code>GPR_PROJECT_PATH</code> does not work when double-clicking the app bundle. If you need it,
+you have to launch <code>GPS.app/Contents/MacOS/GPS</code> from the terminal. I have no idea why this is
+happening - the environment variable can be set in the Info.plist in the app bundle so that GPS is
+loaded with it, and it will be set in GPS then, but GPS won't load projects from there anyway.
+Maybe it's a sandboxing issue or something.</li>
+<li>You need to have GNAT GPL 2013 installed in the default directory <code>/usr/local/gnat</code> in order to run
+GPS. This is because GNAT's <code>libgcc_s.1.dylib</code> is referenced by GPS. I didn't yet succeed in
+packing that properly into the bundle.</li>
+<li>Project templates are not bundled yet and GPS will fail if you try to use them. Coming soon.</li>
+<li>GPS does not use the standard OSX menu bar. To be able to do this, one would need to patch
+GtkAda to provide the necessary binding to GtkOSXApplication and then patch GPS to use it. This
+doesn't seem worth the effort.</li>
+<li>This list is not complete and will probably be grow as I use my native GPS.</li>
+</ul><h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
+
+<p>GPS-OSX is available under the terms of the GNU General Public License, v3.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
