@@ -7,3 +7,4 @@ mv GPS.app dist
 hdiutil create -ov -format UDZO -volname "GNAT Programming Studio" -fs HFS+ -srcfolder dist GPS.dmg
 mv dist/GPS.app .
 rmdir dist
+mv GPS.dmg GPS-`git rev-parse --short HEAD`.dmg
