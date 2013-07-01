@@ -1,0 +1,8 @@
+project Add_Attr_Idx3 is
+   type A_Type is ("1", "2");
+   A : A_Type := external ("A");
+
+   package naming is
+      for specification ("unit2") use "unit2.ads";
+   end naming;
+end Add_Attr_Idx3;

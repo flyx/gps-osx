@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>6. Source Navigation &mdash; GPS 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GPS 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="7. Project Handling" href="projects.html" />
+    <link rel="prev" title="5. Editing Files" href="editing.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="projects.html" title="7. Project Handling"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="editing.html" title="5. Editing Files"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">6. Source Navigation</a><ul>
+<li><a class="reference internal" href="#support-for-cross-references">6.1. Support for Cross-References</a><ul>
+<li><a class="reference internal" href="#loading-xref-info-in-memory">6.1.1. Loading xref info in memory</a></li>
+<li><a class="reference internal" href="#ada-xrefs-heuristics">6.1.2. Ada xrefs heuristics</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-navigate-menu">6.2. The Navigate Menu</a></li>
+<li><a class="reference internal" href="#contextual-menus-for-source-navigation">6.3. Contextual Menus for Source Navigation</a></li>
+<li><a class="reference internal" href="#navigating-with-hyperlinks">6.4. Navigating with hyperlinks</a></li>
+<li><a class="reference internal" href="#highlighting-dispatching-calls">6.5. Highlighting dispatching calls</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="editing.html"
+                        title="previous chapter">5. Editing Files</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="projects.html"
+                        title="next chapter">7. Project Handling</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/navigation.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="source-navigation">
+<span id="id1"></span><h1>6. Source Navigation<a class="headerlink" href="#source-navigation" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="index-0"></span><div class="section" id="support-for-cross-references">
+<span id="index-1"></span><span id="id2"></span><h2>6.1. Support for Cross-References<a class="headerlink" href="#support-for-cross-references" title="Permalink to this headline">¶</a></h2>
+<p id="index-2">GPS provides cross-reference navigation for program entities, such as types,
+procedures, functions, variables, ..., defined in your application. The
+cross-reference support in GPS relies on the compiler generated xref
+information, which means that you need to either compile your project first
+before being able to navigate, or use the menu <cite>Build-&gt;Recompute Xref info</cite>.
+Similarly when your sources have been modified, you need to rebuild and
+recompute xref information so that your changes are taken into account.</p>
+<p>Here are language specific information about source navigation:</p>
+<dl class="docutils">
+<dt><em>Ada</em></dt>
+<dd><span class="target" id="index-3"></span><p class="first" id="index-4">The GNAT compiler is used to generate the cross-references information needed
+by GPS by default, unless you are using the <cite>-gnatD</cite> or <cite>-gnatx</cite> switches, in
+which case no cross reference information will be available.</p>
+<span class="target" id="index-5"></span><p id="index-6">If you need to navigate through sources that do not compile (e.g after
+modifications, or while porting an application), GNAT can still generate
+partial cross-reference information if you specify the <cite>-gnatQ</cite> compilation
+option. Along with the <cite>-k</cite> option of gnatmake, it is then possible to
+generate as much relevant information as possible for your non compilable
+sources.</p>
+<p id="index-7">There are a few special cases where GPS cannot find the external file (called
+<tt class="file docutils literal"><span class="pre">ALI</span> <span class="pre">file</span></tt>) that contains the cross-reference information. Most likely,
+this is either because you haven&#8217;t compiled your sources yet, or because the
+source code has changed since the <tt class="file docutils literal"><span class="pre">ALI</span> <span class="pre">file</span></tt> was generated.</p>
+<p id="index-8">It could also be that you haven&#8217;t included in the project the object
+directories that contain the <tt class="file docutils literal"><span class="pre">ALI</span> <span class="pre">files</span></tt>.</p>
+<p class="last" id="index-9">In addition, one special case cannot be handled automatically. This is for
+separate units, whose file names have been crunched through the <em>gnatkr</em>
+command. To handle this, you should force GPS to parse all the <tt class="file docutils literal"><span class="pre">ALI</span>
+<span class="pre">files</span></tt> in the appropriate object directory. This is done by right-clicking on
+the object directory in the project view (left-side panel on the main
+window), and selecting the menu &#8220;Parse all xref information&#8221;.</p>
+</dd>
+<dt><em>C/C++</em></dt>
+<dd><span class="target" id="index-10"></span><p class="first last" id="index-11">The GCC C and C++ compilers that come with GNAT need to be used to generate
+the cross-references information needed by GPS, via the <cite>-fdump-xref</cite> switch.
+This means that you need to first add the <cite>-fdump-xref</cite> switch to your
+project&#8217;s switches for C and C++ sources, and compile your application before
+you browse through the cross-references or view various graphs in GPS.  If
+sources have been modified, you should recompile the modified files.</p>
+</dd>
+</dl>
+<div class="section" id="loading-xref-info-in-memory">
+<h3>6.1.1. Loading xref info in memory<a class="headerlink" href="#loading-xref-info-in-memory" title="Permalink to this headline">¶</a></h3>
+<p id="index-12">The cross-reference information, as mentioned above, is generated either by the
+compiler when you recompile your sources, or explicitly when you select the
+menu <cite>Build-&gt;Recompute Xref info</cite>.</p>
+<p>This information will be loaded in memory automatically by GPS when it needs
+it, and as little as possible, to limit the memory footprint. However, this
+means that some operations, for instance searching for all the references to a
+global entity, will need to parse most, if not all, of the cross-reference
+information. This will slow done the search the first time (and then the
+information is in memory and the search is fast, unless the cross-reference
+information has been regenerated on the disk).</p>
+<p>You can select the menu <cite>Build-&gt;Load xref info in memory</cite> to force GPS to load
+all the available information immediately in memory. This will speed up future
+queries.</p>
+<p>Note that GPS always loads all xref information for C and C++ sources in order
+to provide accurate source navigation, so this menu is mainly relevant for Ada
+sources.</p>
+<p>A preference can be set to have GPS load the cross-information automatically on
+startup, <a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>.</p>
+</div>
+<div class="section" id="ada-xrefs-heuristics">
+<h3>6.1.2. Ada xrefs heuristics<a class="headerlink" href="#ada-xrefs-heuristics" title="Permalink to this headline">¶</a></h3>
+<p id="index-13">GPS is able to provide some basic navigation support for Ada sources in the
+absence of information coming from the compiler. It uses a built-in Ada parser
+parsing the Ada files at startup and allowing navigation in simple cases.</p>
+<p>In this mode, GPS is able to navigate to an entity body from the declaration,
+and to an entity declaration from the body. In case of other references, GPS
+will navigate to the declaration on simple cases, namely if the heuristics
+provide an information without ambiguity. In particular, it may not work with
+overloaded entities.</p>
+<p>These heuristics are not used in global reference searching operations or call
+graphs.</p>
+<p>Note that this parser is also used to provide the Ada outline view, code
+completion and entity view.</p>
+</div>
+</div>
+<div class="section" id="the-navigate-menu">
+<span id="id3"></span><h2>6.2. The Navigate Menu<a class="headerlink" href="#the-navigate-menu" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils" id="index-14">
+<dt><em>Find or Replace...</em></dt>
+<dd><span class="target" id="index-15"></span><span class="target" id="index-16"></span><p class="first last" id="index-17">Open the find and replace dialog. <a class="reference internal" href="searching.html#searching-and-replacing"><em>Searching and Replacing</em></a>.</p>
+</dd>
+<dt><em>Find Next</em></dt>
+<dd><p class="first last" id="index-18">Find next occurrence of the current search. <a class="reference internal" href="searching.html#searching-and-replacing"><em>Searching and Replacing</em></a>.</p>
+</dd>
+<dt><em>Find Previous</em></dt>
+<dd><p class="first last" id="index-19">Find previous occurrence of the current search.
+<a class="reference internal" href="searching.html#searching-and-replacing"><em>Searching and Replacing</em></a>.</p>
+</dd>
+<dt><em>Find All References</em></dt>
+<dd><span class="target" id="find-all-references"></span><p class="first last" id="index-20">Find all the references to the current entity in the project. The search is
+based on the semantic information extracted from the sources, this is not a
+simple text search. The result of the search is displayed in the location
+window, see <a class="reference internal" href="main_window.html#the-locations-view"><em>The Locations View</em></a>.</p>
+</dd>
+<dt><em>Goto Declaration</em></dt>
+<dd><p class="first last" id="index-21">Go to the declaration/spec of the current entity. The current entity is
+determined by the word located around the cursor.  This item is also
+accessible through the editor&#8217;s contextual menu directly.  This capability
+requires the availability of cross-reference information.
+<a class="reference internal" href="#support-for-cross-references"><em>Support for Cross-References</em></a>.</p>
+</dd>
+<dt><em>Goto Body</em></dt>
+<dd><p class="first last" id="index-22">Go to the body/implementation of the current entity. If the current entity is
+the declaration of an Ada subprogram imported from C it goes to the location
+where the C function is defined.  This item is also accessible through the
+editor&#8217;s contextual menu directly.  This capability requires the availability
+of cross-reference information.  <a class="reference internal" href="#support-for-cross-references"><em>Support for Cross-References</em></a>.</p>
+</dd>
+<dt><em>Goto Matching Delimiter</em></dt>
+<dd><p class="first last" id="index-23">Go to the delimiter matching the one right before (for a closing delimiter) or
+right after (for an opening delimiter) the cursor if any.</p>
+</dd>
+<dt><em>Goto Line...</em></dt>
+<dd><p class="first last" id="index-24">Open a dialog where you can type a line number,  in order to jump to a
+specific location in the current source editor.</p>
+</dd>
+<dt><em>Goto Entity...</em></dt>
+<dd><p class="first last" id="index-25">Open a dialog allowing browsing of the entities loaded in the project.  This
+dialog functions similarly to <a class="reference internal" href="main_window.html#the-entity-view"><em>The Entity View</em></a>.</p>
+</dd>
+<dt><em>Goto File Spec&lt;-&gt;Body</em></dt>
+<dd><span class="target" id="index-26"></span><p class="first" id="index-27">Open the corresponding spec file if the current edited file is a body file,
+or body file otherwise. This option is only available for the Ada language.
+This item is also accessible through the editor&#8217;s contextual menu</p>
+<p class="last">This capability requires support for cross-references.  This item is also
+accessible through the editor&#8217;s contextual menu</p>
+</dd>
+<dt><em>Start Of Statement</em></dt>
+<dd><p class="first last" id="index-28">Move the cursor position to the start of the current statement, move to the
+start of the enclosing statement if the cursor position is already at the
+start of the statement.</p>
+</dd>
+<dt><em>End Of Statement</em></dt>
+<dd><p class="first last" id="index-29">Move the current cursor position to the end of the statement, move to the end
+of the enclosing statement if the cursor position is already at the end of
+the statement.</p>
+</dd>
+<dt><em>Previous Subprogram</em></dt>
+<dd><p class="first last" id="index-30">Move the current cursor position to the start of the previous procedure,
+function, task, protected record or entry.</p>
+</dd>
+<dt><em>Next Subprogram</em></dt>
+<dd><p class="first last" id="index-31">Move the current cursor position to the start of the next procedure,
+function, task, protected record or entry.</p>
+</dd>
+<dt><em>Previous Tag</em></dt>
+<dd><span class="target" id="index-32"></span><span class="target" id="index-33"></span><p class="first last" id="index-34">Go to previous tag/location. <a class="reference internal" href="main_window.html#the-locations-view"><em>The Locations View</em></a>.</p>
+</dd>
+<dt><em>Next Tag</em></dt>
+<dd><span class="target" id="index-35"></span><span class="target" id="index-36"></span><p class="first last" id="index-37">Go to next tag/location. <a class="reference internal" href="main_window.html#the-locations-view"><em>The Locations View</em></a>.</p>
+</dd>
+<dt><em>Back</em></dt>
+<dd><p class="first last" id="index-38">Go to previous location.</p>
+</dd>
+<dt><em>Forward</em></dt>
+<dd><p class="first last" id="index-39">Go to next location.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="contextual-menus-for-source-navigation">
+<span id="id4"></span><h2>6.3. Contextual Menus for Source Navigation<a class="headerlink" href="#contextual-menus-for-source-navigation" title="Permalink to this headline">¶</a></h2>
+<p id="index-40">This contextual menu is available from any source editor.  If you right click
+over an entity, or first select text, the contextual menu will apply to this
+selection or entity.</p>
+<dl class="docutils">
+<dt><em>Goto declaration of *entity*</em></dt>
+<dd><p class="first last" id="index-41">Go to the declaration/spec of <em>entity</em>. The current entity is determined by
+the word located around the cursor or by the current selection if any.  This
+capability requires support for cross-references.</p>
+</dd>
+<dt><em>Goto full declaration of *entity*</em></dt>
+<dd><p class="first last" id="index-42">This contextual menu appears for a private or limited private types. Go to
+the full declaration/spec of <em>entity</em>. The current entity is determined by
+the word located around the cursor or by the current selection if any.  This
+capability requires support for cross-references.</p>
+</dd>
+<dt><em>Goto type declaration of *entity*</em></dt>
+<dd><p class="first last" id="index-43">Go to the type declaration of <em>entity</em>. The current entity is determined by
+the word located around the cursor or by the current selection if any.  This
+capability requires support for cross-references.</p>
+</dd>
+<dt><em>Display type hierarchy for *entity*</em></dt>
+<dd><p class="first last" id="index-44">This contextual menu appears for derived or access types. Output the type
+hierarchy for <em>entity</em> into the location view. The current entity is
+determined by the word located around the cursor or by the current selection
+if any.  This capability requires support for cross-references.</p>
+</dd>
+<dt><em>Goto body of *entity*</em></dt>
+<dd><p class="first last" id="index-45">Go to the body/implementation of <em>entity</em>. If <em>entity</em> is the declaration of
+an Ada subprogram imported from C it goes to the the location where the C
+function is defined.  This capability requires support for cross-references.</p>
+</dd>
+<dt><em>Goto declarations of *entity*</em></dt>
+<dd><p class="first last" id="index-46">This contextual menu appears when you are clicking on a subprogram call that
+is a dispatching call. In such a case, there is no possibility for GPS to
+know what subprogram will actually be called at run time, since that depends
+on dynamic information. It therefore gives you a list of all entities in the
+tagged type hierarchy, and lets you choose which of the declarations you want
+to jump to. See also the <tt class="file docutils literal"><span class="pre">methods.py</span></tt> plug-in (enabled by default)
+which, given an object, lists all its primitive operations in a contextual
+menu so that you can easily jump to them. See also the contextual menu
+<tt class="file docutils literal"><span class="pre">References/Find</span> <span class="pre">References</span> <span class="pre">To...</span></tt> which allows you to find all calls
+to a subprogram or to one of its overriding subprograms.</p>
+</dd>
+<dt><em>Goto bodies of *entity*</em></dt>
+<dd><p class="first last" id="index-47">This is similar to <em>Goto declarations of</em>, but applies to the bodies of the
+entities.</p>
+</dd>
+<dt><em>Goto file spec/body</em></dt>
+<dd><span class="target" id="index-48"></span><p class="first last" id="index-49">Open the corresponding spec file if the current edited file is a body file,
+or body file otherwise. This option is only available for the Ada language.</p>
+</dd>
+<dt><em>Entity</em> calls</dt>
+<dd>Display a list of all subprograms called by <em>entity</em> in a tree view. This is
+generally more convenient than using the corresponding Browsers/ submenu if
+you expect lots of references, <a class="reference internal" href="main_window.html#the-callgraph-view"><em>The Callgraph View</em></a>.</dd>
+<dt><em>Entity</em> is called by</dt>
+<dd>Display a list of all subprograms calling <em>entity</em> in a tree view. This is
+generally more convenient than using the correponding Browsers/ submenu if
+you expect lots of references, <a class="reference internal" href="main_window.html#the-callgraph-view"><em>The Callgraph View</em></a>.</dd>
+<dt>References</dt>
+<dd><p class="first last" id="index-50">This item gives access to different capabilities related to listing or
+displaying references to the current entity or selection.</p>
+</dd>
+<dt><em>Find all references to *entity*</em></dt>
+<dd><p class="first last" id="index-51"><a class="reference internal" href="#find-all-references"><em>Find all references</em></a> to <em>entity</em> in all the
+files in the project.</p>
+</dd>
+<dt><em>Find all references...</em></dt>
+<dd><p class="first">This menu is similar to the one above, except it is possible to select more
+precisely what kind of reference should be selected. It is also possible to
+indicate the scope of the search, and whether the context (or caller) at
+each reference should be displayed. Computing the caller information will
+take slightly longer though.</p>
+<p id="index-52">This dialog has an option <cite>Include overriding and overriden operations</cite>,
+which, when activated, will include references to overriden or overriding
+entities of the one you selected.</p>
+<p>This is particularly useful when you are wondering whether you can easily
+modify the profile of a primitive operation, since you can then see what
+other entities will also be impacted. If you select only the <cite>declaration</cite>
+check box, you will see the list of all related primitive operations.</p>
+<p id="index-53">This dialog also allows you to find out which entities are imported from a
+given file/unit. Click on any entity from that file (for instance on the
+<cite>with</cite> line for Ada code), then select the <cite>All entities imported from same
+file</cite> toggle button. This will display in the location window the list of
+all entities imported from the same file as the entity selected.</p>
+<p class="last">In addition, if you have selected the <cite>Show context</cite> option, you will get a
+list of all the exact references to these entities within the file.
+Otherwise, you just get a pointer to the declaration of the imported
+entities.</p>
+</dd>
+<dt><em>Find all local references to *entity*</em></dt>
+<dd><p class="first last" id="index-54"><a class="reference internal" href="#find-all-references"><em>Find all references</em></a> to <em>entity</em> in the current
+file (or in the current top level unit for Ada sources).  details.</p>
+</dd>
+<dt><em>Variables used in *entity*</em></dt>
+<dd><p class="first last" id="index-55">Find all variables (local or global) used in <em>entity</em> and list each first
+reference in the locations window.</p>
+</dd>
+<dt><em>Non Local variables used in *entity*</em></dt>
+<dd>Find all non-local variables used in the entity.</dd>
+<dt><em>Methods of *entity*</em></dt>
+<dd><span class="target" id="index-56"></span><p class="first last" id="index-57">This submenu is only visible if you have activated the plug-in
+<tt class="file docutils literal"><span class="pre">methods.py</span></tt> (which is the case by default), and when you click on a
+tagged type or an instance of a tagged type. This menu lists all the
+primitive operations of that type, and you can therefore easily jump to the
+declaration of any of these operations.</p>
+</dd>
+<dt><em>Browsers</em></dt>
+<dd><p class="first" id="index-58">This item gives access to graph representations of callers and callees for
+subprograms.</p>
+<dl class="last docutils">
+<dt><em>Entity</em> calls</dt>
+<dd><span class="target" id="index-59"></span><p class="first last" id="index-60">Open or raise the call graph browser on the specified entity and display
+all the subprograms called by <em>entity</em>. <a class="reference internal" href="browsing.html#call-graph"><em>Call Graph</em></a>.</p>
+</dd>
+<dt><em>Entity</em> calls (recursively)</dt>
+<dd><span class="target" id="index-61"></span><p class="first last" id="index-62">Open or raise the call graph browser on the specified entity and display
+all the subprograms called by <em>entity</em>, transitively for all subprograms.
+Since this can take a long time to compute and generate a very large graph,
+an intermediate dialog is displayed to limit the number of subprograms to
+display (1000 by default). <a class="reference internal" href="browsing.html#call-graph"><em>Call Graph</em></a>.</p>
+</dd>
+<dt><em>Entity</em> is called by</dt>
+<dd><span class="target" id="index-63"></span><p class="first" id="index-64">Open or raise the call graph browser on the specified entity and display
+all the subprograms calling <em>entity</em>. <a class="reference internal" href="browsing.html#call-graph"><em>Call Graph</em></a>.</p>
+<p class="last">Note that this capability requires a global look up in the project
+cross-references, which may take a significant amount of time the first
+time.  After a global look up, information is cached in memory, so that
+further global queries will be faster.</p>
+</dd>
+</dl>
+</dd>
+<dt>Expanded code</dt>
+<dd><p class="first">Present for Ada files only. This menu generates a .dg file using your gnat
+compiler (using the -gnatGL switch) and displays the expanded code. This can
+be useful when investigating low-level issues and tracing precisely how the
+source code is transformed by the GNAT front-end.</p>
+<dl class="docutils">
+<dt><em>Show subprogram</em></dt>
+<dd>Display expanded code for the current subprogram in the current editor.</dd>
+<dt><em>Show file</em></dt>
+<dd>Display expanded code for the current file in the current editor.</dd>
+<dt><em>Show in separate editor</em></dt>
+<dd>Display expanded code for the current file in a new editor.</dd>
+<dt><em>Clear</em></dt>
+<dd>Remove expanded code from the current editor.</dd>
+</dl>
+<p class="last">For Ada files only, this entry will generate, and will open this file
+at the location corresponding to the current source line.</p>
+</dd>
+<dt><em>Open &lt;filename&gt;</em></dt>
+<dd>When you click on a filename (for instance a C&#8217; <cite>#include</cite>, or an error
+message in a log file), this menu gives you a way to open the corresponding
+file. If the file name was followed by &#8221;:&#8221; and a line number, the
+corresponding line is activated.</dd>
+</dl>
+</div>
+<div class="section" id="navigating-with-hyperlinks">
+<span id="id5"></span><h2>6.4. Navigating with hyperlinks<a class="headerlink" href="#navigating-with-hyperlinks" title="Permalink to this headline">¶</a></h2>
+<p id="index-65">When the Control key is pressed and you start moving the mouse, entities in the
+editors under the mouse cursor become hyperlinks and the mouse cursor aspect
+changes.</p>
+<p>Left-clicking on a reference to an entity will open a source editor on the
+declaration of this entity, and left-clicking on an entity declaration will
+open an editor on the implementation of this entity.</p>
+<p>Left-clicking on the Ada declaration of a subprogram imported from C will open
+a source editor on the definition of the corresponding C entity. This
+capability requires support for cross-references.</p>
+<p>Clicking with the middle button on either a reference to an entity or the
+declaration of an entity will jump directly to the implementation or type
+completion) of this entity.</p>
+<p>Note that for efficiency, GPS may create hyperlinks for some entities which
+have no associated cross reference. In this case, clicking will have no effect,
+even though an hyperlink may have been displayed.</p>
+<p>This behavior is controlled by the <cite>Hyper links</cite> preference.</p>
+</div>
+<div class="section" id="highlighting-dispatching-calls">
+<span id="id6"></span><h2>6.5. Highlighting dispatching calls<a class="headerlink" href="#highlighting-dispatching-calls" title="Permalink to this headline">¶</a></h2>
+<p id="index-66">Dispatching calls in Ada and C++ source code are highlighted by default in GPS
+via the <cite>dispatching.py</cite> plug-in.</p>
+<p>Based on the cross-reference information, this plug-in will highlight (with a
+special color that you can configure in the preferences dialog) all calls that
+are dispatching (or calls to virtual methods in C++).  A dispatching call, in
+Ada, is a subprogram call where the actual subprogram that is called is not
+known until run time, and is chosen based on the tag of the object (so this of
+course only exists when you are using object-oriented programming).</p>
+<p>To disable this highlighting (which might sometimes be slow if you are using
+big sources, even though the highlighting itself is done in the background),
+you can go to the <cite>/Tools/Plug-ins</cite> menu, and disable the <cite>dispatching.py</cite>
+plug-in.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="projects.html" title="7. Project Handling"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="editing.html" title="5. Editing Files"
+             >previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

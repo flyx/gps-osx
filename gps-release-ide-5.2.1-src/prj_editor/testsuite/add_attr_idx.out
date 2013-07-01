@@ -1,0 +1,22 @@
+add_attr_idx.gpr:1:09: warning: source file "unit2.ads" for unit "unit2" not found
+project Add_Attr_Idx is
+
+   type A_Type is
+      ("1", "2");
+   A : A_Type := external ("A");
+
+   package Naming is
+
+      case A is
+
+         when "1" =>
+            for Spec ("unit2") use "unit2.ads";
+            for Spec ("unit") use "unit.ads";
+
+         when "2" =>
+
+      end case;
+   end Naming;
+
+end Add_Attr_Idx;
+

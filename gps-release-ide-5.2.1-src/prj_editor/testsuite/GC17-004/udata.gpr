@@ -1,0 +1,30 @@
+project Udata is
+
+   for Source_Dirs use (".");
+   for Main use ("udata.ada");
+   for Source_Files use ("udata.ada");
+   for Object_Dir use ".";
+
+   package Binder is
+   end Binder;
+
+   package Linker is
+      for Default_Switches ("ada") use ("-g");
+   end Linker;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-g", "-gnat83");
+   end Compiler;
+
+   package Builder is
+      for Default_Switches ("ada") use ("-g");
+   end Builder;
+
+   package Naming is
+      for Specification_Suffix ("ada") use "_.ada";
+      for Implementation_Suffix ("ada") use ".ada";
+      for Separate_Suffix use ".ada";
+      for Dot_Replacement use "__";
+   end Naming;
+
+end Udata;

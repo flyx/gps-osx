@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>14. Working in a Cross Environment &mdash; GPS 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GPS 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="15. Using GPS for Remote Development" href="remote.html" />
+    <link rel="prev" title="13. Tools" href="tools.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="remote.html" title="15. Using GPS for Remote Development"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tools.html" title="13. Tools"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">14. Working in a Cross Environment</a><ul>
+<li><a class="reference internal" href="#customizing-your-projects">14.1. Customizing your Projects</a></li>
+<li><a class="reference internal" href="#debugger-issues">14.2. Debugger Issues</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tools.html"
+                        title="previous chapter">13. Tools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="remote.html"
+                        title="next chapter">15. Using GPS for Remote Development</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/cross_env.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="working-in-a-cross-environment">
+<span id="id1"></span><h1>14. Working in a Cross Environment<a class="headerlink" href="#working-in-a-cross-environment" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">This chapter explains how to adapt your project and configure GPS when working
+in a cross environment.</p>
+<div class="section" id="customizing-your-projects">
+<span id="id2"></span><h2>14.1. Customizing your Projects<a class="headerlink" href="#customizing-your-projects" title="Permalink to this headline">¶</a></h2>
+<p id="index-1">This section describes some possible ways to customize your projects when
+working in a cross environment. For more details on the project capabilities,
+see <a class="reference internal" href="projects.html#project-handling"><em>Project Handling</em></a>.</p>
+<p>When using the project editor to modify the project&#8217;s properties, two areas are
+particularly relevant to cross environments: <cite>Cross environment</cite> part of the
+<cite>General</cite> page, and <cite>Toolchains</cite> part of the <cite>Languages</cite> page.</p>
+<p>In the <cite>Toolchains</cite> section, you will typically either scan your system to
+display found toolchains, and select the one corresponding to your cross
+environment or use the Add button and manually select the desired cross
+environment.</p>
+<p>If needed, you can also modify manually some of the tools defined in this
+toolchain in the <cite>Details</cite> part of the <cite>Languages</cite> page.</p>
+<p>For example, assuming you have an Ada project, and using a powerpc VxWorks
+configuration. Hitting the scan button, you should see the toolchain
+<cite>powerpc-wrs-vxworks</cite> appearing in the <cite>Toolchains</cite> section.  Selecting this
+toolchain will change the <cite>Details</cite> part, displaying the relevant tools (e.g.
+<em>Gnatls</em> to <cite>powerpc-wrs-vxworks-gnatls</cite> and <em>Debugger</em> to
+<cite>powerpc-wrs-vxworks-gdb</cite> ...).</p>
+<p>The list of toolchains and their default values that can be selected when using
+the Add button can be modified via a custom xml file. See
+<a class="reference internal" href="extending.html#customizing-and-extending-gps"><em>Customizing and Extending GPS</em></a> and in particular
+<a class="reference internal" href="extending.html#toolchains-customization"><em>Toolchains customization</em></a> for further information.</p>
+<p>If you are using an alternative run time, e.g. a <em>soft float</em> run time, you
+need to add the option <cite>&#8211;RTS=soft-float</cite> to the <em>Gnatls</em> property, e.g:
+<cite>powerpc-wrs-vxworks-gnatls &#8211;RTS=soft-float</cite>, and add this same option to the
+<em>Gnatmake</em> switches in the switch editor.  See <a class="reference internal" href="projects.html#id10"><em>Switches</em></a> for
+more details on the switch editor.</p>
+<p>To modify your project to support configurations such as multiple targets, or
+multiple hosts, you can create scenario variables, and modify the setting of
+the Toolchains parameters based on the value of these variables. See
+<a class="reference internal" href="projects.html#scenarios-and-configuration-variables"><em>Scenarios and Configuration Variables</em></a> for more information on these
+variables.</p>
+<p>For example, you may want to create a variable called <cite>Target</cite> to handle
+the different kind of targets handled in your project:</p>
+<dl class="docutils">
+<dt><em>Target</em></dt>
+<dd>Native, Embedded</dd>
+<dt><em>Target</em></dt>
+<dd>Native, PowerPC, M68K</dd>
+</dl>
+<p>Similarly, you may define a <cite>Board</cite> variable listing the different boards used
+in your environment and change the <em>Program host</em> and <em>Protocol</em> settings
+accordingly.</p>
+<p>In some cases, it is useful to provide a different body file for a given
+package (e.g. to handle target specific differences). A possible approach in
+this case is to use a configuration variable (e.g. called <cite>TARGET</cite>), and
+specify a different naming scheme for this body file (in the project
+properties, <cite>Naming</cite> tab), based on the value of <cite>TARGET</cite>.</p>
+</div>
+<div class="section" id="debugger-issues">
+<span id="id3"></span><h2>14.2. Debugger Issues<a class="headerlink" href="#debugger-issues" title="Permalink to this headline">¶</a></h2>
+<p id="index-2">This section describes some debugger issues that are specific to cross
+environments. You will find more information on debugging by reading
+<a class="reference internal" href="debugging.html#debugging"><em>Debugging</em></a>.</p>
+<p>To connect automatically to the right remote debug agent when starting a
+debugging session (using the menu <cite>Debug-&gt;Initialize</cite>), be sure to specify the
+<cite>Program host</cite> and <cite>Protocol</cite> project properties, as described in the previous
+section.</p>
+<p>For example, if you are using the <em>Tornado</em> environment, with a target server
+called <cite>target_ppc</cite>, set the <cite>Protocol</cite> to <cite>wtx</cite> and the <cite>Program host</cite> to
+<cite>target_ppc</cite>.</p>
+<p>Once the debugger is initialized, you can also connect to a remote agent by
+using the menu <cite>Debug-&gt;Debug-&gt;Connect to Board...</cite>. This will open a dialog
+where you can specify the target name (e.g. the name of your
+.. index:: board</p>
+<p>board or debug agent) and the communication protocol.</p>
+<p>In order to load a new module on the target, you can select the menu
+<cite>Debug-&gt;Debug-&gt;Load File...</cite>.</p>
+<p>If a module has been loaded on the target and is not known to the current debug
+session, use the menu <cite>Debug-&gt;Debug-&gt;Add Symbols...</cite> to load the symbol tables
+in the current debugger.</p>
+<p>Similarly, if you are running the underlying debugger (gdb) on a remote
+machine, you can specify the name of this machine by setting the <cite>Tools host</cite>
+field of the project properties.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="remote.html" title="15. Using GPS for Remote Development"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tools.html" title="13. Tools"
+             >previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

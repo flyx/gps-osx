@@ -1,0 +1,36 @@
+--  Must be the same as add_var1.out
+project Add_Var2 is
+
+   for Source_Dirs use (".");
+   type A_B_Type is
+      ("A1", "A2", "A3");
+   A_B : A_B_Type := external ("A B");
+   type C_Type is
+      ("C1", "C2", "C3");
+   C : C_Type := external ("C");
+
+   case C is
+
+      when "C1" =>
+
+         case A_B is
+
+            when "A1" =>
+               for Object_Dir use "new_obj_dir";
+
+            when "A2" =>
+               for Object_Dir use ".";
+
+            when "A3" =>
+               for Object_Dir use ".";
+         end case;
+
+      when "C2" =>
+         for Object_Dir use ".";
+
+      when "C3" =>
+         for Object_Dir use ".";
+   end case;
+
+end Add_Var2;
+

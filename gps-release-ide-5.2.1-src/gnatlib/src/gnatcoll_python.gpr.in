@@ -1,0 +1,43 @@
+with "../gnatcoll_shared";
+with "gnatcoll";
+
+project GnatColl_Python is
+   for Library_Kind    use GnatColl_Shared.Library_Type;
+   for Object_Dir      use "obj/python/" & Project'Library_Kind;
+   for Library_Dir     use "lib/python/" & Project'Library_Kind;
+   for Library_Name    use GnatColl_Shared.Name & "_python";
+   for Library_Version use
+      "lib" & Project'Library_Name
+      & GnatColl_Shared.So_Ext & "." & GnatColl_Shared.Version;
+
+   --  When linking a shared library (see Linker_Options below in addition)
+   for Library_Options use GnatColl_Shared.Python_Libs;
+
+   for Languages use ("Ada", "C");
+
+   case GnatColl_Shared.Python is
+      when "yes" =>
+         for Source_Dirs use Project'Source_Dirs & ("python");
+         for Library_Options use (@PYTHON_LIBS_GPR@);
+      when "no"  =>
+         for Source_Dirs use Project'Source_Dirs & ("nopython");
+   end case;
+
+   package Builder renames GnatColl_Shared.Builder;
+
+   package Compiler is
+      for Switches ("Ada") use
+        GnatColl_Shared.Compiler'Switches ("Ada");
+
+      for Switches ("C") use
+        ("-g", "-O2") & GnatColl_Shared.Python_Cflags;
+   end Compiler;
+
+   package Linker is
+      --  When linking an executable
+      for Linker_Options use GnatColl_Shared.Python_Libs;
+   end Linker;
+
+   package Ide renames GnatColl_Shared.Ide;
+
+end GnatColl_Python;

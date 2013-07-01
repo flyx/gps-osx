@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5. Source Navigation &mdash; Tutorial 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Tutorial 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="6. Search Dialog" href="Search_Dialog.html" />
+    <link rel="prev" title="4. Building applications" href="building.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Search_Dialog.html" title="6. Search Dialog"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="building.html" title="4. Building applications"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Tutorial 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="building.html"
+                        title="previous chapter">4. Building applications</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Search_Dialog.html"
+                        title="next chapter">6. Search Dialog</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/navigating.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="source-navigation">
+<h1>5. Source Navigation<a class="headerlink" href="#source-navigation" title="Permalink to this headline">¶</a></h1>
+<p>Now let&#8217;s try to understand a little bit about how the program is working by
+looking at the <tt class="file docutils literal"><span class="pre">sdc.adb</span></tt> editor: there&#8217;s a loop, the main processing is
+done by the functions Process and Next (at line 30).</p>
+<p>Click around line 30, move the mouse over <cite>Process</cite> and let a tool tip appear
+(<cite>Tokens.Process global procedure declared at tokens.ads:19</cite>): this gives
+information about the kind of entity and the location (file and line) of the
+declaration of this procedure, the profile of the parameters, and documentation
+for this function, as extracted from the comments surrounding the procedure
+declaration.</p>
+<p>Do the same for <cite>Next</cite> (<cite>Tokens.Next global function declared at
+tokens.ads:15</cite>).</p>
+<p>Keeping the mouse over <cite>Next</cite>, display the contextual menu by clicking on the
+right mouse button, then click on <cite>Goto declaration of Next</cite>: we&#8217;re now in the
+package <cite>Tokens</cite>, in file <tt class="file docutils literal"><span class="pre">tokens.ads</span></tt>; but where is this file in the
+project?</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Search_Dialog.html" title="6. Search Dialog"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="building.html" title="4. Building applications"
+             >previous</a> |</li>
+        <li><a href="index.html">Tutorial 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

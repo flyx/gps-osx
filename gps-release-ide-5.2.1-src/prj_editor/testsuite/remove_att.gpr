@@ -1,0 +1,11 @@
+project Remove_Att is
+  
+   type A_Type is ("1", "2");
+   A : A_Type := external ("A");
+
+   type B_Type is ("B1", "B2");
+   B : B_Type := external ("B");
+
+   for source_dirs use (".");
+
+end Remove_Att;

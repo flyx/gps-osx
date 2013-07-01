@@ -1,0 +1,2 @@
+^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x08049660",func="main",file="/some/path/to/main.adb",fullname="/some/path/to/main.adb",line="5",times="0",original-location="main.adb:5"}
+(gdb)

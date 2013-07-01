@@ -1,0 +1,24 @@
+rename_val.gpr:1:09: warning: object directory ".A1" not found
+project Rename_Val is
+
+   type A_Type is
+      ("A100", "A2", "A3");
+   A : A_Type := external ("A", "A100");
+   type A_Type1 is
+      ("A100", "A2", "A3");
+   B : A_Type1 := external ("A", "A100");
+
+   case A is
+
+      when "A100" =>
+         for Object_Dir use "." & external ("A");
+
+      when "A2" =>
+         for Object_Dir use ".." & external ("A", "A100");
+
+      when "A3" =>
+         for Object_Dir use ".." & external ("A", "A3");
+   end case;
+
+end Rename_Val;
+

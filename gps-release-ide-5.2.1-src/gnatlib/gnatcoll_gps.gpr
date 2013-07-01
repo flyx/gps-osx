@@ -1,0 +1,11 @@
+--  This project file is only meant for edition in GPS
+with "gnatcoll_build";
+with "src/gnatcoll_gtk";
+with "src/gnatcoll_tools";
+
+project Gnatcoll_GPS is
+   for Source_Dirs use ();
+   package IDE is
+      for VCS_Kind use "Subversion";
+   end IDE;
+end Gnatcoll_GPS;

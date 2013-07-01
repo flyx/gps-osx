@@ -1,0 +1,16 @@
+project Three_Variables is
+   type A_Type is ("1", "2");
+   A : A_Type := external ("A", "1");
+
+   --  This type conflicts with a potential renaming of
+   --  the type used for B
+   type A_Type1 is ("C1", "C2");
+   C : A_Type1 := external ("C");
+
+   B : A_Type := external ("A", "2");
+
+   case A is
+      when "1" => 
+        for object_dir use ".";
+   end case;
+end Three_Variables;

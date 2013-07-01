@@ -1,0 +1,661 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>12. Version Control System &mdash; GPS 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GPS 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="13. Tools" href="tools.html" />
+    <link rel="prev" title="11. Debugging" href="debugging.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tools.html" title="13. Tools"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="debugging.html" title="11. Debugging"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">12. Version Control System</a><ul>
+<li><a class="reference internal" href="#the-vcs-explorer">12.1. The VCS Explorer</a></li>
+<li><a class="reference internal" href="#the-vcs-activities">12.2. The VCS Activities</a></li>
+<li><a class="reference internal" href="#the-vcs-menu">12.3. The VCS Menu</a></li>
+<li><a class="reference internal" href="#the-version-control-contextual-menu">12.4. The Version Control Contextual Menu</a></li>
+<li><a class="reference internal" href="#working-with-global-changelog-file">12.5. Working with global ChangeLog file</a></li>
+<li><a class="reference internal" href="#the-revision-view">12.6. The Revision View</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="debugging.html"
+                        title="previous chapter">11. Debugging</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tools.html"
+                        title="next chapter">13. Tools</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/vcs.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="version-control-system">
+<span id="id1"></span><h1>12. Version Control System<a class="headerlink" href="#version-control-system" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">GPS offers the possibility for multiple developers to work on the same project,
+through the integration of version control systems (VCS). Each project can be
+associated to a VCS, through the <cite>VCS</cite> tab in the Project properties editor.
+<a class="reference internal" href="projects.html#the-project-properties-editor"><em>The Project Properties Editor</em></a>.</p>
+<p>GPS does not come with any version control system: it uses underlying
+command-line systems such as Subversion or ClearCase to perform the low level
+operations, and provides a high level user interface on top of them. Be sure to
+have a properly installed version control system before enabling it under GPS.</p>
+<p>The systems that are supported out of the box in GPS are:</p>
+<dl class="docutils">
+<dt><em>Auto</em></dt>
+<dd><p class="first last" id="index-1">GPS can be setup to auto-detect the actual VCS to use for each project. This
+is done by selecting <cite>Auto</cite> in the <cite>VCS</cite> tab of the Project properties
+editor. <a class="reference internal" href="projects.html#the-project-properties-editor"><em>The Project Properties Editor</em></a>.  This is also the default
+behavior when no VCS is specified in the project.</p>
+</dd>
+<dt><em>ClearCase</em></dt>
+<dd><p class="first" id="index-2">The standard ClearCase interface, which is built-in and uses a generic GPS
+terminology for VCS operations.</p>
+<p class="last">Note that, at the moment, only Snapshot Views are supported in the ClearCase
+integration; Dynamic Views are not supported.</p>
+</dd>
+<dt><em>ClearCase Native</em></dt>
+<dd><p class="first" id="index-3">Which is fully customizable and uses by default the terminology specific to
+ClearCase.</p>
+<p class="last">Note that, at the moment, only Snapshot Views are supported in the ClearCase
+integration; Dynamic Views are not supported.</p>
+</dd>
+<dt><em>CVS</em></dt>
+<dd><p class="first" id="index-4">The Concurrent Version System.</p>
+<p class="last">GPS needs a corresponding <em>patch</em> command that usually comes with it.</p>
+</dd>
+<dt><em>Git</em></dt>
+<dd><p class="first" id="index-5">Distributed fast source code management. Support for Git on GPS is partial.
+Basic commands are supported but the full power of Git (like working with the
+index) is only available on the command line.</p>
+<p class="last">GPS needs a corresponding <em>diff</em> command that usually comes with it.</p>
+</dd>
+<dt><em>Mercurial</em></dt>
+<dd><p class="first last" id="index-6">An experimental plugin for supporting Mercurial.</p>
+</dd>
+<dt><em>Subversion</em></dt>
+<dd><p class="first" id="index-7">The Subversion version control system. Note that on Windows this version is
+intended to be used with Cygwin/Subversion and fully supports the Cygwin path
+names.</p>
+<p class="last">GPS needs a corresponding <em>patch</em> and <em>diff</em> command that usually comes with
+it.</p>
+</dd>
+<dt><em>Subversion Windows</em></dt>
+<dd><p class="first" id="index-8">The Windows native Subversion version control system. The external Subversion
+commands are expected to be built for the Win32 subsystem. This version does
+not support Cygwin path names.</p>
+<p class="last">GPS needs a corresponding <em>patch</em> and <em>diff</em> command
+that usually comes with it.</p>
+</dd>
+</dl>
+<p>The default VCS that GPS will use is &#8220;Auto&#8221; by default, and this can be
+configured through <a class="reference internal" href="extending.html#the-preferences-dialog"><em>The Preferences Dialog</em></a>.</p>
+<p>It is also possible to add your own support for other version control systems,
+or modify one of the existing interfaces, see
+<a class="reference internal" href="extending.html#adding-support-for-new-version-control-systems"><em>Adding support for new Version Control Systems</em></a> for more information.</p>
+<p>It is recommended that you first get familiar with the version control system
+that you intend to use in GPS first, since many concepts used in GPS assume
+basic knowledge of the underlying system.</p>
+<p>Associating a VCS to a project enables the use of basic VCS features on the
+source files contained in the project. Those basic features typically include
+the checking in and out of files, the querying of file status, file revision
+history, comparison between various revisions, and so on.</p>
+<p id="index-9">Note: the set-up must make sure that the VCS commands can be launched without
+entering a password.</p>
+<div class="section" id="the-vcs-explorer">
+<span id="id2"></span><h2>12.1. The VCS Explorer<a class="headerlink" href="#the-vcs-explorer" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-10"></span><p id="index-11">The VCS Explorer provides an overview of source files and their status. A file
+edited in GPS will be automatically added on the VCS Explorer with a Modified
+status (see below).</p>
+<img alt="_images/vcs-explorer.jpg" id="index-12" src="_images/vcs-explorer.jpg" />
+<p>The easiest way to bring up the VCS Explorer is through the menu
+<cite>VCS-&gt;Explorer</cite>. The Explorer can also be brought up using the contextual menu
+<cite>Version Control-&gt;Query status</cite> on files, directories and projects in the file
+and project views, and on file editors.
+<a class="reference internal" href="#the-version-control-contextual-menu"><em>The Version Control Contextual Menu</em></a>.</p>
+<p>The VCS Explorer contains the following columns:</p>
+<dl class="docutils">
+<dt><em>Project / File</em></dt>
+<dd>This is a two levels tree, the first level contains the name of the project
+and the second the name of files inside the project. Next to the project name
+the VCS name, if any, is displayed. This is the only information available
+for a project. The columns described below are for the files only. This
+column can be sorted by clicking on the header.</dd>
+<dt><em>Status</em></dt>
+<dd><p class="first">Shows the status of the file. This column can be sorted by clicking on
+the header. The different possible status for files are the following:</p>
+<dl class="last docutils">
+<dt><em>Unknown</em></dt>
+<dd><img alt="_images/gps-vcs-unknown.jpg" class="first" src="_images/gps-vcs-unknown.jpg" />
+<p class="last">The status is not yet determined or the VCS repository is not able to
+give this information (for example if it is unavailable, or locked).</p>
+</dd>
+<dt><em>Not registered</em></dt>
+<dd><img alt="_images/gps-vcs-not-registered.jpg" class="first" src="_images/gps-vcs-not-registered.jpg" />
+<p class="last">The file is not known to the VCS repository.</p>
+</dd>
+<dt><em>Up-to-date</em></dt>
+<dd><img alt="_images/gps-vcs-up-to-date.jpg" class="first" src="_images/gps-vcs-up-to-date.jpg" />
+<p class="last">The file corresponds to the latest version in the corresponding branch
+on the repository.</p>
+</dd>
+<dt><em>Added</em></dt>
+<dd><img alt="_images/gps-vcs-added.jpg" class="first" src="_images/gps-vcs-added.jpg" />
+<p class="last">The file has been added remotely but is not yet updated in the local
+view.</p>
+</dd>
+<dt><em>Removed</em></dt>
+<dd><img alt="_images/gps-vcs-removed.jpg" class="first" src="_images/gps-vcs-removed.jpg" />
+<p class="last">The file still exists locally but is known to have been removed from
+the VCS repository.</p>
+</dd>
+<dt><em>Modified</em></dt>
+<dd><img alt="_images/gps-vcs-modified.jpg" class="first" src="_images/gps-vcs-modified.jpg" />
+<p class="last">The file has been modified by the user or has been explicitly opened
+for editing.</p>
+</dd>
+<dt><em>Needs merge</em></dt>
+<dd><img alt="_images/gps-vcs-needs-merge.jpg" class="first" src="_images/gps-vcs-needs-merge.jpg" />
+<p class="last">The file has been modified locally and on the repository.</p>
+</dd>
+<dt><em>Needs update</em></dt>
+<dd><img alt="_images/gps-vcs-needs-update.jpg" class="first" src="_images/gps-vcs-needs-update.jpg" />
+<p class="last">The file has been modified in the repository but not locally.</p>
+</dd>
+<dt><em>Contains merge conflicts</em></dt>
+<dd><img alt="_images/gps-vcs-has-conflicts.jpg" class="first" src="_images/gps-vcs-has-conflicts.jpg" />
+<p class="last">The file contains conflicts from a previous update operation.</p>
+</dd>
+</dl>
+</dd>
+<dt><em>Log</em></dt>
+<dd>This column indicates whether a revision log exists for this file.</dd>
+<dt><em>Activity</em></dt>
+<dd>The name of the activity the file belongs to. See <a class="reference internal" href="#the-vcs-activities"><em>The VCS Activities</em></a>
+for more details.</dd>
+<dt><em>Working rev.</em></dt>
+<dd>Indicates the version of the local file.</dd>
+<dt><em>Head rev.</em></dt>
+<dd>Indicates the most recent version of the file in the repository.</dd>
+</dl>
+<p>The VCS Explorer supports multiple selections. To select a single line, simply
+left-click on it. To select a range of lines, select the first line in the
+range, then hold down the <tt class="kbd docutils literal"><span class="pre">Shift</span></tt> key and select the last line in the
+range. To add or remove single columns from the selection, hold down the
+<tt class="kbd docutils literal"><span class="pre">Control</span></tt> key and left-click on the columns that you want to
+select/unselect. It is also possible to select files having the same status
+using the <cite>Select files same status</cite> menu entry. See
+<a class="reference internal" href="#the-version-control-contextual-menu"><em>The Version Control Contextual Menu</em></a>.</p>
+<p id="index-13">The explorer also provides an <a class="reference internal" href="main_window.html#interactive-search"><em>interactive search</em></a>
+capability allowing you to quickly look for a given file name. The default key
+to start an interactive search is <tt class="kbd docutils literal"><span class="pre">Ctrl-i</span></tt>.</p>
+<p>The VCS contextual menu can be brought up from the VCS explorer by
+left-clicking on a selection or on a single line.
+<a class="reference internal" href="#the-version-control-contextual-menu"><em>The Version Control Contextual Menu</em></a>.</p>
+</div>
+<div class="section" id="the-vcs-activities">
+<span id="id3"></span><h2>12.2. The VCS Activities<a class="headerlink" href="#the-vcs-activities" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-14"></span><p id="index-15">The VCS Activities give the ability to group files to be committed together.
+The set of files can be committed atomically if supported by the version
+control system used.</p>
+<img alt="_images/vcs-activities.jpg" id="index-16" src="_images/vcs-activities.jpg" />
+<p>The way to bring up the VCS Activities view is through the <cite>VCS-&gt;Activities</cite>
+menu.</p>
+<p>The VCS Activities view contains the following columns:</p>
+<dl class="docutils">
+<dt><em>Activity / File</em></dt>
+<dd>The name of the activity or files belonging to an activity. This
+column can be sorted by clicking on the header.</dd>
+<dt><em>Status</em></dt>
+<dd>Shows the status of the file. This column can be sorted by clicking on
+the header. See <a class="reference internal" href="#the-vcs-explorer"><em>The VCS Explorer</em></a> for a full description.</dd>
+<dt><em>Log</em></dt>
+<dd>This column indicates whether a revision log exists for this file.</dd>
+<dt><em>Working rev.</em></dt>
+<dd>Indicates the version of the local file.</dd>
+<dt><em>Head rev.</em></dt>
+<dd>Indicates the most recent version of the file in the repository.</dd>
+</dl>
+<p>The VCS Explorer supports multiple selections. To select a single line, simply
+left-click on it. To select a range of lines, select the first line in the
+range, then hold down the <tt class="kbd docutils literal"><span class="pre">Shift</span></tt> key and select the last line in the
+range. To add or remove single columns from the selection, hold down the
+<tt class="kbd docutils literal"><span class="pre">Control</span></tt> key and left-click on the columns that you want to
+select/unselect.</p>
+<p>There are different contextual menu entries depending on the position on the
+screen.  On an empty area we have a simple contextual menu:</p>
+<dl class="docutils">
+<dt><em>Create new activity</em></dt>
+<dd>Create a new activity. The name can be edited by double clicking on it.</dd>
+</dl>
+<p>On an activity line the contextual menu is:</p>
+<dl class="docutils">
+<dt><em>Group commit</em></dt>
+<dd>This is a selectable menu entry. It is activated only if the
+VCS supports atomic commit and absolute filenames. See <a class="reference internal" href="extending.html#the-vcs-node"><em>The VCS node</em></a>
+for full details.</dd>
+<dt><em>Create new activity</em></dt>
+<dd>Create a new activity. The name can be edited by double clicking on it.</dd>
+<dt><em>Re-open activity / Close activity</em></dt>
+<dd>If the activity is closed it is possible to re-open it and if it is
+opened it is possible to close it manually.</dd>
+<dt><em>Delete activity</em></dt>
+<dd>Remove the activity.</dd>
+<dt><em>Commit activity</em></dt>
+<dd>Commit the activity. If group commit is activated then the commit log content
+is generated using a template file fully configurable.  See <a class="reference internal" href="environment.html#files"><em>Files</em></a>.  If
+group commit is not activated then the log content for each activity file is
+the file log catenated with the activity log. After this operation the file&#8217;s
+log are removed but the activity log is kept as documentation.</dd>
+<dt><em>Query status</em></dt>
+<dd>Query the status for all the source files contained in the activity.</dd>
+<dt><em>Update</em></dt>
+<dd>Update all the source files contained in the activity.</dd>
+<dt><em>Compare against head revision</em></dt>
+<dd>Show a visual comparison between the local activity files and the most recent
+version of those files in the repository.</dd>
+<dt><em>Build patch file</em></dt>
+<dd>Create a patch file (in text format) for the activity. The patch file
+contains a header (the activity log and file&#8217;s logs) and the diff of
+each file. The header format is fully configurable using a template
+file. See <a class="reference internal" href="environment.html#files"><em>Files</em></a>.</dd>
+<dt><em>Edit revision log</em></dt>
+<dd>Edit the current revision log for activity. This log is shared with
+all the activity files.</dd>
+<dt><em>Remove revision log</em></dt>
+<dd>Remove the current revision log for activity. This menu is present
+only if the activity revision log exists.</dd>
+</dl>
+<p>On a file line the contextual menu contains:</p>
+<dl class="docutils">
+<dt><em>Create new activity</em></dt>
+<dd>Create a new activity. The name can be edited by double clicking on it.</dd>
+<dt><em>Remove from activity</em></dt>
+<dd>Remove the selected file from the activity and delete the activity log.</dd>
+<dt><em>Edit revision log</em></dt>
+<dd>Edit the current revision log for the selected file.</dd>
+</dl>
+</div>
+<div class="section" id="the-vcs-menu">
+<span id="id4"></span><h2>12.3. The VCS Menu<a class="headerlink" href="#the-vcs-menu" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-17"></span><p id="index-18">Basic VCS operations can be accessed through the VCS menu. Most of these
+functions act on the current selection, i.e. on the selected items in the VCS
+Explorer if it is present, or on the currently selected file editor, or on the
+currently selected item in the <cite>Tools-&gt;Views-&gt;Files</cite>.  In most cases, the VCS
+contextual menu offers more control on VCS operations.
+<a class="reference internal" href="#the-version-control-contextual-menu"><em>The Version Control Contextual Menu</em></a>.</p>
+<dl class="docutils">
+<dt><em>Explorer</em></dt>
+<dd>Open or raise the VCS Explorer. <a class="reference internal" href="#the-vcs-explorer"><em>The VCS Explorer</em></a>.</dd>
+<dt><em>Update all projects</em></dt>
+<dd>Update the source files in the current project, and all imported
+sub-projects, recursively.</dd>
+<dt><em>Query status for all projects</em></dt>
+<dd>Query the status of all files in the project and all imported sub-projects.</dd>
+<dt><em>Create tag...</em></dt>
+<dd>Create a tag or branch tag starting from a specific root
+directory. The name of the tag is a simple name.</dd>
+<dt><em>Switch tag...</em></dt>
+<dd>Switch the local copy to a specific tag. The name of the tag depends
+on the external VCS used. For CVS this this the simple tag name, for
+Subversion the tag must conform to the default repository layout. For
+a branch tag this is <cite>/branches/&lt;tag_name&gt;/&lt;root_dir&gt;</cite>.</dd>
+</dl>
+<p>For a description of the other entries in the VCS menu, see
+<a class="reference internal" href="#the-version-control-contextual-menu"><em>The Version Control Contextual Menu</em></a></p>
+</div>
+<div class="section" id="the-version-control-contextual-menu">
+<span id="id5"></span><h2>12.4. The Version Control Contextual Menu<a class="headerlink" href="#the-version-control-contextual-menu" title="Permalink to this headline">¶</a></h2>
+<p>This section describes the version control contextual menu displayed when you
+right-click on an entity (e.g. a file, a directory, a project) from various
+parts of GPS, including the project view, the source editor and the VCS
+Explorer.</p>
+<p>Depending on the context, some of the items described in this section won&#8217;t be
+shown, which means that they are not relevant to the current context.</p>
+<dl class="docutils">
+<dt><em>Remove project</em></dt>
+<dd>Only displayed on a project line. This will remove the selected
+project from the VCS Explorer.</dd>
+<dt><em>Expand all</em></dt>
+<dd>Expand all VCS Explorer project nodes.</dd>
+<dt><em>Collapse all</em></dt>
+<dd>Collapse all VCS Explorer project nodes.</dd>
+<dt><em>Clear View</em></dt>
+<dd>Clear the VCS Explorer.</dd>
+<dt><em>Query status</em></dt>
+<dd>Query the status of the selected item. Brings up the VCS Explorer.</dd>
+<dt><em>Update</em></dt>
+<dd><p class="first last" id="update">Update the currently selected item (file, directory or project).</p>
+</dd>
+<dt><em>Commit</em></dt>
+<dd><p class="first" id="commit">Submits the changes made to the file to the repository, and queries
+the status for the file once the change is made.</p>
+<p>It is possible to tell GPS to check the file before the actual commit
+happens. This is done by specifying a <cite>File checker</cite> in the <cite>VCS</cite> tab of the
+project properties dialog. This <cite>File checker</cite> is in fact a script or
+executable that takes an absolute file name as argument, and displays any
+error message on the standard output. The VCS commit operation will actually
+occur only if nothing was written on the standard output.</p>
+<p class="last">It is also possible to check the change-log of a file before commit, by
+specifying a <cite>Log checker</cite> in the project properties dialog. This works on
+change-log files in the same way as the <cite>File checker</cite> works on source files.</p>
+</dd>
+<dt><em>Open</em></dt>
+<dd><p class="first last" id="open">Open the currently selected file for writing. On some VCS systems,
+this is a necessary operation, and on other systems it is not.</p>
+</dd>
+<dt><em>View entire revision history</em></dt>
+<dd><p class="first last" id="view-revision-history">Show the revision logs for all previous revisions of this file.</p>
+</dd>
+<dt><em>View specific revision history</em></dt>
+<dd>Show the revision logs for one previous revision of this file.</dd>
+<dt><em>Compare against head revision</em></dt>
+<dd><p class="first last" id="compare-against-head"><span id="index-19"></span>Show a visual comparison between the local file and the most recent
+version of that file in the repository.</p>
+</dd>
+<dt><em>Compare against other revision</em></dt>
+<dd><p class="first last" id="compare-against-working">Show a visual comparison between the local file and one specific
+version of that file in the repository.</p>
+</dd>
+<dt><em>Compare two revisions</em></dt>
+<dd><p class="first last" id="compare-against-revision">Show a visual comparison between two specific revisions
+of the file in the repository.</p>
+</dd>
+<dt><em>Compare base against head</em></dt>
+<dd><p class="first last" id="compare-base-against-head">Show a visual comparison between the corresponding version of the
+file in the repository and the most recent version of that file.</p>
+</dd>
+<dt><em>Compare against tag/branch</em></dt>
+<dd><p class="first last" id="compare-base-against-tag-branch">Only available on a Revision View and over a tag/branch. Show a visual
+comparison between the corresponding version of the file in the repository
+and the version of that file in the tag/branch.</p>
+</dd>
+<dt><em>Annotate</em></dt>
+<dd><p class="first" id="annotate">Display the annotations for the file, i.e. the information for each line of
+the file showing the revision corresponding to that file, and additional
+information depending on the VCS system.</p>
+<p class="last">When using CVS or Subversion, the annotations are clickable. Left-clicking on
+an annotation line will query and display the changelog associated to the
+specific revision for this line.</p>
+</dd>
+<dt><em>Remove Annotate</em></dt>
+<dd>Remove the annotations from the selected file.</dd>
+<dt><em>Edit revision log</em></dt>
+<dd>Edit the current revision log for the selected file.</dd>
+<dt><em>Edit global ChangeLog</em></dt>
+<dd>Edit the global ChangeLog entry for the selected file.
+<a class="reference internal" href="#working-with-global-changelog-file"><em>Working with global ChangeLog file</em></a>.</dd>
+<dt><em>Remove revision log</em></dt>
+<dd>Clear the current revision associated to the selected file.</dd>
+<dt><em>Add</em></dt>
+<dd>Add a file to the repository, using the current revision log for this
+file. If no revision log exists, activating this menu will create
+one. The file is committed in the repository.</dd>
+<dt><em>Add/No commit</em></dt>
+<dd>Add a file to the repository, using the current revision log for this
+file. If no revision log exists, activating this menu will create
+one. The file is not committed in the repository.</dd>
+<dt><em>Remove</em></dt>
+<dd>Remove a file from the repository, using the current revision log for
+this file. If no revision log exists, activating this menu will create
+one. The modification is committed in the repository.</dd>
+<dt><em>Remove/No commit</em></dt>
+<dd>Remove a file from the repository, using the current revision log for
+this file. If no revision log exists, activating this menu will create
+one. The modification is not committed in the repository.</dd>
+<dt><em>Revert</em></dt>
+<dd>Revert a locale file to the repository revision, discarding all local
+changes.</dd>
+<dt><em>Resolved</em></dt>
+<dd>Mark files&#8217; merge conflics as resolved. Some version control systems
+(like Subversion) will block any commit until this action is called.</dd>
+<dt><em>Switch tag/bracnh</em></dt>
+<dd>Only available on a Revision View and over a tag/branch name. Will
+switch the tree starting from a selected root to this specific tag or
+branch.</dd>
+<dt><em>Merge</em></dt>
+<dd>Only available on a Revision View and over a tag/branch name. Merge
+file changes made on this specific tag/branch.</dd>
+<dt><em>View revision</em></dt>
+<dd>Only available on a Revision View and over a revision.</dd>
+<dt><em>Commit as new Activity</em></dt>
+<dd>An action to prepare a group-commit in just one-click. This action will:</dd>
+</dl>
+<p><em>create an anonymous activity,</em></p>
+<blockquote>
+<div><dl class="docutils">
+<dt><em>add all files selected into the VCS Explorer into the newly</em></dt>
+<dd>created anonymous activity,</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt><em>open the activity log,</em></dt>
+<dd>Just fill the activity log and commit the anonymous activity.</dd>
+<dt><em>Add to Activity</em></dt>
+<dd>A menu containing all the current activities. Selecting one will add
+the current file to this activity. This menu is present only if the
+file is not already part of an activity.</dd>
+<dt><em>Remove from Activity</em></dt>
+<dd>Remove file from the given activity. This menu is present only if the
+file is already part of an activity.</dd>
+<dt><em>Directory</em></dt>
+<dd><p class="first">Only available when the current context contains directory information</p>
+<dl class="last docutils">
+<dt><em>Add/No commit</em></dt>
+<dd>Add the selected directory into the VCS.</dd>
+<dt><em>Remove/No commit</em></dt>
+<dd>Remove the selected directory from the VCS.</dd>
+<dt><em>Commit</em></dt>
+<dd>Commit the selected directory into the VCS. This action is available
+only if the VCS supports commit on directories, <a class="reference internal" href="extending.html#the-vcs-node"><em>The VCS node</em></a>.</dd>
+<dt><em>Add to Activity</em></dt>
+<dd>Add the selected directory into the VCS. This action is available
+only if the VCS supports commit on directories, <a class="reference internal" href="extending.html#the-vcs-node"><em>The VCS node</em></a>.</dd>
+<dt><em>Query status for directory</em></dt>
+<dd>Query status for the files contained in the selected directory.</dd>
+<dt><em>Update directory</em></dt>
+<dd>Update the files in the selected directory.</dd>
+<dt><em>Query status for directory recursively</em></dt>
+<dd>Query status for the files in the selected directory and all
+subdirectories recursively. Links and hidden directories are not
+included.</dd>
+<dt><em>Update directory recursively</em></dt>
+<dd>Update the files in the selected directory and all
+subdirectories recursively. Links and hidden directories not included..</dd>
+</dl>
+</dd>
+<dt><em>Project</em></dt>
+<dd><p class="first">Only available when the current context contains project information</p>
+<dl class="last docutils">
+<dt><em>List all files in project</em></dt>
+<dd>Bring up the VCS Explorer with all the source files contained in the
+project.</dd>
+<dt><em>Query status for project</em></dt>
+<dd>Query the status for all the source files contained in the project.</dd>
+<dt><em>Update project</em></dt>
+<dd>Update all the source files in the project.</dd>
+<dt><em>List all files in project and sub-projects</em></dt>
+<dd>Bring up the VCS Explorer with all the source files contained in the
+project and all imported sub-projects.</dd>
+<dt><em>Query status for project and sub-projects</em></dt>
+<dd>Query the status for all the source files contained in the project
+and all imported sub-projects.</dd>
+<dt><em>Update project and sub-projects</em></dt>
+<dd>Update all the source files in the project and all imported
+sub-projects.</dd>
+</dl>
+</dd>
+<dt><em>Select files same status</em></dt>
+<dd>Select the files having the same status as the current selected file.</dd>
+<dt><em>Filters</em></dt>
+<dd><p class="first">Only available from the VCS Explorer. This menu controls filtering of the
+items displayed in the list.</p>
+<dl class="last docutils">
+<dt><em>Show all status</em></dt>
+<dd>Do not filter out any file from the list in the VCS Explorer.</dd>
+<dt><em>Hide all status</em></dt>
+<dd>Filter out all the files from the list in the VCS Explorer.</dd>
+<dt><em>Show &lt;status&gt;</em></dt>
+<dd>When disabled, filter out the files with the given status from the VCS
+Explorer.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="working-with-global-changelog-file">
+<span id="id6"></span><h2>12.5. Working with global ChangeLog file<a class="headerlink" href="#working-with-global-changelog-file" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="index-20"></span><p id="index-21">A global ChangeLog file contains revision logs for all files in a directory and
+is named <tt class="file docutils literal"><span class="pre">ChangeLog</span></tt>. The format for such a file is:</p>
+<div class="highlight-python"><pre>**ISO-DATE  *name  &lt;e-mail&gt;***
+
+&lt;HT&gt;* **filename**[, **filename**]:
+&lt;HT&gt;revision history</pre>
+</div>
+<p>where:</p>
+<dl class="docutils">
+<dt><em>ISO-DATE</em></dt>
+<dd>A date with the ISO format YYYY-MM-DD</dd>
+<dt><em>name</em></dt>
+<dd>A name, generally the developer name</dd>
+<dt><em>&lt;e-mail&gt;</em></dt>
+<dd>The e-mail address of the developer surrounded with &#8216;&lt;&#8217; and &#8216;&gt;&#8217; characters.</dd>
+<dt><em>HT</em></dt>
+<dd>Horizontal tabulation (or 8 spaces)</dd>
+</dl>
+<p>The <em>name</em> and <em>&lt;e-mail&gt;</em> items can be entered automatically by setting the
+<cite>GPS_CHANGELOG_USER</cite> environment variable. Note that there is two spaces
+between the <em>name</em> and the <em>&lt;e-mail&gt;</em>:</p>
+<div class="highlight-python"><pre>On sh shell:
+
+   export GPS_CHANGELOG_USER="John Doe  &lt;john.doe@home.com&gt;"
+
+On Windows shell:
+   set GPS_CHANGELOG_USER="John Doe  &lt;john.doe@home.com&gt;"</pre>
+</div>
+<p>Using the menu entry <strong>Edit global ChangeLog</strong> will open the file
+<tt class="file docutils literal"><span class="pre">ChangeLog</span></tt> in the directory where the current selected file is and
+create the corresponding <tt class="file docutils literal"><span class="pre">ChangeLog</span></tt> entry. This means that the ISO date
+and filename headers will be created if not yet present. You will have to enter
+your name and e-mail address.</p>
+<p>This <tt class="file docutils literal"><span class="pre">ChangeLog</span></tt> file serve as a repository for revision logs, when ready
+to check-in a file use the standard <strong>Edit revision log</strong> menu command. This
+will open the standard revision log buffer with the content filled from the
+global <tt class="file docutils literal"><span class="pre">ChangeLog</span></tt> file.</p>
+</div>
+<div class="section" id="the-revision-view">
+<span id="id7"></span><h2>12.6. The Revision View<a class="headerlink" href="#the-revision-view" title="Permalink to this headline">¶</a></h2>
+<p>The revision view is used to display a revision tree for a given file. Each
+node contains information for a specific revision of the file.</p>
+<img alt="_images/revision-view.jpg" id="index-22" src="_images/revision-view.jpg" />
+<dl class="docutils">
+<dt><em>the revision number</em></dt>
+<dd>This corresponds to the external VCS revision number.</dd>
+<dt><em>author</em></dt>
+<dd>The author of this revision.</dd>
+<dt><em>date / log</em></dt>
+<dd>For root nodes this column contains the check-in date and eventually
+the list of tags and branches associated with this revision. For
+children nodes this contains the log for the corresponding revision.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tools.html" title="13. Tools"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="debugging.html" title="11. Debugging"
+             >previous</a> |</li>
+        <li><a href="index.html">GPS 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

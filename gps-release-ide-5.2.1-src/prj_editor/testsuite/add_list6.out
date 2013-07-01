@@ -1,0 +1,22 @@
+project Add_List6 is
+
+   type A_Type is
+      ("1", "2");
+   A : A_Type := external ("A");
+
+   package Compiler is
+
+      case A is
+
+         when "1" =>
+            for Default_Switches ("ada") use ("-g");
+            for Default_Switches ("ada") use ("new");
+
+         when "2" =>
+            for Default_Switches ("ada") use ("-g");
+            for Default_Switches ("ada") use Compiler'Default_Switches ("ada") & ("-O");
+      end case;
+   end Compiler;
+
+end Add_List6;
+

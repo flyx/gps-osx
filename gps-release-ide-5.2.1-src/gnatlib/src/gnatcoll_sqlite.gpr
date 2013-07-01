@@ -1,0 +1,61 @@
+with "../gnatcoll_shared";
+with "gnatcoll";
+
+project GnatColl_Sqlite is
+
+   for Library_Kind    use GnatColl_Shared.Library_Type;
+   for Object_Dir
+      use Gnatcoll_Shared'Object_Dir & "/sqlite/" & Project'Library_Kind;
+   for Library_Dir
+      use Gnatcoll_Shared'Library_Dir & "/sqlite/" & Project'Library_Kind;
+   for Library_Name    use GnatColl_Shared.Name & "_sqlite";
+   for Library_Version use
+      "lib" & Project'Library_Name
+      & GnatColl_Shared.So_Ext & "." & GnatColl_Shared.Version;
+
+   case GnatColl_Shared.Sqlite is
+      when "no" =>
+        for Source_Dirs use ("sqlite", "sqlite/no_sqlite");
+      when "yes" =>
+        for Source_Dirs use ("sqlite", "sqlite/with_sqlite");
+        for Library_Options use (GnatColl_Shared.Sqlite_Dir) & "-lsqlite3";
+      when "embedded" =>
+        for Languages use ("Ada", "C");
+        for Source_Dirs use ("sqlite", "sqlite/with_sqlite", "sqlite/amalgamation");
+   end case;
+
+   case GnatColl_Shared.Projects is
+      when "no" =>
+         --  GNATCOLL.Xref requires projects support
+         for Excluded_Source_Files use ("gnatcoll-xref.ads",
+                                        "gnatcoll-xref.adb"
+                                        );
+      when "yes" =>
+         for Source_Dirs use Project'Source_Dirs & ("generated");
+   end case;
+
+   package Builder  renames GnatColl_Shared.Builder;
+
+   package Compiler is
+      for Switches ("Ada") use GnatColl_Shared.Compiler'Switches ("Ada");
+      case GnatColl_Shared.Sqlite is
+         when "yes" | "no" =>
+            null;
+         when "embedded" =>
+            for Switches ("C") use GnatColl_Shared.Compiler'Switches ("C") 
+               & ("-DSQLITE_OMIT_LOAD_EXTENSION");
+      end case;
+   end Compiler;
+
+   package Linker is
+      case GnatColl_Shared.Sqlite is
+         when "no" =>
+            null;
+         when "yes" =>
+            for Linker_Options use (Gnatcoll_Shared.Sqlite_Dir) & "-lsqlite3";
+      end case;
+   end Linker;
+
+   package Ide      renames GnatColl_Shared.Ide;
+
+end GnatColl_Sqlite;

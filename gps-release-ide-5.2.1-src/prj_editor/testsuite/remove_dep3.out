@@ -1,0 +1,80 @@
+project Add_Attr5 is
+
+   type A_Type is
+      ("1", "2");
+   A : A_Type := external ("A");
+   type B_Type is
+      ("B1", "B2");
+   B : B_Type := external ("B");
+   for Source_Files use ();
+   for Object_Dir use "..";
+   for Object_Dir use ".";
+
+   case A is
+
+      when "1" =>
+
+         case B is
+
+            when "B1" =>
+               for Source_Dirs use (".");
+         end case;
+   end case;
+
+end Add_Attr5;
+project Add_Attr4 is
+
+   type A_Type is
+      ("1", "2");
+   A : A_Type := external ("A");
+   for Source_Files use ();
+   for Object_Dir use "..";
+   for Object_Dir use ".";
+
+   case A is
+
+      when "1" =>
+         for Source_Dirs use (".");
+   end case;
+
+end Add_Attr4;
+project Add_Attr2 is
+
+   type A_Type is
+      ("1", "2");
+   A : A_Type := external ("A");
+   for Source_Files use ();
+
+   case A is
+
+      when "2" =>
+
+      when "1" =>
+         for Source_Dirs use (".");
+   end case;
+
+end Add_Attr2;
+project Add_Attr is
+
+   type A_Type is
+      ("1", "2");
+   A : A_Type := external ("A");
+
+   case A is
+
+      when "1" =>
+         for Source_Dirs use (".");
+   end case;
+
+end Add_Attr;
+with "add_attr";
+with "add_attr2";
+with "add_attr4";
+with "./add_attr5";
+
+project Remove_Dep is
+
+   for Source_Files use ();
+
+end Remove_Dep;
+

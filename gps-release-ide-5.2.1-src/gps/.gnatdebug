@@ -1,0 +1,112 @@
++
+>&2
+
+--  Configure the traces format
+
+DEBUG.COLORS=yes
+DEBUG.ABSOLUTE_TIME=yes
+DEBUG.ABSOLUTE_DATE=no
+DEBUG.ELAPSED_TIME=no
+DEBUG.STACK_TRACE=no
+DEBUG.LOCATION=no
+DEBUG.ENCLOSING_ENTITY=no
+DEBUG.COUNT=no
+
+--  Always show unexpected exceptions, no matter what other traces are active
+
+UNEXPECTED_EXCEPTIONS=yes
+
+--  Should we override the X11 server's default handling of middle mouse
+--  button to paste the selection (and thus do not paste text highlight)
+
+OVERRIDE_MIDDLE_CLICK_PASTE = yes
+
+--  Select the modules that should be loaded
+
+--  MODULE.DOCGEN             = yes
+--  MODULE.METRICS            = no
+--  MODULE.REFACTOR           = yes
+--  MODULE.PYTHON             = yes
+--  MODULE.CALL_GRAPH         = yes
+--  MODULE.DEPENDENCY         = yes
+--  MODULE.PROJECT_BROWSER    = yes
+--  MODULE.ENTITIES_BROWSER   = yes
+--  MODULE.ALIASES            = yes
+--  MODULE.PROJECT_EXPLORER   = yes
+--  MODULE.FILES_EXPLORER     = yes
+--  MODULE.EXTERNAL_EDITOR    = yes
+--  MODULE.VCS                = yes
+--  MODULE.CUSTOM             = yes
+--  MODULE.ACTION_EDITOR      = yes
+--  MODULE.CODEFIX            = yes
+--  MODULE.GVD                = yes
+--  MODULE.AUNIT              = yes
+--  MODULE.VFS                = yes
+--  MODULE.HELP               = yes
+--  MODULE.SSH                = yes
+--  MODULE.PROJECT_PROPERTIES = yes
+--  MODULE.PROJECT_VIEWER     = yes
+--  MODULE.CPP                = yes
+
+--  Change behavior of GPS. These debug handle do not add extra logs
+
+COMMENT_EXTRACTION                = yes
+EXPLORERS.TOOLTIPS                = no
+ENTITIES.FORCE_UNIQUE_REF         = yes
+ENTITIES.QUERIES_FILE_GRANULARITY = yes
+ENTITIES.ASSERT                   = no
+
+--  Enable this to activate the use of sql-based entities
+ENTITIES.SQLITE                   = no
+
+--  Deactivate SQL traces by default
+SQL.*                             = no
+
+--  Projects. Unfortunately the traces from PROJECTS.GNAT go to stdout
+
+PROJECTS = no
+PROJECTS.GNAT = no
+
+--  Debug handles related to the cross-references database
+
+ALI=no
+ALI.Assert=yes
+CPP=no
+ENTITIES.DEBUG=no
+ENTITIES.DUMP = no
+ENTITIES.REF  = no
+ENTITIES.QUERIES = no
+SCRIPTS.REF = no
+CONTEXTS.REF = no
+CONTEXTS.MEM = no
+
+--  Enable the fallback on the construct tree for xref queries (on by default)
+ENTITIES.CONSTRUCTS = yes
+
+--  Debug handles related to scripts
+
+SHELL_SCRIPT=no
+GPS.KERNEL.SCRIPTS=no
+GPS.KERNEL.MODULES=no
+PYTHON.OUT=yes
+SCRIPTS.LOG=no
+PYTHON.ERRORS=yes
+COMMANDS.CUSTOM=no
+HOOKS=no
+EXPECT=no
+TERM=no
+
+--  Display full traceback for all calls from python to Ada (expensive)
+PYTHON.TB=no
+
+--  Debug handles related to the debugger
+GVD.OUT=no
+GVD.Process.Verbose=no
+
+REMOTE_FULL=no
+PYTHON_REF_COUNT=no
+
+COMPLETION_ADVANCED=no
+
+--  Debug handles related to the editor
+buffer_debug=no

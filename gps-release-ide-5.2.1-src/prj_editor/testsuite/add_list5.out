@@ -1,0 +1,41 @@
+project Add_List5 is
+
+   type A_Type is
+      ("1", "2");
+   A : A_Type := external ("A");
+   type B_Type is
+      ("B1", "B2");
+   B : B_Type := external ("B");
+
+   case A is
+
+      when "1" =>
+
+         case B is
+
+            when "B1" =>
+               for Source_Dirs use ("..");
+               for Source_Dirs use (".");
+               for Object_Dir use ".";
+
+            when "B2" =>
+               for Source_Dirs use ("..");
+               for Source_Dirs use (".");
+         end case;
+
+      when "2" =>
+
+         case B is
+
+            when "B1" =>
+               for Source_Dirs use ("..");
+               for Source_Dirs use ("foo", "bar");
+
+            when "B2" =>
+               for Source_Dirs use ("..");
+               for Source_Dirs use (".");
+         end case;
+   end case;
+
+end Add_List5;
+

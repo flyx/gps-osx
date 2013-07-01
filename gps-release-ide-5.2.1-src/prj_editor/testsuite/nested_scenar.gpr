@@ -1,0 +1,33 @@
+
+--  Tests whether a scenario tested in a package is correctly put in the
+--  project declaration itself. This is mandatory, so that this scenario
+--  variable can be used in the nested cases for the project and any of
+--  the packages.
+--  This is done lazily, only when the project is modified. You thus need
+--  to add an attribute "Source_Files" to the "Compiler" package below
+
+project Nested_Scenar is
+    type OS_Type is ("Linux", "Windows");
+
+    package Compiler is
+      OS : OS_Type := external ("OS");
+    end Compiler;
+end Nested_Scenar;
+
+
+
+--  Expected:
+--  project Nested_Scenar is
+--    type OS_Type is ("Linux", "Windows");
+--    OS : OS_Type := external ("OS");
+--
+--    case A is
+--      when "1" =>
+--         for Source_Files use ("foo.adb");
+--    end case;
+--
+--    package Compiler is
+--    end Compiler;
+--
+--  end Nested_Scenar;
+

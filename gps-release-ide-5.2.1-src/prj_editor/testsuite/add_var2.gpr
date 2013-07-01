@@ -1,0 +1,14 @@
+--  Must be the same as add_var1.out
+project add_var2 is
+
+   for source_dirs use (".");
+   for object_dir use ".";
+   type a_b_type is
+      ("A1", "A2", "A3");
+   a_b : a_b_type := external ("A B");
+   type C_Type is
+      ("C1", "C2", "C3");
+   C : C_Type := external ("C");
+
+end add_var2;
+

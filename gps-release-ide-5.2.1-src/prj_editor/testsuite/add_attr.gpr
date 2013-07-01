@@ -1,0 +1,12 @@
+project Add_Attr is
+
+   type A_Type is ("1", "2");
+   A : A_Type := external ("A");
+
+   case A is
+       when "1" =>
+          for Source_Dirs use (".");
+   end case;
+end Add_Attr;
+
+

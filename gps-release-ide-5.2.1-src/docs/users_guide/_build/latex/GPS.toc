@@ -1,0 +1,351 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Description of the Main Windows}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}The Welcome Dialog}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}The Tip of the Day}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}The Menu Bar}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}The Tool Bar}{6}{section.2.4}
+\contentsline {section}{\numberline {2.5}The Work Space}{6}{section.2.5}
+\contentsline {section}{\numberline {2.6}The Project View}{6}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}The configuration variables}{8}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Icons for source language entities}{9}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}The File View}{10}{section.2.7}
+\contentsline {section}{\numberline {2.8}The Entity View}{11}{section.2.8}
+\contentsline {section}{\numberline {2.9}The Window View}{12}{section.2.9}
+\contentsline {section}{\numberline {2.10}The Outline View}{12}{section.2.10}
+\contentsline {section}{\numberline {2.11}The Clipboard View}{13}{section.2.11}
+\contentsline {section}{\numberline {2.12}The Callgraph View}{14}{section.2.12}
+\contentsline {section}{\numberline {2.13}Bookmarks}{15}{section.2.13}
+\contentsline {section}{\numberline {2.14}The Messages Window}{15}{section.2.14}
+\contentsline {section}{\numberline {2.15}The Shell and Python Windows}{15}{section.2.15}
+\contentsline {section}{\numberline {2.16}The Locations View}{16}{section.2.16}
+\contentsline {section}{\numberline {2.17}The Execution Window}{17}{section.2.17}
+\contentsline {section}{\numberline {2.18}The Status Line}{17}{section.2.18}
+\contentsline {section}{\numberline {2.19}The Task Manager}{17}{section.2.19}
+\contentsline {chapter}{\numberline {3}Online Help}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}The Help Menu}{19}{section.3.1}
+\contentsline {section}{\numberline {3.2}Adding New Help Files}{20}{section.3.2}
+\contentsline {chapter}{\numberline {4}Multiple Document Interface}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Selecting Windows}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Closing Windows}{21}{section.4.2}
+\contentsline {section}{\numberline {4.3}Splitting Windows}{22}{section.4.3}
+\contentsline {section}{\numberline {4.4}Floating Windows}{22}{section.4.4}
+\contentsline {section}{\numberline {4.5}Moving Windows}{23}{section.4.5}
+\contentsline {section}{\numberline {4.6}Perspectives}{23}{section.4.6}
+\contentsline {chapter}{\numberline {5}Editing Files}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}General Information}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}Editing Sources}{28}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Key bindings}{28}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}The File Selector}{28}{section.5.3}
+\contentsline {section}{\numberline {5.4}Menu Items}{30}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}The File Menu}{30}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}The Edit Menu}{32}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Rectangles}{36}{section.5.5}
+\contentsline {section}{\numberline {5.6}Recording and replaying macros}{38}{section.5.6}
+\contentsline {section}{\numberline {5.7}Contextual Menus for Editing Files}{39}{section.5.7}
+\contentsline {section}{\numberline {5.8}Handling of case exceptions}{39}{section.5.8}
+\contentsline {section}{\numberline {5.9}Refactoring}{40}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Rename Entity}{40}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Name Parameters}{40}{subsection.5.9.2}
+\contentsline {subsection}{\numberline {5.9.3}Extract Subprogram}{40}{subsection.5.9.3}
+\contentsline {section}{\numberline {5.10}Using an External Editor}{44}{section.5.10}
+\contentsline {section}{\numberline {5.11}Using the Clipboard}{45}{section.5.11}
+\contentsline {section}{\numberline {5.12}Saving Files}{45}{section.5.12}
+\contentsline {section}{\numberline {5.13}Remote Files}{46}{section.5.13}
+\contentsline {chapter}{\numberline {6}Source Navigation}{49}{chapter.6}
+\contentsline {section}{\numberline {6.1}Support for Cross-References}{49}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Loading xref info in memory}{49}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Ada xrefs heuristics}{50}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}The Navigate Menu}{50}{section.6.2}
+\contentsline {section}{\numberline {6.3}Contextual Menus for Source Navigation}{51}{section.6.3}
+\contentsline {section}{\numberline {6.4}Navigating with hyperlinks}{53}{section.6.4}
+\contentsline {section}{\numberline {6.5}Highlighting dispatching calls}{53}{section.6.5}
+\contentsline {chapter}{\numberline {7}Project Handling}{55}{chapter.7}
+\contentsline {section}{\numberline {7.1}Description of the Projects}{55}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Project files and GNAT tools}{55}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Contents of project files}{56}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Supported Languages}{57}{section.7.2}
+\contentsline {section}{\numberline {7.3}Scenarios and Configuration Variables}{58}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Creating new configuration variables}{58}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Editing existing configuration variables}{59}{subsection.7.3.2}
+\contentsline {section}{\numberline {7.4}Extending Projects}{60}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Description of extending projects}{60}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Creating extending projects}{60}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Adding files to extending projects}{61}{subsection.7.4.3}
+\contentsline {section}{\numberline {7.5}The Project View}{61}{section.7.5}
+\contentsline {section}{\numberline {7.6}Disabling Project Edition Features}{62}{section.7.6}
+\contentsline {section}{\numberline {7.7}The Project Menu}{62}{section.7.7}
+\contentsline {section}{\numberline {7.8}The Project Wizard}{63}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}Project Type}{65}{subsection.7.8.1}
+\contentsline {subsection}{\numberline {7.8.2}Project Naming}{65}{subsection.7.8.2}
+\contentsline {subsection}{\numberline {7.8.3}Languages Selection}{66}{subsection.7.8.3}
+\contentsline {subsection}{\numberline {7.8.4}VCS Selection}{66}{subsection.7.8.4}
+\contentsline {subsection}{\numberline {7.8.5}Source Directories Selection}{66}{subsection.7.8.5}
+\contentsline {subsection}{\numberline {7.8.6}Build Directory}{66}{subsection.7.8.6}
+\contentsline {subsection}{\numberline {7.8.7}Main Units}{67}{subsection.7.8.7}
+\contentsline {subsection}{\numberline {7.8.8}Library}{67}{subsection.7.8.8}
+\contentsline {subsection}{\numberline {7.8.9}Naming Scheme}{67}{subsection.7.8.9}
+\contentsline {subsection}{\numberline {7.8.10}Switches}{69}{subsection.7.8.10}
+\contentsline {section}{\numberline {7.9}The Project Dependencies Editor}{71}{section.7.9}
+\contentsline {section}{\numberline {7.10}The Project Properties Editor}{72}{section.7.10}
+\contentsline {section}{\numberline {7.11}The Switches Editor}{74}{section.7.11}
+\contentsline {section}{\numberline {7.12}The Project Browser}{76}{section.7.12}
+\contentsline {chapter}{\numberline {8}Searching and Replacing}{77}{chapter.8}
+\contentsline {chapter}{\numberline {9}Compilation/Build}{81}{chapter.9}
+\contentsline {section}{\numberline {9.1}The Build Menu}{81}{section.9.1}
+\contentsline {section}{\numberline {9.2}The Target Configuration Dialog}{83}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}The Targets tree}{84}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}The configuration panel}{84}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}Background compilations}{85}{subsection.9.2.3}
+\contentsline {section}{\numberline {9.3}The Build Mode}{86}{section.9.3}
+\contentsline {section}{\numberline {9.4}Working with two compilers}{86}{section.9.4}
+\contentsline {subsection}{\numberline {9.4.1}Interaction with the remote mode}{87}{subsection.9.4.1}
+\contentsline {chapter}{\numberline {10}Source Browsing}{89}{chapter.10}
+\contentsline {section}{\numberline {10.1}General Issues}{89}{section.10.1}
+\contentsline {section}{\numberline {10.2}Call Graph}{90}{section.10.2}
+\contentsline {section}{\numberline {10.3}Dependency Browser}{92}{section.10.3}
+\contentsline {section}{\numberline {10.4}Entity Browser}{93}{section.10.4}
+\contentsline {chapter}{\numberline {11}Debugging}{95}{chapter.11}
+\contentsline {section}{\numberline {11.1}The Debug Menu}{95}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Initialize}{96}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}Debug}{96}{subsection.11.1.2}
+\contentsline {subsection}{\numberline {11.1.3}Data}{97}{subsection.11.1.3}
+\contentsline {section}{\numberline {11.2}The Call Stack Window}{98}{section.11.2}
+\contentsline {section}{\numberline {11.3}The Data Window}{98}{section.11.3}
+\contentsline {subsection}{\numberline {11.3.1}Description}{98}{subsection.11.3.1}
+\contentsline {subsection}{\numberline {11.3.2}Manipulating items}{101}{subsection.11.3.2}
+\contentsline {subsubsection}{Moving items}{101}{subsubsection*.13}
+\contentsline {subsubsection}{Colors}{101}{subsubsection*.14}
+\contentsline {subsubsection}{Icons}{102}{subsubsection*.15}
+\contentsline {section}{\numberline {11.4}The Breakpoint Editor}{103}{section.11.4}
+\contentsline {subsection}{\numberline {11.4.1}Scope/Action Settings for VxWorks AE}{104}{subsection.11.4.1}
+\contentsline {section}{\numberline {11.5}The Memory Window}{105}{section.11.5}
+\contentsline {section}{\numberline {11.6}Using the Source Editor when Debugging}{106}{section.11.6}
+\contentsline {section}{\numberline {11.7}The Assembly Window}{107}{section.11.7}
+\contentsline {section}{\numberline {11.8}The Debugger Console}{109}{section.11.8}
+\contentsline {section}{\numberline {11.9}Customizing the Debugger}{109}{section.11.9}
+\contentsline {chapter}{\numberline {12}Version Control System}{113}{chapter.12}
+\contentsline {section}{\numberline {12.1}The VCS Explorer}{114}{section.12.1}
+\contentsline {section}{\numberline {12.2}The VCS Activities}{116}{section.12.2}
+\contentsline {section}{\numberline {12.3}The VCS Menu}{117}{section.12.3}
+\contentsline {section}{\numberline {12.4}The Version Control Contextual Menu}{118}{section.12.4}
+\contentsline {section}{\numberline {12.5}Working with global ChangeLog file}{120}{section.12.5}
+\contentsline {section}{\numberline {12.6}The Revision View}{121}{section.12.6}
+\contentsline {chapter}{\numberline {13}Tools}{123}{chapter.13}
+\contentsline {section}{\numberline {13.1}The Tools Menu}{123}{section.13.1}
+\contentsline {section}{\numberline {13.2}Coding Standard}{124}{section.13.2}
+\contentsline {section}{\numberline {13.3}Visual Comparison}{125}{section.13.3}
+\contentsline {section}{\numberline {13.4}Code Fixing}{126}{section.13.4}
+\contentsline {section}{\numberline {13.5}Documentation Generation}{127}{section.13.5}
+\contentsline {section}{\numberline {13.6}Working With Unit Tests}{129}{section.13.6}
+\contentsline {subsection}{\numberline {13.6.1}The GNATtest Menu}{129}{subsection.13.6.1}
+\contentsline {subsection}{\numberline {13.6.2}The Contextual Menu}{129}{subsection.13.6.2}
+\contentsline {subsection}{\numberline {13.6.3}Project Properties}{130}{subsection.13.6.3}
+\contentsline {section}{\numberline {13.7}Metrics}{130}{section.13.7}
+\contentsline {subsection}{\numberline {13.7.1}The Metrics Menu}{130}{subsection.13.7.1}
+\contentsline {subsection}{\numberline {13.7.2}The Contextual Menu}{130}{subsection.13.7.2}
+\contentsline {section}{\numberline {13.8}Code Coverage}{130}{section.13.8}
+\contentsline {subsection}{\numberline {13.8.1}Coverage Menu}{131}{subsection.13.8.1}
+\contentsline {subsection}{\numberline {13.8.2}The Contextual Menu}{131}{subsection.13.8.2}
+\contentsline {subsection}{\numberline {13.8.3}The Coverage Report}{132}{subsection.13.8.3}
+\contentsline {section}{\numberline {13.9}Stack Analysis}{133}{section.13.9}
+\contentsline {subsection}{\numberline {13.9.1}The Stack Analysis Menu}{134}{subsection.13.9.1}
+\contentsline {subsection}{\numberline {13.9.2}The Contextual Menu}{134}{subsection.13.9.2}
+\contentsline {subsection}{\numberline {13.9.3}The Stack Usage Report}{134}{subsection.13.9.3}
+\contentsline {subsection}{\numberline {13.9.4}The Stack Usage Editor}{134}{subsection.13.9.4}
+\contentsline {chapter}{\numberline {14}Working in a Cross Environment}{137}{chapter.14}
+\contentsline {section}{\numberline {14.1}Customizing your Projects}{137}{section.14.1}
+\contentsline {section}{\numberline {14.2}Debugger Issues}{138}{section.14.2}
+\contentsline {chapter}{\numberline {15}Using GPS for Remote Development}{139}{chapter.15}
+\contentsline {section}{\numberline {15.1}Requirements}{139}{section.15.1}
+\contentsline {section}{\numberline {15.2}Setup the remote servers}{140}{section.15.2}
+\contentsline {subsection}{\numberline {15.2.1}The remote configuration dialog}{140}{subsection.15.2.1}
+\contentsline {subsection}{\numberline {15.2.2}Connection settings}{141}{subsection.15.2.2}
+\contentsline {subsection}{\numberline {15.2.3}Paths settings}{142}{subsection.15.2.3}
+\contentsline {section}{\numberline {15.3}Setup a remote project}{142}{section.15.3}
+\contentsline {subsection}{\numberline {15.3.1}Remote operations}{142}{subsection.15.3.1}
+\contentsline {subsection}{\numberline {15.3.2}The remote view}{143}{subsection.15.3.2}
+\contentsline {subsection}{\numberline {15.3.3}Loading a remote project}{143}{subsection.15.3.3}
+\contentsline {section}{\numberline {15.4}Limitations}{144}{section.15.4}
+\contentsline {chapter}{\numberline {16}Customizing and Extending GPS}{145}{chapter.16}
+\contentsline {section}{\numberline {16.1}The Preferences Dialog}{145}{section.16.1}
+\contentsline {section}{\numberline {16.2}GPS Themes}{158}{section.16.2}
+\contentsline {section}{\numberline {16.3}The Key Manager Dialog}{158}{section.16.3}
+\contentsline {section}{\numberline {16.4}The Plug-ins Editor}{159}{section.16.4}
+\contentsline {section}{\numberline {16.5}Customizing through XML and Python files}{160}{section.16.5}
+\contentsline {subsection}{\numberline {16.5.1}Customization files and plugins}{160}{subsection.16.5.1}
+\contentsline {subsubsection}{Python files}{161}{subsubsection*.34}
+\contentsline {subsubsection}{XML files}{162}{subsubsection*.35}
+\contentsline {subsection}{\numberline {16.5.2}Defining Actions}{163}{subsection.16.5.2}
+\contentsline {subsection}{\numberline {16.5.3}Macro arguments}{166}{subsection.16.5.3}
+\contentsline {subsection}{\numberline {16.5.4}Filtering actions}{170}{subsection.16.5.4}
+\contentsline {subsubsection}{The filters tags}{170}{subsubsection*.36}
+\contentsline {subsection}{\numberline {16.5.5}Adding new menus}{172}{subsection.16.5.5}
+\contentsline {subsection}{\numberline {16.5.6}Adding contextual menus}{174}{subsection.16.5.6}
+\contentsline {subsection}{\numberline {16.5.7}Adding tool bar buttons}{175}{subsection.16.5.7}
+\contentsline {subsection}{\numberline {16.5.8}Binding actions to keys}{176}{subsection.16.5.8}
+\contentsline {subsection}{\numberline {16.5.9}Preferences support in custom files}{176}{subsection.16.5.9}
+\contentsline {subsubsection}{Creating new preferences}{176}{subsubsection*.37}
+\contentsline {subsubsection}{Setting preferences values}{178}{subsubsection*.38}
+\contentsline {subsection}{\numberline {16.5.10}Creating themes}{178}{subsection.16.5.10}
+\contentsline {subsection}{\numberline {16.5.11}Defining new search patterns}{179}{subsection.16.5.11}
+\contentsline {subsection}{\numberline {16.5.12}Adding support for new languages}{179}{subsection.16.5.12}
+\contentsline {subsection}{\numberline {16.5.13}Defining text aliases}{183}{subsection.16.5.13}
+\contentsline {subsection}{\numberline {16.5.14}Aliases files}{184}{subsection.16.5.14}
+\contentsline {subsection}{\numberline {16.5.15}Defining project attributes}{185}{subsection.16.5.15}
+\contentsline {subsubsection}{Declaring the new attributes}{185}{subsubsection*.39}
+\contentsline {subsubsection}{Declaring the type of the new attributes}{187}{subsubsection*.40}
+\contentsline {subsubsection}{Examples}{189}{subsubsection*.41}
+\contentsline {subsubsection}{Accessing the project attributes}{191}{subsubsection*.42}
+\contentsline {subsection}{\numberline {16.5.16}Adding casing exceptions}{192}{subsection.16.5.16}
+\contentsline {subsection}{\numberline {16.5.17}Adding documentation}{192}{subsection.16.5.17}
+\contentsline {subsection}{\numberline {16.5.18}Adding stock icons}{193}{subsection.16.5.18}
+\contentsline {subsection}{\numberline {16.5.19}Remote programming customization}{194}{subsection.16.5.19}
+\contentsline {subsubsection}{Defining a remote connection tool}{194}{subsubsection*.43}
+\contentsline {subsubsection}{Defining a shell}{195}{subsubsection*.44}
+\contentsline {subsubsection}{Configuring rsync usage}{196}{subsubsection*.45}
+\contentsline {subsubsection}{Defining a remote server}{196}{subsubsection*.46}
+\contentsline {subsubsection}{Defining a remote path translation}{196}{subsubsection*.47}
+\contentsline {subsection}{\numberline {16.5.20}Customizing build Targets and Models}{197}{subsection.16.5.20}
+\contentsline {subsubsection}{Defining new Target Models}{197}{subsubsection*.48}
+\contentsline {subsubsection}{Defining new Targets}{197}{subsubsection*.49}
+\contentsline {subsubsection}{Defining new Modes}{199}{subsubsection*.50}
+\contentsline {subsection}{\numberline {16.5.21}Toolchains customization}{199}{subsection.16.5.21}
+\contentsline {section}{\numberline {16.6}Adding support for new tools}{200}{section.16.6}
+\contentsline {subsection}{\numberline {16.6.1}Defining supported languages}{200}{subsection.16.6.1}
+\contentsline {subsection}{\numberline {16.6.2}Defining default command line}{201}{subsection.16.6.2}
+\contentsline {subsection}{\numberline {16.6.3}Defining tool switches}{201}{subsection.16.6.3}
+\contentsline {subsection}{\numberline {16.6.4}Executing external tools}{205}{subsection.16.6.4}
+\contentsline {subsubsection}{Chaining commands}{205}{subsubsection*.51}
+\contentsline {subsubsection}{Saving open windows}{205}{subsubsection*.52}
+\contentsline {subsubsection}{Querying project switches}{206}{subsubsection*.53}
+\contentsline {subsubsection}{Querying switches interactively}{206}{subsubsection*.54}
+\contentsline {subsubsection}{Redirecting the command output}{207}{subsubsection*.55}
+\contentsline {subsubsection}{Processing the tool output}{207}{subsubsection*.56}
+\contentsline {section}{\numberline {16.7}Customization examples}{208}{section.16.7}
+\contentsline {subsection}{\numberline {16.7.1}Menu example}{208}{subsection.16.7.1}
+\contentsline {subsection}{\numberline {16.7.2}Tool example}{209}{subsection.16.7.2}
+\contentsline {section}{\numberline {16.8}Scripting GPS}{210}{section.16.8}
+\contentsline {subsection}{\numberline {16.8.1}Scripts}{210}{subsection.16.8.1}
+\contentsline {subsection}{\numberline {16.8.2}Scripts and GPS actions}{211}{subsection.16.8.2}
+\contentsline {subsection}{\numberline {16.8.3}The GPS Shell}{211}{subsection.16.8.3}
+\contentsline {subsection}{\numberline {16.8.4}The Python Interpreter}{212}{subsection.16.8.4}
+\contentsline {subsection}{\numberline {16.8.5}Python modules}{213}{subsection.16.8.5}
+\contentsline {subsection}{\numberline {16.8.6}Subprogram parameters}{214}{subsection.16.8.6}
+\contentsline {subsection}{\numberline {16.8.7}Python FAQ}{217}{subsection.16.8.7}
+\contentsline {subsubsection}{Hello World! in python}{217}{subsubsection*.57}
+\contentsline {subsubsection}{Spawning external processes}{217}{subsubsection*.58}
+\contentsline {subsubsection}{Redirecting the output of spawned processes}{218}{subsubsection*.59}
+\contentsline {subsubsection}{Contextual menus on object directories only}{218}{subsubsection*.60}
+\contentsline {subsubsection}{Redirecting the output to specific windows}{220}{subsubsection*.61}
+\contentsline {subsubsection}{Reloading a python file in GPS}{220}{subsubsection*.62}
+\contentsline {subsubsection}{Printing the GPS Python documentation}{221}{subsubsection*.63}
+\contentsline {subsubsection}{Automatically loading python files at startup}{222}{subsubsection*.64}
+\contentsline {subsubsection}{Hiding contextual menus}{222}{subsubsection*.65}
+\contentsline {subsubsection}{Creating custom graphical interfaces}{222}{subsubsection*.66}
+\contentsline {subsection}{\numberline {16.8.8}Hooks}{222}{subsection.16.8.8}
+\contentsline {subsubsection}{Adding commands to hooks}{223}{subsubsection*.67}
+\contentsline {subsubsection}{Action hooks}{224}{subsubsection*.68}
+\contentsline {subsubsection}{Running hooks}{224}{subsubsection*.69}
+\contentsline {subsubsection}{Creating new hooks}{225}{subsubsection*.70}
+\contentsline {section}{\numberline {16.9}Adding support for new Version Control Systems}{226}{section.16.9}
+\contentsline {subsection}{\numberline {16.9.1}Custom VCS interfaces}{226}{subsection.16.9.1}
+\contentsline {subsection}{\numberline {16.9.2}Describing a VCS}{226}{subsection.16.9.2}
+\contentsline {subsubsection}{The VCS node}{226}{subsubsection*.71}
+\contentsline {subsubsection}{Associating actions to operations}{227}{subsubsection*.72}
+\contentsline {subsubsection}{Defining revision information}{228}{subsubsection*.73}
+\contentsline {subsubsection}{Defining status}{228}{subsubsection*.74}
+\contentsline {subsubsection}{Output parsers}{228}{subsubsection*.75}
+\contentsline {subsection}{\numberline {16.9.3}Implementing VCS actions}{229}{subsection.16.9.3}
+\contentsline {subsection}{\numberline {16.9.4}Implementing VCS menus}{232}{subsection.16.9.4}
+\contentsline {section}{\numberline {16.10}The Server Mode}{233}{section.16.10}
+\contentsline {section}{\numberline {16.11}Adding project templates}{234}{section.16.11}
+\contentsline {chapter}{\numberline {17}Environment}{235}{chapter.17}
+\contentsline {section}{\numberline {17.1}Command Line Options}{235}{section.17.1}
+\contentsline {section}{\numberline {17.2}Environment Variables}{235}{section.17.2}
+\contentsline {section}{\numberline {17.3}Running GPS on Mac OS X}{236}{section.17.3}
+\contentsline {section}{\numberline {17.4}Files}{236}{section.17.4}
+\contentsline {section}{\numberline {17.5}Reporting Suggestions and Bugs}{238}{section.17.5}
+\contentsline {section}{\numberline {17.6}Solving Problems}{238}{section.17.6}
+\contentsline {chapter}{\numberline {18}Scripting API reference for \emph {GPS}}{241}{chapter.18}
+\contentsline {section}{\numberline {18.1}Function description}{241}{section.18.1}
+\contentsline {section}{\numberline {18.2}User data in instances}{241}{section.18.2}
+\contentsline {section}{\numberline {18.3}Hooks}{242}{section.18.3}
+\contentsline {section}{\numberline {18.4}Functions}{242}{section.18.4}
+\contentsline {section}{\numberline {18.5}Classes}{250}{section.18.5}
+\contentsline {subsection}{\numberline {18.5.1}\texttt {GPS.Action}}{250}{subsection.18.5.1}
+\contentsline {subsection}{\numberline {18.5.2}\texttt {GPS.Activities}}{252}{subsection.18.5.2}
+\contentsline {subsection}{\numberline {18.5.3}\texttt {GPS.AreaContext}}{253}{subsection.18.5.3}
+\contentsline {subsection}{\numberline {18.5.4}\texttt {GPS.Bookmark}}{254}{subsection.18.5.4}
+\contentsline {subsection}{\numberline {18.5.5}\texttt {GPS.BuildTarget}}{255}{subsection.18.5.5}
+\contentsline {subsection}{\numberline {18.5.6}\texttt {GPS.Button}}{256}{subsection.18.5.6}
+\contentsline {subsection}{\numberline {18.5.7}\texttt {GPS.Clipboard}}{257}{subsection.18.5.7}
+\contentsline {subsection}{\numberline {18.5.8}\texttt {GPS.CodeAnalysis}}{258}{subsection.18.5.8}
+\contentsline {subsection}{\numberline {18.5.9}\texttt {GPS.Codefix}}{259}{subsection.18.5.9}
+\contentsline {subsection}{\numberline {18.5.10}\texttt {GPS.CodefixError}}{261}{subsection.18.5.10}
+\contentsline {subsection}{\numberline {18.5.11}\texttt {GPS.Combo}}{261}{subsection.18.5.11}
+\contentsline {subsection}{\numberline {18.5.12}\texttt {GPS.Command}}{263}{subsection.18.5.12}
+\contentsline {subsection}{\numberline {18.5.13}\texttt {GPS.CommandWindow}}{263}{subsection.18.5.13}
+\contentsline {subsection}{\numberline {18.5.14}\texttt {GPS.Console}}{265}{subsection.18.5.14}
+\contentsline {subsection}{\numberline {18.5.15}\texttt {GPS.Context}}{270}{subsection.18.5.15}
+\contentsline {subsection}{\numberline {18.5.16}\texttt {GPS.Contextual}}{270}{subsection.18.5.16}
+\contentsline {subsection}{\numberline {18.5.17}\texttt {GPS.Debugger}}{274}{subsection.18.5.17}
+\contentsline {subsection}{\numberline {18.5.18}\texttt {GPS.Docgen}}{276}{subsection.18.5.18}
+\contentsline {subsection}{\numberline {18.5.19}\texttt {GPS.DocgenTagHandler}}{277}{subsection.18.5.19}
+\contentsline {subsection}{\numberline {18.5.20}\texttt {GPS.Editor}}{279}{subsection.18.5.20}
+\contentsline {subsection}{\numberline {18.5.21}\texttt {GPS.EditorBuffer}}{288}{subsection.18.5.21}
+\contentsline {subsection}{\numberline {18.5.22}\texttt {GPS.EditorHighlighter}}{293}{subsection.18.5.22}
+\contentsline {subsection}{\numberline {18.5.23}\texttt {GPS.EditorLocation}}{294}{subsection.18.5.23}
+\contentsline {subsection}{\numberline {18.5.24}\texttt {GPS.EditorMark}}{298}{subsection.18.5.24}
+\contentsline {subsection}{\numberline {18.5.25}\texttt {GPS.EditorOverlay}}{299}{subsection.18.5.25}
+\contentsline {subsection}{\numberline {18.5.26}\texttt {GPS.EditorView}}{300}{subsection.18.5.26}
+\contentsline {subsection}{\numberline {18.5.27}\texttt {GPS.Entity}}{301}{subsection.18.5.27}
+\contentsline {subsection}{\numberline {18.5.28}\texttt {GPS.EntityContext}}{306}{subsection.18.5.28}
+\contentsline {subsection}{\numberline {18.5.29}\texttt {GPS.Exception}}{306}{subsection.18.5.29}
+\contentsline {subsection}{\numberline {18.5.30}\texttt {GPS.File}}{306}{subsection.18.5.30}
+\contentsline {subsection}{\numberline {18.5.31}\texttt {GPS.FileContext}}{310}{subsection.18.5.31}
+\contentsline {subsection}{\numberline {18.5.32}\texttt {GPS.FileLocation}}{311}{subsection.18.5.32}
+\contentsline {subsection}{\numberline {18.5.33}\texttt {GPS.GUI}}{312}{subsection.18.5.33}
+\contentsline {subsection}{\numberline {18.5.34}\texttt {GPS.HTML}}{313}{subsection.18.5.34}
+\contentsline {subsection}{\numberline {18.5.35}\texttt {GPS.Help}}{314}{subsection.18.5.35}
+\contentsline {subsection}{\numberline {18.5.36}\texttt {GPS.Hook}}{315}{subsection.18.5.36}
+\contentsline {subsection}{\numberline {18.5.37}\texttt {GPS.Invalid\_Argument}}{327}{subsection.18.5.37}
+\contentsline {subsection}{\numberline {18.5.38}\texttt {GPS.Locations}}{327}{subsection.18.5.38}
+\contentsline {subsection}{\numberline {18.5.39}\texttt {GPS.Logger}}{329}{subsection.18.5.39}
+\contentsline {subsection}{\numberline {18.5.40}\texttt {GPS.MDI}}{330}{subsection.18.5.40}
+\contentsline {subsection}{\numberline {18.5.41}\texttt {GPS.MDIWindow}}{332}{subsection.18.5.41}
+\contentsline {subsection}{\numberline {18.5.42}\texttt {GPS.Menu}}{334}{subsection.18.5.42}
+\contentsline {subsection}{\numberline {18.5.43}\texttt {GPS.Message}}{335}{subsection.18.5.43}
+\contentsline {subsection}{\numberline {18.5.44}\texttt {GPS.Missing\_Arguments}}{337}{subsection.18.5.44}
+\contentsline {subsection}{\numberline {18.5.45}\texttt {GPS.Preference}}{337}{subsection.18.5.45}
+\contentsline {subsection}{\numberline {18.5.46}\texttt {GPS.Process}}{339}{subsection.18.5.46}
+\contentsline {subsection}{\numberline {18.5.47}\texttt {GPS.Project}}{343}{subsection.18.5.47}
+\contentsline {subsection}{\numberline {18.5.48}\texttt {GPS.ProjectTemplate}}{352}{subsection.18.5.48}
+\contentsline {subsection}{\numberline {18.5.49}\texttt {GPS.ReferencesCommand}}{352}{subsection.18.5.49}
+\contentsline {subsection}{\numberline {18.5.50}\texttt {GPS.Revision}}{353}{subsection.18.5.50}
+\contentsline {subsection}{\numberline {18.5.51}\texttt {GPS.Style}}{353}{subsection.18.5.51}
+\contentsline {subsection}{\numberline {18.5.52}\texttt {GPS.SwitchesChooser}}{354}{subsection.18.5.52}
+\contentsline {subsection}{\numberline {18.5.53}\texttt {GPS.Task}}{355}{subsection.18.5.53}
+\contentsline {subsection}{\numberline {18.5.54}\texttt {GPS.Timeout}}{356}{subsection.18.5.54}
+\contentsline {subsection}{\numberline {18.5.55}\texttt {GPS.ToolButton}}{356}{subsection.18.5.55}
+\contentsline {subsection}{\numberline {18.5.56}\texttt {GPS.Toolbar}}{357}{subsection.18.5.56}
+\contentsline {subsection}{\numberline {18.5.57}\texttt {GPS.Unexpected\_Exception}}{358}{subsection.18.5.57}
+\contentsline {subsection}{\numberline {18.5.58}\texttt {GPS.VCS}}{359}{subsection.18.5.58}
+\contentsline {subsection}{\numberline {18.5.59}\texttt {GPS.Vdiff}}{361}{subsection.18.5.59}
+\contentsline {subsection}{\numberline {18.5.60}\texttt {GPS.XMLViewer}}{363}{subsection.18.5.60}
+\contentsline {chapter}{\numberline {19}GNU Free Documentation License}{365}{chapter.19}
+\contentsline {section}{\numberline {19.1}PREAMBLE}{365}{section.19.1}
+\contentsline {section}{\numberline {19.2}APPLICABILITY AND DEFINITIONS}{365}{section.19.2}
+\contentsline {section}{\numberline {19.3}VERBATIM COPYING}{366}{section.19.3}
+\contentsline {section}{\numberline {19.4}COPYING IN QUANTITY}{366}{section.19.4}
+\contentsline {section}{\numberline {19.5}MODIFICATIONS}{367}{section.19.5}
+\contentsline {section}{\numberline {19.6}COMBINING DOCUMENTS}{368}{section.19.6}
+\contentsline {section}{\numberline {19.7}COLLECTIONS OF DOCUMENTS}{368}{section.19.7}
+\contentsline {section}{\numberline {19.8}AGGREGATION WITH INDEPENDENT WORKS}{368}{section.19.8}
+\contentsline {section}{\numberline {19.9}TRANSLATION}{369}{section.19.9}
+\contentsline {section}{\numberline {19.10}TERMINATION}{369}{section.19.10}
+\contentsline {section}{\numberline {19.11}FUTURE REVISIONS OF THIS LICENSE}{369}{section.19.11}
+\contentsline {section}{\numberline {19.12}ADDENDUM: How to use this License for your documents}{369}{section.19.12}
+\contentsline {chapter}{\numberline {20}Indices and tables}{371}{chapter.20}
+\contentsline {chapter}{Python Module Index}{373}{section*.697}
+\contentsline {chapter}{Index}{375}{section*.698}

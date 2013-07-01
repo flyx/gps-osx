@@ -1,0 +1,12 @@
+project Non_Scenar_Case is
+   type A_Type is ("A1", "A2");
+   A : A_Type := "A1";
+
+   case A is
+      when "A1" =>
+         for object_dir use ".";
+
+      when "A2" =>
+         for object_dir use "..";
+   end case;
+end Non_Scenar_Case;

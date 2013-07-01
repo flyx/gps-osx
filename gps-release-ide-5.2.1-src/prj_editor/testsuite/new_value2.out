@@ -1,0 +1,25 @@
+project New_Value2_Def is
+
+   type A_Type is
+      ("A2", "A1", "1", "2");
+   A_Var : A_Type := external ("A", "2");
+
+   case A_Var is
+
+      when "1" =>
+         for Object_Dir use ".";
+
+      when "2" =>
+
+   end case;
+
+end New_Value2_Def;
+with "new_value2_def";
+
+project New_Value2 is
+
+   for Source_Files use ();
+   for Object_Dir use ".";
+
+end New_Value2;
+

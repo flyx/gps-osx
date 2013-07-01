@@ -1,0 +1,11 @@
+project rename_var_imported is
+    type A_Type is ("A1", "A2");
+    A : A_Type := external ("var1");
+
+    A := "c" & external ("var1")
+         & external ("var2")
+         & external ("var1");
+
+    for source_dirs use
+       (".", "./" & external ("var1"));
+end rename_var_imported;

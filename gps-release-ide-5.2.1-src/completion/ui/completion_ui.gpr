@@ -1,0 +1,21 @@
+with "../../kernel/kernel";
+with "../../common/common";
+with "../../shared";
+
+with "../core/completion_core";
+
+project Completion_UI is
+
+   for Source_Dirs use ("src");
+   for Languages use ("Ada");
+   for Object_Dir use Shared'Object_Dir;
+
+   package Compiler renames Shared.Compiler;
+
+   package Builder is
+      for Default_Switches ("ada") use ("-g", "-m");
+   end Builder;
+
+   package IDE renames Shared.IDE;
+
+end Completion_UI;

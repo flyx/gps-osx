@@ -1,0 +1,5 @@
+project Add_Var is
+   for Source_Dirs use (".");
+   for Source_Files use ();
+   for Object_Dir use ".";
+end Add_Var;

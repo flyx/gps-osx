@@ -1,0 +1,27 @@
+project Del_Var is
+
+   type Build_Type is
+      ("PRODUCTION", "DEBUG");
+   Build : Build_Type := external ("Build");
+
+   package Compiler is
+      case Build is
+         when "DEBUG" =>
+            for Default_Switches ("ada") use ("-O2", "-gnatf", "-gnatwe", "-g");      end case;
+   end Compiler;
+
+   package Builder is
+      case Build is
+         when "DEBUG" =>
+            for Default_Switches ("ada") use ("-g");
+      end case;
+   end Builder;
+
+   package Linker is
+      case Build is
+         when "DEBUG" =>
+            for Default_Switches ("ada") use ("-g");
+      end case;
+   end Linker;
+
+end Del_Var;

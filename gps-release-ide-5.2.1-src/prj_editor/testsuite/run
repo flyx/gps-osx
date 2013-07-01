@@ -1,0 +1,328 @@
+#!/bin/bash
+## Switches: the usual switches from Config.sh
+
+. `dirname $0`/../../scripts/CONFIG.sh
+
+print_header "Project editor tests"
+parse_opts "$@"
+
+if [ $clean == 1 ]; then
+   # ??? What should we do here ?
+   echo ""
+   exit 0
+fi
+
+passed=0
+total=0
+
+pwd_replace="/foo/bar"
+testsuite="../obj/$OBJ_SUBDIR/testsuite"
+
+run_and_exit "gprbuild -p -ws -q -P../prj_editor testsuite.adb $EXTRA_GPRBUILD_OPT"
+setup_traces
+
+check() {
+   comment=$1
+   out=$2
+   cmd=$3
+   file=$4
+   shift 4
+   
+   $testsuite $cmd $file "$@" 2>&1 | \
+   sed -e "s@[A-Za-z]:\\\\@/@g" | sed -e "s@\\\\@/@g" | \
+   sed -e "s@\([^/]*\)/.*/\([a-zA-Z0-9_]*\.[a-z]*.*\)@\1/foo/bar/\2@g" | \
+   tr -d '\r' \
+   > $out.tmp
+
+   $diff $out $out.tmp > $out.dif 2>&1 
+   if [ $? -ne 0 ]; then
+      echo_with_status 0 "-- $comment"
+      if [ $showdiff = 1 ]; then
+         echo "$testsuite $cmd $file ""$@"
+         echo "   expected: $out"
+         $diff $out $out.tmp
+      fi
+
+      if [ "$REPORTER" != "" ]; then
+         $REPORTER "project_editor.$comment" "DIFF" $out.dif
+      fi
+
+   else
+      if [ $silent = 0 ]; then
+         echo_with_status 1 "-- $comment OK"
+      fi
+      passed=`expr $passed \+ 1`
+
+      if [ "$REPORTER" != "" ]; then
+         $REPORTER "project_editor.$comment" "OK" /dev/null
+      fi
+   fi
+
+   total=`expr $total \+ 1`
+   rm -f $out.tmp $out.dif
+}
+
+##########################
+## Normalizing projects ##
+##########################
+
+check "Elimination of null statements: eliminate_null.gpr" eliminate_null.out \
+    NORM eliminate_null
+check "Handling of when others" other.out NORM other
+check "Same case variables" same_case.out NORM same_case
+check "Scenario variable declared in package" nested_scenar.out \
+    NORM nested_scenar
+check "Normalizing an empty case construction" empty_case.out \
+    NORM empty_case
+check "Normalizing with reference to variables in other projects" ref_project.out \
+    NORM remove_var7
+check "Normalizing with declaration in package" var_in_pkg.out NORM var_in_pkg
+check "Two equal scenario variables" two_variables.out \
+    NORM two_variables
+check "Three equal scenario variables" three_variables.out \
+    NORM three_variables
+
+#################################
+## Projects we can't normalize ##
+#################################
+
+#??? Should have some tests for projects we can't normalize
+#???   - incoherent types for variables
+
+# In fact, we could normalize this one, if the variable is known to have a
+# constant value (just do a DELETE_VAR and keep this constant value).
+# But since the value can be computed from other values, this is hard to do
+# in the general case
+check "Can't normalize with non-scenario variables in case constructions" \
+    non_scenar_case.out \
+    NORM non_scenar_case.gpr
+
+# Normalize when an attribute is supposed to have an index but doesn't have
+# one (J212-018)
+
+check "Normalizing attribute with no index" \
+    test_norm.out NORM test_norm.gpr
+
+#############################
+## Changing new attributes ##
+#############################
+
+check "Adding new attribute in existing case item" add_attr.out \
+    SINGLE add_attr object_dir "new_obj_dir" -DA=1
+check "Adding new attribute in non-existing case item" add_attr2.out \
+    SINGLE add_attr2 object_dir "new_obj_dir" -DA=2
+check "Adding new attribute and move existing declaration to new case item" \
+    add_attr3.out \
+    SINGLE add_attr3 object_dir "new_obj_dir" -DA=1
+check "Adding new attribute and move existing declaration" add_attr4.out \
+    SINGLE add_attr4 object_dir "new_obj_dir" -DA=2
+check "Adding new attribute with several scenario variables" add_attr5.out \
+    SINGLE add_attr5 object_dir "new_obj_dir" -DA=2 -DB=B1
+check "Adding new attribute, scenario defined in imported project" \
+    add_attr6.out \
+    SINGLE add_attr6 object_dir "new_obj_dir" -DA=1 -DB=B1
+check "Adding new attribute, scenario defined in parent project" \
+    add_attr7.out \
+    SINGLE add_attr6 object_dir "new_obj_dir" -DA=1 -DB=B1 -DC=C1 \
+      -root add_attr7
+check "Adding new attribute in non-existing package" add_attr8.out \
+    SINGLE add_attr5 compiler\#object_dir "new_obj_dir" -DA=2 -DB=B1
+check "Adding new attribute in existing package" add_attr9.out \
+    SINGLE add_attr9 compiler\#local_configuration_pragmas \
+       "foo.adc" -DA=2 -DB=B1
+
+check "Adding new attribute in existing case item" add_attr_idx.out \
+    SINGLE add_attr_idx \
+    INDEX=unit naming\#spec "unit.ads" -DA=1
+check "Adding new attribute in non-existing case item" add_attr_idx2.out \
+    SINGLE add_attr_idx \
+    INDEX=unit naming\#spec "unit.ads" -DA=2
+check "Adding new attribute (has existing decl. with other index)" \
+    add_attr_idx3.out \
+    SINGLE add_attr_idx3 INDEX=unit naming\#spec "unit.ads" -DA=1
+check "Adding new attribute and move existing declaration to new case item" \
+    add_attr_idx4.out \
+    SINGLE add_attr_idx3 INDEX=unit2 naming\#spec "unit.ads" -DA=1
+
+check "Adding list attribute in existing case item" add_list.out \
+    LIST add_attr  source_dirs "foo" "bar" -DA=1
+check "Adding list attribute in non-existing case item" add_list2.out \
+    LIST add_attr2 source_dirs "foo" "bar" -DA=2
+check "Adding list attribute and move existing declaration to new case item" \
+    add_list3.out \
+    LIST add_list3 source_dirs "foo" "bar" -DA=1
+check "Adding list attribute and move existing declaration" add_list4.out \
+    LIST add_list4 source_dirs "foo" "bar" -DA=2
+check "Adding list attribute with several scenario variables" add_list5.out \
+    LIST add_list5 source_dirs "foo" "bar" -DA=2 -DB=B1
+
+check "Modifying an attribute defined through concatenation" add_list6.out \
+    LIST add_list6 INDEX=ada compiler\#default_switches "new" -DA=1
+
+check "Adding new list attribute in existing case item" add_list_idx.out \
+    LIST add_list_idx \
+    INDEX=Ada compiler\#default_switches "g" -DA=1
+check "Adding new list attribute in non-existing case item" add_list_idx2.out \
+    LIST add_list_idx \
+    INDEX=Ada compiler\#default_switches "g" -DA=2
+check "Adding new list attribute (has existing decl. with other index)" \
+    add_list_idx3.out \
+    LIST add_list_idx3 INDEX=Ada compiler\#default_switches "g" -DA=1
+check "Adding new list attribute and move existing declaration to new case item" \
+    add_list_idx4.out \
+    LIST add_list_idx3 INDEX=c compiler\#default_switches "g" -DA=1
+
+###########################
+## Removing an attribute ##
+###########################
+
+check "Removing an attribute" remove_att.out \
+    DELETE_ATTR remove_att source_dirs -DA=1 -DB=B1
+check "Removing an attribute with incorrect index" del_attr_idx1.out \
+    DELETE_ATTR add_attr_idx.gpr naming\#spec -DA=1 -DB=B1
+check "Removing an attribute with index" remove_att_idx2.out \
+    DELETE_ATTR add_attr_idx.gpr naming\#spec INDEX=unit2 -DA=1 -DB=B1
+
+#########################
+## Adding dependencies ##
+#########################
+
+#??? Should check that we cannot add circular dependencies
+#??? Should check that if we remove the last dependency on a project, then we
+#???   can add a dependency on another project by the same name.
+
+check "Adding a simple with" test_with.out \
+    WITH test_with add_attr2.gpr
+check "Adding a with to itself" test_with1.out \
+    WITH test_with test_with.gpr
+check "Adding a with twice" test_with2.out \
+    WITH test_with add_attr2.gpr add_attr2.gpr
+
+check "Adding an already existing with, but different location" test_with3.out \
+    WITH test_with subdir1/simple.gpr
+
+#########################
+## Removing dependency ##
+#########################
+
+check "Removing a dependency" remove_dep.out REMOVE_WITH remove_dep add_attr
+check "Removing a dependency with basename" remove_dep2.out \
+    REMOVE_WITH remove_dep add_attr2
+check "Removing a dependency with fullname and basename" remove_dep3.out \
+    REMOVE_WITH remove_dep add_attr3
+check "Removing a dependency with fullname" remove_dep4.out \
+    REMOVE_WITH remove_dep add_attr4
+check "Removing a dependency with fullname in project file" remove_dep5.out \
+    REMOVE_WITH remove_dep add_attr5
+
+##########################
+## Adding new variables ##
+##########################
+
+check "Adding new variable in default project" add_var.out \
+     ADD_VAR add_var "A B" A1 A2 A3
+check "Adding second scenario variable in default project" add_var1.out \
+     ADD_VAR add_var1 C C1 C2 C3
+check "Adding new attribute with newly created scenario variable" add_var2.out \
+     SINGLE add_var2 object_dir "new_obj_dir" -D"A B"=A1 -DC=C1
+
+#########################
+## Removing a variable ##
+#########################
+
+check "Removing a scenario variable" remove_var.out \
+     DELETE_VAR remove_var A A1 True -DA=A1 -DB=B1
+check "Removing a scenario variable (when others case)" remove_var1.out \
+     DELETE_VAR remove_var A A2 True -DA=A1 -DB=B1
+check "Removing a scenario variable (alternative choice)" remove_var2.out \
+     DELETE_VAR remove_var A A3 True -DA=A1 -DB=B1
+check "Removing a scenario variable (no warning)" remove_var3.out \
+     DELETE_VAR remove_var B B1 True -DA=A1 -DB=B1
+
+check "Removing a scenario variable, no direct ref" remove_var4.out \
+     DELETE_VAR remove_var A A1 False -DA=A1 -DB=B1
+check "Removing a scenario variable (when others case), no direct ref" \
+     remove_var5.out \
+     DELETE_VAR remove_var A A2 False -DA=A1 -DB=B1
+check "Removing a scenario variable (alternative choice), no direct ref" \
+     remove_var6.out \
+     DELETE_VAR remove_var A A3 False -DA=A1 -DB=B1
+check "Removing a scenario variable (no warning), no direct ref" \
+     remove_var3.out \
+     DELETE_VAR remove_var B B1 False -DA=A1 -DB=B1
+
+check "Removing variable defined in other project" remove_var7.out \
+     DELETE_VAR remove_var7.gpr A A1 False
+
+########################
+## Renaming a project ##
+########################
+
+check "Renaming a project" rename.out \
+     RENAME rename rename_root.gpr new_project
+check "Renaming a project, imported twice" rename2.out \
+     RENAME rename rename_root2.gpr new_project
+check "Renaming a project, imported twice by different projects" rename3.out \
+     RENAME rename rename_root3.gpr new_project
+
+#########################
+## Renaming a variable ##
+#########################
+
+check "Renaming a variable" rename_var.out \
+      RENAME_VAR rename_var var1 var1_new
+
+###############################
+## Renaming a variable value ##
+###############################
+
+check "Renaming a variable value" rename_val.out \
+      MODIFY rename_val A A1 A100
+check "Renaming a non-existing variable value" rename_val2.out \
+      MODIFY rename_val A A4 A100 -DA=A1
+check "Renaming a value in a shared typed" rename_val3.out \
+      MODIFY rename_val3 A 1 100
+
+#################################
+## Modifying the set of values ##
+#################################
+
+check "Add new value for scenario variable" new_value.out \
+     VALUE new_value A 1 A1 A2
+check "Add new value for scenario variable in other project" new_value2.out \
+     VALUE new_value2 A 1 A1 A2
+
+#??? Start thinking on how to use non-scenario variables
+
+
+#################################
+## Bug report from users       ##
+#################################
+
+check "Remove variable that doesn't appear in case items" del_var1.out \
+     DELETE_VAR del_var.gpr Build PRODUCTION True
+check "Remove variable that doesn't appear in case items" del_var1.out \
+     DELETE_VAR del_var.gpr Build PRODUCTION False
+check "Remove variable that doesn't appear in case items" del_var2.out \
+     DELETE_VAR del_var.gpr Build DEBUG False
+check "Remove variable that doesn't appear in case items" del_var2.out \
+     DELETE_VAR del_var.gpr Build DEBUG True
+check "Add project multiple times" tree.out \
+    WITH tree tree2.gpr
+check "Add project, resulting in circular dep" tree2.out \
+    WITH tree1 tree.gpr -root tree.gpr
+
+check "GC17-004: Multiple normalization of the same file (step 1)" \
+     GC17-004/udata1.out \
+     LIST GC17-004/udata.gpr INDEX=ada compiler\#default_switches "gnata" "g"
+check "GC17-004: Multiple normalization of the same file (step 2)" \
+     GC17-004/udata2.out \
+     LIST GC17-004/udata1.gpr INDEX=ada compiler\#default_switches "g"
+     
+#NORM GC17-004/udata1.gpr
+
+if [ $total != $passed ]; then
+  echo_with_status 0 "Results: $total total, $passed passed"
+else
+  echo_with_status 1 ""
+fi

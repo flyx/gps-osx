@@ -1,0 +1,9 @@
+with "remove_var7_utils";
+
+project Remove_Var7 is
+    for Source_Files use ();
+    case Remove_Var7_Utils.A is
+       when "A1" =>
+         for Object_Dir use ".";
+    end case;
+end Remove_Var7;

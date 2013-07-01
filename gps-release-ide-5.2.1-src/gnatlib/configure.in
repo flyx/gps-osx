@@ -1,0 +1,84 @@
+# Set the version number below
+AC_INIT(gnatcoll,1.5w,report@adacore.com,gnatcoll)
+AC_CANONICAL_SYSTEM
+
+AC_PROG_LN_S
+AC_FUNC_MMAP
+
+AC_ARG_ENABLE(gpl,
+  [AC_HELP_STRING(
+     [--enable-gpl],
+     [Include GPL packages (readline)])],
+  WITH_GPL=$enableval,
+  WITH_GPL=no)
+AC_SUBST(WITH_GPL)
+
+CHECK_BUILD_TYPE
+AM_GNAT_BUILDS_SHARED
+AM_SO_SUFFIX
+AM_PATH_PYTHON
+AM_PATH_GTK
+AM_PATH_PYGTK(2.8)
+AM_PATH_PYGOBJECT
+AM_PATH_POSTGRES
+AM_PATH_SQLITE
+AM_PATH_GMP
+AM_GNAT_SOURCES
+AM_CHECK_READLINE
+AM_PROJECTS
+AM_HAS_INTRINSIC_SYNC_COUNTERS
+AM_TO_GPR($GMP_CFLAGS,    GMP_CFLAGS_GPR)
+AM_TO_GPR($GMP_LIBS,      GMP_LIBS_GPR)
+AM_TO_GPR($PYTHON_LIBS,   PYTHON_LIBS_GPR)
+AM_TO_GPR($PYTHON_CFLAGS, PYTHON_CFLAGS_GPR)
+AM_TO_GPR($PYGTK_INCLUDE, PYGTK_INCLUDE_GPR)
+AM_TO_GPR($GTK_GCC_FLAGS, GTK_GCC_FLAGS_GPR)
+AM_TO_GPR($GTK_GCC_LIBS,  GTK_GCC_LIBS_GPR)
+AM_TO_GPR($PYGOBJECT_INCLUDE, PYGOBJECT_INCLUDE_GPR)
+
+AM_PATH_SYSLOG
+
+LIB=`basename $libdir`
+AC_SUBST(LIB)
+
+AM_LINK_FILE([src/gnatcoll-refcount-sync_counters__$SYNC_COUNTERS_IMPL.ada],
+             [src/gnatcoll-refcount-sync_counters.adb],
+             [SYNC_COUNTERS_IMPL=$SYNC_COUNTERS_IMPL])
+AM_LINK_FILE([src/gnatcoll__$GNAT_SOURCES.gpr],
+             [src/gnatcoll.gpr],
+             [GNAT_SOURCES=$GNAT_SOURCES])
+AM_LINK_FILE([distrib/gnatcoll.gpr__$GNAT_SOURCES],
+             [distrib/gnatcoll.gpr])
+
+AC_OUTPUT(gnatcoll_shared.gpr Makefile.conf src/gnatcoll_gmp.gpr src/gnatcoll_python.gpr distrib/gnatcoll.gpr__gnat_util distrib/gnatcoll.gpr__copy distrib/gnatcoll_python.gpr distrib/gnatcoll_gmp.gpr gnat/sdefault/sdefault.adb src/gnatcoll_readline.gpr)
+
+AC_MSG_NOTICE([--------- Summary for GNAT Components --------------])
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [Shared libraries:],[$GNAT_BUILDS_SHARED (default: $DEFAULT_LIBRARY_TYPE)]))
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [Gtk+:],[$WITH_GTK (requires pkg-config and gtkada.gpr)]))
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [Python:],[$WITH_PYTHON $PYTHON_BASE (see --with-python)]))
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [PyGtk:],[$WITH_PYGTK $PYGTK_PREFIX (see --enable-pygtk)]))
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [PyGObject:],[$WITH_PYGOBJECT (see --enable-pygobject)]))
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [Syslog:],[$WITH_SYSLOG (see --enable-syslog)]))
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [Readline (GPL license):],
+              [$WITH_READLINE (see --with-readline --enable-gpl)]))
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [gmp:],[$WITH_GMP (see --with-gmp)]))
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [PostgreSQL:],[$WITH_POSTGRES $PATH_LIBPQ (see --with-postgresql)]))
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [Sqlite:],[$WITH_SQLITE $PATH_LIBSQLITE (see --with-sqlite)]))
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [Projects:],[$WITH_PROJECTS]))
+if test $WITH_PROJECTS = no; then
+AC_MSG_NOTICE(AC_HELP_STRING(
+              [],[create gnat_src to override]))
+fi
+AC_MSG_NOTICE([--------------------------------------------])
+

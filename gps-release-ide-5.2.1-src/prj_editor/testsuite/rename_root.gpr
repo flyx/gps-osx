@@ -1,0 +1,7 @@
+with "rename";
+
+project Rename_Root is
+
+   for Source_Files use ();
+
+end Rename_Root;

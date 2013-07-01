@@ -1,0 +1,9 @@
+project New_Value is
+   type A_Type is ("1", "2");
+   A_Var : A_Type := external ("A", "2");
+
+   case A_Var is
+       when "1" =>
+           for object_dir use ".";
+   end case;
+end New_Value;

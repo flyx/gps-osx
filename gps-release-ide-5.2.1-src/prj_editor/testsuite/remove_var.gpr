@@ -1,0 +1,32 @@
+
+project remove_var is
+
+   type A_Type is ("A1", "A2", "A3");
+   A : A_Type := external ("A");
+
+   type B_Type is ("B1", "B2");
+   B : B_Type := external ("B");
+
+   for object_dir use "." & A;
+   for source_dirs use ("." & A, ".." & external ("A"));
+
+   case A is
+      when "A1" | "A3" =>
+          case B is
+             when "B1" =>
+                 for source_dirs use ("." & A);
+                 for object_dir use "../" & A;
+             when "B2" =>
+                 for source_dirs use (".." & external ("A"));
+          end case;
+
+      when others =>
+          case B is
+             when "B1" =>
+                 for source_dirs use ("../.");
+             when "B2" =>
+                 for source_dirs use ("../..");
+          end case;
+   end case;
+
+end remove_var;

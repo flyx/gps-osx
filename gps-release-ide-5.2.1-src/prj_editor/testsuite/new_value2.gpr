@@ -1,0 +1,6 @@
+with "new_value2_def";
+
+project New_Value2 is
+   for Source_Files use ();
+   for object_dir use ".";
+end New_Value2;

@@ -1,0 +1,1862 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.9.20)  8 JAN 2013 21:33
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**GPS.tex
+(./GPS.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(./sphinxmanual.cls
+Document Class: sphinxmanual 2009/06/02 Document class (Sphinx manual)
+(/usr/share/texmf-texlive/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+))
+(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texmf-texlive/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texmf-texlive/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texmf-texlive/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+   defining Unicode char U+00A0 (decimal 160)
+
+(/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/var/lib/texmf/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
+
+(/usr/share/texmf-texlive/tex/generic/babel/english.ldf
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+(/usr/share/texmf-texlive/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texmf-texlive/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+) (./fncychap.sty
+Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
+\RW=\skip43
+\mylen=\skip44
+\myhi=\skip45
+\px=\skip46
+\py=\skip47
+\pyy=\skip48
+\pxx=\skip49
+\c@AlphaCnt=\count89
+\c@AlphaDecCnt=\count90
+)
+(/usr/share/texmf-texlive/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip50
+\LTright=\skip51
+\LTpre=\skip52
+\LTpost=\skip53
+\LTchunksize=\count91
+\LTcapwidth=\dimen104
+\LT@head=\box26
+\LT@firsthead=\box27
+\LT@foot=\box28
+\LT@lastfoot=\box29
+\LT@cols=\count92
+\LT@rows=\count93
+\c@LT@tables=\count94
+\c@LT@chunks=\count95
+\LT@p@ftn=\toks16
+) (./sphinx.sty
+Package: sphinx 2010/01/15 LaTeX package (Sphinx markup)
+
+(/usr/share/texmf-texlive/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/share/texmf-texlive/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/share/texmf-texlive/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+))
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+)
+(/usr/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip54
+\f@ncyO@elh=\skip55
+\f@ncyO@erh=\skip56
+\f@ncyO@olh=\skip57
+\f@ncyO@orh=\skip58
+\f@ncyO@elf=\skip59
+\f@ncyO@erf=\skip60
+\f@ncyO@olf=\skip61
+\f@ncyO@orf=\skip62
+)
+(/usr/share/texmf-texlive/tex/latex/fancybox/fancybox.sty
+Package: fancybox 2000/09/19 1.3
+
+Style option: `fancybox' v1.3 <2000/09/19> (tvz)
+\@fancybox=\box30
+\shadowsize=\dimen105
+\@Sbox=\box31
+\do@VerbBox=\toks17
+\the@fancyput=\toks18
+\this@fancyput=\toks19
+\EndVerbatimTokens=\toks20
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read1
+) (/usr/share/texmf-texlive/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2007/08/12 v2.8 Sectioning titles
+\ttl@box=\box32
+\beforetitleunit=\skip63
+\aftertitleunit=\skip64
+\ttl@plus=\dimen106
+\ttl@minus=\dimen107
+\ttl@toksa=\toks21
+\titlewidth=\dimen108
+\titlewidthlast=\dimen109
+\titlewidthfirst=\dimen110
+) (./tabulary.sty
+Package: tabulary 2007/10/02 v0.9 tabulary package (DPC)
+
+(/usr/share/texmf-texlive/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen111
+\extrarowheight=\dimen112
+\NC@list=\toks22
+\extratabsurround=\skip65
+\backup@length=\skip66
+)
+\TY@count=\count96
+\TY@linewidth=\dimen113
+\tymin=\dimen114
+\tymax=\dimen115
+\TY@tablewidth=\dimen116
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip67
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks23
+\ex@=\dimen117
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen118
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count97
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count98
+\leftroot@=\count99
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count100
+\DOTSCASE@=\count101
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box33
+\strutbox@=\box34
+\big@size=\dimen119
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
+\dotsspace@=\muskip10
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
+\tag@help=\toks24
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
+\andhelp@=\toks25
+\eqnshift@=\dimen120
+\alignsep@=\dimen121
+\tagshift@=\dimen122
+\tagwidth@=\dimen123
+\totwidth@=\dimen124
+\lineht@=\dimen125
+\@envbody=\toks26
+\multlinegap=\skip68
+\multlinetaggap=\skip69
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/framed.sty
+Package: framed 2007/10/04 v 0.95: framed or shaded text with page breaks
+\fb@frw=\dimen126
+\fb@frh=\dimen127
+\FrameRule=\dimen128
+\FrameSep=\dimen129
+)
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
+\Gread@gobject=\count109
+))
+(/usr/share/texmf-texlive/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz) (/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks28
+)
+\FV@CodeLineNo=\count110
+\FV@InFile=\read2
+\FV@TabBox=\box35
+\c@FancyVerbLine=\count111
+\FV@StepNumber=\count112
+\FV@OutFile=\write4
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box36
+)
+(/usr/share/texmf-texlive/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box37
+\fn@width=\dimen130
+)
+(/usr/share/texmf-texlive/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen131
+\WF@size=\dimen132
+\c@WF@wrappedlines=\count113
+\WF@box=\box38
+\WF@everypar=\toks29
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/parskip.sty
+Package: parskip 2001/04/09 non-zero parskip adjustments
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen133
+\Gin@req@width=\dimen134
+)
+(/usr/share/texmf-texlive/tex/plain/misc/pdfcolor.tex)
+\distancetoright=\skip70
+\py@argswidth=\skip71
+\py@noticelength=\skip72
+\lineblockindentation=\skip73
+\image@box=\box39
+\image@width=\dimen135
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2009/10/09 v6.79a Hypertext links for LaTeX
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
+Package: hycolor 2009/10/02 v1.5 Code for color options of hyperref/bookmark (H
+O)
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty
+Package: xcolor-patch 2009/10/02 xcolor patch
+))
+\@linkdim=\dimen136
+\Hy@linkcounter=\count114
+\Hy@pagecounter=\count115
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)
+(/usr/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
+t (HO)
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 2864.
+Package hyperref Info: Option `breaklinks' set `true' on input line 2864.
+Package hyperref Info: Hyper figures OFF on input line 2975.
+Package hyperref Info: Link nesting OFF on input line 2980.
+Package hyperref Info: Hyper index ON on input line 2983.
+Package hyperref Info: Plain pages OFF on input line 2990.
+Package hyperref Info: Backreferencing OFF on input line 2995.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3191.
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 3428.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions
+ (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO
+)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)))
+\Fld@menulength=\count116
+\Field@Width=\dimen137
+\Fld@charsize=\dimen138
+\Field@toks=\toks30
+Package hyperref Info: Hyper figures OFF on input line 4377.
+Package hyperref Info: Link nesting OFF on input line 4382.
+Package hyperref Info: Hyper index ON on input line 4385.
+Package hyperref Info: backreferencing OFF on input line 4392.
+Package hyperref Info: Link coloring ON on input line 4395.
+Package hyperref Info: Link coloring with OCG OFF on input line 4402.
+Package hyperref Info: PDF/A mode OFF on input line 4407.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+)
+\Hy@abspage=\count117
+\c@Item=\count118
+\c@Hfootnote=\count119
+)
+*hyperref using default driver hpdftex*
+(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
+\Fld@listcount=\count120
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/hypcap.sty
+Package: hypcap 2008/09/08 v1.10 Adjusting anchors of captions (HO)
+)
+\DUlineblockindent=\skip74
+)
+(/usr/share/texmf-texlive/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen139
+)
+\@indexfile=\write5
+\openout5 = `GPS.idx'.
+
+
+Writing index file GPS.idx
+(./GPS.aux)
+\openout1 = `GPS.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 113.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 113.
+
+ (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 113.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(/usr/share/texmf/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count121
+\scratchdimen=\dimen140
+\scratchbox=\box40
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen141
+\MPnumerator=\count125
+\everyMPtoPDFconversion=\toks32
+)
+Package hyperref Info: Link coloring ON on input line 113.
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+\c@section@level=\count126
+)
+LaTeX Info: Redefining \ref on input line 113.
+LaTeX Info: Redefining \pageref on input line 113.
+ (./GPS.out)
+(./GPS.out)
+\@outlinefile=\write6
+\openout6 = `GPS.out'.
+
+\AtBeginShipoutBox=\box41
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--116
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+phv on input line 116.
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 116.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 116.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 116.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 116.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 116.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+] (./GPS.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 43.
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 ...mberline {5.5}Rectangles}{36}{section.5.5}
+                                                   [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.127 ...}Version Control System}{113}{chapter.12}
+                                                   [2]
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 270.
+ [3])
+\tf@toc=\write7
+\openout7 = `GPS.toc'.
+
+ [4]
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 121.
+<main-gps.jpg, id=788, 940.51375pt x 829.0975pt>
+File: main-gps.jpg Graphic file (type jpg)
+ <use main-gps.jpg>
+File: main-gps.jpg Graphic file (type jpg)
+
+<use main-gps.jpg> [1
+
+
+] [2 <./main-gps.jpg>]
+Chapter 2.
+<welcome.jpg, id=801, 618.31pt x 387.4475pt>
+File: welcome.jpg Graphic file (type jpg)
+ <use welcome.jpg>
+File: welcome.jpg Graphic file (type jpg)
+
+<use welcome.jpg>
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 173.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [3
+
+ <./welcome.jpg>] <tip-of-the-day.jpg, id=810, 642.4pt x 393.47pt>
+File: tip-of-the-day.jpg Graphic file (type jpg)
+
+<use tip-of-the-day.jpg>
+File: tip-of-the-day.jpg Graphic file (type jpg)
+ <use tip-of-the-day.jpg> [4] [5 <./tip-of-the-day.jpg>] <project-view.jpg, id=
+832, 210.7875pt x 416.15475pt>
+File: project-view.jpg Graphic file (type jpg)
+ <use project-view.jpg>
+File: project-view.jpg Graphic file (type jpg)
+
+<use project-view.jpg> [6] [7 <./project-view.jpg>]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 497.
+ [8]
+<scenario-view.jpg, id=849, 268.00125pt x 141.52875pt>
+File: scenario-view.jpg Graphic file (type jpg)
+ <use scenario-view.jpg>
+File: scenario-view.jpg Graphic file (type jpg)
+
+<use scenario-view.jpg>
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 554.
+
+ (/usr/share/texmf-texlive/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+<square_x.png, id=850, 16.06pt x 16.06pt>
+File: square_x.png Graphic file (type png)
+ <use square_x.png>
+File: square_x.png Graphic file (type png)
+
+<use square_x.png> <circle_x.png, id=852, 16.06pt x 16.06pt>
+File: circle_x.png Graphic file (type png)
+
+<use circle_x.png>
+File: circle_x.png Graphic file (type png)
+ <use circle_x.png>
+<triangle_x.png, id=853, 16.06pt x 16.06pt>
+File: triangle_x.png Graphic file (type png)
+ <use triangle_x.png>
+File: triangle_x.png Graphic file (type png)
+
+<use triangle_x.png> <dot_x.png, id=854, 16.06pt x 16.06pt>
+File: dot_x.png Graphic file (type png)
+ <use dot_x.png>
+File: dot_x.png Graphic file (type png)
+
+<use dot_x.png> <diamond_x.png, id=855, 16.06pt x 16.06pt>
+File: diamond_x.png Graphic file (type png)
+ <use diamond_x.png>
+File: diamond_x.png Graphic file (type png)
+
+<use diamond_x.png> [9 <./scenario-view.jpg> <./square_x.png> <./circle_x.png> 
+<./triangle_x.png> <./dot_x.png>]
+<file-view.jpg, id=865, 204.765pt x 370.38374pt>
+File: file-view.jpg Graphic file (type jpg)
+ <use file-view.jpg>
+File: file-view.jpg Graphic file (type jpg)
+
+<use file-view.jpg> [10 <./diamond_x.png>]
+<entity-view.jpg, id=872, 1020.81375pt x 356.33125pt>
+File: entity-view.jpg Graphic file (type jpg)
+ <use entity-view.jpg>
+File: entity-view.jpg Graphic file (type jpg)
+
+<use entity-view.jpg> [11 <./file-view.jpg>]
+<outline-view.jpg, id=878, 524.55975pt x 203.5605pt>
+File: outline-view.jpg Graphic file (type jpg)
+ <use outline-view.jpg>
+File: outline-view.jpg Graphic file (type jpg)
+
+<use outline-view.jpg> [12 <./entity-view.jpg>] [13 <./outline-view.jpg>]
+[14] <messages.jpg, id=894, 732.7375pt x 178.6675pt>
+File: messages.jpg Graphic file (type jpg)
+ <use messages.jpg>
+File: messages.jpg Graphic file (type jpg)
+
+<use messages.jpg> <shell-window.jpg, id=898, 728.7225pt x 212.795pt>
+File: shell-window.jpg Graphic file (type jpg)
+
+<use shell-window.jpg>
+File: shell-window.jpg Graphic file (type jpg)
+ <use shell-window.jpg> [15 <./messages.jpg>]
+<locations-view.jpg, id=903, 771.88374pt x 260.975pt>
+File: locations-view.jpg Graphic file (type jpg)
+ <use locations-view.jpg>
+File: locations-view.jpg Graphic file (type jpg)
+
+<use locations-view.jpg> [16 <./shell-window.jpg> <./locations-view.jpg>]
+[17] <task-manager.jpg, id=914, 409.53pt x 245.91875pt>
+File: task-manager.jpg Graphic file (type jpg)
+ <use task-manager.jpg>
+File: task-manager.jpg Graphic file (type jpg)
+
+<use task-manager.jpg> [18 <./task-manager.jpg>]
+Chapter 3.
+<about.jpg, id=921, 352.31625pt x 189.70876pt>
+File: about.jpg Graphic file (type jpg)
+ <use about.jpg>
+File: about.jpg Graphic file (type jpg)
+ <use about.jpg>
+[19
+
+ <./about.jpg>] [20]
+Chapter 4.
+[21
+
+] [22] [23] [24]
+Chapter 5.
+<source-editor.jpg, id=951, 514.3215pt x 347.49825pt>
+File: source-editor.jpg Graphic file (type jpg)
+ <use source-editor.jpg>
+File: source-editor.jpg Graphic file (type jpg)
+
+<use source-editor.jpg> [25
+
+ <./source-editor.jpg>] [26]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 1548.
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <9> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 1549.
+ [27]
+<open-file.jpg, id=989, 614.295pt x 606.265pt>
+File: open-file.jpg Graphic file (type jpg)
+ <use open-file.jpg>
+File: open-file.jpg Graphic file (type jpg)
+
+<use open-file.jpg> [28] [29 <./open-file.jpg>]
+<open-from-project.jpg, id=1003, 298.11375pt x 288.07625pt>
+File: open-from-project.jpg Graphic file (type jpg)
+
+<use open-from-project.jpg>
+File: open-from-project.jpg Graphic file (type jpg)
+ <use open-from-project.jpg> [30] [31 <./open-from-project.jpg>] [32] [33]
+<smart-completion.jpg, id=1034, 751.00575pt x 293.29575pt>
+File: smart-completion.jpg Graphic file (type jpg)
+
+<use smart-completion.jpg>
+File: smart-completion.jpg Graphic file (type jpg)
+ <use smart-completion.jpg> [34 <./smart-completion.jpg>] [35] [36] [37] [38] [
+39] [40]
+Underfull \vbox (badness 3623) detected at line 2800
+ []
+
+[41] [42] [43] [44]
+Underfull \hbox (badness 5637) in paragraph at lines 3083--3087
+[]\T1/ptm/m/n/10 By de-fault, GPS over-rides the X mech-a-nism. To pre-vent thi
+s, add the fol-low-ing line: \T1/ptm/m/it/10 OVER-
+ []
+
+[45] <save-dialog.jpg, id=1114, 335.2525pt x 280.04625pt>
+File: save-dialog.jpg Graphic file (type jpg)
+
+<use save-dialog.jpg>
+File: save-dialog.jpg Graphic file (type jpg)
+ <use save-dialog.jpg> [46 <./save-dialog.jpg>] [47]
+[48
+
+]
+Chapter 6.
+[49] [50] [51] [52] [53] [54
+
+]
+Chapter 7.
+[55] [56] [57] <scenarios.jpg, id=1195, 451.6875pt x 271.0125pt>
+File: scenarios.jpg Graphic file (type jpg)
+
+<use scenarios.jpg>
+File: scenarios.jpg Graphic file (type jpg)
+ <use scenarios.jpg> [58]
+<explorer-scenario.jpg, id=1201, 114.55042pt x 45.35565pt>
+File: explorer-scenario.jpg Graphic file (type jpg)
+
+<use explorer-scenario.jpg>
+File: explorer-scenario.jpg Graphic file (type jpg)
+ <use explorer-scenario.jpg> [59 <./scenarios.jpg> <./explorer-scenario.jpg (PN
+G copy)>] [60] [61]
+<project-modified.jpg, id=1222, 33.12375pt x 12.045pt>
+File: project-modified.jpg Graphic file (type jpg)
+
+<use project-modified.jpg>
+File: project-modified.jpg Graphic file (type jpg)
+ <use project-modified.jpg> [62 <./project-modified.jpg>] <project-wizard.jpg, 
+id=1231, 540.0175pt x 444.66125pt>
+File: project-wizard.jpg Graphic file (type jpg)
+
+<use project-wizard.jpg>
+File: project-wizard.jpg Graphic file (type jpg)
+ <use project-wizard.jpg> [63] [64 <./project-wizard.jpg>] [65] [66] <naming-sc
+heme.jpg, id=1260, 606.265pt x 683.55376pt>
+File: naming-scheme.jpg Graphic file (type jpg)
+
+<use naming-scheme.jpg>
+File: naming-scheme.jpg Graphic file (type jpg)
+ <use naming-scheme.jpg> [67] [68 <./naming-scheme.jpg>] <switch-editor.jpg, id
+=1273, 606.265pt x 683.55376pt>
+File: switch-editor.jpg Graphic file (type jpg)
+ <use switch-editor.jpg>
+File: switch-editor.jpg Graphic file (type jpg)
+
+<use switch-editor.jpg> [69] [70 <./switch-editor.jpg>]
+<project-deps.jpg, id=1284, 650.43pt x 515.9275pt>
+File: project-deps.jpg Graphic file (type jpg)
+ <use project-deps.jpg>
+File: project-deps.jpg Graphic file (type jpg)
+
+<use project-deps.jpg> [71 <./project-deps.jpg>]
+<project-properties.jpg, id=1289, 609.27625pt x 648.4225pt>
+File: project-properties.jpg Graphic file (type jpg)
+
+<use project-properties.jpg>
+File: project-properties.jpg Graphic file (type jpg)
+ <use project-properties.jpg> [72] [73 <./project-properties.jpg>] <switch-edit
+or-revert.jpg, id=1302, 512.91624pt x 644.4075pt>
+File: switch-editor-revert.jpg Graphic file (type jpg)
+
+<use switch-editor-revert.jpg>
+File: switch-editor-revert.jpg Graphic file (type jpg)
+ <use switch-editor-revert.jpg> [74] [75 <./switch-editor-revert.jpg>] <project
+-browser.jpg, id=1313, 1015.795pt x 724.7075pt>
+File: project-browser.jpg Graphic file (type jpg)
+
+<use project-browser.jpg>
+File: project-browser.jpg Graphic file (type jpg)
+ <use project-browser.jpg> [76 <./project-browser.jpg>]
+Chapter 8.
+<search-hide.jpg, id=1319, 222.8325pt x 241.90375pt>
+File: search-hide.jpg Graphic file (type jpg)
+ <use search-hide.jpg>
+File: search-hide.jpg Graphic file (type jpg)
+
+<use search-hide.jpg> [77
+
+ <./search-hide.jpg>] [78]
+<search-options.jpg, id=1329, 269.005pt x 430.60875pt>
+File: search-options.jpg Graphic file (type jpg)
+
+<use search-options.jpg>
+File: search-options.jpg Graphic file (type jpg)
+ <use search-options.jpg> [79 <./search-options.jpg>]
+[80]
+Chapter 9.
+[81
+
+] [82] <target-configuration-dialog.jpg, id=1363, 756.8275pt x 575.14874pt>
+File: target-configuration-dialog.jpg Graphic file (type jpg)
+
+<use target-configuration-dialog.jpg>
+File: target-configuration-dialog.jpg Graphic file (type jpg)
+ <use target-configuration-dialog.jpg>
+[83] [84 <./target-configuration-dialog.jpg>] [85]
+<toolchains-config.jpg, id=1389, 427.5975pt x 194.7275pt>
+File: toolchains-config.jpg Graphic file (type jpg)
+
+<use toolchains-config.jpg>
+File: toolchains-config.jpg Graphic file (type jpg)
+ <use toolchains-config.jpg> [86 <./toolchains-config.jpg>] [87] [88
+
+]
+Chapter 10.
+[89] <call-graph.jpg, id=1411, 1079.03125pt x 885.3075pt>
+File: call-graph.jpg Graphic file (type jpg)
+ <use call-graph.jpg>
+File: call-graph.jpg Graphic file (type jpg)
+
+<use call-graph.jpg> [90] [91 <./call-graph.jpg>]
+<dependency-browser.jpg, id=1421, 606.265pt x 429.605pt>
+File: dependency-browser.jpg Graphic file (type jpg)
+
+<use dependency-browser.jpg>
+File: dependency-browser.jpg Graphic file (type jpg)
+ <use dependency-browser.jpg> [92 <./dependency-browser.jpg>] <entity-browser.j
+pg, id=1426, 834.11626pt x 711.65875pt>
+File: entity-browser.jpg Graphic file (type jpg)
+
+<use entity-browser.jpg>
+File: entity-browser.jpg Graphic file (type jpg)
+ <use entity-browser.jpg> [93] [94 <./entity-browser.jpg>]
+Chapter 11.
+[95
+
+] [96] <tasks.jpg, id=1450, 514.92375pt x 242.9075pt>
+File: tasks.jpg Graphic file (type jpg)
+ <use tasks.jpg>
+File: tasks.jpg Graphic file (type jpg)
+
+<use tasks.jpg> [97 <./tasks.jpg>]
+<call-stack.jpg, id=1461, 627.34375pt x 178.6675pt>
+File: call-stack.jpg Graphic file (type jpg)
+ <use call-stack.jpg>
+File: call-stack.jpg Graphic file (type jpg)
+
+<use call-stack.jpg> [98 <./call-stack.jpg>]
+<canvas.jpg, id=1467, 691.58376pt x 411.5375pt>
+File: canvas.jpg Graphic file (type jpg)
+ <use canvas.jpg>
+File: canvas.jpg Graphic file (type jpg)
+
+<use canvas.jpg> [99 <./canvas.jpg>] [100]
+<colors.jpg, id=1476, 356.33125pt x 182.6825pt>
+File: colors.jpg Graphic file (type jpg)
+ <use colors.jpg>
+File: colors.jpg Graphic file (type jpg)
+
+<use colors.jpg> [101 <./colors.jpg>]
+<breakpoints.jpg, id=1484, 522.95375pt x 423.5825pt>
+File: breakpoints.jpg Graphic file (type jpg)
+ <use breakpoints.jpg>
+File: breakpoints.jpg Graphic file (type jpg)
+
+<use breakpoints.jpg> [102] <bp-advanced.jpg, id=1490, 321.2pt x 294.09875pt>
+File: bp-advanced.jpg Graphic file (type jpg)
+
+<use bp-advanced.jpg>
+File: bp-advanced.jpg Graphic file (type jpg)
+ <use bp-advanced.jpg> [103 <./breakpoints.jpg>] [104 <./bp-advanced.jpg>] <mem
+ory-view.jpg, id=1501, 835.12pt x 415.5525pt>
+File: memory-view.jpg Graphic file (type jpg)
+
+<use memory-view.jpg>
+File: memory-view.jpg Graphic file (type jpg)
+ <use memory-view.jpg> [105 <./memory-view.jpg>]
+<tooltips.jpg, id=1506, 838.13126pt x 328.22626pt>
+File: tooltips.jpg Graphic file (type jpg)
+ <use tooltips.jpg>
+File: tooltips.jpg Graphic file (type jpg)
+
+<use tooltips.jpg> [106 <./tooltips.jpg>]
+<assembly.jpg, id=1514, 601.24625pt x 460.72125pt>
+File: assembly.jpg Graphic file (type jpg)
+ <use assembly.jpg>
+File: assembly.jpg Graphic file (type jpg)
+
+<use assembly.jpg> [107] [108 <./assembly.jpg>] [109] [110] [111] [112
+
+]
+Chapter 12.
+[113] <vcs-explorer.jpg, id=1549, 629.35126pt x 362.35374pt>
+File: vcs-explorer.jpg Graphic file (type jpg)
+
+<use vcs-explorer.jpg>
+File: vcs-explorer.jpg Graphic file (type jpg)
+ <use vcs-explorer.jpg>
+<gps-vcs-unknown.jpg, id=1551, 20.075pt x 20.075pt>
+File: gps-vcs-unknown.jpg Graphic file (type jpg)
+ <use gps-vcs-unknown.jpg>
+File: gps-vcs-unknown.jpg Graphic file (type jpg)
+
+<use gps-vcs-unknown.jpg> [114 <./vcs-explorer.jpg> <./gps-vcs-unknown.jpg>]
+<gps-vcs-not-registered.jpg, id=1556, 6.0225pt x 10.0375pt>
+File: gps-vcs-not-registered.jpg Graphic file (type jpg)
+
+<use gps-vcs-not-registered.jpg>
+File: gps-vcs-not-registered.jpg Graphic file (type jpg)
+ <use gps-vcs-not-registered.jpg>
+<gps-vcs-up-to-date.jpg, id=1557, 20.075pt x 20.075pt>
+File: gps-vcs-up-to-date.jpg Graphic file (type jpg)
+
+<use gps-vcs-up-to-date.jpg>
+File: gps-vcs-up-to-date.jpg Graphic file (type jpg)
+ <use gps-vcs-up-to-date.jpg>
+<gps-vcs-added.jpg, id=1558, 20.075pt x 20.075pt>
+File: gps-vcs-added.jpg Graphic file (type jpg)
+ <use gps-vcs-added.jpg>
+File: gps-vcs-added.jpg Graphic file (type jpg)
+
+<use gps-vcs-added.jpg> <gps-vcs-removed.jpg, id=1559, 20.075pt x 20.075pt>
+File: gps-vcs-removed.jpg Graphic file (type jpg)
+
+<use gps-vcs-removed.jpg>
+File: gps-vcs-removed.jpg Graphic file (type jpg)
+ <use gps-vcs-removed.jpg>
+<gps-vcs-modified.jpg, id=1560, 20.075pt x 20.075pt>
+File: gps-vcs-modified.jpg Graphic file (type jpg)
+
+<use gps-vcs-modified.jpg>
+File: gps-vcs-modified.jpg Graphic file (type jpg)
+ <use gps-vcs-modified.jpg>
+<gps-vcs-needs-merge.jpg, id=1561, 20.075pt x 20.075pt>
+File: gps-vcs-needs-merge.jpg Graphic file (type jpg)
+
+<use gps-vcs-needs-merge.jpg>
+File: gps-vcs-needs-merge.jpg Graphic file (type jpg)
+ <use gps-vcs-needs-merge.jpg>
+<gps-vcs-needs-update.jpg, id=1562, 20.075pt x 20.075pt>
+File: gps-vcs-needs-update.jpg Graphic file (type jpg)
+
+<use gps-vcs-needs-update.jpg>
+File: gps-vcs-needs-update.jpg Graphic file (type jpg)
+ <use gps-vcs-needs-update.jpg>
+<gps-vcs-has-conflicts.jpg, id=1563, 20.075pt x 20.075pt>
+File: gps-vcs-has-conflicts.jpg Graphic file (type jpg)
+
+<use gps-vcs-has-conflicts.jpg>
+File: gps-vcs-has-conflicts.jpg Graphic file (type jpg)
+ <use gps-vcs-has-conflicts.jpg>
+<vcs-activities.jpg, id=1568, 626.34pt x 523.9575pt>
+File: vcs-activities.jpg Graphic file (type jpg)
+ <use vcs-activities.jpg>
+File: vcs-activities.jpg Graphic file (type jpg)
+
+<use vcs-activities.jpg> [115 <./gps-vcs-not-registered.jpg> <./gps-vcs-up-to-d
+ate.jpg> <./gps-vcs-added.jpg> <./gps-vcs-removed.jpg> <./gps-vcs-modified.jpg>
+ <./gps-vcs-needs-merge.jpg> <./gps-vcs-needs-update.jpg> <./gps-vcs-has-confli
+cts.jpg>] [116 <./vcs-activities.jpg>] [117] [118] [119] [120]
+<revision-view.jpg, id=1615, 710.655pt x 378.41376pt>
+File: revision-view.jpg Graphic file (type jpg)
+ <use revision-view.jpg>
+File: revision-view.jpg Graphic file (type jpg)
+
+<use revision-view.jpg> [121 <./revision-view.jpg>] [122
+
+]
+Chapter 13.
+[123] [124] [125] <visual-diff.jpg, id=1672, 930.47626pt x 472.76625pt>
+File: visual-diff.jpg Graphic file (type jpg)
+
+<use visual-diff.jpg>
+File: visual-diff.jpg Graphic file (type jpg)
+ <use visual-diff.jpg> [126 <./visual-diff.jpg>]
+Overfull \hbox (62.70291pt too wide) in paragraph at lines 8236--8239
+[]\T1/ptm/m/n/10 Some de-fault tags have been al-ready de-fined by GPS in \T1/p
+cr/m/n/10 <install_dir>/share/gps/plug-ins/docgen_base_tags.py\T1/ptm/m/n/10 .
+ []
+
+[127] <docgen.jpg, id=1683, 1006.76125pt x 584.1825pt>
+File: docgen.jpg Graphic file (type jpg)
+ <use docgen.jpg>
+File: docgen.jpg Graphic file (type jpg)
+
+<use docgen.jpg> [128 <./docgen.jpg>] [129] [130]
+<report-of-analysis_tree.jpg, id=1711, 638.385pt x 570.13pt>
+File: report-of-analysis_tree.jpg Graphic file (type jpg)
+
+<use report-of-analysis_tree.jpg>
+File: report-of-analysis_tree.jpg Graphic file (type jpg)
+ <use report-of-analysis_tree.jpg> [131]
+<report-of-analysis_flat.jpg, id=1719, 638.385pt x 437.635pt>
+File: report-of-analysis_flat.jpg Graphic file (type jpg)
+
+<use report-of-analysis_flat.jpg>
+File: report-of-analysis_flat.jpg Graphic file (type jpg)
+ <use report-of-analysis_flat.jpg> [132 <./report-of-analysis_tree.jpg>] [133 <
+./report-of-analysis_flat.jpg>]
+<stack-usage-editor.jpg, id=1734, 820.06375pt x 520.94624pt>
+File: stack-usage-editor.jpg Graphic file (type jpg)
+
+<use stack-usage-editor.jpg>
+File: stack-usage-editor.jpg Graphic file (type jpg)
+ <use stack-usage-editor.jpg> [134] [135 <./stack-usage-editor.jpg>] [136
+
+]
+Chapter 14.
+[137] [138]
+Chapter 15.
+[139
+
+] <remote-view.jpg, id=1778, 226.8475pt x 109.40875pt>
+File: remote-view.jpg Graphic file (type jpg)
+
+<use remote-view.jpg>
+File: remote-view.jpg Graphic file (type jpg)
+ <use remote-view.jpg>
+<servers-configuration.jpg, id=1779, 716.6775pt x 472.76625pt>
+File: servers-configuration.jpg Graphic file (type jpg)
+
+<use servers-configuration.jpg>
+File: servers-configuration.jpg Graphic file (type jpg)
+ <use servers-configuration.jpg> [140 <./remote-view.jpg> <./servers-configurat
+ion.jpg>] [141] [142]
+<remote-view-full.jpg, id=1803, 226.8475pt x 214.8025pt>
+File: remote-view-full.jpg Graphic file (type jpg)
+
+<use remote-view-full.jpg>
+File: remote-view-full.jpg Graphic file (type jpg)
+ <use remote-view-full.jpg> [143 <./remote-view-full.jpg>] [144]
+Chapter 16.
+<preferences-general.jpg, id=1815, 630.355pt x 440.64626pt>
+File: preferences-general.jpg Graphic file (type jpg)
+
+<use preferences-general.jpg>
+File: preferences-general.jpg Graphic file (type jpg)
+ <use preferences-general.jpg> [145
+
+ <./preferences-general.jpg>] [146] [147] [148] [149] [150] [151] [152] [153] [
+154] [155]
+[156] [157] <key-shortcuts.jpg, id=1888, 349.305pt x 303.534pt>
+File: key-shortcuts.jpg Graphic file (type jpg)
+
+<use key-shortcuts.jpg>
+File: key-shortcuts.jpg Graphic file (type jpg)
+ <use key-shortcuts.jpg> [158] [159 <./key-shortcuts.jpg>] [160] [161] [162] [1
+63] [164] [165] [166] [167] [168] [169] [170] [171]
+[172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182]
+<aliases.jpg, id=2056, 708.6475pt x 441.65pt>
+File: aliases.jpg Graphic file (type jpg)
+ <use aliases.jpg>
+File: aliases.jpg Graphic file (type jpg)
+
+<use aliases.jpg> [183 <./aliases.jpg>] [184] [185] [186] [187] [188] [189]
+[190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201]
+[202] [203] [204] [205] [206] [207] [208] [209] [210] [211] [212] [213]
+[214] [215] [216] [217] [218] [219] [220] [221] [222] [223] [224] [225]
+[226] [227] [228] [229] [230] [231] [232] [233] [234]
+Chapter 17.
+[235
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 17241--17245
+[][] \T1/ptm/m/n/10 Same as \T1/ptm/m/it/10 GPS_STARTUP_LD_LIBRARY_PATH \T1/ptm
+/m/n/10 but for the
+ []
+
+[236] [237] [238]
+Underfull \hbox (badness 7308) in paragraph at lines 17520--17525
+[]\T1/ptm/m/n/10 This is usu-ally due to font prob-lems. Edit-ing the file
+ []
+
+[239]
+Underfull \hbox (badness 7362) in paragraph at lines 17669--17672
+\T1/ptm/m/n/10 1/17 Un-ex-pected ex-cep-tion: Ex-cep-tion name: CON-STRAINT_ERR
+OR _UN-EX-
+ []
+
+[240]
+Chapter 18.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 17679.
+
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 17679.
+
+[241
+
+]
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 17787.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 17848.
+
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 17848.
+
+ [242] [243] [244] [245] [246] [247] [248] [249]
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 18776.
+
+<inheritance-588f70f6775e64f5f12fcff5e2c444d2bdd32ccb.pdf, id=2522, 244.915pt x
+ 100.375pt>
+File: inheritance-588f70f6775e64f5f12fcff5e2c444d2bdd32ccb.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-588f70f6775e64f5f12fcff5e2c444d2bdd32ccb.pdf>
+File: inheritance-588f70f6775e64f5f12fcff5e2c444d2bdd32ccb.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-588f70f6775e64f5f12fcff5e2c444d2bdd32ccb.pdf> [250] [251 <./in
+heritance-588f70f6775e64f5f12fcff5e2c444d2bdd32ccb.pdf>] [252]
+<inheritance-ef3c50bd7b77d5d85c58e4bac7699295cd5d1c52.pdf, id=2577, 423.5825pt 
+x 100.375pt>
+File: inheritance-ef3c50bd7b77d5d85c58e4bac7699295cd5d1c52.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-ef3c50bd7b77d5d85c58e4bac7699295cd5d1c52.pdf>
+File: inheritance-ef3c50bd7b77d5d85c58e4bac7699295cd5d1c52.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-ef3c50bd7b77d5d85c58e4bac7699295cd5d1c52.pdf> [253 <./inherita
+nce-ef3c50bd7b77d5d85c58e4bac7699295cd5d1c52.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 19241--19245
+\T1/ptm/m/n/10 This func-tion pre-vents the cre-ation of a book-mark in-stance 
+di-rectly. You must use
+ []
+
+[254] [255]
+<inheritance-7906481d060c5bd82be4a90b2bfd2179684e5e1f.pdf, id=2634, 246.9225pt 
+x 100.375pt>
+File: inheritance-7906481d060c5bd82be4a90b2bfd2179684e5e1f.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-7906481d060c5bd82be4a90b2bfd2179684e5e1f.pdf>
+File: inheritance-7906481d060c5bd82be4a90b2bfd2179684e5e1f.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-7906481d060c5bd82be4a90b2bfd2179684e5e1f.pdf> [256 <./inherita
+nce-7906481d060c5bd82be4a90b2bfd2179684e5e1f.pdf>] [257] [258] [259]
+Underfull \hbox (badness 10000) in paragraph at lines 20009--20009
+[]\T1/ptm/m/it/10 category\T1/ptm/m/n/10 , \T1/ptm/m/it/10 out-put\T1/ptm/m/n/1
+0 , \T1/ptm/m/it/10 reg-exp='`\T1/ptm/m/n/10 , \T1/ptm/m/it/10 file_index=-1\T1
+/ptm/m/n/10 , \T1/ptm/m/it/10 line_index=-1\T1/ptm/m/n/10 , \T1/ptm/m/it/10 col
+umn_index=-1\T1/ptm/m/n/10 ,
+ []
+
+[260]
+Underfull \hbox (badness 10000) in paragraph at lines 20136--20138
+[]\T1/ptm/b/n/10 choice \T1/ptm/m/n/10 -- The in-dex of the fix to ap-ply, see 
+out-put of
+ []
+
+
+<inheritance-fb7d0bc5014a6cc93ba14966d4821d7a55c9ba42.pdf, id=2725, 248.93pt x 
+100.375pt>
+File: inheritance-fb7d0bc5014a6cc93ba14966d4821d7a55c9ba42.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-fb7d0bc5014a6cc93ba14966d4821d7a55c9ba42.pdf>
+[261]
+File: inheritance-fb7d0bc5014a6cc93ba14966d4821d7a55c9ba42.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-fb7d0bc5014a6cc93ba14966d4821d7a55c9ba42.pdf> [262 <./inherit
+ance-fb7d0bc5014a6cc93ba14966d4821d7a55c9ba42.pdf>] [263]
+<inheritance-b8f8fc763a4c622b683042831f134b863161b91f.pdf, id=2778, 301.125pt x
+ 100.375pt>
+File: inheritance-b8f8fc763a4c622b683042831f134b863161b91f.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-b8f8fc763a4c622b683042831f134b863161b91f.pdf>
+File: inheritance-b8f8fc763a4c622b683042831f134b863161b91f.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-b8f8fc763a4c622b683042831f134b863161b91f.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 20472--20472
+[]\T1/ptm/m/it/10 prompt='`\T1/ptm/m/n/10 , \T1/ptm/m/it/10 global_window=False
+\T1/ptm/m/n/10 , \T1/ptm/m/it/10 on_changed=None\T1/ptm/m/n/10 , \T1/ptm/m/it/1
+0 on_activate=None\T1/ptm/m/n/10 ,
+ []
+
+[264 <./inheritance-b8f8fc763a4c622b683042831f134b863161b91f.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 20616--20616
+[]\T1/ptm/m/it/10 name\T1/ptm/m/n/10 , \T1/ptm/m/it/10 force=False\T1/ptm/m/n/1
+0 , \T1/ptm/m/it/10 on_input=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 on_destroy=No
+ne\T1/ptm/m/n/10 , \T1/ptm/m/it/10 ac-cept_input=True\T1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20616--20616
+\T1/ptm/m/it/10 on_resize=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 on_interrupt=Non
+e\T1/ptm/m/n/10 , \T1/ptm/m/it/10 on_completion=None\T1/ptm/m/n/10 , \T1/ptm/m/
+it/10 on_key='`\T1/ptm/m/n/10 , \T1/ptm/m/it/10 man-
+ []
+
+[265]
+<inheritance-274e95af290ff61d241809e5073f3d2e967ab17d.pdf, id=2808, 252.945pt x
+ 100.375pt>
+File: inheritance-274e95af290ff61d241809e5073f3d2e967ab17d.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-274e95af290ff61d241809e5073f3d2e967ab17d.pdf>
+File: inheritance-274e95af290ff61d241809e5073f3d2e967ab17d.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-274e95af290ff61d241809e5073f3d2e967ab17d.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 20691--20691
+[]\T1/ptm/m/it/10 name\T1/ptm/m/n/10 , \T1/ptm/m/it/10 force=False\T1/ptm/m/n/1
+0 , \T1/ptm/m/it/10 on_input=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 on_destroy=No
+ne\T1/ptm/m/n/10 , \T1/ptm/m/it/10 ac-cept_input=True\T1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20691--20691
+\T1/ptm/m/it/10 on_resize=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 on_interrupt=Non
+e\T1/ptm/m/n/10 , \T1/ptm/m/it/10 on_completion=None\T1/ptm/m/n/10 , \T1/ptm/m/
+it/10 on_key='`\T1/ptm/m/n/10 , \T1/ptm/m/it/10 man-
+ []
+
+[266 <./inheritance-274e95af290ff61d241809e5073f3d2e967ab17d.pdf>] [267]
+[268] [269] [270] [271] [272] [273] [274] [275]
+Underfull \hbox (badness 6825) in paragraph at lines 21833--21835
+\T1/ptm/m/n/10 Retrieves the cur-rent anal-ysed source file. You should call th
+is method only from a
+ []
+
+[276] [277] [278] [279] [280] [281] [282] [283] [284] [285] [286] [287]
+Underfull \hbox (badness 10000) in paragraph at lines 23202--23204
+\T1/ptm/m/n/10 This func-tion pre-vents the di-rect cre-ation of in-stances of 
+Ed-i-tor-Buffer. Use
+ []
+
+[288] [289] [290] [291] [292] [293] [294] [295] [296] [297]
+Underfull \hbox (badness 10000) in paragraph at lines 24567--24567
+[]\T1/ptm/m/it/10 pattern\T1/ptm/m/n/10 , \T1/ptm/m/it/10 back-ward=False\T1/pt
+m/m/n/10 , \T1/ptm/m/it/10 case_sensitive=False\T1/ptm/m/n/10 , \T1/ptm/m/it/10
+ reg-exp=False\T1/ptm/m/n/10 , \T1/ptm/m/it/10 whole_word=False\T1/ptm/m/n/10 ,
+
+ []
+
+[298] [299]
+<inheritance-996e299eaa1d6ccc1456d8a608875dd40ea8e5ec.pdf, id=3264, 264.99pt x 
+100.375pt>
+File: inheritance-996e299eaa1d6ccc1456d8a608875dd40ea8e5ec.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-996e299eaa1d6ccc1456d8a608875dd40ea8e5ec.pdf>
+File: inheritance-996e299eaa1d6ccc1456d8a608875dd40ea8e5ec.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-996e299eaa1d6ccc1456d8a608875dd40ea8e5ec.pdf> [300 <./inherita
+nce-996e299eaa1d6ccc1456d8a608875dd40ea8e5ec.pdf>] [301] [302] [303]
+Underfull \hbox (badness 10000) in paragraph at lines 25459--25459
+[]\T1/ptm/m/it/10 include_implicit=False\T1/ptm/m/n/10 , \T1/ptm/m/it/10 syn-ch
+ronous=True\T1/ptm/m/n/10 , \T1/ptm/m/it/10 show_kind=False\T1/ptm/m/n/10 , \T1
+/ptm/m/it/10 in_file='None'\T1/ptm/m/n/10 ,
+ []
+
+[304] [305]
+<inheritance-4419be1531704f1714e087124e88a9303058b577.pdf, id=3363, 427.5975pt 
+x 100.375pt>
+File: inheritance-4419be1531704f1714e087124e88a9303058b577.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-4419be1531704f1714e087124e88a9303058b577.pdf>
+File: inheritance-4419be1531704f1714e087124e88a9303058b577.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-4419be1531704f1714e087124e88a9303058b577.pdf>
+<inheritance-b8beac09d7b1ccf2008016f5ceab3f29717d1dd2.pdf, id=3366, 166.6225pt 
+x 100.375pt>
+File: inheritance-b8beac09d7b1ccf2008016f5ceab3f29717d1dd2.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-b8beac09d7b1ccf2008016f5ceab3f29717d1dd2.pdf>
+File: inheritance-b8beac09d7b1ccf2008016f5ceab3f29717d1dd2.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-b8beac09d7b1ccf2008016f5ceab3f29717d1dd2.pdf> [306 <./inherita
+nce-4419be1531704f1714e087124e88a9303058b577.pdf> <./inheritance-b8beac09d7b1cc
+f2008016f5ceab3f29717d1dd2.pdf>] [307] [308] [309]
+<inheritance-cd292bae136109266e469d532a80d2da47ce6dfb.pdf, id=3446, 287.0725pt 
+x 100.375pt>
+File: inheritance-cd292bae136109266e469d532a80d2da47ce6dfb.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-cd292bae136109266e469d532a80d2da47ce6dfb.pdf>
+File: inheritance-cd292bae136109266e469d532a80d2da47ce6dfb.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-cd292bae136109266e469d532a80d2da47ce6dfb.pdf> [310 <./inherita
+nce-cd292bae136109266e469d532a80d2da47ce6dfb.pdf>] [311] [312] [313] [314]
+[315] [316] [317] [318] [319] [320] [321] [322]
+Underfull \hbox (badness 10000) in paragraph at lines 27556--27559
+[]\T1/ptm/m/n/10 enable_navigation, new_file,
+ []
+
+[323] [324] [325] [326]
+<inheritance-f5ac4f1cf088abf59e67067ad9e8639e45147029.pdf, id=3637, 327.2225pt 
+x 100.375pt>
+File: inheritance-f5ac4f1cf088abf59e67067ad9e8639e45147029.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-f5ac4f1cf088abf59e67067ad9e8639e45147029.pdf>
+File: inheritance-f5ac4f1cf088abf59e67067ad9e8639e45147029.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-f5ac4f1cf088abf59e67067ad9e8639e45147029.pdf> [327 <./inherita
+nce-f5ac4f1cf088abf59e67067ad9e8639e45147029.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 28180--28180
+[]\T1/ptm/m/it/10 output\T1/ptm/m/n/10 , \T1/ptm/m/it/10 cat-e-gory\T1/ptm/m/n/
+10 , \T1/ptm/m/it/10 reg-exp='`\T1/ptm/m/n/10 , \T1/ptm/m/it/10 file_index=-1\T
+1/ptm/m/n/10 , \T1/ptm/m/it/10 line_index=-1\T1/ptm/m/n/10 , \T1/ptm/m/it/10 co
+lumn_index=-1\T1/ptm/m/n/10 ,
+ []
+
+[328] [329] [330] [331]
+<inheritance-e350ff3e67de9d74f006dfb8fb38cd12bfa3a25d.pdf, id=3711, 269.005pt x
+ 100.375pt>
+File: inheritance-e350ff3e67de9d74f006dfb8fb38cd12bfa3a25d.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-e350ff3e67de9d74f006dfb8fb38cd12bfa3a25d.pdf>
+File: inheritance-e350ff3e67de9d74f006dfb8fb38cd12bfa3a25d.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-e350ff3e67de9d74f006dfb8fb38cd12bfa3a25d.pdf> [332 <./inherita
+nce-e350ff3e67de9d74f006dfb8fb38cd12bfa3a25d.pdf>] [333]
+<inheritance-30655749a51bcdd5fa36edb25312a37070ba366d.pdf, id=3744, 240.9pt x 1
+00.375pt>
+File: inheritance-30655749a51bcdd5fa36edb25312a37070ba366d.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-30655749a51bcdd5fa36edb25312a37070ba366d.pdf>
+File: inheritance-30655749a51bcdd5fa36edb25312a37070ba366d.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-30655749a51bcdd5fa36edb25312a37070ba366d.pdf> [334 <./inherita
+nce-30655749a51bcdd5fa36edb25312a37070ba366d.pdf>] [335] [336]
+<inheritance-be2304251490065fe84580914542190c3a1aa5b7.pdf, id=3788, 337.26pt x 
+100.375pt>
+File: inheritance-be2304251490065fe84580914542190c3a1aa5b7.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-be2304251490065fe84580914542190c3a1aa5b7.pdf>
+File: inheritance-be2304251490065fe84580914542190c3a1aa5b7.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-be2304251490065fe84580914542190c3a1aa5b7.pdf> [337 <./inherita
+nce-be2304251490065fe84580914542190c3a1aa5b7.pdf>] [338]
+Underfull \hbox (badness 10000) in paragraph at lines 29434--29434
+[]\T1/ptm/m/it/10 command\T1/ptm/m/n/10 , \T1/ptm/m/it/10 reg-exp='`\T1/ptm/m/n
+/10 , \T1/ptm/m/it/10 on_match=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 on_exit=Non
+e\T1/ptm/m/n/10 , \T1/ptm/m/it/10 task_manager=True\T1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29434--29434
+\T1/ptm/m/it/10 progress_regexp='`\T1/ptm/m/n/10 , \T1/ptm/m/it/10 progress_cur
+rent=1\T1/ptm/m/n/10 , \T1/ptm/m/it/10 progress_total=1\T1/ptm/m/n/10 , \T1/ptm
+/m/it/10 be-fore_kill=None\T1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29434--29434
+\T1/ptm/m/it/10 re-mote_server='`\T1/ptm/m/n/10 , \T1/ptm/m/it/10 show_command=
+False\T1/ptm/m/n/10 , \T1/ptm/m/it/10 sin-gle_line_regexp=False\T1/ptm/m/n/10 ,
+
+ []
+
+[339]
+<inheritance-ffa7a5ed619e02c99910f7f293bdc50c23600d3c.pdf, id=3825, 285.065pt x
+ 100.375pt>
+File: inheritance-ffa7a5ed619e02c99910f7f293bdc50c23600d3c.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-ffa7a5ed619e02c99910f7f293bdc50c23600d3c.pdf>
+File: inheritance-ffa7a5ed619e02c99910f7f293bdc50c23600d3c.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-ffa7a5ed619e02c99910f7f293bdc50c23600d3c.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 29504--29504
+[]\T1/ptm/m/it/10 command\T1/ptm/m/n/10 , \T1/ptm/m/it/10 reg-exp='`\T1/ptm/m/n
+/10 , \T1/ptm/m/it/10 on_match=None\T1/ptm/m/n/10 , \T1/ptm/m/it/10 on_exit=Non
+e\T1/ptm/m/n/10 , \T1/ptm/m/it/10 task_manager=True\T1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29504--29504
+\T1/ptm/m/it/10 progress_regexp='`\T1/ptm/m/n/10 , \T1/ptm/m/it/10 progress_cur
+rent=1\T1/ptm/m/n/10 , \T1/ptm/m/it/10 progress_total=1\T1/ptm/m/n/10 , \T1/ptm
+/m/it/10 be-fore_kill=None\T1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29504--29504
+\T1/ptm/m/it/10 re-mote_server='`\T1/ptm/m/n/10 , \T1/ptm/m/it/10 show_command=
+False\T1/ptm/m/n/10 , \T1/ptm/m/it/10 sin-gle_line_regexp=False\T1/ptm/m/n/10 ,
+
+ []
+
+[340 <./inheritance-ffa7a5ed619e02c99910f7f293bdc50c23600d3c.pdf>] [341]
+[342] [343] [344] [345] [346] [347] [348] [349] [350] [351]
+<inheritance-f510d0e5985cd65d79ba7c93d8bf57f714d70531.pdf, id=3972, 349.305pt x
+ 100.375pt>
+File: inheritance-f510d0e5985cd65d79ba7c93d8bf57f714d70531.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-f510d0e5985cd65d79ba7c93d8bf57f714d70531.pdf>
+File: inheritance-f510d0e5985cd65d79ba7c93d8bf57f714d70531.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-f510d0e5985cd65d79ba7c93d8bf57f714d70531.pdf> [352 <./inherita
+nce-f510d0e5985cd65d79ba7c93d8bf57f714d70531.pdf>] [353]
+<inheritance-3ee89da96caf0f20abab4647ff8b3525c7c99426.pdf, id=4008, 297.11pt x 
+100.375pt>
+File: inheritance-3ee89da96caf0f20abab4647ff8b3525c7c99426.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-3ee89da96caf0f20abab4647ff8b3525c7c99426.pdf>
+File: inheritance-3ee89da96caf0f20abab4647ff8b3525c7c99426.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-3ee89da96caf0f20abab4647ff8b3525c7c99426.pdf> [354] [355 <./in
+heritance-3ee89da96caf0f20abab4647ff8b3525c7c99426.pdf>]
+<inheritance-2c89ae807dbac9effa44bc54c326b1800ffc5c6f.pdf, id=4051, 264.99pt x 
+100.375pt>
+File: inheritance-2c89ae807dbac9effa44bc54c326b1800ffc5c6f.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-2c89ae807dbac9effa44bc54c326b1800ffc5c6f.pdf>
+File: inheritance-2c89ae807dbac9effa44bc54c326b1800ffc5c6f.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-2c89ae807dbac9effa44bc54c326b1800ffc5c6f.pdf> [356 <./inherita
+nce-2c89ae807dbac9effa44bc54c326b1800ffc5c6f.pdf>]
+<inheritance-228f72add5f0823f903e3505b1063e54dabbb3dc.pdf, id=4073, 248.93pt x 
+100.375pt>
+File: inheritance-228f72add5f0823f903e3505b1063e54dabbb3dc.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-228f72add5f0823f903e3505b1063e54dabbb3dc.pdf>
+File: inheritance-228f72add5f0823f903e3505b1063e54dabbb3dc.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-228f72add5f0823f903e3505b1063e54dabbb3dc.pdf> [357 <./inherita
+nce-228f72add5f0823f903e3505b1063e54dabbb3dc.pdf>]
+<inheritance-2ca8ca355a305af9dce29f1b97a94f72b7080420.pdf, id=4092, 353.32pt x 
+100.375pt>
+File: inheritance-2ca8ca355a305af9dce29f1b97a94f72b7080420.pdf Graphic file (ty
+pe pdf)
+ <use inheritance-2ca8ca355a305af9dce29f1b97a94f72b7080420.pdf>
+File: inheritance-2ca8ca355a305af9dce29f1b97a94f72b7080420.pdf Graphic file (ty
+pe pdf)
+
+<use inheritance-2ca8ca355a305af9dce29f1b97a94f72b7080420.pdf> [358] [359 <./in
+heritance-2ca8ca355a305af9dce29f1b97a94f72b7080420.pdf>] [360] [361] [362]
+[363] [364]
+Chapter 19.
+[365
+
+] [366] [367] [368] [369] [370
+
+]
+Chapter 20.
+[371] [372
+
+] [373
+
+
+] (./GPS.ind [374
+
+
+] [375
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+[]\T1/ptm/m/n/10 add_all_gcov_project_info() (GPS.CodeAnalysis
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+[]\T1/ptm/m/n/10 add_templates_dir() (GPS.ProjectTemplate static
+ []
+
+[376] [377] [378] [379] [380]
+Underfull \hbox (badness 10000) in paragraph at lines 649--650
+[]\T1/ptm/m/n/10 hide_coverage_information() (GPS.CodeAnalysis
+ []
+
+[381] [382] [383]
+Underfull \hbox (badness 10000) in paragraph at lines 1042--1043
+[]\T1/ptm/m/n/10 scenario_variables_cmd_line() (GPS.Project static
+ []
+
+[384]
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1133
+[]\T1/ptm/m/n/10 show_analysis_report() (GPS.CodeAnalysis method),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1134
+[]\T1/ptm/m/n/10 show_coverage_information() (GPS.CodeAnalysis
+ []
+
+[385] [386]) (./GPS.aux) ) 
+Here is how much of TeX's memory you used:
+ 11164 strings out of 493848
+ 169429 string characters out of 1152823
+ 270245 words of memory out of 3000000
+ 12750 multiletter control sequences out of 15000+50000
+ 67290 words of font info for 76 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 45i,12n,51p,529b,621s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc
+}</usr/share/texmf-texlive/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf
+-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/typ
+e1/urw/courier/ucrro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/u
+hvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/
+share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texli
+ve/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/t
+imes/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></u
+sr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on GPS.pdf (392 pages, 6835991 bytes).
+PDF statistics:
+ 6065 PDF objects out of 6186 (max. 8388607)
+ 1392 named destinations out of 1440 (max. 500000)
+ 1669 words of extra memory for PDF output out of 10000 (max. 10000000)
+

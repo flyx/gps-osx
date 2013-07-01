@@ -1,0 +1,6 @@
+project Simple2 is
+   for Source_Files use ();
+   package Compiler is
+      for Default_Switches ("Ada") use ("-g");
+   end Compiler;
+end Simple2;

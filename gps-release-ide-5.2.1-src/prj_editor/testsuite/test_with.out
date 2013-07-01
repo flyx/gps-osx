@@ -1,0 +1,28 @@
+project Simple is
+
+end Simple;
+project Add_Attr2 is
+
+   type A_Type is
+      ("1", "2");
+   A : A_Type := external ("A");
+   for Source_Files use ();
+
+   case A is
+
+      when "2" =>
+
+      when "1" =>
+         for Source_Dirs use (".");
+   end case;
+
+end Add_Attr2;
+with "/foo/bar/add_attr2.gpr";
+with "simple";
+
+project Test_With is
+
+   for Source_Files use ();
+
+end Test_With;
+

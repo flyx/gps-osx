@@ -1,0 +1,4 @@
+with "tree2";
+project Tree1 is
+   for Source_Files use ();
+end Tree1;

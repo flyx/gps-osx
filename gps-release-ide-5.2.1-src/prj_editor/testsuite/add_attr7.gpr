@@ -1,0 +1,7 @@
+with "add_attr6";
+
+project add_attr7 is
+   type C_Type is ("C1", "C2");
+   C : C_Type := external ("C");
+   for Source_Files use ();
+end add_attr7;

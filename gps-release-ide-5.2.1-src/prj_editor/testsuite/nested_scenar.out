@@ -1,0 +1,18 @@
+--  Tests whether a scenario tested in a package is correctly put in the
+--  project declaration itself. This is mandatory, so that this scenario
+--  variable can be used in the nested cases for the project and any of
+--  the packages.
+--  This is done lazily, only when the project is modified. You thus need
+--  to add an attribute "Source_Files" to the "Compiler" package below
+
+project Nested_Scenar is
+
+   type Os_Type is
+      ("Linux", "Windows");
+   Os : Os_Type := external ("OS");
+
+   package Compiler is
+   end Compiler;
+
+end Nested_Scenar;
+

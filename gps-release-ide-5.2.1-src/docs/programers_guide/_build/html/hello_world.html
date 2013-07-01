@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4. Hello World walk through &mdash; GPS Programer&#39;s Guide 5.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '5.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="GPS Programer&#39;s Guide 5.2.1 documentation" href="index.html" />
+    <link rel="next" title="5. The GPS Kernel" href="kernel.html" />
+    <link rel="prev" title="3. The GPS modules" href="modules.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="kernel.html" title="5. The GPS Kernel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="3. The GPS modules"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">GPS Programer&#39;s Guide 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/adacore_transparent.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">4. Hello World walk through</a><ul>
+<li><a class="reference internal" href="#declaring-the-module">4.1. Declaring the module</a></li>
+<li><a class="reference internal" href="#publicizing-your-module">4.2. Publicizing your module</a></li>
+<li><a class="reference internal" href="#compiling-your-module">4.3. Compiling your module</a></li>
+<li><a class="reference internal" href="#registering-the-module">4.4. Registering the module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="previous chapter">3. The GPS modules</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="kernel.html"
+                        title="next chapter">5. The GPS Kernel</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/hello_world.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="hello-world-walk-through">
+<h1>4. Hello World walk through<a class="headerlink" href="#hello-world-walk-through" title="Permalink to this headline">¶</a></h1>
+<p>Creating a new module is best demonstrated by going through the
+classical and simple example &#8216;hello world&#8217;. This example will be
+refined as new extension possibilities are described later on in this
+document.</p>
+<div class="section" id="declaring-the-module">
+<h2>4.1. Declaring the module<a class="headerlink" href="#declaring-the-module" title="Permalink to this headline">¶</a></h2>
+<p>A module is generally implemented in a separate source file, at this point
+an Ada package. The first thing that needs to be done is to create the specs
+of this package. Most of the time, a single function has to be exported,
+which is called Register_Module by convention. Therefore, we have to create
+a new directory to contain the module (we&#8217;ll call it <tt class="file docutils literal"><span class="pre">hello_world</span></tt>), at
+the same level as other modules like the source editor.</p>
+<p>Still by convention, the sources are put in a directory called <tt class="file docutils literal"><span class="pre">src</span></tt>, and
+the object files are kept in a separate directory called <tt class="file docutils literal"><span class="pre">obj</span></tt>:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="n">mkdir</span> <span class="n">hello_world</span>
+<span class="n">mkdir</span> <span class="n">hello_world</span><span class="o">/</span><span class="n">src</span>
+<span class="n">mkdir</span> <span class="n">hello_world</span><span class="o">/</span><span class="n">obj</span>
+</pre></div>
+</div>
+<p>In the source directory, we create the file <tt class="file docutils literal"><span class="pre">hello_world.ads</span></tt>, which
+contains the declaration of the <cite>Register_Module</cite> subprogram:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kn">with</span> <span class="nn">GPS.Kernel</span><span class="p">;</span>
+<span class="kd">package</span> <span class="nc">Hello_World</span> <span class="kr">is</span>
+   <span class="kd">procedure</span> <span class="nf">Register_Module</span>
+      <span class="p">(</span><span class="nv">Kernel</span> <span class="p">: </span><span class="nv">access</span> <span class="nv">GPS</span><span class="p">.</span><span class="nv">Kernel</span><span class="p">.</span><span class="nv">Kernel_Handle_Record</span><span class="p">&#39;</span><span class="na">Class</span><span class="p">);</span>
+<span class="kr">end</span> <span class="nf">Hello_World</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Before going over the details of the implementation of <cite>Register_Module</cite>,
+we have to make sure that the rest of GPS knows about this module, and that
+we know how to compile it</p>
+</div>
+<div class="section" id="publicizing-your-module">
+<h2>4.2. Publicizing your module<a class="headerlink" href="#publicizing-your-module" title="Permalink to this headline">¶</a></h2>
+<p>Until GPS provides dynamic modules, you have to modify the main subprogram of
+GPS to make it aware of your module.</p>
+<p>This is done by modifying the file <tt class="file docutils literal"><span class="pre">gps.adb</span></tt>, and adding two statements
+in there: a <cite>with</cite> statement that imports <tt class="file docutils literal"><span class="pre">hello_world</span></tt>.ads, and
+a call to <cite>Hello_World.Register_Module</cite>. See for instance how this is
+done for the keymanager module.</p>
+</div>
+<div class="section" id="compiling-your-module">
+<h2>4.3. Compiling your module<a class="headerlink" href="#compiling-your-module" title="Permalink to this headline">¶</a></h2>
+<p>However, after the addition of the two statements in <tt class="file docutils literal"><span class="pre">gps.adb</span></tt>, the file
+<tt class="file docutils literal"><span class="pre">hello_world.ads</span></tt> will not be found automatically by GPS. Therefore,
+you need to create a project file for your new module (we&#8217;ll call it
+<tt class="file docutils literal"><span class="pre">hello_world.gpr</span></tt>), and add a dependency to it in the root project file
+of GPS (<tt class="file docutils literal"><span class="pre">gps/gps.gpr</span></tt>), as is currently done for all other modules.</p>
+<p>The project file <tt class="file docutils literal"><span class="pre">hello_world.gpr</span></tt> is best created by copying the
+project file from any other module, for instance the aliases module
+(<tt class="file docutils literal"><span class="pre">aliases/aliases.gpr</span></tt>), and changing the name of the project to
+<cite>Hello_World</cite>.</p>
+<p>You must also create a set of two Makfiles, which are used to add files other
+than Ada, even if your module only uses Ada files.
+Once again, this is best done by copying the two Makefiles from the
+directory <tt class="file docutils literal"><span class="pre">aliases</span></tt>, renaming them into <tt class="file docutils literal"><span class="pre">Makefile</span></tt> and
+<tt class="file docutils literal"><span class="pre">Makefile.hello_world</span></tt>, and replacing the strings <cite>aliases</cite> and
+<cite>ALIASES</cite> by resp. <cite>hello_world</cite> and <cite>HELLO_WORLD</cite>.</p>
+<p>These steps will be made easier in the near future, but in any case are
+relatively straightforward, and only need to be done once per module. The
+resulting setup automatically takes into account all sources files that will
+be added later on to the module, either C or Ada, and compile them with the
+appropriate compiler.</p>
+<p>You might also prefer in your first attempt at creating a new module to add
+your new files into the <tt class="file docutils literal"><span class="pre">src</span></tt> directory of an existing module. In this
+case, you don&#8217;t have to create any of the project files or Makefile, nor to
+modify the <tt class="file docutils literal"><span class="pre">gps.adb</span></tt> file.</p>
+<p>Once the project file has been created, and a dependency added in
+<tt class="file docutils literal"><span class="pre">gps.gpr</span></tt>, you might want to reload the GPS project in GPS, so that the
+editing of your sources can be done in an Ada-friendly context.</p>
+</div>
+<div class="section" id="registering-the-module">
+<h2>4.4. Registering the module<a class="headerlink" href="#registering-the-module" title="Permalink to this headline">¶</a></h2>
+<p>Back to the source files of your modules. We now need to create a body for
+the procedure <cite>Register_Module</cite>. The minimal thing this function has to
+do is indicate to the GPS kernel that a new module is being declared, and
+give it a name. If you only do that, there is no direct impact on the rest
+of GPS. However, as we will see during in this guide, having a specific
+<cite>Module_Id</cite> is mandatory for some of the advanced feature, so it is
+cleaner to always declare one from the start.</p>
+<p>This is done by creating the file <tt class="file docutils literal"><span class="pre">hello_world.adb</span></tt>, with the following
+contents:</p>
+<div class="highlight-ada"><div class="highlight"><pre><span class="kn">with</span> <span class="nn">GPS.Kernel.Modules</span><span class="p">;</span>  <span class="kn">use</span> <span class="nn">GPS.Kernel</span><span class="p">,</span> <span class="n">GPS</span><span class="p">.</span><span class="n">Kernel</span><span class="p">.</span><span class="n">Modules</span><span class="p">;</span>
+
+<span class="kd">package</span> <span class="nc">Hello_World</span> <span class="kr">is</span>
+   <span class="kd">procedure</span> <span class="nf">Register_Module</span>
+      <span class="p">(</span><span class="nv">Kernel</span> <span class="p">: </span><span class="nv">access</span> <span class="nv">GPS</span><span class="p">.</span><span class="nv">Kernel</span><span class="p">.</span><span class="nv">Kernel_Handle_Record</span><span class="p">&#39;</span><span class="na">Class</span><span class="p">)</span>
+   <span class="kr">is</span>
+      <span class="n">Module</span> <span class="p">:</span> <span class="n">Module_ID</span><span class="p">;</span>
+   <span class="kr">begin</span>
+      <span class="n">GPS</span><span class="p">.</span><span class="n">Kernel</span><span class="p">.</span><span class="n">Modules</span><span class="p">.</span><span class="n">Register_Module</span>
+         <span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="n">Kernel</span><span class="p">,</span> <span class="n">Module_Name</span> <span class="p">=&gt;</span> <span class="s">&quot;hello_world&quot;</span><span class="p">);</span>
+   <span class="kr">end</span> <span class="nf">Register_Module</span><span class="p">;</span>
+
+<span class="kr">end</span> <span class="nf">Hello_World</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>At this point, the hello_world module is compilable, only it won&#8217;t do anything
+but be loaded in GPS.</p>
+<p>The following sections will show how new features can be provided to the
+rest of GPS.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="kernel.html" title="5. The GPS Kernel"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="3. The GPS modules"
+             >previous</a> |</li>
+        <li><a href="index.html">GPS Programer&#39;s Guide 5.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2001-2013, AdaCore.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
