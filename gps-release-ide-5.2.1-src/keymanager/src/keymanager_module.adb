@@ -853,7 +853,8 @@ package body KeyManager_Module is
                   if Modif = Mnemonic_Modif then
                      Set_Mnemonic_Modifier
                        (Get_Main_Window (Kernel),
-                        Modif or Control_Mask or Mod1_Mask or Shift_Mask);
+                        Modif or Control_Mask or Mod1_Mask or Shift_Mask
+                        or Meta_Mask);
                   end if;
 
                   if not Change_Entry
