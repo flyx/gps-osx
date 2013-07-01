@@ -471,7 +471,7 @@ procedure GPS.Main is
 
       Free (Home);
 
-      GPS_Home_Dir := Create_From_Dir (Home_Dir, ".gps");
+      GPS_Home_Dir := Create_From_Dir (Home_Dir, ".gps-osx");
       Ensure_Directory (GPS_Home_Dir);
 
       Prefix := Getenv ("GPS_ROOT");
