@@ -26,6 +26,8 @@
 	<string>Copyright (C) 2001-2012, AdaCore, GNU General Public License.</string>
 	<key>LSEnvironment</key>
 	<dict>
+		<key>GNAT_HOME</key>
+		<string>/usr/local/gnat</string>
 		<key>GPR_PROJECT_PATH</key>
 		<string></string>
 	</dict>

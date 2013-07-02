@@ -35,6 +35,9 @@ export GDK_PIXBUF_MODULE_FILE="$bundle_etc/gtk-2.0/gdk-pixbuf.loaders"
 export PANGO_LIBDIR="$bundle_lib"
 export PANGO_SYSCONFDIR="$bundle_etc"
 
+# GNAT_HOME should be set in the Info.plist file of the bundle. By default, it is /usr/local/gnat
+export PATH=$GNAT_HOME/bin:$PATH
+
 #Add the bundle's python modules
 PYTHONPATH="$bundle_lib/python2.7:$PYTHONPATH"
 PYTHONPATH="$bundle_lib/python2.7/site-packages:$PYTHONPATH"
