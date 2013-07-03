@@ -28,7 +28,7 @@
 	<dict>
 		<key>GNAT_HOME</key>
 		<string>/usr/local/gnat</string>
-		<key>GPR_PROJECT_PATH</key>
+		<key>ADA_PROJECT_PATH</key>
 		<string></string>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
