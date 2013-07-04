@@ -37,7 +37,7 @@ export PANGO_SYSCONFDIR="$bundle_etc"
 
 # GNAT_HOME should be set in the Info.plist file of the bundle. By default, it is /usr/local/gnat
 export PATH=$GNAT_HOME/bin:$PATH
-if [ "$ADA_PROJECT_PATH" == "" ] then
+if [ "$ADA_PROJECT_PATH" == "" ]; then
    export ADA_PROJECT_PATH="$GNAT_HOME/lib/gnat"
 fi
 
