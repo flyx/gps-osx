@@ -64,24 +64,29 @@ shortcuts - those have not been migrated to use command instead of control autom
 
 <p>I host a readily compiled app bundle on my server:</p>
 
-<p><a href="http://flyx.org/files/GPS-1606baf.dmg">Download!</a></p>
+<p><a href="http://flyx.org/files/GPS-511f81a.dmg">Download!</a></p>
 
-<p>This is built on the base of commit <a href="https://github.com/flyx86/gps-osx/commit/1606baff7a095e3a0a7c5978bca414b8d8265e09">1606baff7a095e3a0a7c5978bca414b8d8265e09</a>.</p>
+<p>This is built on the base of commit <a href="https://github.com/flyx86/gps-osx/commit/511f81af00144896b6d797348d2a280bebfe67d4">511f81af00144896b6d797348d2a280bebfe67d4</a>.</p>
 
 <p>Please note that I do not plan to create <em>stable</em> releases. I just spread the latest binary
 I use myself here.</p>
 
 <h3>
+<a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h3>
+
+<p>To be able to use your GNAT compiler, you have to tell GPS where it's located. You can do this by opening the app bundle (right click -&gt; show package contents) and opening the file <code>Contents/Info.plist</code> (you can either edit this with the visual editor that comes with Xcode or edit it as XML with your favorite text editor). In the section <em>Environment variables</em>, there are two variables that can be edited:</p>
+
+<ul>
+<li>
+<code>GNAT_HOME</code> is the base directory where your GNAT is installed. By default, this is <code>/usr/local/gnat</code>.</li>
+<li>
+<code>GPR_PROJECT_PATH</code> is important when you're using third-party GPRBuild libraries. You can give a list of paths seperated by <code>:</code> here. These paths are searched for GPRBuild project files. If left empty, this variable will default to <code>$GNAT_HOME/lib/gnat</code>.</li>
+</ul><h3>
 <a name="known-issues" class="anchor" href="#known-issues"><span class="octicon octicon-link"></span></a>Known issues</h3>
 
 <ul>
 <li>Fonts are quite small in the editor and project view. But you can change these in GPS' preferences.</li>
 <li>The autocomplete list is not rendered below the cursor, but quite some pixels off.</li>
-<li>Setting the <code>GPR_PROJECT_PATH</code> does not work when double-clicking the app bundle. If you need it,
-you have to launch <code>GPS.app/Contents/MacOS/GPS</code> from the terminal. I have no idea why this is
-happening - the environment variable can be set in the Info.plist in the app bundle so that GPS is
-loaded with it, and it will be set in GPS then, but GPS won't load projects from there anyway.
-Maybe it's a sandboxing issue or something.</li>
 <li>GPS does not use the standard OSX menu bar. To be able to do this, one would need to patch
 GtkAda to provide the necessary binding to GtkOSXApplication and then patch GPS to use it. This
 doesn't seem worth the effort.</li>
