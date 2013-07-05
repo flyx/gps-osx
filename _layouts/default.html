@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <title>GPS-OSX - {{ page.title }}</title>
+   <link href="/gps-osx/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+   <link href="/gps-osx/css/syntax.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+   <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+         <div class="container">
+            <a class="brand" href="/gps-osx/">GPS-OSX</a>
+            {% for weight in (0..20) %}
+            {% for p in site.pages %}
+            {% if p.weight == weight %}
+            <ul class="nav">
+                <li{% if p.url == page.url %} class="active"{% endif %}>
+                  <a href="{{ p.url| prepend: '/gps-osx' }}">{{p.title}}</a>
+               </li>
+            </ul>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+   
+   <article>
+      {{content}}
+   </article>
+   
+   <footer>
+      <p>
+         Copyright © 2013 by <a href="http://flyx.org">Felix Krause</a>.
+         Powered by <a href="http://pages.github.com/">GitHub Pages</a>,
+         <a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a>,
+         theme by <a href="http://bootswatch.com/">Bootswatch</a>
+      </p>
+   </footer>
+</body>
+
+</html>
