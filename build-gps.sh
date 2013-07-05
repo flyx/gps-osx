@@ -4,7 +4,7 @@ export PATH=$PREFIX/bin:$PATH
 export LDFLAGS=`echo $LDFLAGS | sed 's/ -arch [^ ]*//'`
 
 cd gps-release-ide-5.2.1-src
-./configure --prefix=$PREFIX --with-python=$PREFIX/bin/python
+./configure --prefix=$PREFIX --with-python=$PREFIX/bin/python --enable-gpl
 sed  '/Python_Libs/c \
    Python_Libs    := ("-ldl", "-Wl,-framework", "-Wl,CoreFoundation", "-lpython2.7");' gnatlib/gnatcoll_shared.gpr > gnatlib/gnatcoll_shared.gpr.patched
 cp gnatlib/gnatcoll_shared.gpr.patched gnatlib/gnatcoll_shared.gpr
