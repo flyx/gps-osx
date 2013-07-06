@@ -18,11 +18,9 @@ provides the following enhancements:
  * It comes as an app bundle which can simply be dropped into your
    `/Applications` folder.
 
-### Very important - please read before downloading
-
- * gtk-quartz is considered experimental and you should not expect this binary to be stable.
-   It also is in no way supported by [AdaCore][2]. Be aware of this before you decide to use
-   it for any serious software development.
+**Important**: gtk-quartz is considered experimental and you should not expect
+this binary to be stable. It also is in no way supported by [AdaCore][2]. Be
+aware of this before you decide to use it for any serious software development.
 
 ### Download
 
@@ -30,10 +28,11 @@ I host a readily compiled app bundle on my server:
 
 [Download!][4]
 
-This is built on the base of commit [1ed91852a52af3c27ed99bc868280ea2e996a572][3].
+This is built on the base of commit
+[1ed91852a52af3c27ed99bc868280ea2e996a572][3].
 
-Please note that I do not plan to create *stable* releases. I just spread the latest binary
-I use myself here.
+Please note that I do not plan to create *stable* releases. I just spread the
+latest binary I use myself here.
 
 ### License
 

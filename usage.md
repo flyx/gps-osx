@@ -26,6 +26,10 @@ Be aware that OSX caches the contents of the `Info.plist` file. If you modify
 it after you launched GPS once, you may need to move the GPS app bundle to
 another folder (not the Desktop) and back in order to clear the cache.
 
+If you want to use the command key `⌘` for keyboard shortcuts, you have to
+change the default keyboard shortcuts. You can do that by choosing
+`Edit -> Key Shortcuts` from the menu.
+
 ### Known issues
 
  * Fonts are quite small in the editor and project view. But you can change
