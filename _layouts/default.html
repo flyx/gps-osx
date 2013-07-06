@@ -6,6 +6,11 @@
    <title>GPS-OSX - {{ page.title }}</title>
    <link href="/gps-osx/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
    <link href="/gps-osx/css/syntax.css" media="screen" rel="stylesheet" type="text/css"/>
+   <style type="text/css"> 
+       body {
+           padding-top: 60px;
+       }
+   </style>
 </head>
 <body>
    <div class="navbar navbar-inverse navbar-fixed-top">
@@ -27,24 +32,28 @@
       </div>
    </div>
    
-   <a href="https://github.com/flyx86/gps-osx"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+   <a href="https://github.com/flyx86/gps-osx" style="z-index: 100;"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
    
    <div class="container">
       <div class="row">
-         <article class="span12">
+         <article class="span8 offset2">
             {{content}}
          </article>
       </div>
    </div>
    
-   <footer>
-      <p>
-         Copyright © 2013 by <a href="http://flyx.org">Felix Krause</a>.
-         Powered by <a href="http://pages.github.com/">GitHub Pages</a>,
-         <a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a>,
-         theme by <a href="http://bootswatch.com/">Bootswatch</a>
-      </p>
-   </footer>
+   <div class="container">
+      <div class="row">
+         <footer class="span8 offset2">
+            <p>
+               Copyright © 2013 by <a href="http://flyx.org">Felix Krause</a>.
+               Powered by <a href="http://pages.github.com/">GitHub Pages</a>,
+               <a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a>,
+               theme by <a href="http://bootswatch.com/">Bootswatch</a>
+            </p>
+         </footer>
+      </div>
+   </div>
 </body>
 
 </html>
