@@ -1,15 +1,3 @@
-.highlight pre {
-   margin: 0;
-   font-family: Menlo,Courier,monospace;
-}
-.highlight  { 
-   background: #eee;
-   border-radius: 8px;
-   -moz-border-radius: 8px;
-   -webkit-border-radius: 8px;
-   -o-border-radius: 8px;
-   padding: 8px;
-}
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
