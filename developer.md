@@ -30,12 +30,16 @@ and change the `ADA_PROJECT_PATH` of your GPS app bundle to
 page). Before opening the source, you should navigate to the source folder in
 the terminal and execute:
 
-    jhbuild shell
-    export GPR_PROJECT_PATH=$PREFIX/lib/gnat
-    export PATH=$PREFIX/bin:$PATH
-    export LDFLAGS=`echo $LDFLAGS | sed 's/ -arch [^ ]*//'`
-    ./configure --prefix=$PREFIX  --with-python=$PREFIX/bin/python --enable-gpl
-    exit
+{% highlight sh %}
+ jhbuild shell
+ export GPR_PROJECT_PATH=$PREFIX/lib/gnat
+ export PATH=$PREFIX/bin:$PATH
+ ./configure --prefix=$PREFIX --with-python=$PREFIX/bin/python --enable-gpl
+ exit
+{% endhighlight %}
 
 This generates the project file `gnatlib/gnatcoll_shared.gpr`. After that, you
-should be able to open `gps/gps.gpr` into GPS.
+should be able to open `gps/gps.gpr` into GPS. If you want to actually build
+GPS from inside GPS, well, good luck - I never tried that. A starting point
+would be `build-gps.sh`, where the lines above are taken from. In addition, you
+need to figure out what the Makefile does and tell GPS to do exactly that.
