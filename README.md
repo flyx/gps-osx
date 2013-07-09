@@ -11,9 +11,11 @@ I am not affiliated with [AdaCore][2].
 
 In order to be able to build GPS on your Mac, you need to have:
 
-#### GNAT GPL 2013
+#### GNAT Compiler
 
-Just download the darwin binary from [AdaCore's libre site][3] and execute the install script.
+You can use either GNAT GPL 2013 from [AdaCore's libre site][3] or the version included
+in [FSF's GCC][8]. GNAT GPL 2013 is the default. Either way, make sure the `bin`
+directory of your GNAT installation is included in your `PATH`.
 
 #### GTK-Quartz (jhbuild) Toolchain
 
@@ -54,7 +56,11 @@ directories:
 
 ### Building GPS
 
-Just do:
+If you use GNAT FSF, start with:
+
+    export GNAT_KIND=FSF
+
+You don't need to do that for GNAT GPL 2013. You can then build gps with:
 
     jhbuild shell < build-gps.sh
 
@@ -79,6 +85,8 @@ After building GPS, navigate into the `bundle` folder and execute
 This should create the bundle. To be able to do this, you need to have the latest
 [gtk-mac-bundler][6] from git installed (the current stable version mentioned on the site won't work).
 
+This requires `GNAT_KIND` to be defined as shown above if you're using GNAT FSF.
+
 ### What else can be done
 
 To provide more integration into OSX (= using the default OSX menu bar), GtkOSXApplication would need
@@ -102,3 +110,4 @@ This work is, as the GNAT Programming Studio itself, licensed under the terms of
  [5]: http://git.gnome.org/browse/gtk-osx/plain/gtk-osx-build-setup.sh
  [6]: https://live.gnome.org/GTK%2B/OSX/Bundling
  [7]: http://flyx86.github.io/gps-osx/
+ [8]: http://sourceforge.net/projects/gnuada/files/GNAT_GCC%20Mac%20OS%20X/4.8.1/
