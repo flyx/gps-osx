@@ -8,4 +8,9 @@ weight: 3
 
 GPS-OSX uses the *Clearlooks* theme. It looks like this:
 
-![Screenshot of GPS-OSX](/gtk-osx/img/screenshot1.png)
+<!-- hack to escape the default layout (I feel bad about this) -->
+</article>
+<div class="span12">
+![Screenshot of GPS-OSX](/gps-osx/img/screenshot1.png)
+</div>
+<article>
