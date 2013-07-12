@@ -39,6 +39,11 @@
          <article class="span8 offset2">
             {{content}}
          </article>
+         {% if page.bigimage %}
+            <div class="span12">
+               <img src="{{ page.bigimage }}" alt="" />
+            </div>
+         {% endif %}
       </div>
    </div>
    
