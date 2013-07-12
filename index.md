@@ -29,16 +29,17 @@ I host a readily compiled app bundle on my server:
 [Download!][4]
 
 This is built on the base of commit
-[1ed91852a52af3c27ed99bc868280ea2e996a572][3].
+[6284098a177d2ba27050b84798fc163398c23e1f][3].
 
 Please note that I do not plan to create *stable* releases. I just spread the
 latest binary I use myself here.
 
 ### License
 
-GPS-OSX is available under the terms of the GNU General Public License, v3.
+GPS-OSX is available under the terms of the [GNU General Public License, v3][5].
 
  [1]: http://libre.adacore.com/tools/gps/
  [2]: http://www.adacore.com/
- [3]: https://github.com/flyx86/gps-osx/commit/1ed91852a52af3c27ed99bc868280ea2e996a572
- [4]: http://flyx.org/files/GPS-1ed9185.dmg
+ [3]: https://github.com/flyx86/gps-osx/commit/6284098a177d2ba27050b84798fc163398c23e1f
+ [4]: http://flyx.org/files/GPS-6284098.dmg
+ [5]: http://www.gnu.org/licenses/gpl.html
