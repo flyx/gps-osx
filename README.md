@@ -109,5 +109,5 @@ This work is, as the GNAT Programming Studio itself, licensed under the terms of
  [4]: https://live.gnome.org/GTK%2B/OSX/Building
  [5]: http://git.gnome.org/browse/gtk-osx/plain/gtk-osx-build-setup.sh
  [6]: https://live.gnome.org/GTK%2B/OSX/Bundling
- [7]: http://flyx86.github.io/gps-osx/
+ [7]: http://flyx.github.io/gps-osx/
  [8]: http://sourceforge.net/projects/gnuada/files/GNAT_GCC%20Mac%20OS%20X/4.8.1/
